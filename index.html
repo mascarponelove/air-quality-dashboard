@@ -8,10 +8,6 @@
     <!-- Chart.js for visualizations -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     
-    <!-- Leaflet for maps -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
-    
     <style>
         * {
             margin: 0;
@@ -127,25 +123,6 @@
             height: 6px;
             border-radius: 3px;
             margin-top: 15px;
-        }
-
-        .map-container {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .map-container h2 {
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        #map {
-            height: 500px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         .charts-grid {
@@ -279,10 +256,6 @@
             .header h1 {
                 font-size: 1.8rem;
             }
-            
-            #map {
-                height: 350px;
-            }
         }
     </style>
 </head>
@@ -290,7 +263,7 @@
     <div class="container">
         <div class="header">
             <h1>🌍 Punjab, Rajasthan & UP Air Quality Dashboard</h1>
-            <p>Real-time CPCB air quality monitoring across three states</p>
+            <p>Real-time CPCB air quality monitoring with charts and city comparisons</p>
             
             <div class="controls">
                 <select id="stateSelect" class="state-select">
@@ -340,11 +313,6 @@
                 </div>
             </div>
 
-            <div class="map-container">
-                <h2>📍 CPCB Monitoring Stations Map</h2>
-                <div id="map"></div>
-            </div>
-
             <div class="charts-grid">
                 <div class="chart-card">
                     <h2>Pollutant Breakdown</h2>
@@ -366,11 +334,11 @@
                 <h2>AQI Categories (CPCB Standards)</h2>
                 <div class="legend-grid">
                     <div class="legend-item" style="border-color: #00E400; background-color: rgba(0, 228, 0, 0.1);">
-                        <div class="legend-category" style="color: #00A000;">Good</div>
+                        <div class="legend-category" style="color: #006400;">Good</div>
                         <div class="legend-range">0 - 50</div>
                     </div>
-                    <div class="legend-item" style="border-color: #FFFF00; background-color: rgba(255, 255, 0, 0.1);">
-                        <div class="legend-category" style="color: #B8B800;">Satisfactory</div>
+                    <div class="legend-item" style="border-color: #FFD700; background-color: rgba(255, 215, 0, 0.1);">
+                        <div class="legend-category" style="color: #8B7500;">Satisfactory</div>
                         <div class="legend-range">51 - 100</div>
                     </div>
                     <div class="legend-item" style="border-color: #FF7E00; background-color: rgba(255, 126, 0, 0.1);">
@@ -395,19 +363,17 @@
 
         <div class="footer">
             <p>Data sourced from World Air Quality Index Project & CPCB</p>
-            <p>Covering Punjab, Rajasthan & Uttar Pradesh • Updates every 15 minutes</p>
+            <p>Real-time monitoring • Punjab, Rajasthan & Uttar Pradesh • Updates every 15 minutes</p>
         </div>
     </div>
 
     <script>
         // Configuration
-        const WAQI_TOKEN = '486994a34df29107945c8a194da64d15218daf77';
+        const WAQI_TOKEN = '486994a34df29107945c8a194da64d15218daf77'; 
         const API_BASE = 'https://api.waqi.info';
         
         let pollutantsChart = null;
         let trendChart = null;
-        let map = null;
-        let markers = [];
 
         // Cities data with coordinates
         const STATES_DATA = {
@@ -467,11 +433,21 @@
         // AQI Color mapping
         function getAQIColor(aqi) {
             if (aqi <= 50) return '#00E400';
-            if (aqi <= 100) return '#FFFF00';
+            if (aqi <= 100) return '#FFD700'; // Changed from bright yellow to gold for better visibility
             if (aqi <= 200) return '#FF7E00';
             if (aqi <= 300) return '#FF0000';
             if (aqi <= 400) return '#99004C';
             return '#7E0023';
+        }
+        
+        // Get text color based on AQI (for better contrast)
+        function getAQITextColor(aqi) {
+            if (aqi <= 50) return '#006400'; // Dark green for good
+            if (aqi <= 100) return '#8B7500'; // Dark gold for satisfactory
+            if (aqi <= 200) return '#CC6500'; // Dark orange for moderate
+            if (aqi <= 300) return '#CC0000'; // Dark red for poor
+            if (aqi <= 400) return '#99004C'; // Keep same for very poor
+            return '#7E0023'; // Keep same for severe
         }
 
         function getAQICategory(aqi) {
@@ -481,30 +457,6 @@
             if (aqi <= 300) return 'Poor';
             if (aqi <= 400) return 'Very Poor';
             return 'Severe';
-        }
-
-        // Initialize map
-        function initMap() {
-            const selectedState = document.getElementById('stateSelect').value;
-            const stateData = STATES_DATA[selectedState];
-
-            if (map) {
-                map.remove();
-            }
-
-            map = L.map('map').setView(stateData.center, stateData.zoom);
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© OpenStreetMap contributors'
-            }).addTo(map);
-
-            // Add markers for all cities in the state
-            stateData.cities.forEach(city => {
-                const marker = L.marker([city.lat, city.lon])
-                    .addTo(map)
-                    .bindPopup(`<b>${city.name}</b><br>Monitoring Station`);
-                markers.push(marker);
-            });
         }
 
         // Update city dropdown
@@ -554,13 +506,14 @@
             const aqi = data.aqi;
             const category = getAQICategory(aqi);
             const color = getAQIColor(aqi);
+            const textColor = getAQITextColor(aqi);
 
             document.getElementById('currentAqi').textContent = aqi;
-            document.getElementById('currentAqi').style.color = color;
+            document.getElementById('currentAqi').style.color = textColor; // Use darker color for text
             document.getElementById('currentAqiBar').style.backgroundColor = color;
             
             document.getElementById('aqiCategory').textContent = category;
-            document.getElementById('aqiCategory').style.color = color;
+            document.getElementById('aqiCategory').style.color = textColor; // Use darker color for text
             
             const dominantPollutant = data.dominentpol || 'N/A';
             document.getElementById('dominantPollutant').textContent = 
@@ -753,7 +706,6 @@
                 updateStatistics(data);
                 createPollutantsChart(data);
                 createTrendChart(data);
-                initMap();
                 await updateCitiesList();
 
                 document.getElementById('lastUpdate').textContent = 
