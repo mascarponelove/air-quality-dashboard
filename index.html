@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Air Quality Dashboard - Punjab, Rajasthan & UP</title>
+    <title>India Air Quality Dashboard</title>
     
     <!-- Chart.js for visualizations -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
@@ -225,6 +225,74 @@
             opacity: 0.8;
         }
 
+        .health-advisory {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .health-advisory h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .advisory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .advisory-card {
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 5px solid;
+        }
+
+        .advisory-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .advisory-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .advisory-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .advisory-card li:before {
+            content: "•";
+            position: absolute;
+            left: 10px;
+            font-weight: bold;
+        }
+
+        .healthy-group {
+            background: #f0f9ff;
+            border-left-color: #3b82f6;
+        }
+
+        .vulnerable-group {
+            background: #fef3c7;
+            border-left-color: #f59e0b;
+        }
+
+        .sensitive-group {
+            background: #fee2e2;
+            border-left-color: #ef4444;
+        }
+
         .loading {
             text-align: center;
             padding: 50px;
@@ -256,20 +324,25 @@
             .header h1 {
                 font-size: 1.8rem;
             }
+
+            .advisory-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🌍 Punjab, Rajasthan & UP Air Quality Dashboard</h1>
-            <p>Real-time CPCB air quality monitoring with charts and city comparisons</p>
+            <h1>🌍 Punjab, Rajasthan & Uttar Pradesh Air Quality Dashboard</h1>
+            <p>Real-time CPCB air quality monitoring | Including Delhi & Chandigarh NCR</p>
             
             <div class="controls">
                 <select id="stateSelect" class="state-select">
                     <option value="punjab">Punjab</option>
                     <option value="rajasthan">Rajasthan</option>
                     <option value="uttar-pradesh">Uttar Pradesh</option>
+                    <option value="delhi-chandigarh">Delhi & Chandigarh</option>
                 </select>
                 
                 <select id="citySelect" class="city-select">
@@ -313,6 +386,14 @@
                 </div>
             </div>
 
+            <div class="health-advisory">
+                <h2>🏥 Health Advisory</h2>
+                <p style="color: #666; margin-bottom: 15px;">Based on current AQI: <strong id="advisoryAQI">--</strong> (<span id="advisoryCategory">--</span>)</p>
+                <div class="advisory-grid" id="advisoryGrid">
+                    <!-- Advisory cards will be populated here -->
+                </div>
+            </div>
+
             <div class="charts-grid">
                 <div class="chart-card">
                     <h2>Pollutant Breakdown</h2>
@@ -320,7 +401,7 @@
                 </div>
                 
                 <div class="chart-card">
-                    <h2>24-Hour Trend</h2>
+                    <h2>AQI Trend - Last 24 Hours</h2>
                     <canvas id="trendChart"></canvas>
                 </div>
             </div>
@@ -363,7 +444,7 @@
 
         <div class="footer">
             <p>Data sourced from World Air Quality Index Project & CPCB</p>
-            <p>Real-time monitoring • Punjab, Rajasthan & Uttar Pradesh • Updates every 15 minutes</p>
+            <p>Real-time monitoring • Punjab, Rajasthan, Uttar Pradesh, Delhi & Chandigarh • Updates every 15 minutes</p>
         </div>
     </div>
 
@@ -425,7 +506,22 @@
                     { name: 'Moradabad', id: 'moradabad', lat: 28.8389, lon: 78.7378 },
                     { name: 'Bareilly', id: 'bareilly', lat: 28.3670, lon: 79.4304 },
                     { name: 'Prayagraj', id: 'prayagraj', lat: 25.4358, lon: 81.8463 },
-                    { name: 'Gorakhpur', id: 'gorakhpur', lat: 26.7606, lon: 83.3732 }
+                    { name: 'Gorakhpur', id: 'gorakhpur', lat: 26.7606, lon: 83.3732 },
+                    { name: 'Firozabad', id: 'firozabad', lat: 27.1591, lon: 78.3957 },
+                    { name: 'Jhansi', id: 'jhansi', lat: 25.4484, lon: 78.5685 },
+                    { name: 'Gajraula', id: 'gajraula', lat: 28.8487, lon: 78.2377 },
+                    { name: 'Khurja', id: 'khurja', lat: 28.2515, lon: 77.8565 },
+                    { name: 'Raebareli', id: 'raebareli', lat: 26.2286, lon: 81.2334 },
+                    { name: 'Anpara', id: 'anpara', lat: 24.2000, lon: 82.6500 }
+                ]
+            },
+            'delhi-chandigarh': {
+                name: 'Delhi & Chandigarh',
+                center: [28.7041, 77.1025],
+                zoom: 8,
+                cities: [
+                    { name: 'Delhi', id: 'delhi', lat: 28.7041, lon: 77.1025 },
+                    { name: 'Chandigarh', id: 'chandigarh', lat: 30.7333, lon: 76.7794 }
                 ]
             }
         };
@@ -457,6 +553,244 @@
             if (aqi <= 300) return 'Poor';
             if (aqi <= 400) return 'Very Poor';
             return 'Severe';
+        }
+
+        // Get health advisories based on AQI
+        function getHealthAdvisories(aqi) {
+            if (aqi <= 50) {
+                return {
+                    healthy: {
+                        title: "👤 Healthy People",
+                        icon: "🏃",
+                        advice: [
+                            "Good day to be active outside",
+                            "No precautions required",
+                            "Ideal for outdoor activities and exercise"
+                        ]
+                    },
+                    vulnerable: {
+                        title: "👨‍👩‍👧 Elderly, Pregnant Women & Children",
+                        icon: "👶",
+                        advice: [
+                            "Poses little or no health risk",
+                            "Good day to be active outside",
+                            "No restrictions on outdoor activities"
+                        ]
+                    },
+                    sensitive: {
+                        title: "🫁 People with Lung & Heart Diseases",
+                        icon: "❤️",
+                        advice: [
+                            "Poses little or no health risk",
+                            "Good day to be active outside",
+                            "Safe for regular activities"
+                        ]
+                    }
+                };
+            } else if (aqi <= 100) {
+                return {
+                    healthy: {
+                        title: "👤 Healthy People",
+                        icon: "🏃",
+                        advice: [
+                            "No precautions required",
+                            "Safe for outdoor activities",
+                            "Minimal impact expected"
+                        ]
+                    },
+                    vulnerable: {
+                        title: "👨‍👩‍👧 Elderly, Pregnant Women & Children",
+                        icon: "👶",
+                        advice: [
+                            "Minor breathing discomfort to sensitive people",
+                            "Reduce prolonged or heavy exertion",
+                            "Limit prolonged outdoor exertion during peak AQI"
+                        ]
+                    },
+                    sensitive: {
+                        title: "🫁 People with Lung & Heart Diseases",
+                        icon: "❤️",
+                        advice: [
+                            "Reduce prolonged or heavy exertion",
+                            "Limit prolonged physical exertion during peaks",
+                            "Consider reducing outdoor activities if symptoms occur"
+                        ]
+                    }
+                };
+            } else if (aqi <= 200) {
+                return {
+                    healthy: {
+                        title: "👤 Healthy People",
+                        icon: "🏃",
+                        advice: [
+                            "Limit outdoor activities during peak AQI",
+                            "Reduce prolonged or heavy exertion",
+                            "Consider indoor exercise alternatives"
+                        ]
+                    },
+                    vulnerable: {
+                        title: "👨‍👩‍👧 Elderly, Pregnant Women & Children",
+                        icon: "👶",
+                        advice: [
+                            "Breathing discomfort to sensitive people",
+                            "Reduce prolonged or heavy exertion",
+                            "Avoid prolonged outdoor activities",
+                            "People with heart disease avoid sources of PM"
+                        ]
+                    },
+                    sensitive: {
+                        title: "🫁 People with Lung & Heart Diseases",
+                        icon: "❤️",
+                        advice: [
+                            "Limit activities in polluted areas",
+                            "Avoid heavy traffic and pollution sources",
+                            "Re-schedule outdoor activities per AQI level",
+                            "Reduce prolonged or heavy exertion"
+                        ]
+                    }
+                };
+            } else if (aqi <= 300) {
+                return {
+                    healthy: {
+                        title: "👤 Healthy People",
+                        icon: "🏃",
+                        advice: [
+                            "Reduce prolonged or heavy exertion",
+                            "Breathing discomfort may occur",
+                            "Consider moving activities indoors",
+                            "Wear N95 mask if going outdoors"
+                        ]
+                    },
+                    vulnerable: {
+                        title: "👨‍👩‍👧 Elderly, Pregnant Women & Children",
+                        icon: "👶",
+                        advice: [
+                            "Avoid prolonged or heavy exertion",
+                            "Children & outdoors active people should avoid prolonged exertion",
+                            "Stay indoors as much as possible",
+                            "Use air purifiers indoors",
+                            "Wear N95 mask if must go outside"
+                        ]
+                    },
+                    sensitive: {
+                        title: "🫁 People with Lung & Heart Diseases",
+                        icon: "❤️",
+                        advice: [
+                            "Avoid exposure to polluted areas",
+                            "Reduce activities & avoid pollution sources",
+                            "Avoid heavy traffic areas",
+                            "Stay indoors with air purification",
+                            "Consult doctor if symptoms worsen"
+                        ]
+                    }
+                };
+            } else if (aqi <= 400) {
+                return {
+                    healthy: {
+                        title: "👤 Healthy People",
+                        icon: "🏃",
+                        advice: [
+                            "Avoid prolonged or heavy exertion",
+                            "Respiratory illness on prolonged exposure",
+                            "Move all activities indoors",
+                            "Use N95 masks when going outside",
+                            "Keep windows and doors closed"
+                        ]
+                    },
+                    vulnerable: {
+                        title: "👨‍👩‍👧 Elderly, Pregnant Women & Children",
+                        icon: "👶",
+                        advice: [
+                            "Avoid all physical activities outdoors",
+                            "Should avoid exposure to air pollution sources",
+                            "Stay indoors with air purifiers",
+                            "Keep children indoors",
+                            "Seek medical advice if needed"
+                        ]
+                    },
+                    sensitive: {
+                        title: "🫁 People with Lung & Heart Diseases",
+                        icon: "❤️",
+                        advice: [
+                            "Avoid all physical activities outdoors",
+                            "Avoid all sources of air pollution",
+                            "Keep prescribed medications readily available",
+                            "Seek immediate medical help if symptoms appear",
+                            "Use air purifiers indoors continuously"
+                        ]
+                    }
+                };
+            } else {
+                return {
+                    healthy: {
+                        title: "👤 Healthy People",
+                        icon: "🏃",
+                        advice: [
+                            "⚠️ SERIOUS HEALTH EFFECTS",
+                            "Affects healthy people, serious impact on those with existing diseases",
+                            "Avoid all outdoor activities",
+                            "Stay indoors with doors/windows closed",
+                            "Use N95 masks even for short outdoor exposure",
+                            "Emergency advisory in effect"
+                        ]
+                    },
+                    vulnerable: {
+                        title: "👨‍👩‍👧 Elderly, Pregnant Women & Children",
+                        icon: "👶",
+                        advice: [
+                            "⚠️ EMERGENCY - SERIOUS HEALTH EFFECTS",
+                            "Avoid all physical activities outdoors",
+                            "Should avoid all sources of air pollution",
+                            "Keep children strictly indoors",
+                            "May cause respiratory impact even during light activities",
+                            "Seek medical advice immediately if symptoms occur"
+                        ]
+                    },
+                    sensitive: {
+                        title: "🫁 People with Lung & Heart Diseases",
+                        icon: "❤️",
+                        advice: [
+                            "⚠️ MEDICAL EMERGENCY RISK",
+                            "Serious health effects - avoid all outdoor exposure",
+                            "May cause respiratory impact even during light activities",
+                            "Keep all medications readily available",
+                            "Remain in controlled indoor environment",
+                            "Contact healthcare provider immediately if any symptoms"
+                        ]
+                    }
+                };
+            }
+        }
+
+        // Update health advisory section
+        function updateHealthAdvisory(aqi) {
+            document.getElementById('advisoryAQI').textContent = aqi;
+            document.getElementById('advisoryCategory').textContent = getAQICategory(aqi);
+            document.getElementById('advisoryCategory').style.color = getAQITextColor(aqi);
+
+            const advisories = getHealthAdvisories(aqi);
+            const advisoryGrid = document.getElementById('advisoryGrid');
+            
+            advisoryGrid.innerHTML = `
+                <div class="advisory-card healthy-group">
+                    <h3><span style="font-size: 1.5rem;">${advisories.healthy.icon}</span> ${advisories.healthy.title}</h3>
+                    <ul>
+                        ${advisories.healthy.advice.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="advisory-card vulnerable-group">
+                    <h3><span style="font-size: 1.5rem;">${advisories.vulnerable.icon}</span> ${advisories.vulnerable.title}</h3>
+                    <ul>
+                        ${advisories.vulnerable.advice.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="advisory-card sensitive-group">
+                    <h3><span style="font-size: 1.5rem;">${advisories.sensitive.icon}</span> ${advisories.sensitive.title}</h3>
+                    <ul>
+                        ${advisories.sensitive.advice.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
         }
 
         // Update city dropdown
@@ -704,12 +1038,13 @@
                 const data = await fetchAQIData(city);
                 
                 updateStatistics(data);
+                updateHealthAdvisory(data.aqi);
                 createPollutantsChart(data);
                 createTrendChart(data);
                 await updateCitiesList();
 
                 document.getElementById('lastUpdate').textContent = 
-                    `Last updated: ${new Date().toLocaleTimeString()}`;
+                    `Last updated: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`;
                 
                 document.getElementById('loadingMessage').style.display = 'none';
                 document.getElementById('mainContent').style.display = 'block';
