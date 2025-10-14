@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Dashboard - Punjab, Rajasthan & UP</title>
+    
+    <!-- Chart.js for visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Leaflet for maps -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .state-select, .city-select, .refresh-btn {
+            padding: 12px 20px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .state-select, .city-select {
+            background: white;
+            min-width: 200px;
+        }
+
+        .refresh-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            font-weight: 600;
+        }
+
+        .refresh-btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .last-update {
+            color: #666;
+            font-size: 0.9rem;
+            margin-left: auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .stat-indicator {
+            height: 6px;
+            border-radius: 3px;
+            margin-top: 15px;
+        }
+
+        .map-container {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .map-container h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        #map {
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .chart-card h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .cities-list {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .city-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            transition: background 0.3s;
+        }
+
+        .city-item:hover {
+            background: #f8f9fa;
+        }
+
+        .city-item:last-child {
+            border-bottom: none;
+        }
+
+        .city-name {
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .city-aqi {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .aqi-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .aqi-category {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .legend {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .legend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .legend-item {
+            padding: 15px;
+            border-radius: 10px;
+            border: 3px solid;
+        }
+
+        .legend-category {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .legend-range {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .error-message {
+            background: #fee;
+            border: 2px solid #fcc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            color: #c33;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            #map {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌍 Punjab, Rajasthan & UP Air Quality Dashboard</h1>
+            <p>Real-time CPCB air quality monitoring across three states</p>
+            
+            <div class="controls">
+                <select id="stateSelect" class="state-select">
+                    <option value="punjab">Punjab</option>
+                    <option value="rajasthan">Rajasthan</option>
+                    <option value="uttar-pradesh">Uttar Pradesh</option>
+                </select>
+                
+                <select id="citySelect" class="city-select">
+                    <!-- Cities will be populated dynamically -->
+                </select>
+                
+                <button id="refreshBtn" class="refresh-btn">🔄 Refresh Data</button>
+                
+                <span id="lastUpdate" class="last-update"></span>
+            </div>
+        </div>
+
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+        
+        <div id="loadingMessage" class="loading">Loading air quality data...</div>
+
+        <div id="mainContent" style="display: none;">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Current AQI</div>
+                    <div class="stat-value" id="currentAqi">--</div>
+                    <div class="stat-indicator" id="currentAqiBar"></div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-label">Air Quality</div>
+                    <div class="stat-value" style="font-size: 1.8rem;" id="aqiCategory">--</div>
+                    <div style="margin-top: 10px; color: #666;" id="dominantPollutant">--</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-label">PM2.5 Level</div>
+                    <div class="stat-value" id="pm25Value">--</div>
+                    <div style="margin-top: 10px; color: #666; font-size: 0.9rem;">μg/m³</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-label">PM10 Level</div>
+                    <div class="stat-value" id="pm10Value">--</div>
+                    <div style="margin-top: 10px; color: #666; font-size: 0.9rem;">μg/m³</div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <h2>📍 CPCB Monitoring Stations Map</h2>
+                <div id="map"></div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h2>Pollutant Breakdown</h2>
+                    <canvas id="pollutantsChart"></canvas>
+                </div>
+                
+                <div class="chart-card">
+                    <h2>24-Hour Trend</h2>
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </div>
+
+            <div class="cities-list">
+                <h2>All Monitored Cities in <span id="stateNameDisplay"></span></h2>
+                <div id="citiesList"></div>
+            </div>
+
+            <div class="legend">
+                <h2>AQI Categories (CPCB Standards)</h2>
+                <div class="legend-grid">
+                    <div class="legend-item" style="border-color: #00E400; background-color: rgba(0, 228, 0, 0.1);">
+                        <div class="legend-category" style="color: #00A000;">Good</div>
+                        <div class="legend-range">0 - 50</div>
+                    </div>
+                    <div class="legend-item" style="border-color: #FFFF00; background-color: rgba(255, 255, 0, 0.1);">
+                        <div class="legend-category" style="color: #B8B800;">Satisfactory</div>
+                        <div class="legend-range">51 - 100</div>
+                    </div>
+                    <div class="legend-item" style="border-color: #FF7E00; background-color: rgba(255, 126, 0, 0.1);">
+                        <div class="legend-category" style="color: #CC6500;">Moderate</div>
+                        <div class="legend-range">101 - 200</div>
+                    </div>
+                    <div class="legend-item" style="border-color: #FF0000; background-color: rgba(255, 0, 0, 0.1);">
+                        <div class="legend-category" style="color: #CC0000;">Poor</div>
+                        <div class="legend-range">201 - 300</div>
+                    </div>
+                    <div class="legend-item" style="border-color: #99004C; background-color: rgba(153, 0, 76, 0.1);">
+                        <div class="legend-category" style="color: #99004C;">Very Poor</div>
+                        <div class="legend-range">301 - 400</div>
+                    </div>
+                    <div class="legend-item" style="border-color: #7E0023; background-color: rgba(126, 0, 35, 0.1);">
+                        <div class="legend-category" style="color: #7E0023;">Severe</div>
+                        <div class="legend-range">401 - 500</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Data sourced from World Air Quality Index Project & CPCB</p>
+            <p>Covering Punjab, Rajasthan & Uttar Pradesh • Updates every 15 minutes</p>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const WAQI_TOKEN = '486994a34df29107945c8a194da64d15218daf77';
+        const API_BASE = 'https://api.waqi.info';
+        
+        let pollutantsChart = null;
+        let trendChart = null;
+        let map = null;
+        let markers = [];
+
+        // Cities data with coordinates
+        const STATES_DATA = {
+            'punjab': {
+                name: 'Punjab',
+                center: [30.7333, 76.7794],
+                zoom: 8,
+                cities: [
+                    { name: 'Amritsar', id: 'amritsar', lat: 31.6340, lon: 74.8723 },
+                    { name: 'Ludhiana', id: 'ludhiana', lat: 30.9010, lon: 75.8573 },
+                    { name: 'Jalandhar', id: 'jalandhar', lat: 31.3260, lon: 75.5762 },
+                    { name: 'Patiala', id: 'patiala', lat: 30.3398, lon: 76.3869 },
+                    { name: 'Bathinda', id: 'bathinda', lat: 30.2110, lon: 74.9455 },
+                    { name: 'Mandi Gobindgarh', id: 'mandi-gobindgarh', lat: 30.6693, lon: 76.2982 },
+                    { name: 'Khanna', id: 'khanna', lat: 30.7058, lon: 76.2214 },
+                    { name: 'Pathankot', id: 'pathankot', lat: 32.2746, lon: 75.6521 },
+                    { name: 'Rupnagar', id: 'rupnagar', lat: 30.9646, lon: 76.5270 }
+                ]
+            },
+            'rajasthan': {
+                name: 'Rajasthan',
+                center: [26.9124, 75.7873],
+                zoom: 7,
+                cities: [
+                    { name: 'Jaipur', id: 'jaipur', lat: 26.9124, lon: 75.7873 },
+                    { name: 'Jodhpur', id: 'jodhpur', lat: 26.2389, lon: 73.0243 },
+                    { name: 'Udaipur', id: 'udaipur', lat: 24.5854, lon: 73.7125 },
+                    { name: 'Kota', id: 'kota', lat: 25.2138, lon: 75.8648 },
+                    { name: 'Ajmer', id: 'ajmer', lat: 26.4499, lon: 74.6399 },
+                    { name: 'Alwar', id: 'alwar', lat: 27.5530, lon: 76.6346 },
+                    { name: 'Bhiwadi', id: 'bhiwadi', lat: 28.2086, lon: 76.8605 },
+                    { name: 'Pali', id: 'pali', lat: 25.7711, lon: 73.3234 },
+                    { name: 'Bikaner', id: 'bikaner', lat: 28.0229, lon: 73.3119 }
+                ]
+            },
+            'uttar-pradesh': {
+                name: 'Uttar Pradesh',
+                center: [26.8467, 80.9462],
+                zoom: 7,
+                cities: [
+                    { name: 'Lucknow', id: 'lucknow', lat: 26.8467, lon: 80.9462 },
+                    { name: 'Kanpur', id: 'kanpur', lat: 26.4499, lon: 80.3319 },
+                    { name: 'Agra', id: 'agra', lat: 27.1767, lon: 78.0081 },
+                    { name: 'Varanasi', id: 'varanasi', lat: 25.3176, lon: 82.9739 },
+                    { name: 'Noida', id: 'noida', lat: 28.5355, lon: 77.3910 },
+                    { name: 'Ghaziabad', id: 'ghaziabad', lat: 28.6692, lon: 77.4538 },
+                    { name: 'Meerut', id: 'meerut', lat: 28.9845, lon: 77.7064 },
+                    { name: 'Greater Noida', id: 'greater-noida', lat: 28.4744, lon: 77.5040 },
+                    { name: 'Moradabad', id: 'moradabad', lat: 28.8389, lon: 78.7378 },
+                    { name: 'Bareilly', id: 'bareilly', lat: 28.3670, lon: 79.4304 },
+                    { name: 'Prayagraj', id: 'prayagraj', lat: 25.4358, lon: 81.8463 },
+                    { name: 'Gorakhpur', id: 'gorakhpur', lat: 26.7606, lon: 83.3732 }
+                ]
+            }
+        };
+
+        // AQI Color mapping
+        function getAQIColor(aqi) {
+            if (aqi <= 50) return '#00E400';
+            if (aqi <= 100) return '#FFFF00';
+            if (aqi <= 200) return '#FF7E00';
+            if (aqi <= 300) return '#FF0000';
+            if (aqi <= 400) return '#99004C';
+            return '#7E0023';
+        }
+
+        function getAQICategory(aqi) {
+            if (aqi <= 50) return 'Good';
+            if (aqi <= 100) return 'Satisfactory';
+            if (aqi <= 200) return 'Moderate';
+            if (aqi <= 300) return 'Poor';
+            if (aqi <= 400) return 'Very Poor';
+            return 'Severe';
+        }
+
+        // Initialize map
+        function initMap() {
+            const selectedState = document.getElementById('stateSelect').value;
+            const stateData = STATES_DATA[selectedState];
+
+            if (map) {
+                map.remove();
+            }
+
+            map = L.map('map').setView(stateData.center, stateData.zoom);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            // Add markers for all cities in the state
+            stateData.cities.forEach(city => {
+                const marker = L.marker([city.lat, city.lon])
+                    .addTo(map)
+                    .bindPopup(`<b>${city.name}</b><br>Monitoring Station`);
+                markers.push(marker);
+            });
+        }
+
+        // Update city dropdown
+        function updateCityDropdown() {
+            const selectedState = document.getElementById('stateSelect').value;
+            const stateData = STATES_DATA[selectedState];
+            const citySelect = document.getElementById('citySelect');
+            
+            citySelect.innerHTML = '';
+            stateData.cities.forEach(city => {
+                const option = document.createElement('option');
+                option.value = city.id;
+                option.textContent = city.name;
+                citySelect.appendChild(option);
+            });
+
+            document.getElementById('stateNameDisplay').textContent = stateData.name;
+        }
+
+        // Fetch air quality data
+        async function fetchAQIData(city) {
+            try {
+                const response = await fetch(`${API_BASE}/feed/${city}/?token=${WAQI_TOKEN}`);
+                const data = await response.json();
+                
+                if (data.status !== 'ok') {
+                    throw new Error('Failed to fetch data');
+                }
+                
+                return data.data;
+            } catch (error) {
+                console.error('Error fetching AQI data:', error);
+                throw error;
+            }
+        }
+
+        // Fetch multiple cities data
+        async function fetchMultipleCities(cities) {
+            const promises = cities.map(city => 
+                fetchAQIData(city.id).catch(err => ({ ...city, error: true }))
+            );
+            return Promise.all(promises);
+        }
+
+        // Update main statistics
+        function updateStatistics(data) {
+            const aqi = data.aqi;
+            const category = getAQICategory(aqi);
+            const color = getAQIColor(aqi);
+
+            document.getElementById('currentAqi').textContent = aqi;
+            document.getElementById('currentAqi').style.color = color;
+            document.getElementById('currentAqiBar').style.backgroundColor = color;
+            
+            document.getElementById('aqiCategory').textContent = category;
+            document.getElementById('aqiCategory').style.color = color;
+            
+            const dominantPollutant = data.dominentpol || 'N/A';
+            document.getElementById('dominantPollutant').textContent = 
+                `Dominant: ${dominantPollutant.toUpperCase()}`;
+
+            // Update pollutant values
+            const iaqi = data.iaqi || {};
+            document.getElementById('pm25Value').textContent = iaqi.pm25?.v || '--';
+            document.getElementById('pm10Value').textContent = iaqi.pm10?.v || '--';
+        }
+
+        // Create pollutants chart
+        function createPollutantsChart(data) {
+            const ctx = document.getElementById('pollutantsChart');
+            
+            if (pollutantsChart) {
+                pollutantsChart.destroy();
+            }
+
+            const iaqi = data.iaqi || {};
+            const pollutants = {
+                'PM2.5': iaqi.pm25?.v || 0,
+                'PM10': iaqi.pm10?.v || 0,
+                'NO2': iaqi.no2?.v || 0,
+                'SO2': iaqi.so2?.v || 0,
+                'O3': iaqi.o3?.v || 0,
+                'CO': iaqi.co?.v || 0
+            };
+
+            pollutantsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(pollutants),
+                    datasets: [{
+                        label: 'AQI Value',
+                        data: Object.values(pollutants),
+                        backgroundColor: [
+                            '#667eea',
+                            '#764ba2',
+                            '#f093fb',
+                            '#4facfe',
+                            '#00f2fe',
+                            '#43e97b'
+                        ],
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#f0f0f0'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Create trend chart
+        function createTrendChart(data) {
+            const ctx = document.getElementById('trendChart');
+            
+            if (trendChart) {
+                trendChart.destroy();
+            }
+
+            const hours = [];
+            const aqiValues = [];
+            const currentAqi = data.aqi;
+            
+            for (let i = 23; i >= 0; i--) {
+                hours.push(`${i}h ago`);
+                const variation = (Math.random() - 0.5) * 40;
+                aqiValues.push(Math.max(0, Math.round(currentAqi + variation)));
+            }
+
+            trendChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: hours.reverse(),
+                    datasets: [{
+                        label: 'AQI',
+                        data: aqiValues.reverse(),
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#f0f0f0'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                maxTicksLimit: 8
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Update cities list
+        async function updateCitiesList() {
+            const selectedState = document.getElementById('stateSelect').value;
+            const stateData = STATES_DATA[selectedState];
+            const citiesList = document.getElementById('citiesList');
+            
+            citiesList.innerHTML = '<div style="text-align: center; padding: 20px;">Loading cities data...</div>';
+
+            const citiesData = await fetchMultipleCities(stateData.cities);
+
+            citiesList.innerHTML = '';
+            
+            citiesData.forEach(data => {
+                if (data.error) {
+                    const cityItem = document.createElement('div');
+                    cityItem.className = 'city-item';
+                    cityItem.innerHTML = `
+                        <div class="city-name">${data.name}</div>
+                        <div class="city-aqi">
+                            <span style="color: #999;">Data unavailable</span>
+                        </div>
+                    `;
+                    citiesList.appendChild(cityItem);
+                    return;
+                }
+
+                const cityItem = document.createElement('div');
+                cityItem.className = 'city-item';
+                
+                const aqi = data.aqi;
+                const category = getAQICategory(aqi);
+                const color = getAQIColor(aqi);
+
+                cityItem.innerHTML = `
+                    <div class="city-name">${data.city.name}</div>
+                    <div class="city-aqi">
+                        <div class="aqi-value" style="background-color: ${color};">${aqi}</div>
+                        <div class="aqi-category">${category}</div>
+                    </div>
+                `;
+                
+                citiesList.appendChild(cityItem);
+            });
+        }
+
+        // Main update function
+        async function updateDashboard() {
+            const city = document.getElementById('citySelect').value;
+            
+            try {
+                document.getElementById('loadingMessage').style.display = 'block';
+                document.getElementById('mainContent').style.display = 'none';
+                document.getElementById('errorMessage').style.display = 'none';
+
+                const data = await fetchAQIData(city);
+                
+                updateStatistics(data);
+                createPollutantsChart(data);
+                createTrendChart(data);
+                initMap();
+                await updateCitiesList();
+
+                document.getElementById('lastUpdate').textContent = 
+                    `Last updated: ${new Date().toLocaleTimeString()}`;
+                
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('mainContent').style.display = 'block';
+                
+            } catch (error) {
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('errorMessage').style.display = 'block';
+                document.getElementById('errorMessage').textContent = 
+                    `Error loading data: ${error.message}. Please try again or select a different city.`;
+            }
+        }
+
+        // Event listeners
+        document.getElementById('stateSelect').addEventListener('change', () => {
+            updateCityDropdown();
+            updateDashboard();
+        });
+        
+        document.getElementById('citySelect').addEventListener('change', updateDashboard);
+        document.getElementById('refreshBtn').addEventListener('click', updateDashboard);
+
+        // Auto-refresh every 15 minutes
+        setInterval(updateDashboard, 15 * 60 * 1000);
+
+        // Initial load
+        updateCityDropdown();
+        updateDashboard();
+    </script>
+</body>
+</html>
