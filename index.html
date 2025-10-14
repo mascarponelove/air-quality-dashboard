@@ -645,6 +645,7 @@
             const aqiValues = [];
             const currentAqi = data.aqi;
             
+            // Build from 23 hours ago to now (0 hours ago)
             for (let i = 23; i >= 0; i--) {
                 hours.push(`${i}h ago`);
                 const variation = (Math.random() - 0.5) * 40;
@@ -654,10 +655,10 @@
             trendChart = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: hours.reverse(),
+                    labels: hours,
                     datasets: [{
                         label: 'AQI',
-                        data: aqiValues.reverse(),
+                        data: aqiValues,
                         borderColor: '#667eea',
                         backgroundColor: 'rgba(102, 126, 234, 0.1)',
                         fill: true,
