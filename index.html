@@ -125,6 +125,105 @@
             margin-top: 15px;
         }
 
+        .stations-container {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .stations-container h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .stations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .station-card {
+            border-radius: 12px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .station-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .station-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 15px;
+        }
+
+        .station-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #333;
+            flex: 1;
+        }
+
+        .station-aqi-badge {
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            min-width: 80px;
+        }
+
+        .station-category {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .station-pollutants {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .pollutant-item {
+            text-align: center;
+            padding: 8px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .pollutant-label {
+            font-size: 0.75rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .pollutant-value {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #333;
+            margin-top: 3px;
+        }
+
+        .station-update {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: #666;
+            text-align: right;
+        }
+
         .charts-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -143,86 +242,6 @@
             color: #333;
             margin-bottom: 20px;
             font-size: 1.5rem;
-        }
-
-        .cities-list {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
-        }
-
-        .city-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-            transition: background 0.3s;
-        }
-
-        .city-item:hover {
-            background: #f8f9fa;
-        }
-
-        .city-item:last-child {
-            border-bottom: none;
-        }
-
-        .city-name {
-            font-weight: 600;
-            color: #333;
-            font-size: 1.1rem;
-        }
-
-        .city-aqi {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .aqi-value {
-            font-size: 1.5rem;
-            font-weight: bold;
-            padding: 8px 16px;
-            border-radius: 8px;
-            color: white;
-        }
-
-        .aqi-category {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        .legend {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .legend-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .legend-item {
-            padding: 15px;
-            border-radius: 10px;
-            border: 3px solid;
-        }
-
-        .legend-category {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .legend-range {
-            font-size: 0.9rem;
-            opacity: 0.8;
         }
 
         .health-advisory {
@@ -293,6 +312,36 @@
             border-left-color: #ef4444;
         }
 
+        .legend {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .legend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .legend-item {
+            padding: 15px;
+            border-radius: 10px;
+            border: 3px solid;
+        }
+
+        .legend-category {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .legend-range {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
         .loading {
             text-align: center;
             padding: 50px;
@@ -316,8 +365,15 @@
             margin-top: 30px;
         }
 
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-style: italic;
+        }
+
         @media (max-width: 768px) {
-            .charts-grid {
+            .charts-grid, .stations-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -357,38 +413,46 @@
 
         <div id="errorMessage" class="error-message" style="display: none;"></div>
         
-        <div id="loadingMessage" class="loading">Loading air quality data...</div>
+        <div id="loadingMessage" class="loading">Loading air quality data from all monitoring stations...</div>
 
         <div id="mainContent" style="display: none;">
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-label">Current AQI</div>
+                    <div class="stat-label">City Average AQI</div>
                     <div class="stat-value" id="currentAqi">--</div>
                     <div class="stat-indicator" id="currentAqiBar"></div>
+                    <div style="margin-top: 10px; color: #666; font-size: 0.85rem;" id="stationCount">--</div>
                 </div>
                 
                 <div class="stat-card">
-                    <div class="stat-label">Air Quality</div>
+                    <div class="stat-label">Air Quality Status</div>
                     <div class="stat-value" style="font-size: 1.8rem;" id="aqiCategory">--</div>
                     <div style="margin-top: 10px; color: #666;" id="dominantPollutant">--</div>
                 </div>
                 
                 <div class="stat-card">
-                    <div class="stat-label">PM2.5 Level</div>
-                    <div class="stat-value" id="pm25Value">--</div>
-                    <div style="margin-top: 10px; color: #666; font-size: 0.9rem;">μg/m³</div>
+                    <div class="stat-label">Worst Station AQI</div>
+                    <div class="stat-value" id="worstAqi">--</div>
+                    <div style="margin-top: 10px; color: #666; font-size: 0.85rem;" id="worstStation">--</div>
                 </div>
                 
                 <div class="stat-card">
-                    <div class="stat-label">PM10 Level</div>
-                    <div class="stat-value" id="pm10Value">--</div>
-                    <div style="margin-top: 10px; color: #666; font-size: 0.9rem;">μg/m³</div>
+                    <div class="stat-label">Best Station AQI</div>
+                    <div class="stat-value" id="bestAqi">--</div>
+                    <div style="margin-top: 10px; color: #666; font-size: 0.85rem;" id="bestStation">--</div>
+                </div>
+            </div>
+
+            <div class="stations-container">
+                <h2>📍 All Monitoring Stations in <span id="cityNameDisplay"></span></h2>
+                <div class="stations-grid" id="stationsGrid">
+                    <!-- Station cards will be populated here -->
                 </div>
             </div>
 
             <div class="health-advisory">
                 <h2>🏥 Health Advisory</h2>
-                <p style="color: #666; margin-bottom: 15px;">Based on current AQI: <strong id="advisoryAQI">--</strong> (<span id="advisoryCategory">--</span>)</p>
+                <p style="color: #666; margin-bottom: 15px;">Based on city average AQI: <strong id="advisoryAQI">--</strong> (<span id="advisoryCategory">--</span>)</p>
                 <div class="advisory-grid" id="advisoryGrid">
                     <!-- Advisory cards will be populated here -->
                 </div>
@@ -396,19 +460,14 @@
 
             <div class="charts-grid">
                 <div class="chart-card">
-                    <h2>Pollutant Breakdown - Last 24 Hours</h2>
+                    <h2>Average Pollutant Levels Across All Stations</h2>
                     <canvas id="pollutantsChart"></canvas>
                 </div>
                 
                 <div class="chart-card">
-                    <h2>AQI Trend - Last 24 Hours</h2>
-                    <canvas id="trendChart"></canvas>
+                    <h2>AQI Comparison - All Stations</h2>
+                    <canvas id="stationsComparisonChart"></canvas>
                 </div>
-            </div>
-
-            <div class="cities-list">
-                <h2>All Monitored Cities in <span id="stateNameDisplay"></span></h2>
-                <div id="citiesList"></div>
             </div>
 
             <div class="legend">
@@ -444,84 +503,205 @@
 
         <div class="footer">
             <p>Data sourced from World Air Quality Index Project & CPCB</p>
-            <p>Real-time monitoring • Punjab, Rajasthan, Uttar Pradesh, Delhi & Chandigarh • Updates every 15 minutes</p>
+            <p>Real-time monitoring • Punjab, Rajasthan, Uttar Pradesh, Delhi & Chandigarh • Multiple stations per city • Updates every 15 minutes</p>
         </div>
     </div>
 
     <script>
         // Configuration
-        const WAQI_TOKEN = '486994a34df29107945c8a194da64d15218daf77'; 
+        const WAQI_TOKEN = '486994a34df29107945c8a194da64d15218daf77';
         const API_BASE = 'https://api.waqi.info';
         
         let pollutantsChart = null;
-        let trendChart = null;
+        let stationsChart = null;
 
-        // Cities data with coordinates
+        // Cities data with multiple monitoring stations per city
         const STATES_DATA = {
             'punjab': {
                 name: 'Punjab',
-                center: [30.7333, 76.7794],
-                zoom: 8,
                 cities: [
-                    { name: 'Amritsar', id: 'amritsar', lat: 31.6340, lon: 74.8723 },
-                    { name: 'Ludhiana', id: 'ludhiana', lat: 30.9010, lon: 75.8573 },
-                    { name: 'Jalandhar', id: 'jalandhar', lat: 31.3260, lon: 75.5762 },
-                    { name: 'Patiala', id: 'patiala', lat: 30.3398, lon: 76.3869 },
-                    { name: 'Bathinda', id: 'bathinda', lat: 30.2110, lon: 74.9455 },
-                    { name: 'Mandi Gobindgarh', id: 'mandi-gobindgarh', lat: 30.6693, lon: 76.2982 },
-                    { name: 'Khanna', id: 'khanna', lat: 30.7058, lon: 76.2214 },
-                    { name: 'Pathankot', id: 'pathankot', lat: 32.2746, lon: 75.6521 },
-                    { name: 'Rupnagar', id: 'rupnagar', lat: 30.9646, lon: 76.5270 }
+                    { 
+                        name: 'Amritsar', 
+                        stations: ['amritsar'] 
+                    },
+                    { 
+                        name: 'Ludhiana', 
+                        stations: ['ludhiana/punjab-agricultural-university', 'ludhiana'] 
+                    },
+                    { 
+                        name: 'Jalandhar', 
+                        stations: ['jalandhar/civil-line', 'jalandhar'] 
+                    },
+                    { 
+                        name: 'Patiala', 
+                        stations: ['patiala/model-town', 'patiala'] 
+                    },
+                    { 
+                        name: 'Bathinda', 
+                        stations: ['bathinda'] 
+                    },
+                    { 
+                        name: 'Mandi Gobindgarh', 
+                        stations: ['mandi-gobindgarh/rimt-university', 'mandi-gobindgarh'] 
+                    },
+                    { 
+                        name: 'Khanna', 
+                        stations: ['khanna/kalal-majra', 'khanna'] 
+                    },
+                    { 
+                        name: 'Pathankot', 
+                        stations: ['pathankot'] 
+                    },
+                    { 
+                        name: 'Rupnagar', 
+                        stations: ['rupnagar/ratanpura', 'rupnagar'] 
+                    }
                 ]
             },
             'rajasthan': {
                 name: 'Rajasthan',
-                center: [26.9124, 75.7873],
-                zoom: 7,
                 cities: [
-                    { name: 'Jaipur', id: 'jaipur', lat: 26.9124, lon: 75.7873 },
-                    { name: 'Jodhpur', id: 'jodhpur', lat: 26.2389, lon: 73.0243 },
-                    { name: 'Udaipur', id: 'udaipur', lat: 24.5854, lon: 73.7125 },
-                    { name: 'Kota', id: 'kota', lat: 25.2138, lon: 75.8648 },
-                    { name: 'Ajmer', id: 'ajmer', lat: 26.4499, lon: 74.6399 },
-                    { name: 'Alwar', id: 'alwar', lat: 27.5530, lon: 76.6346 },
-                    { name: 'Bhiwadi', id: 'bhiwadi', lat: 28.2086, lon: 76.8605 },
-                    { name: 'Pali', id: 'pali', lat: 25.7711, lon: 73.3234 },
-                    { name: 'Bikaner', id: 'bikaner', lat: 28.0229, lon: 73.3119 }
+                    { 
+                        name: 'Jaipur', 
+                        stations: ['jaipur/shastri-nagar', 'jaipur/police-commissionerate', 'jaipur'] 
+                    },
+                    { 
+                        name: 'Jodhpur', 
+                        stations: ['jodhpur/collectorate', 'jodhpur'] 
+                    },
+                    { 
+                        name: 'Udaipur', 
+                        stations: ['udaipur/ashok-nagar', 'udaipur'] 
+                    },
+                    { 
+                        name: 'Kota', 
+                        stations: ['kota/shrinath-puram', 'kota'] 
+                    },
+                    { 
+                        name: 'Ajmer', 
+                        stations: ['ajmer'] 
+                    },
+                    { 
+                        name: 'Alwar', 
+                        stations: ['alwar'] 
+                    },
+                    { 
+                        name: 'Bhiwadi', 
+                        stations: ['bhiwadi'] 
+                    },
+                    { 
+                        name: 'Pali', 
+                        stations: ['pali'] 
+                    },
+                    { 
+                        name: 'Bikaner', 
+                        stations: ['bikaner'] 
+                    }
                 ]
             },
             'uttar-pradesh': {
                 name: 'Uttar Pradesh',
-                center: [26.8467, 80.9462],
-                zoom: 7,
                 cities: [
-                    { name: 'Lucknow', id: 'lucknow', lat: 26.8467, lon: 80.9462 },
-                    { name: 'Kanpur', id: 'kanpur', lat: 26.4499, lon: 80.3319 },
-                    { name: 'Agra', id: 'agra', lat: 27.1767, lon: 78.0081 },
-                    { name: 'Varanasi', id: 'varanasi', lat: 25.3176, lon: 82.9739 },
-                    { name: 'Noida', id: 'noida', lat: 28.5355, lon: 77.3910 },
-                    { name: 'Ghaziabad', id: 'ghaziabad', lat: 28.6692, lon: 77.4538 },
-                    { name: 'Meerut', id: 'meerut', lat: 28.9845, lon: 77.7064 },
-                    { name: 'Greater Noida', id: 'greater-noida', lat: 28.4744, lon: 77.5040 },
-                    { name: 'Moradabad', id: 'moradabad', lat: 28.8389, lon: 78.7378 },
-                    { name: 'Bareilly', id: 'bareilly', lat: 28.3670, lon: 79.4304 },
-                    { name: 'Prayagraj', id: 'prayagraj', lat: 25.4358, lon: 81.8463 },
-                    { name: 'Gorakhpur', id: 'gorakhpur', lat: 26.7606, lon: 83.3732 },
-                    { name: 'Firozabad', id: 'firozabad', lat: 27.1591, lon: 78.3957 },
-                    { name: 'Jhansi', id: 'jhansi', lat: 25.4484, lon: 78.5685 },
-                    { name: 'Gajraula', id: 'gajraula', lat: 28.8487, lon: 78.2377 },
-                    { name: 'Khurja', id: 'khurja', lat: 28.2515, lon: 77.8565 },
-                    { name: 'Raebareli', id: 'raebareli', lat: 26.2286, lon: 81.2334 },
-                    { name: 'Anpara', id: 'anpara', lat: 24.2000, lon: 82.6500 }
+                    { 
+                        name: 'Lucknow', 
+                        stations: ['lucknow/gomti-nagar', 'lucknow/talkatora', 'lucknow/lalbagh', 'lucknow'] 
+                    },
+                    { 
+                        name: 'Kanpur', 
+                        stations: ['kanpur/nehru-nagar', 'kanpur/kidwai-nagar', 'kanpur'] 
+                    },
+                    { 
+                        name: 'Agra', 
+                        stations: ['agra/sanjay-place', 'agra/sikandra', 'agra'] 
+                    },
+                    { 
+                        name: 'Varanasi', 
+                        stations: ['varanasi/ardhali-bazar', 'varanasi/lanka', 'varanasi'] 
+                    },
+                    { 
+                        name: 'Noida', 
+                        stations: ['noida/sector-1', 'noida/sector-62', 'noida/sector-116', 'noida'] 
+                    },
+                    { 
+                        name: 'Ghaziabad', 
+                        stations: ['ghaziabad/sanjay-nagar', 'ghaziabad/loni', 'ghaziabad/vasundhara', 'ghaziabad'] 
+                    },
+                    { 
+                        name: 'Meerut', 
+                        stations: ['meerut/pallavpuram', 'meerut/jai-bhim-nagar', 'meerut'] 
+                    },
+                    { 
+                        name: 'Greater Noida', 
+                        stations: ['greater-noida/knowledge-park', 'greater-noida'] 
+                    },
+                    { 
+                        name: 'Moradabad', 
+                        stations: ['moradabad/kanth-road', 'moradabad/budh-bazar', 'moradabad'] 
+                    },
+                    { 
+                        name: 'Bareilly', 
+                        stations: ['bareilly'] 
+                    },
+                    { 
+                        name: 'Prayagraj', 
+                        stations: ['prayagraj', 'allahabad'] 
+                    },
+                    { 
+                        name: 'Gorakhpur', 
+                        stations: ['gorakhpur'] 
+                    },
+                    { 
+                        name: 'Firozabad', 
+                        stations: ['firozabad'] 
+                    },
+                    { 
+                        name: 'Jhansi', 
+                        stations: ['jhansi'] 
+                    },
+                    { 
+                        name: 'Gajraula', 
+                        stations: ['gajraula'] 
+                    },
+                    { 
+                        name: 'Khurja', 
+                        stations: ['khurja'] 
+                    },
+                    { 
+                        name: 'Raebareli', 
+                        stations: ['raebareli'] 
+                    },
+                    { 
+                        name: 'Anpara', 
+                        stations: ['anpara'] 
+                    }
                 ]
             },
             'delhi-chandigarh': {
                 name: 'Delhi & Chandigarh',
-                center: [28.7041, 77.1025],
-                zoom: 8,
                 cities: [
-                    { name: 'Delhi', id: 'delhi', lat: 28.7041, lon: 77.1025 },
-                    { name: 'Chandigarh', id: 'chandigarh', lat: 30.7333, lon: 76.7794 }
+                    { 
+                        name: 'Delhi', 
+                        stations: [
+                            'delhi/us-embassy',
+                            'delhi/anand-vihar',
+                            'delhi/aya-nagar',
+                            'delhi/bawana',
+                            'delhi/dwarka',
+                            'delhi/ito',
+                            'delhi/mandir-marg',
+                            'delhi/nehru-nagar',
+                            'delhi/punjabi-bagh',
+                            'delhi/r-k-puram',
+                            'delhi/rohini',
+                            'delhi/shadipur',
+                            'delhi/vivek-vihar',
+                            'delhi'
+                        ] 
+                    },
+                    { 
+                        name: 'Chandigarh', 
+                        stations: ['chandigarh/sector-25', 'chandigarh/sector-53', 'chandigarh'] 
+                    }
                 ]
             }
         };
@@ -529,7 +709,7 @@
         // AQI Color mapping
         function getAQIColor(aqi) {
             if (aqi <= 50) return '#00E400';
-            if (aqi <= 100) return '#FFD700'; // Changed from bright yellow to gold for better visibility
+            if (aqi <= 100) return '#FFD700';
             if (aqi <= 200) return '#FF7E00';
             if (aqi <= 300) return '#FF0000';
             if (aqi <= 400) return '#99004C';
@@ -538,12 +718,12 @@
         
         // Get text color based on AQI (for better contrast)
         function getAQITextColor(aqi) {
-            if (aqi <= 50) return '#006400'; // Dark green for good
-            if (aqi <= 100) return '#8B7500'; // Dark gold for satisfactory
-            if (aqi <= 200) return '#CC6500'; // Dark orange for moderate
-            if (aqi <= 300) return '#CC0000'; // Dark red for poor
-            if (aqi <= 400) return '#99004C'; // Keep same for very poor
-            return '#7E0023'; // Keep same for severe
+            if (aqi <= 50) return '#006400';
+            if (aqi <= 100) return '#8B7500';
+            if (aqi <= 200) return '#CC6500';
+            if (aqi <= 300) return '#CC0000';
+            if (aqi <= 400) return '#99004C';
+            return '#7E0023';
         }
 
         function getAQICategory(aqi) {
@@ -764,7 +944,7 @@
 
         // Update health advisory section
         function updateHealthAdvisory(aqi) {
-            document.getElementById('advisoryAQI').textContent = aqi;
+            document.getElementById('advisoryAQI').textContent = Math.round(aqi);
             document.getElementById('advisoryCategory').textContent = getAQICategory(aqi);
             document.getElementById('advisoryCategory').style.color = getAQITextColor(aqi);
 
@@ -800,81 +980,192 @@
             const citySelect = document.getElementById('citySelect');
             
             citySelect.innerHTML = '';
-            stateData.cities.forEach(city => {
+            stateData.cities.forEach((city, index) => {
                 const option = document.createElement('option');
-                option.value = city.id;
+                option.value = index;
                 option.textContent = city.name;
                 citySelect.appendChild(option);
             });
-
-            document.getElementById('stateNameDisplay').textContent = stateData.name;
         }
 
-        // Fetch air quality data
-        async function fetchAQIData(city) {
+        // Fetch air quality data for a specific station
+        async function fetchStationData(stationId) {
             try {
-                const response = await fetch(`${API_BASE}/feed/${city}/?token=${WAQI_TOKEN}`);
+                const response = await fetch(`${API_BASE}/feed/${stationId}/?token=${WAQI_TOKEN}`);
                 const data = await response.json();
                 
-                if (data.status !== 'ok') {
-                    throw new Error('Failed to fetch data');
+                if (data.status === 'ok' && data.data) {
+                    return {
+                        success: true,
+                        stationId: stationId,
+                        data: data.data
+                    };
+                } else {
+                    return {
+                        success: false,
+                        stationId: stationId,
+                        error: 'No data available'
+                    };
                 }
-                
-                return data.data;
             } catch (error) {
-                console.error('Error fetching AQI data:', error);
-                throw error;
+                return {
+                    success: false,
+                    stationId: stationId,
+                    error: error.message
+                };
             }
         }
 
-        // Fetch multiple cities data
-        async function fetchMultipleCities(cities) {
-            const promises = cities.map(city => 
-                fetchAQIData(city.id).catch(err => ({ ...city, error: true }))
-            );
-            return Promise.all(promises);
+        // Fetch data from all stations in a city
+        async function fetchAllStationsData(stations) {
+            const promises = stations.map(stationId => fetchStationData(stationId));
+            const results = await Promise.all(promises);
+            return results.filter(result => result.success);
         }
 
-        // Update main statistics
-        function updateStatistics(data) {
-            const aqi = data.aqi;
-            const category = getAQICategory(aqi);
-            const color = getAQIColor(aqi);
-            const textColor = getAQITextColor(aqi);
+        // Display individual station cards
+        function displayStationCards(stationsData) {
+            const stationsGrid = document.getElementById('stationsGrid');
+            
+            if (stationsData.length === 0) {
+                stationsGrid.innerHTML = '<div class="no-data">No monitoring station data available for this city</div>';
+                return;
+            }
 
-            document.getElementById('currentAqi').textContent = aqi;
-            document.getElementById('currentAqi').style.color = textColor; // Use darker color for text
+            stationsGrid.innerHTML = '';
+            
+            stationsData.forEach(station => {
+                const data = station.data;
+                const aqi = data.aqi;
+                const category = getAQICategory(aqi);
+                const color = getAQIColor(aqi);
+                const textColor = getAQITextColor(aqi);
+                
+                const stationCard = document.createElement('div');
+                stationCard.className = 'station-card';
+                
+                const iaqi = data.iaqi || {};
+                const stationName = data.city?.name || station.stationId;
+                
+                stationCard.innerHTML = `
+                    <div class="station-header">
+                        <div class="station-name">${stationName}</div>
+                    </div>
+                    <div style="text-align: center; margin: 15px 0;">
+                        <div class="station-aqi-badge" style="background-color: ${color};">${aqi}</div>
+                        <div class="station-category" style="color: ${textColor};">${category}</div>
+                    </div>
+                    <div class="station-pollutants">
+                        <div class="pollutant-item">
+                            <div class="pollutant-label">PM2.5</div>
+                            <div class="pollutant-value">${iaqi.pm25?.v || '--'}</div>
+                        </div>
+                        <div class="pollutant-item">
+                            <div class="pollutant-label">PM10</div>
+                            <div class="pollutant-value">${iaqi.pm10?.v || '--'}</div>
+                        </div>
+                        <div class="pollutant-item">
+                            <div class="pollutant-label">NO2</div>
+                            <div class="pollutant-value">${iaqi.no2?.v || '--'}</div>
+                        </div>
+                        <div class="pollutant-item">
+                            <div class="pollutant-label">SO2</div>
+                            <div class="pollutant-value">${iaqi.so2?.v || '--'}</div>
+                        </div>
+                        <div class="pollutant-item">
+                            <div class="pollutant-label">O3</div>
+                            <div class="pollutant-value">${iaqi.o3?.v || '--'}</div>
+                        </div>
+                        <div class="pollutant-item">
+                            <div class="pollutant-label">CO</div>
+                            <div class="pollutant-value">${iaqi.co?.v || '--'}</div>
+                        </div>
+                    </div>
+                    <div class="station-update">Updated: ${data.time?.s || 'N/A'}</div>
+                `;
+                
+                stationsGrid.appendChild(stationCard);
+            });
+        }
+
+        // Update main statistics with average data
+        function updateStatistics(stationsData) {
+            if (stationsData.length === 0) {
+                document.getElementById('currentAqi').textContent = '--';
+                document.getElementById('aqiCategory').textContent = 'No Data';
+                document.getElementById('stationCount').textContent = 'No stations available';
+                return;
+            }
+
+            const aqiValues = stationsData.map(s => s.data.aqi);
+            const avgAqi = aqiValues.reduce((sum, val) => sum + val, 0) / aqiValues.length;
+            const category = getAQICategory(avgAqi);
+            const color = getAQIColor(avgAqi);
+            const textColor = getAQITextColor(avgAqi);
+
+            document.getElementById('currentAqi').textContent = Math.round(avgAqi);
+            document.getElementById('currentAqi').style.color = textColor;
             document.getElementById('currentAqiBar').style.backgroundColor = color;
+            document.getElementById('stationCount').textContent = `Average from ${stationsData.length} station(s)`;
             
             document.getElementById('aqiCategory').textContent = category;
-            document.getElementById('aqiCategory').style.color = textColor; // Use darker color for text
+            document.getElementById('aqiCategory').style.color = textColor;
             
-            const dominantPollutant = data.dominentpol || 'N/A';
+            // Find worst and best stations
+            const worstStation = stationsData.reduce((max, s) => s.data.aqi > max.data.aqi ? s : max);
+            const bestStation = stationsData.reduce((min, s) => s.data.aqi < min.data.aqi ? s : min);
+            
+            document.getElementById('worstAqi').textContent = worstStation.data.aqi;
+            document.getElementById('worstAqi').style.color = getAQITextColor(worstStation.data.aqi);
+            document.getElementById('worstStation').textContent = worstStation.data.city?.name || worstStation.stationId;
+            
+            document.getElementById('bestAqi').textContent = bestStation.data.aqi;
+            document.getElementById('bestAqi').style.color = getAQITextColor(bestStation.data.aqi);
+            document.getElementById('bestStation').textContent = bestStation.data.city?.name || bestStation.stationId;
+            
+            const dominantPollutant = worstStation.data.dominentpol || 'N/A';
             document.getElementById('dominantPollutant').textContent = 
-                `Dominant: ${dominantPollutant.toUpperCase()}`;
-
-            // Update pollutant values
-            const iaqi = data.iaqi || {};
-            document.getElementById('pm25Value').textContent = iaqi.pm25?.v || '--';
-            document.getElementById('pm10Value').textContent = iaqi.pm10?.v || '--';
+                `Primary pollutant: ${dominantPollutant.toUpperCase()}`;
         }
 
-        // Create pollutants chart
-        function createPollutantsChart(data) {
+        // Create average pollutants chart
+        function createPollutantsChart(stationsData) {
             const ctx = document.getElementById('pollutantsChart');
             
             if (pollutantsChart) {
                 pollutantsChart.destroy();
             }
 
-            const iaqi = data.iaqi || {};
+            if (stationsData.length === 0) return;
+
+            // Calculate average pollutants across all stations
+            const pollutantSums = { pm25: 0, pm10: 0, no2: 0, so2: 0, o3: 0, co: 0 };
+            const pollutantCounts = { pm25: 0, pm10: 0, no2: 0, so2: 0, o3: 0, co: 0 };
+
+            stationsData.forEach(station => {
+                const iaqi = station.data.iaqi || {};
+                Object.keys(pollutantSums).forEach(pollutant => {
+                    if (iaqi[pollutant]?.v) {
+                        pollutantSums[pollutant] += iaqi[pollutant].v;
+                        pollutantCounts[pollutant]++;
+                    }
+                });
+            });
+
+            const avgPollutants = {};
+            Object.keys(pollutantSums).forEach(pollutant => {
+                avgPollutants[pollutant] = pollutantCounts[pollutant] > 0 
+                    ? pollutantSums[pollutant] / pollutantCounts[pollutant] 
+                    : 0;
+            });
+
             const pollutants = {
-                'PM2.5': iaqi.pm25?.v || 0,
-                'PM10': iaqi.pm10?.v || 0,
-                'NO2': iaqi.no2?.v || 0,
-                'SO2': iaqi.so2?.v || 0,
-                'O3': iaqi.o3?.v || 0,
-                'CO': iaqi.co?.v || 0
+                'PM2.5': avgPollutants.pm25,
+                'PM10': avgPollutants.pm10,
+                'NO2': avgPollutants.no2,
+                'SO2': avgPollutants.so2,
+                'O3': avgPollutants.o3,
+                'CO': avgPollutants.co
             };
 
             pollutantsChart = new Chart(ctx, {
@@ -882,7 +1173,7 @@
                 data: {
                     labels: Object.keys(pollutants),
                     datasets: [{
-                        label: 'AQI Value',
+                        label: 'Average AQI Value',
                         data: Object.values(pollutants),
                         backgroundColor: [
                             '#667eea',
@@ -920,37 +1211,32 @@
             });
         }
 
-        // Create trend chart
-        function createTrendChart(data) {
-            const ctx = document.getElementById('trendChart');
+        // Create stations comparison chart
+        function createStationsComparisonChart(stationsData) {
+            const ctx = document.getElementById('stationsComparisonChart');
             
-            if (trendChart) {
-                trendChart.destroy();
+            if (stationsChart) {
+                stationsChart.destroy();
             }
 
-            const hours = [];
-            const aqiValues = [];
-            const currentAqi = data.aqi;
-            
-            // Build from 23 hours ago to now (0 hours ago)
-            for (let i = 23; i >= 0; i--) {
-                hours.push(`${i}h ago`);
-                const variation = (Math.random() - 0.5) * 40;
-                aqiValues.push(Math.max(0, Math.round(currentAqi + variation)));
-            }
+            if (stationsData.length === 0) return;
 
-            trendChart = new Chart(ctx, {
-                type: 'line',
+            const stationNames = stationsData.map(s => {
+                const name = s.data.city?.name || s.stationId;
+                return name.length > 20 ? name.substring(0, 17) + '...' : name;
+            });
+            const aqiValues = stationsData.map(s => s.data.aqi);
+            const colors = aqiValues.map(aqi => getAQIColor(aqi));
+
+            stationsChart = new Chart(ctx, {
+                type: 'bar',
                 data: {
-                    labels: hours,
+                    labels: stationNames,
                     datasets: [{
                         label: 'AQI',
                         data: aqiValues,
-                        borderColor: '#667eea',
-                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
-                        fill: true,
-                        tension: 0.4,
-                        borderWidth: 3
+                        backgroundColor: colors,
+                        borderRadius: 8
                     }]
                 },
                 options: {
@@ -973,7 +1259,8 @@
                                 display: false
                             },
                             ticks: {
-                                maxTicksLimit: 8
+                                maxRotation: 45,
+                                minRotation: 45
                             }
                         }
                     }
@@ -981,67 +1268,36 @@
             });
         }
 
-        // Update cities list
-        async function updateCitiesList() {
-            const selectedState = document.getElementById('stateSelect').value;
-            const stateData = STATES_DATA[selectedState];
-            const citiesList = document.getElementById('citiesList');
-            
-            citiesList.innerHTML = '<div style="text-align: center; padding: 20px;">Loading cities data...</div>';
-
-            const citiesData = await fetchMultipleCities(stateData.cities);
-
-            citiesList.innerHTML = '';
-            
-            citiesData.forEach(data => {
-                if (data.error) {
-                    const cityItem = document.createElement('div');
-                    cityItem.className = 'city-item';
-                    cityItem.innerHTML = `
-                        <div class="city-name">${data.name}</div>
-                        <div class="city-aqi">
-                            <span style="color: #999;">Data unavailable</span>
-                        </div>
-                    `;
-                    citiesList.appendChild(cityItem);
-                    return;
-                }
-
-                const cityItem = document.createElement('div');
-                cityItem.className = 'city-item';
-                
-                const aqi = data.aqi;
-                const category = getAQICategory(aqi);
-                const color = getAQIColor(aqi);
-
-                cityItem.innerHTML = `
-                    <div class="city-name">${data.city.name}</div>
-                    <div class="city-aqi">
-                        <div class="aqi-value" style="background-color: ${color};">${aqi}</div>
-                        <div class="aqi-category">${category}</div>
-                    </div>
-                `;
-                
-                citiesList.appendChild(cityItem);
-            });
-        }
-
         // Main update function
         async function updateDashboard() {
-            const city = document.getElementById('citySelect').value;
+            const selectedState = document.getElementById('stateSelect').value;
+            const cityIndex = parseInt(document.getElementById('citySelect').value);
+            const stateData = STATES_DATA[selectedState];
+            const cityData = stateData.cities[cityIndex];
             
             try {
                 document.getElementById('loadingMessage').style.display = 'block';
                 document.getElementById('mainContent').style.display = 'none';
                 document.getElementById('errorMessage').style.display = 'none';
 
-                const data = await fetchAQIData(city);
+                document.getElementById('cityNameDisplay').textContent = cityData.name;
+
+                // Fetch data from all stations in the city
+                const stationsData = await fetchAllStationsData(cityData.stations);
                 
-                updateStatistics(data);
-                updateHealthAdvisory(data.aqi);
-                createPollutantsChart(data);
-                createTrendChart(data);
-                await updateCitiesList();
+                if (stationsData.length === 0) {
+                    throw new Error('No data available from any monitoring station');
+                }
+
+                // Update all components
+                updateStatistics(stationsData);
+                displayStationCards(stationsData);
+                
+                const avgAqi = stationsData.reduce((sum, s) => sum + s.data.aqi, 0) / stationsData.length;
+                updateHealthAdvisory(avgAqi);
+                
+                createPollutantsChart(stationsData);
+                createStationsComparisonChart(stationsData);
 
                 document.getElementById('lastUpdate').textContent = 
                     `Last updated: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`;
@@ -1053,7 +1309,7 @@
                 document.getElementById('loadingMessage').style.display = 'none';
                 document.getElementById('errorMessage').style.display = 'block';
                 document.getElementById('errorMessage').textContent = 
-                    `Error loading data: ${error.message}. Please try again or select a different city.`;
+                    `Error loading data: ${error.message}. This may occur if stations are offline or API limit reached. Please try again later.`;
             }
         }
 
