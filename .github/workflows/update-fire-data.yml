@@ -1,0 +1,35 @@
+name: Update Fire Count Data
+
+on:
+  schedule:
+    # Run every 6 hours at minute 0
+    - cron: '0 */6 * * *'
+  workflow_dispatch:  # Allow manual triggering from GitHub UI
+
+jobs:
+  process-fire-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        
+    - name: Install dependencies
+      run: |
+        pip install geopandas pandas requests shapely pyproj
+        
+    - name: Run fire data processing script
+      run: python scripts/process_fire_data.py
+      
+    - name: Commit and push updated data
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add data/fire_counts.json data/fire_counts_summary.json
+        git diff --quiet && git diff --staged --quiet || git commit -m "Update fire count data - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+        git push
