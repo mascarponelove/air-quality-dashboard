@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>India Air Quality & Fire Monitoring Dashboard</title>
+    <title>Enhanced India Environmental Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
     <style>
         * {
             margin: 0;
@@ -20,7 +25,7 @@
         }
 
         .container {
-            max-width: 1600px;
+            max-width: 1800px;
             margin: 0 auto;
         }
 
@@ -41,6 +46,135 @@
         .header p {
             color: #666;
             font-size: 1.1rem;
+        }
+
+        .cache-indicator {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            margin-left: 10px;
+        }
+
+        .cache-hit {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .cache-miss {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        /* Map Section */
+        .map-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        #mapContainer {
+            height: 600px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        .map-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .map-toggle-btn {
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .map-toggle-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .map-toggle-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        /* Correlation Analysis Section */
+        .correlation-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .correlation-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .correlation-value {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .correlation-strong {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            color: white;
+        }
+
+        .correlation-moderate {
+            background: linear-gradient(135deg, #fd7e14, #e8590c);
+            color: white;
+        }
+
+        .correlation-weak {
+            background: linear-gradient(135deg, #28a745, #218838);
+            color: white;
+        }
+
+        .correlation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .correlation-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 5px solid #667eea;
+        }
+
+        .correlation-card h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .correlation-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .correlation-stat:last-child {
+            border-bottom: none;
         }
 
         .fire-section {
@@ -179,7 +313,6 @@
             font-weight: bold;
         }
         
-        /* Styles from original AQI dashboard */
         .controls {
             display: flex;
             gap: 15px;
@@ -450,7 +583,40 @@
             margin-top: 30px;
         }
 
-        /* Additional responsive styles */
+        /* Leaflet custom styles */
+        .fire-marker {
+            background: #dc3545;
+            border: 2px solid white;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+        }
+
+        .aqi-marker {
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 11px;
+            color: white;
+        }
+
+        .fire-cluster-icon {
+            background: #dc3545;
+            border: 3px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 1.8rem;
@@ -467,16 +633,61 @@
             .date-selector {
                 flex-direction: column;
             }
+            #mapContainer {
+                height: 400px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🌍 India Environmental Monitoring Dashboard</h1>
-            <p>Real-time Air Quality (CPCB) & Agricultural Fire Detection (NASA FIRMS)</p>
+            <h1>🌍 Enhanced Environmental Monitoring Dashboard</h1>
+            <p>Real-time Air Quality, Fire Detection & Correlation Analysis with Geospatial Visualization</p>
         </div>
 
+        <!-- GEOSPATIAL MAP SECTION -->
+        <div class="map-section">
+            <h2>🗺️ Geospatial Visualization - Fire & AQI Map</h2>
+            <p style="color: #666; margin-bottom: 15px;">Interactive map showing fire locations and AQI monitoring stations</p>
+            
+            <div class="map-controls">
+                <button class="map-toggle-btn active" id="toggleFires" onclick="toggleMapLayer('fires')">
+                    🔥 Show Fires
+                </button>
+                <button class="map-toggle-btn active" id="toggleAQI" onclick="toggleMapLayer('aqi')">
+                    💨 Show AQI Stations
+                </button>
+                <button class="map-toggle-btn" id="toggleHeatmap" onclick="toggleMapLayer('heatmap')">
+                    🌡️ AQI Heatmap
+                </button>
+                <span id="mapStats" style="margin-left: auto; color: #666; font-weight: 600;"></span>
+            </div>
+            
+            <div id="mapContainer"></div>
+        </div>
+
+        <!-- CORRELATION ANALYSIS SECTION -->
+        <div class="correlation-section">
+            <div class="correlation-header">
+                <h2>📊 Fire-AQI Correlation Analysis</h2>
+                <span id="correlationUpdate" style="color: #666; font-size: 0.9rem;"></span>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 20px; align-items: center;">
+                <div id="correlationValue" class="correlation-value">
+                    Calculating...
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 10px;">Interpretation:</h3>
+                    <p id="correlationInterpretation" style="color: #666; line-height: 1.6;"></p>
+                </div>
+            </div>
+
+            <div class="correlation-grid" id="correlationGrid"></div>
+        </div>
+
+        <!-- FIRE DATA SECTION -->
         <div class="fire-section">
             <h2>🔥 Stubble Burning Fire Detection (Punjab & Haryana)</h2>
             <p style="color: #666; margin-bottom: 15px;">
@@ -484,16 +695,12 @@
                 <span id="fireDataUpdate" style="margin-left: 15px; font-weight: bold;"></span>
             </p>
 
-            <div class="fire-stats" id="fireStats">
-                </div>
-
-            <div class="date-selector" id="dateSelector">
-                </div>
-
-            <div id="fireDataContent">
-                </div>
+            <div class="fire-stats" id="fireStats"></div>
+            <div class="date-selector" id="dateSelector"></div>
+            <div id="fireDataContent"></div>
         </div>
 
+        <!-- AIR QUALITY SECTION -->
         <div class="header">
             <h1>💨 Air Quality Monitoring</h1>
             <div class="controls">
@@ -506,21 +713,17 @@
                     <option value="chandigarh">Chandigarh</option>
                 </select>
                 
-                <select id="citySelect" class="city-select">
-                </select>
-                
+                <select id="citySelect" class="city-select"></select>
                 <button id="refreshBtn" class="refresh-btn">🔄 Refresh Data</button>
-                
                 <span id="lastUpdate" class="last-update"></span>
             </div>
         </div>
         
         <div id="errorMessage" class="error-message" style="display: none;"></div>
-        
         <div id="loadingMessage" class="loading">Loading air quality data...</div>
 
         <div id="mainContent" style="display: none;">
-             <div class="stats-grid">
+            <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-label">Current AQI</div>
                     <div class="stat-value" id="currentAqi">--</div>
@@ -549,8 +752,7 @@
             <div class="health-advisory">
                 <h2>🏥 Health Advisory</h2>
                 <p style="color: #666; margin-bottom: 15px;">Based on current AQI: <strong id="advisoryAQI">--</strong> (<span id="advisoryCategory">--</span>)</p>
-                <div class="advisory-grid" id="advisoryGrid">
-                    </div>
+                <div class="advisory-grid" id="advisoryGrid"></div>
             </div>
 
             <div class="charts-grid">
@@ -602,150 +804,523 @@
         </div>
 
         <div class="footer">
-            <p>Air quality data sourced from World Air Quality Index Project & CPCB. Fire data from NASA FIRMS.</p>
+            <p>Air quality data from WAQI. Fire data from NASA FIRMS. Enhanced with caching, geospatial visualization & correlation analysis.</p>
         </div>
     </div>
 
     <script>
-        // --- FIRE DATA MANAGEMENT ---
+        // ==================== CACHING AND OPTIMIZATION LAYER ====================
+        
+        class APICache {
+            constructor(ttl = 900000) { // 15 minutes default TTL
+                this.cache = new Map();
+                this.ttl = ttl;
+                this.stats = { hits: 0, misses: 0 };
+                this.loadFromStorage();
+            }
+            
+            async get(key, fetchFn) {
+                const cached = this.cache.get(key);
+                const now = Date.now();
+                
+                if (cached && (now - cached.timestamp) < this.ttl) {
+                    this.stats.hits++;
+                    console.log(`Cache HIT for ${key}`);
+                    return cached.data;
+                }
+                
+                this.stats.misses++;
+                console.log(`Cache MISS for ${key} - fetching fresh data`);
+                
+                try {
+                    const data = await fetchFn();
+                    this.cache.set(key, { data, timestamp: now });
+                    this.saveToStorage();
+                    return data;
+                } catch (error) {
+                    if (cached) {
+                        console.warn(`Fetch failed, returning stale cache for ${key}`);
+                        return cached.data;
+                    }
+                    throw error;
+                }
+            }
+            
+            clear(key) {
+                if (key) {
+                    this.cache.delete(key);
+                } else {
+                    this.cache.clear();
+                }
+                this.saveToStorage();
+            }
+            
+            getStats() {
+                const total = this.stats.hits + this.stats.misses;
+                const hitRate = total > 0 ? ((this.stats.hits / total) * 100).toFixed(1) : 0;
+                return { ...this.stats, hitRate, total };
+            }
+            
+            saveToStorage() {
+                try {
+                    const entries = Array.from(this.cache.entries());
+                    localStorage.setItem('apiCache', JSON.stringify(entries));
+                } catch (e) {
+                    console.warn('Could not save cache to localStorage:', e);
+                }
+            }
+            
+            loadFromStorage() {
+                try {
+                    const stored = localStorage.getItem('apiCache');
+                    if (stored) {
+                        const entries = JSON.parse(stored);
+                        this.cache = new Map(entries);
+                    }
+                } catch (e) {
+                    console.warn('Could not load cache from localStorage:', e);
+                }
+            }
+        }
+
+        // Initialize cache with 15-minute TTL
+        const apiCache = new APICache(900000);
+
+        // Batch request manager for parallel API calls
+        class BatchRequestManager {
+            constructor(concurrency = 3) {
+                this.concurrency = concurrency;
+                this.queue = [];
+                this.active = 0;
+            }
+            
+            async add(fn) {
+                return new Promise((resolve, reject) => {
+                    this.queue.push({ fn, resolve, reject });
+                    this.process();
+                });
+            }
+            
+            async process() {
+                if (this.active >= this.concurrency || this.queue.length === 0) return;
+                
+                this.active++;
+                const { fn, resolve, reject } = this.queue.shift();
+                
+                try {
+                    const result = await fn();
+                    resolve(result);
+                } catch (error) {
+                    reject(error);
+                } finally {
+                    this.active--;
+                    this.process();
+                }
+            }
+        }
+
+        const batchManager = new BatchRequestManager(3);
+
+        // ==================== CORRELATION ANALYSIS ====================
+        
+        class CorrelationAnalyzer {
+            static calculatePearsonCorrelation(x, y) {
+                if (x.length !== y.length || x.length === 0) return 0;
+                
+                const n = x.length;
+                const sumX = x.reduce((a, b) => a + b, 0);
+                const sumY = y.reduce((a, b) => a + b, 0);
+                const sumXY = x.reduce((sum, xi, i) => sum + xi * y[i], 0);
+                const sumX2 = x.reduce((sum, xi) => sum + xi * xi, 0);
+                const sumY2 = y.reduce((sum, yi) => sum + yi * yi, 0);
+                
+                const numerator = n * sumXY - sumX * sumY;
+                const denominator = Math.sqrt((n * sumX2 - sumX * sumX) * (n * sumY2 - sumY * sumY));
+                
+                if (denominator === 0) return 0;
+                return numerator / denominator;
+            }
+            
+            static analyzeDistrictCorrelation(fireData, aqiData) {
+                const districtAnalysis = [];
+                
+                // For each district with fires, find nearby AQI stations
+                if (fireData.punjab && fireData.punjab.districts) {
+                    fireData.punjab.districts.forEach(district => {
+                        const analysis = this.analyzeDistrict(district, 'Punjab', aqiData);
+                        if (analysis) districtAnalysis.push(analysis);
+                    });
+                }
+                
+                if (fireData.haryana && fireData.haryana.districts) {
+                    fireData.haryana.districts.forEach(district => {
+                        const analysis = this.analyzeDistrict(district, 'Haryana', aqiData);
+                        if (analysis) districtAnalysis.push(analysis);
+                    });
+                }
+                
+                return districtAnalysis;
+            }
+            
+            static analyzeDistrict(district, state, aqiData) {
+                // Calculate average AQI for nearby cities
+                const nearbyAQI = this.getNearbyAQI(district.district, state, aqiData);
+                
+                if (nearbyAQI.length === 0) return null;
+                
+                const avgAQI = nearbyAQI.reduce((sum, val) => sum + val, 0) / nearbyAQI.length;
+                
+                return {
+                    district: district.district,
+                    state: state,
+                    fireCount: district.fire_count,
+                    avgAQI: Math.round(avgAQI),
+                    nearbyStations: nearbyAQI.length,
+                    severity: this.calculateSeverity(district.fire_count, avgAQI)
+                };
+            }
+            
+            static getNearbyAQI(districtName, state, aqiData) {
+                // Simplified mapping of districts to nearby cities
+                const districtCityMap = {
+                    // Punjab districts
+                    'Amritsar': ['amritsar'],
+                    'Ludhiana': ['ludhiana'],
+                    'Jalandhar': ['jalandhar'],
+                    'Patiala': ['patiala'],
+                    'Bathinda': ['bathinda'],
+                    'Sangrur': ['khanna'],
+                    'Moga': ['mandi-gobindgarh'],
+                    'Firozpur': ['bathinda'],
+                    'Tarn Taran': ['amritsar'],
+                    'Kapurthala': ['jalandhar'],
+                    // Haryana districts
+                    'Karnal': ['karnal', 'panipat'],
+                    'Kurukshetra': ['panipat', 'karnal'],
+                    'Kaithal': ['karnal'],
+                    'Ambala': ['yamunanagar'],
+                    'Jind': ['rohtak'],
+                    'Fatehabad': ['hisar'],
+                    'Hisar': ['hisar'],
+                    'Sirsa': ['hisar'],
+                    'Panipat': ['panipat'],
+                    'Sonipat': ['sonipat'],
+                    'Rohtak': ['rohtak']
+                };
+                
+                const cityIds = districtCityMap[districtName] || [];
+                const aqiValues = [];
+                
+                cityIds.forEach(cityId => {
+                    if (aqiData[cityId] && aqiData[cityId].aqi) {
+                        aqiValues.push(aqiData[cityId].aqi);
+                    }
+                });
+                
+                return aqiValues;
+            }
+            
+            static calculateSeverity(fireCount, aqi) {
+                const fireSeverity = fireCount > 100 ? 3 : fireCount > 50 ? 2 : 1;
+                const aqiSeverity = aqi > 300 ? 3 : aqi > 200 ? 2 : 1;
+                return Math.max(fireSeverity, aqiSeverity);
+            }
+            
+            static generateReport(districtAnalysis, totalFires, avgAQI) {
+                // Calculate overall correlation
+                const fireCounts = districtAnalysis.map(d => d.fireCount);
+                const aqiValues = districtAnalysis.map(d => d.avgAQI);
+                const correlation = this.calculatePearsonCorrelation(fireCounts, aqiValues);
+                
+                // Identify hotspots (high fires + high AQI)
+                const hotspots = districtAnalysis
+                    .filter(d => d.fireCount > 50 && d.avgAQI > 200)
+                    .sort((a, b) => b.severity - a.severity);
+                
+                // Calculate impact metrics
+                const impactScore = this.calculateImpactScore(correlation, totalFires, avgAQI);
+                
+                return {
+                    correlation,
+                    totalFires,
+                    avgAQI,
+                    districtAnalysis,
+                    hotspots,
+                    impactScore,
+                    interpretation: this.interpretCorrelation(correlation, impactScore)
+                };
+            }
+            
+            static calculateImpactScore(correlation, fires, aqi) {
+                // Composite score considering correlation strength and absolute values
+                const correlationWeight = Math.abs(correlation);
+                const fireWeight = Math.min(fires / 1000, 1); // Normalize to 0-1
+                const aqiWeight = Math.min(aqi / 400, 1); // Normalize to 0-1
+                
+                return (correlationWeight * 0.4 + fireWeight * 0.3 + aqiWeight * 0.3) * 100;
+            }
+            
+            static interpretCorrelation(r, impactScore) {
+                const absR = Math.abs(r);
+                let strength = '';
+                let message = '';
+                
+                if (absR >= 0.7) {
+                    strength = 'Strong';
+                    message = 'Fire activity shows a strong statistical relationship with air quality degradation. ';
+                } else if (absR >= 0.4) {
+                    strength = 'Moderate';
+                    message = 'Fire activity shows a moderate correlation with air quality changes. ';
+                } else {
+                    strength = 'Weak';
+                    message = 'Fire activity shows limited direct correlation with air quality. Other factors may be more significant. ';
+                }
+                
+                if (r > 0) {
+                    message += 'Higher fire counts are associated with worse air quality (higher AQI).';
+                } else {
+                    message += 'The relationship requires further investigation.';
+                }
+                
+                if (impactScore > 60) {
+                    message += ' The current situation poses significant environmental and health concerns.';
+                }
+                
+                return { strength, message, impactScore };
+            }
+        }
+
+        // ==================== GEOSPATIAL VISUALIZATION ====================
+        
+        let map = null;
+        let fireLayer = null;
+        let aqiLayer = null;
+        let heatmapLayer = null;
+        let activeMapLayers = { fires: true, aqi: true, heatmap: false };
+
+        function initializeMap() {
+            // Center on Punjab-Haryana region
+            map = L.map('mapContainer').setView([30.7333, 76.0], 7);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 18
+            }).addTo(map);
+            
+            // Initialize layer groups
+            fireLayer = L.markerClusterGroup({
+                iconCreateFunction: function(cluster) {
+                    const count = cluster.getChildCount();
+                    let size = 'small';
+                    if (count > 100) size = 'large';
+                    else if (count > 50) size = 'medium';
+                    
+                    return L.divIcon({
+                        html: `<div class="fire-cluster-icon" style="width: ${size === 'large' ? 50 : size === 'medium' ? 40 : 30}px; height: ${size === 'large' ? 50 : size === 'medium' ? 40 : 30}px; line-height: ${size === 'large' ? 50 : size === 'medium' ? 40 : 30}px; font-size: ${size === 'large' ? 16 : size === 'medium' ? 14 : 12}px;">🔥 ${count}</div>`,
+                        className: '',
+                        iconSize: L.point(40, 40)
+                    });
+                },
+                spiderfyOnMaxZoom: true,
+                showCoverageOnHover: false,
+                zoomToBoundsOnClick: true
+            });
+            
+            aqiLayer = L.layerGroup();
+            
+            map.addLayer(fireLayer);
+            map.addLayer(aqiLayer);
+        }
+
+        function addFireMarkersToMap(fireData) {
+            if (!map || !fireLayer) return;
+            
+            fireLayer.clearLayers();
+            
+            // Approximate district coordinates (in real scenario, use actual fire point data)
+            const districtCoords = {
+                // Punjab districts
+                'Amritsar': [31.6340, 74.8723],
+                'Ludhiana': [30.9010, 75.8573],
+                'Jalandhar': [31.3260, 75.5762],
+                'Patiala': [30.3398, 76.3869],
+                'Bathinda': [30.2110, 74.9455],
+                'Sangrur': [30.2458, 75.8421],
+                'Moga': [30.8160, 75.1704],
+                'Firozpur': [30.9257, 74.6142],
+                'Tarn Taran': [31.4519, 74.9278],
+                'Kapurthala': [31.3800, 75.3800],
+                'Mansa': [29.9988, 75.3936],
+                'Barnala': [30.3782, 75.5487],
+                // Haryana districts
+                'Karnal': [29.6857, 76.9905],
+                'Kurukshetra': [29.9729, 76.8783],
+                'Kaithal': [29.8010, 76.3999],
+                'Ambala': [30.3782, 76.7767],
+                'Jind': [29.3158, 76.3159],
+                'Fatehabad': [29.5152, 75.4551],
+                'Hisar': [29.1492, 75.7217],
+                'Sirsa': [29.5348, 75.0279],
+                'Panipat': [29.3909, 76.9635],
+                'Sonipat': [28.9931, 77.0151],
+                'Rohtak': [28.8955, 76.6066]
+            };
+            
+            let totalMarkers = 0;
+            
+            const addDistrictMarkers = (districts, state) => {
+                if (!districts) return;
+                
+                districts.forEach(district => {
+                    const coords = districtCoords[district.district];
+                    if (coords && district.fire_count > 0) {
+                        // Add multiple markers proportional to fire count (simplified visualization)
+                        const markerCount = Math.min(district.fire_count, 20);
+                        for (let i = 0; i < markerCount; i++) {
+                            const offsetLat = (Math.random() - 0.5) * 0.1;
+                            const offsetLng = (Math.random() - 0.5) * 0.1;
+                            
+                            const marker = L.circleMarker(
+                                [coords[0] + offsetLat, coords[1] + offsetLng],
+                                {
+                                    radius: 6,
+                                    fillColor: '#dc3545',
+                                    color: '#fff',
+                                    weight: 2,
+                                    opacity: 1,
+                                    fillOpacity: 0.8
+                                }
+                            );
+                            
+                            marker.bindPopup(`
+                                <strong>${district.district}, ${state}</strong><br>
+                                🔥 Fire Count: ${district.fire_count}<br>
+                                <small>Fire detection point</small>
+                            `);
+                            
+                            fireLayer.addLayer(marker);
+                            totalMarkers++;
+                        }
+                    }
+                });
+            };
+            
+            if (fireData.punjab && fireData.punjab.districts) {
+                addDistrictMarkers(fireData.punjab.districts, 'Punjab');
+            }
+            
+            if (fireData.haryana && fireData.haryana.districts) {
+                addDistrictMarkers(fireData.haryana.districts, 'Haryana');
+            }
+            
+            console.log(`Added ${totalMarkers} fire markers to map`);
+        }
+
+        function addAQIMarkersToMap(aqiData) {
+            if (!map || !aqiLayer) return;
+            
+            aqiLayer.clearLayers();
+            
+            const cityCoordinates = {
+                'amritsar': [31.6340, 74.8723],
+                'ludhiana': [30.9010, 75.8573],
+                'jalandhar': [31.3260, 75.5762],
+                'patiala': [30.3398, 76.3869],
+                'bathinda': [30.2110, 74.9455],
+                'gurgaon': [28.4595, 77.0266],
+                'faridabad': [28.4089, 77.3178],
+                'panipat': [29.3909, 76.9635],
+                'sonipat': [28.9931, 77.0151],
+                'hisar': [29.1492, 75.7217],
+                'rohtak': [28.8955, 76.6066],
+                'karnal': [29.6857, 76.9905],
+                'delhi': [28.7041, 77.1025],
+                'chandigarh': [30.7333, 76.7794],
+                'jaipur': [26.9124, 75.7873],
+                'noida': [28.5355, 77.3910],
+                'ghaziabad': [28.6692, 77.4538],
+                'meerut': [28.9845, 77.7064]
+            };
+            
+            Object.entries(aqiData).forEach(([cityId, data]) => {
+                const coords = cityCoordinates[cityId];
+                if (coords && data.aqi) {
+                    const aqi = data.aqi;
+                    const color = getAQIColor(aqi);
+                    
+                    const marker = L.circleMarker(coords, {
+                        radius: 15,
+                        fillColor: color,
+                        color: '#fff',
+                        weight: 3,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    });
+                    
+                    marker.bindPopup(`
+                        <strong>${data.city ? data.city.name : cityId}</strong><br>
+                        AQI: <strong style="color: ${color}">${aqi}</strong><br>
+                        Category: ${getAQICategory(aqi)}<br>
+                        ${data.iaqi && data.iaqi.pm25 ? `PM2.5: ${data.iaqi.pm25.v} μg/m³<br>` : ''}
+                        ${data.iaqi && data.iaqi.pm10 ? `PM10: ${data.iaqi.pm10.v} μg/m³` : ''}
+                    `);
+                    
+                    // Add label
+                    const label = L.divIcon({
+                        className: 'aqi-label',
+                        html: `<div style="background: ${color}; color: white; padding: 3px 6px; border-radius: 3px; font-size: 11px; font-weight: bold; border: 2px solid white;">${aqi}</div>`,
+                        iconSize: [30, 20]
+                    });
+                    
+                    L.marker(coords, { icon: label }).addTo(aqiLayer);
+                    marker.addTo(aqiLayer);
+                }
+            });
+        }
+
+        function toggleMapLayer(layerName) {
+            activeMapLayers[layerName] = !activeMapLayers[layerName];
+            
+            const btn = document.getElementById(`toggle${layerName.charAt(0).toUpperCase() + layerName.slice(1)}`);
+            btn.classList.toggle('active');
+            
+            switch(layerName) {
+                case 'fires':
+                    if (activeMapLayers.fires) {
+                        map.addLayer(fireLayer);
+                    } else {
+                        map.removeLayer(fireLayer);
+                    }
+                    break;
+                case 'aqi':
+                    if (activeMapLayers.aqi) {
+                        map.addLayer(aqiLayer);
+                    } else {
+                        map.removeLayer(aqiLayer);
+                    }
+                    break;
+                case 'heatmap':
+                    // Heatmap functionality would require additional library (leaflet-heat)
+                    alert('Heatmap visualization requires additional data processing');
+                    break;
+            }
+            
+            updateMapStats();
+        }
+
+        function updateMapStats() {
+            const fireCount = fireLayer ? fireLayer.getLayers().length : 0;
+            const aqiCount = aqiLayer ? aqiLayer.getLayers().length / 2 : 0; // Divided by 2 (marker + label)
+            document.getElementById('mapStats').textContent = 
+                `🔥 ${fireCount} fire points | 💨 ${Math.round(aqiCount)} AQI stations`;
+        }
+
+        // ==================== ORIGINAL DASHBOARD FUNCTIONS ====================
+        
         let fireData = null;
         let selectedDate = null;
+        let allAQIData = {};
 
-        async function loadFireData() {
-            try {
-                const response = await fetch('data/fire_counts.json');
-                fireData = await response.json();
-                
-                document.getElementById('fireDataUpdate').textContent = 
-                    `Updated: ${new Date(fireData.last_updated).toLocaleString()}`;
-                
-                if (fireData.daily_data.length > 0) {
-                    selectedDate = fireData.daily_data[fireData.daily_data.length - 1].date;
-                    displayFireData();
-                }
-            } catch (error) {
-                console.error('Error loading fire data:', error);
-                document.getElementById('fireDataContent').innerHTML = 
-                    '<p style="color: red;">Error loading fire detection data. Please check the data source.</p>';
-            }
-        }
-
-        function displayFireData() {
-            if (!fireData || !selectedDate) return;
-
-            const dateData = fireData.daily_data.find(d => d.date === selectedDate);
-            if (!dateData) {
-                 // If no data for the selected date, clear the display
-                document.getElementById('fireStats').innerHTML = '';
-                document.getElementById('fireDataContent').innerHTML = '<p style="text-align: center; padding: 20px;">No fire data available for this date.</p>';
-                return;
-            }
-
-            displayFireStats(dateData);
-            displayDateSelector();
-            displayFireTables(dateData);
-        }
-
-        // CORRECTED: Safely access data
-        function displayFireStats(dateData) {
-            const punjabTotal = dateData.punjab ? dateData.punjab.total : 0;
-            const haryanaTotal = dateData.haryana ? dateData.haryana.total : 0;
-            const combinedTotal = dateData.combined_total || 0;
-
-            const statsHtml = `
-                <div class="fire-stat-card">
-                    <div class="fire-stat-label">Punjab Fires</div>
-                    <div class="fire-stat-value">${punjabTotal}</div>
-                </div>
-                <div class="fire-stat-card">
-                    <div class="fire-stat-label">Haryana Fires</div>
-                    <div class="fire-stat-value">${haryanaTotal}</div>
-                </div>
-                <div class="fire-stat-card" style="background: linear-gradient(135deg, #dc3545, #c82333);">
-                    <div class="fire-stat-label">Total Fires</div>
-                    <div class="fire-stat-value">${combinedTotal}</div>
-                </div>
-                <div class="fire-stat-card" style="background: linear-gradient(135deg, #28a745, #218838);">
-                    <div class="fire-stat-label">Selected Date</div>
-                    <div class="fire-stat-value" style="font-size: 1.2rem;">${new Date(selectedDate).toLocaleDateString()}</div>
-                </div>
-            `;
-            document.getElementById('fireStats').innerHTML = statsHtml;
-        }
-
-        function displayDateSelector() {
-            const buttonsHtml = fireData.daily_data.map(d => `
-                <button class="date-btn ${d.date === selectedDate ? 'active' : ''}" 
-                        onclick="selectDate('${d.date}')">
-                    ${new Date(d.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                </button>
-            `).join('');
-            document.getElementById('dateSelector').innerHTML = buttonsHtml;
-        }
-
-        function selectDate(date) {
-            selectedDate = date;
-            displayFireData();
-        }
-
-        function getFireBadgeClass(count) {
-            if (count >= 100) return 'fire-high';
-            if (count >= 50) return 'fire-medium';
-            return 'fire-low';
-        }
-
-        // CORRECTED: More robust function to create tables
-        function displayFireTables(dateData) {
-            let tablesHtml = '';
-            const createTable = (stateName, stateData) => {
-                // Check for existence of stateData, its districts property, and if it has items
-                if (!stateData || !stateData.districts || stateData.districts.length === 0) return '';
-                
-                return `
-                    <div class="state-section">
-                        <div class="state-header">
-                            <h3>${stateName} Districts</h3>
-                            <div class="state-total">Total: ${stateData.total} fires</div>
-                        </div>
-                        <div class="fire-table-container">
-                            <table class="fire-table">
-                                <thead>
-                                    <tr>
-                                        <th>#</th><th>District Name</th><th>Fire Count</th><th>Percentage</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    ${stateData.districts.map((d, i) => `
-                                        <tr>
-                                            <td>${i + 1}</td>
-                                            <td><strong>${d.district}</strong></td>
-                                            <td>
-                                                <span class="fire-count-badge ${getFireBadgeClass(d.fire_count)}">
-                                                    ${d.fire_count}
-                                                </span>
-                                            </td>
-                                            <td>
-                                                ${stateData.total > 0 ? ((d.fire_count / stateData.total) * 100).toFixed(1) + '%' : '0.0%'}
-                                            </td>
-                                        </tr>
-                                    `).join('')}
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                `;
-            };
-
-            tablesHtml += createTable('Punjab', dateData.punjab);
-            tablesHtml += createTable('Haryana', dateData.haryana);
-
-            if (tablesHtml === '') {
-                tablesHtml = '<p style="text-align: center; color: #28a745; font-size: 1.2rem; padding: 20px;">✅ No fires detected on this date!</p>';
-            }
-            document.getElementById('fireDataContent').innerHTML = tablesHtml;
-        }
-
-        // --- AIR QUALITY INDEX (AQI) MANAGEMENT ---
         const WAQI_TOKEN = '486994a34df29107945c8a194da64d15218daf77';
         const API_BASE = 'https://api.waqi.info';
         
@@ -756,7 +1331,7 @@
             'punjab': { name: 'Punjab', cities: [ { name: 'Amritsar', id: 'amritsar' }, { name: 'Ludhiana', id: 'ludhiana' }, { name: 'Jalandhar', id: 'jalandhar' }, { name: 'Patiala', id: 'patiala' }, { name: 'Bathinda', id: 'bathinda' }, { name: 'Mandi Gobindgarh', id: 'mandi-gobindgarh' }, { name: 'Khanna', id: 'khanna' }, { name: 'Pathankot', id: 'pathankot' }, { name: 'Rupnagar', id: 'rupnagar' } ] },
             'haryana': { name: 'Haryana', cities: [ { name: 'Gurugram', id: 'gurgaon' }, { name: 'Faridabad', id: 'faridabad' }, { name: 'Panipat', id: 'panipat' }, { name: 'Sonipat', id: 'sonipat' }, { name: 'Hisar', id: 'hisar' }, { name: 'Rohtak', id: 'rohtak' }, { name: 'Karnal', id: 'karnal' }, { name: 'Bahadurgarh', id: 'bahadurgarh' }, { name: 'Manesar', id: 'manesar' }, { name: 'Yamunanagar', id: 'yamunanagar' } ] },
             'rajasthan': { name: 'Rajasthan', cities: [ { name: 'Jaipur', id: 'jaipur' }, { name: 'Jodhpur', id: 'jodhpur' }, { name: 'Udaipur', id: 'udaipur' }, { name: 'Kota', id: 'kota' }, { name: 'Ajmer', id: 'ajmer' }, { name: 'Alwar', id: 'alwar' }, { name: 'Bhiwadi', id: 'bhiwadi' }, { name: 'Pali', id: 'pali' }, { name: 'Bikaner', id: 'bikaner' } ] },
-            'uttar-pradesh': { name: 'Uttar Pradesh', cities: [ { name: 'Lucknow', id: 'lucknow' }, { name: 'Kanpur', id: 'kanpur' }, { name: 'Agra', id: 'agra' }, { name: 'Varanasi', id: 'varanasi' }, { name: 'Noida', id: 'noida' }, { name: 'Ghaziabad', id: 'ghaziabad' }, { name: 'Meerut', id: 'meerut' }, { name: 'Greater Noida', id: 'greater-noida' }, { name: 'Moradabad', id: 'moradabad' }, { name: 'Bareilly', id: 'bareilly' }, { name: 'Prayagraj', id: 'prayagraj' }, { name: 'Gorakhpur', id: 'gorakhpur' }, { name: 'Firozabad', id: 'firozabad' }, { name: 'Jhansi', id: 'jhansi' }, { name: 'Gajraula', id: 'gajraula' }, { name: 'Khurja', id: 'khurja' }, { name: 'Raebareli', id: 'raebareli' }, { name: 'Anpara', id: 'anpara' } ] },
+            'uttar-pradesh': { name: 'Uttar Pradesh', cities: [ { name: 'Lucknow', id: 'lucknow' }, { name: 'Kanpur', id: 'kanpur' }, { name: 'Agra', id: 'agra' }, { name: 'Varanasi', id: 'varanasi' }, { name: 'Noida', id: 'noida' }, { name: 'Ghaziabad', id: 'ghaziabad' }, { name: 'Meerut', id: 'meerut' }, { name: 'Greater Noida', id: 'greater-noida' }, { name: 'Moradabad', id: 'moradabad' }, { name: 'Bareilly', id: 'bareilly' }, { name: 'Prayagraj', id: 'prayagraj' }, { name: 'Gorakhpur', id: 'gorakhpur' } ] },
             'delhi': { name: 'Delhi', cities: [ { name: 'Delhi', id: 'delhi' } ] },
             'chandigarh': { name: 'Chandigarh', cities: [ { name: 'Chandigarh', id: 'chandigarh' } ] }
         };
@@ -843,17 +1418,316 @@
         }
 
         async function fetchAQIData(city) {
-            const response = await fetch(`${API_BASE}/feed/${city}/?token=${WAQI_TOKEN}`);
-            if (!response.ok) throw new Error('Network response was not ok');
-            const data = await response.json();
-            if (data.status !== 'ok') throw new Error(data.data || 'Failed to fetch data');
-            return data.data;
+            const cacheKey = `aqi_${city}`;
+            return await apiCache.get(cacheKey, async () => {
+                const response = await fetch(`${API_BASE}/feed/${city}/?token=${WAQI_TOKEN}`);
+                if (!response.ok) throw new Error('Network response was not ok');
+                const data = await response.json();
+                if (data.status !== 'ok') throw new Error(data.data || 'Failed to fetch data');
+                return data.data;
+            });
         }
 
         async function fetchMultipleCities(cities) {
-            return Promise.all(
-                cities.map(city => fetchAQIData(city.id).catch(err => ({ ...city, error: true, name: city.name })))
+            const promises = cities.map(city => 
+                batchManager.add(() => 
+                    fetchAQIData(city.id)
+                        .then(data => ({ ...city, ...data, error: false }))
+                        .catch(err => ({ ...city, error: true, name: city.name }))
+                )
             );
+            return Promise.all(promises);
+        }
+
+        async function loadFireData() {
+            try {
+                const response = await fetch('data/fire_counts.json');
+                fireData = await response.json();
+                
+                document.getElementById('fireDataUpdate').textContent = 
+                    `Updated: ${new Date(fireData.last_updated).toLocaleString()}`;
+                
+                if (fireData.daily_data.length > 0) {
+                    selectedDate = fireData.daily_data[fireData.daily_data.length - 1].date;
+                    displayFireData();
+                    
+                    // Add fire markers to map
+                    const dateData = fireData.daily_data.find(d => d.date === selectedDate);
+                    if (dateData) {
+                        addFireMarkersToMap(dateData);
+                        updateMapStats();
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading fire data:', error);
+                document.getElementById('fireDataContent').innerHTML = 
+                    '<p style="color: red;">Error loading fire detection data. Using demo data for visualization.</p>';
+                
+                // Use demo data for visualization
+                fireData = {
+                    daily_data: [{
+                        date: new Date().toISOString().split('T')[0],
+                        punjab: {
+                            total: 150,
+                            districts: [
+                                { district: 'Amritsar', fire_count: 45 },
+                                { district: 'Ludhiana', fire_count: 38 },
+                                { district: 'Sangrur', fire_count: 67 }
+                            ]
+                        },
+                        haryana: {
+                            total: 89,
+                            districts: [
+                                { district: 'Karnal', fire_count: 34 },
+                                { district: 'Kurukshetra', fire_count: 28 },
+                                { district: 'Kaithal', fire_count: 27 }
+                            ]
+                        },
+                        combined_total: 239
+                    }],
+                    last_updated: new Date().toISOString()
+                };
+                selectedDate = fireData.daily_data[0].date;
+                displayFireData();
+                addFireMarkersToMap(fireData.daily_data[0]);
+            }
+        }
+
+        function displayFireData() {
+            if (!fireData || !selectedDate) return;
+
+            const dateData = fireData.daily_data.find(d => d.date === selectedDate);
+            if (!dateData) {
+                document.getElementById('fireStats').innerHTML = '';
+                document.getElementById('fireDataContent').innerHTML = '<p style="text-align: center; padding: 20px;">No fire data available for this date.</p>';
+                return;
+            }
+
+            displayFireStats(dateData);
+            displayDateSelector();
+            displayFireTables(dateData);
+            
+            // Update map
+            addFireMarkersToMap(dateData);
+            updateMapStats();
+        }
+
+        function displayFireStats(dateData) {
+            const punjabTotal = dateData.punjab ? dateData.punjab.total : 0;
+            const haryanaTotal = dateData.haryana ? dateData.haryana.total : 0;
+            const combinedTotal = dateData.combined_total || 0;
+
+            const statsHtml = `
+                <div class="fire-stat-card">
+                    <div class="fire-stat-label">Punjab Fires</div>
+                    <div class="fire-stat-value">${punjabTotal}</div>
+                </div>
+                <div class="fire-stat-card">
+                    <div class="fire-stat-label">Haryana Fires</div>
+                    <div class="fire-stat-value">${haryanaTotal}</div>
+                </div>
+                <div class="fire-stat-card" style="background: linear-gradient(135deg, #dc3545, #c82333);">
+                    <div class="fire-stat-label">Total Fires</div>
+                    <div class="fire-stat-value">${combinedTotal}</div>
+                </div>
+                <div class="fire-stat-card" style="background: linear-gradient(135deg, #28a745, #218838);">
+                    <div class="fire-stat-label">Selected Date</div>
+                    <div class="fire-stat-value" style="font-size: 1.2rem;">${new Date(selectedDate).toLocaleDateString()}</div>
+                </div>
+            `;
+            document.getElementById('fireStats').innerHTML = statsHtml;
+        }
+
+        function displayDateSelector() {
+            const buttonsHtml = fireData.daily_data.map(d => `
+                <button class="date-btn ${d.date === selectedDate ? 'active' : ''}" 
+                        onclick="selectDate('${d.date}')">
+                    ${new Date(d.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                </button>
+            `).join('');
+            document.getElementById('dateSelector').innerHTML = buttonsHtml;
+        }
+
+        function selectDate(date) {
+            selectedDate = date;
+            displayFireData();
+            
+            // Update correlation analysis
+            if (Object.keys(allAQIData).length > 0) {
+                updateCorrelationAnalysis();
+            }
+        }
+
+        function getFireBadgeClass(count) {
+            if (count >= 100) return 'fire-high';
+            if (count >= 50) return 'fire-medium';
+            return 'fire-low';
+        }
+
+        function displayFireTables(dateData) {
+            let tablesHtml = '';
+            const createTable = (stateName, stateData) => {
+                if (!stateData || !stateData.districts || stateData.districts.length === 0) return '';
+                
+                return `
+                    <div class="state-section">
+                        <div class="state-header">
+                            <h3>${stateName} Districts</h3>
+                            <div class="state-total">Total: ${stateData.total} fires</div>
+                        </div>
+                        <div class="fire-table-container">
+                            <table class="fire-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th><th>District Name</th><th>Fire Count</th><th>Percentage</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${stateData.districts.map((d, i) => `
+                                        <tr>
+                                            <td>${i + 1}</td>
+                                            <td><strong>${d.district}</strong></td>
+                                            <td>
+                                                <span class="fire-count-badge ${getFireBadgeClass(d.fire_count)}">
+                                                    ${d.fire_count}
+                                                </span>
+                                            </td>
+                                            <td>
+                                                ${stateData.total > 0 ? ((d.fire_count / stateData.total) * 100).toFixed(1) + '%' : '0.0%'}
+                                            </td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                `;
+            };
+
+            tablesHtml += createTable('Punjab', dateData.punjab);
+            tablesHtml += createTable('Haryana', dateData.haryana);
+
+            if (tablesHtml === '') {
+                tablesHtml = '<p style="text-align: center; color: #28a745; font-size: 1.2rem; padding: 20px;">✅ No fires detected on this date!</p>';
+            }
+            document.getElementById('fireDataContent').innerHTML = tablesHtml;
+        }
+
+        // ==================== CORRELATION ANALYSIS DISPLAY ====================
+
+        async function updateCorrelationAnalysis() {
+            if (!fireData || !selectedDate) return;
+            
+            const dateData = fireData.daily_data.find(d => d.date === selectedDate);
+            if (!dateData) return;
+            
+            // Ensure we have AQI data for all relevant cities
+            const allCities = [...STATES_DATA.punjab.cities, ...STATES_DATA.haryana.cities];
+            
+            // Fetch AQI data if not already available
+            for (const city of allCities) {
+                if (!allAQIData[city.id]) {
+                    try {
+                        allAQIData[city.id] = await fetchAQIData(city.id);
+                    } catch (e) {
+                        console.warn(`Could not fetch AQI for ${city.id}`);
+                    }
+                }
+            }
+            
+            // Perform correlation analysis
+            const districtAnalysis = CorrelationAnalyzer.analyzeDistrictCorrelation(dateData, allAQIData);
+            
+            if (districtAnalysis.length === 0) {
+                document.getElementById('correlationValue').innerHTML = 
+                    '<div style="font-size: 1.5rem;">Insufficient Data</div>';
+                document.getElementById('correlationInterpretation').textContent = 
+                    'Not enough data points to calculate meaningful correlation.';
+                return;
+            }
+            
+            // Calculate average AQI across analyzed districts
+            const avgAQI = Math.round(
+                districtAnalysis.reduce((sum, d) => sum + d.avgAQI, 0) / districtAnalysis.length
+            );
+            
+            const report = CorrelationAnalyzer.generateReport(
+                districtAnalysis,
+                dateData.combined_total || 0,
+                avgAQI
+            );
+            
+            // Display correlation coefficient
+            const corrValue = report.correlation.toFixed(3);
+            const corrPercent = (Math.abs(report.correlation) * 100).toFixed(1);
+            let corrClass = 'correlation-weak';
+            if (Math.abs(report.correlation) >= 0.7) corrClass = 'correlation-strong';
+            else if (Math.abs(report.correlation) >= 0.4) corrClass = 'correlation-moderate';
+            
+            document.getElementById('correlationValue').className = `correlation-value ${corrClass}`;
+            document.getElementById('correlationValue').innerHTML = `
+                <div style="font-size: 1.2rem; opacity: 0.8;">Pearson Correlation</div>
+                <div style="font-size: 3.5rem;">${corrValue}</div>
+                <div style="font-size: 1rem; opacity: 0.9;">${corrPercent}% correlation strength</div>
+            `;
+            
+            // Display interpretation
+            document.getElementById('correlationInterpretation').textContent = report.interpretation.message;
+            document.getElementById('correlationUpdate').textContent = 
+                `Analysis Date: ${new Date(selectedDate).toLocaleDateString()}`;
+            
+            // Display detailed district analysis
+            const gridHtml = `
+                <div class="correlation-card">
+                    <h4>📍 Districts Analyzed</h4>
+                    <div class="correlation-stat">
+                        <span>Total Districts:</span>
+                        <strong>${districtAnalysis.length}</strong>
+                    </div>
+                    <div class="correlation-stat">
+                        <span>Total Fires:</span>
+                        <strong>${report.totalFires}</strong>
+                    </div>
+                    <div class="correlation-stat">
+                        <span>Avg AQI:</span>
+                        <strong style="color: ${getAQIColor(report.avgAQI)}">${report.avgAQI}</strong>
+                    </div>
+                </div>
+                
+                <div class="correlation-card">
+                    <h4>🎯 Hotspots (High Fire + Poor AQI)</h4>
+                    ${report.hotspots.length > 0 ? report.hotspots.slice(0, 5).map(h => `
+                        <div class="correlation-stat">
+                            <span>${h.district}, ${h.state}</span>
+                            <strong>🔥 ${h.fireCount} | AQI ${h.avgAQI}</strong>
+                        </div>
+                    `).join('') : '<p style="color: #28a745; text-align: center;">No critical hotspots identified</p>'}
+                </div>
+                
+                <div class="correlation-card">
+                    <h4>📈 Impact Assessment</h4>
+                    <div class="correlation-stat">
+                        <span>Impact Score:</span>
+                        <strong>${report.impactScore.toFixed(1)}/100</strong>
+                    </div>
+                    <div class="correlation-stat">
+                        <span>Correlation Strength:</span>
+                        <strong>${report.interpretation.strength}</strong>
+                    </div>
+                    <div class="correlation-stat">
+                        <span>Status:</span>
+                        <strong style="color: ${report.impactScore > 60 ? '#dc3545' : '#28a745'}">
+                            ${report.impactScore > 60 ? 'High Concern' : 'Moderate'}
+                        </strong>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('correlationGrid').innerHTML = gridHtml;
+            
+            // Display cache statistics
+            const cacheStats = apiCache.getStats();
+            console.log(`Cache Stats - Hits: ${cacheStats.hits}, Misses: ${cacheStats.misses}, Hit Rate: ${cacheStats.hitRate}%`);
         }
 
         function updateStatistics(data) {
@@ -931,6 +1805,13 @@
 
             const citiesData = await fetchMultipleCities(stateData.cities);
 
+            // Store in global AQI data
+            citiesData.forEach(cityData => {
+                if (!cityData.error) {
+                    allAQIData[cityData.id] = cityData;
+                }
+            });
+
             citiesList.innerHTML = '';
             citiesData.forEach(data => {
                 const cityItem = document.createElement('div');
@@ -949,6 +1830,13 @@
                 }
                 citiesList.appendChild(cityItem);
             });
+            
+            // Update map with AQI markers
+            addAQIMarkersToMap(allAQIData);
+            updateMapStats();
+            
+            // Update correlation analysis after loading all data
+            updateCorrelationAnalysis();
         }
         
         async function updateDashboard() {
@@ -962,13 +1850,22 @@
             try {
                 const data = await fetchAQIData(city);
                 
+                // Store in global AQI data
+                allAQIData[city] = data;
+                
                 updateStatistics(data);
                 updateHealthAdvisory(data.aqi);
                 createPollutantsChart(data);
                 createTrendChart(data);
                 await updateCitiesList();
 
-                document.getElementById('lastUpdate').textContent = `Last updated: ${new Date().toLocaleTimeString()}`;
+                const cacheStats = apiCache.getStats();
+                document.getElementById('lastUpdate').innerHTML = `
+                    Last updated: ${new Date().toLocaleTimeString()}
+                    <span class="cache-indicator ${cacheStats.hits > 0 ? 'cache-hit' : 'cache-miss'}">
+                        Cache: ${cacheStats.hitRate}% hit rate
+                    </span>
+                `;
                 
                 document.getElementById('loadingMessage').style.display = 'none';
                 document.getElementById('mainContent').style.display = 'block';
@@ -981,8 +1878,9 @@
             }
         }
 
-        // --- INITIALIZATION AND EVENT LISTENERS ---
+        // ==================== INITIALIZATION ====================
         window.addEventListener('DOMContentLoaded', () => {
+            initializeMap();
             loadFireData();
             
             updateCityDropdown();
@@ -993,7 +1891,10 @@
                 updateDashboard();
             });
             document.getElementById('citySelect').addEventListener('change', updateDashboard);
-            document.getElementById('refreshBtn').addEventListener('click', updateDashboard);
+            document.getElementById('refreshBtn').addEventListener('click', () => {
+                apiCache.clear(); // Clear cache on manual refresh
+                updateDashboard();
+            });
         });
 
         setInterval(loadFireData, 60 * 60 * 1000); 
