@@ -613,7 +613,7 @@
 
         async function loadFireData() {
             try {
-                const response = await fetch('https://raw.githubusercontent.com/guneet-gill/waqi-dashboard/main/data/fire_counts.json');
+                const response = await fetch('data/fire_counts.json');
                 fireData = await response.json();
                 
                 document.getElementById('fireDataUpdate').textContent = 
