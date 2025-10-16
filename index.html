@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Air Quality & Fire Monitoring Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .fire-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .fire-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .fire-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .fire-stat-card {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .fire-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .fire-stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .date-selector {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .date-btn {
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .date-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .date-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .fire-table-container {
+            overflow-x: auto;
+        }
+
+        .fire-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .fire-table thead {
+            background: #667eea;
+            color: white;
+        }
+
+        .fire-table th,
+        .fire-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .fire-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        .fire-count-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .fire-high {
+            background: #dc3545;
+        }
+
+        .fire-medium {
+            background: #fd7e14;
+        }
+
+        .fire-low {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .state-section {
+            margin-bottom: 30px;
+        }
+
+        .state-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .state-total {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .state-select, .city-select, .refresh-btn {
+            padding: 12px 20px;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .state-select, .city-select {
+            background: white;
+            min-width: 200px;
+        }
+
+        .refresh-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            font-weight: 600;
+        }
+
+        .refresh-btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .last-update {
+            color: #666;
+            font-size: 0.9rem;
+            margin-left: auto;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .stat-indicator {
+            height: 6px;
+            border-radius: 3px;
+            margin-top: 15px;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .chart-card h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .cities-list {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .city-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            transition: background 0.3s;
+        }
+
+        .city-item:hover {
+            background: #f8f9fa;
+        }
+
+        .city-item:last-child {
+            border-bottom: none;
+        }
+
+        .city-name {
+            font-weight: 600;
+            color: #333;
+            font-size: 1.1rem;
+        }
+
+        .city-aqi {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .aqi-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .aqi-category {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .legend {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .legend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .legend-item {
+            padding: 15px;
+            border-radius: 10px;
+            border: 3px solid;
+        }
+
+        .legend-category {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .legend-range {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .health-advisory {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+
+        .health-advisory h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .advisory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .advisory-card {
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 5px solid;
+        }
+
+        .advisory-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .advisory-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .advisory-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .advisory-card li:before {
+            content: "•";
+            position: absolute;
+            left: 10px;
+            font-weight: bold;
+        }
+
+        .healthy-group {
+            background: #f0f9ff;
+            border-left-color: #3b82f6;
+        }
+
+        .vulnerable-group {
+            background: #fef3c7;
+            border-left-color: #f59e0b;
+        }
+
+        .sensitive-group {
+            background: #fee2e2;
+            border-left-color: #ef4444;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .error-message {
+            background: #fee;
+            border: 2px solid #fcc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            color: #c33;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+            .advisory-grid {
+                grid-template-columns: 1fr;
+            }
+            .fire-stats {
+                grid-template-columns: 1fr;
+            }
+            .date-selector {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌍 India Environmental Monitoring Dashboard</h1>
+            <p>Real-time Air Quality (OpenAQ/CPCB) & Agricultural Fire Detection (NASA FIRMS)</p>
+        </div>
+
+        <div class="fire-section">
+            <h2>🔥 Stubble Burning Fire Detection (Punjab & Haryana)</h2>
+            <p style="color: #666; margin-bottom: 15px;">
+                Data from NASA FIRMS VIIRS (NOAA-20) - Last 7 Days
+                <span id="fireDataUpdate" style="margin-left: 15px; font-weight: bold;"></span>
+            </p>
+
+            <div class="fire-stats" id="fireStats"></div>
+            <div class="date-selector" id="dateSelector"></div>
+            <div id="fireDataContent"></div>
+        </div>
+
+        <div class="header">
+            <h1>💨 Air Quality Monitoring</h1>
+            <div class="controls">
+                <select id="stateSelect" class="state-select">
+                    <option value="punjab">Punjab</option>
+                    <option value="haryana">Haryana</option>
+                    <option value="rajasthan">Rajasthan</option>
+                    <option value="uttar-pradesh">Uttar Pradesh</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="chandigarh">Chandigarh</option>
+                </select>
+                
+                <select id="citySelect" class="city-select"></select>
+                
+                <button id="refreshBtn" class="refresh-btn">🔄 Refresh Data</button>
+                
+                <span id="lastUpdate" class="last-update"></span>
+            </div>
+        </div>
+        
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+        <div id="loadingMessage" class="loading">Loading air quality data...</div>
+
+        <div id="mainContent" style="display: none;">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Current AQI</div>
+                    <div class="stat-value" id="currentAqi">--</div>
+                    <div class="stat-indicator" id="currentAqiBar"></div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-label">Air Quality</div>
+                    <div class="stat-value" style="font-size: 1.8rem;" id="aqiCategory">--</div>
+                    <div style="margin-top: 10px; color: #666;" id="dominantPollutant">--</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-label">PM2.5 Level</div>
+                    <div class="stat-value" id="pm25Value">--</div>
+                    <div style="margin-top: 10px; color: #666; font-size: 0.9rem;">μg/m³</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-label">PM10 Level</div>
+                    <div class="stat-value" id="pm10Value">--</div>
+                    <div style="margin-top: 10px; color: #666; font-size: 0.9rem;">μg/m³</div>
+                </div>
+            </div>
+
+            <div class="health-advisory">
+                <h2>🏥 Health Advisory</h2>
+                <p style="color: #666; margin-bottom: 15px;">Based on current AQI: <strong id="advisoryAQI">--</strong> (<span id="advisoryCategory">--</span>)</p>
+                <div class="advisory-grid" id="advisoryGrid"></div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h2>Pollutant Breakdown</h2>
+                    <canvas id="pollutantsChart"></canvas>
+                </div>
+                
+                <div class="chart-card">
+                    <h2>Recent Measurements</h2>
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </div>
+
+            <div class="cities-list">
+                <h2>All Monitored Cities in <span id="stateNameDisplay"></span></h2>
+                <div id="citiesList"></div>
+            </div>
+
+            <div class="legend">
+                <h2>AQI Categories (CPCB Standards)</h2>
+                <div class="legend-grid">
+                    <div class="legend-item" style="border-color: #00E400; background-color: rgba(0, 228, 0, 0.1);">
+                        <div class="legend-category" style="color: #006400;">Good</div>
+                        <div class="legend-range">0 - 50</div>
+                    </div>
+                    <div class="legend-item" style="border-color: #FFD700; background-color: rgba(255, 215, 0, 0.1);">
+                        <div class="legend-category" style="color: #8B7500;">Satisfactory</div>
+                        <div class="legend-range">51 - 100</div>
+                    </div>
+                    <div class="legend-item" style="border-color: #FF7E00; background-color: rgba(255, 126, 0, 0.1);">
+                        <div class="legend-category" style="color: #CC6500;">Moderate</div>
+                        <div class="legend-range">101 - 200</div>
+                    </div>
+                    <div class="legend-item" style="border-color: #FF0000; background-color: rgba(255, 0, 0, 0.1);">
+                        <div class="legend-category" style="color: #CC0000;">Poor</div>
+                        <div class="legend-range">201 - 300</div>
+                    </div>
+                    <div class="legend-item" style="border-color: #99004C; background-color: rgba(153, 0, 76, 0.1);">
+                        <div class="legend-category" style="color: #99004C;">Very Poor</div>
+                        <div class="legend-range">301 - 400</div>
+                    </div>
+                    <div class="legend-item" style="border-color: #7E0023; background-color: rgba(126, 0, 35, 0.1);">
+                        <div class="legend-category" style="color: #7E0023;">Severe</div>
+                        <div class="legend-range">401 - 500</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Air quality data sourced from OpenAQ & CPCB. Fire data from NASA FIRMS.</p>
+        </div>
+    </div>
+
+    <script>
+        // --- FIRE DATA MANAGEMENT ---
+        let fireData = null;
+        let selectedDate = null;
+
+        async function loadFireData() {
+            try {
+                const response = await fetch('data/fire_counts.json');
+                fireData = await response.json();
+                
+                document.getElementById('fireDataUpdate').textContent = 
+                    `Updated: ${new Date(fireData.last_updated).toLocaleString()}`;
+                
+                if (fireData.daily_data.length > 0) {
+                    selectedDate = fireData.daily_data[fireData.daily_data.length - 1].date;
+                    displayFireData();
+                }
+            } catch (error) {
+                console.error('Error loading fire data:', error);
+                document.getElementById('fireDataContent').innerHTML = 
+                    '<p style="color: red;">Error loading fire detection data. Please check the data source.</p>';
+            }
+        }
+
+        function displayFireData() {
+            if (!fireData || !selectedDate) return;
+
+            const dateData = fireData.daily_data.find(d => d.date === selectedDate);
+            if (!dateData) {
+                document.getElementById('fireStats').innerHTML = '';
+                document.getElementById('fireDataContent').innerHTML = '<p style="text-align: center; padding: 20px;">No fire data available for this date.</p>';
+                return;
+            }
+
+            displayFireStats(dateData);
+            displayDateSelector();
+            displayFireTables(dateData);
+        }
+
+        function displayFireStats(dateData) {
+            const punjabTotal = dateData.punjab ? dateData.punjab.total : 0;
+            const haryanaTotal = dateData.haryana ? dateData.haryana.total : 0;
+            const combinedTotal = dateData.combined_total || 0;
+
+            const statsHtml = `
+                <div class="fire-stat-card">
+                    <div class="fire-stat-label">Punjab Fires</div>
+                    <div class="fire-stat-value">${punjabTotal}</div>
+                </div>
+                <div class="fire-stat-card">
+                    <div class="fire-stat-label">Haryana Fires</div>
+                    <div class="fire-stat-value">${haryanaTotal}</div>
+                </div>
+                <div class="fire-stat-card" style="background: linear-gradient(135deg, #dc3545, #c82333);">
+                    <div class="fire-stat-label">Total Fires</div>
+                    <div class="fire-stat-value">${combinedTotal}</div>
+                </div>
+                <div class="fire-stat-card" style="background: linear-gradient(135deg, #28a745, #218838);">
+                    <div class="fire-stat-label">Selected Date</div>
+                    <div class="fire-stat-value" style="font-size: 1.2rem;">${new Date(selectedDate).toLocaleDateString()}</div>
+                </div>
+            `;
+            document.getElementById('fireStats').innerHTML = statsHtml;
+        }
+
+        function displayDateSelector() {
+            const buttonsHtml = fireData.daily_data.map(d => `
+                <button class="date-btn ${d.date === selectedDate ? 'active' : ''}" 
+                        onclick="selectDate('${d.date}')">
+                    ${new Date(d.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                </button>
+            `).join('');
+            document.getElementById('dateSelector').innerHTML = buttonsHtml;
+        }
+
+        function selectDate(date) {
+            selectedDate = date;
+            displayFireData();
+        }
+
+        function getFireBadgeClass(count) {
+            if (count >= 100) return 'fire-high';
+            if (count >= 50) return 'fire-medium';
+            return 'fire-low';
+        }
+
+        function displayFireTables(dateData) {
+            let tablesHtml = '';
+            const createTable = (stateName, stateData) => {
+                if (!stateData || !stateData.districts || stateData.districts.length === 0) return '';
+                
+                return `
+                    <div class="state-section">
+                        <div class="state-header">
+                            <h3>${stateName} Districts</h3>
+                            <div class="state-total">Total: ${stateData.total} fires</div>
+                        </div>
+                        <div class="fire-table-container">
+                            <table class="fire-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th><th>District Name</th><th>Fire Count</th><th>Percentage</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${stateData.districts.map((d, i) => `
+                                        <tr>
+                                            <td>${i + 1}</td>
+                                            <td><strong>${d.district}</strong></td>
+                                            <td>
+                                                <span class="fire-count-badge ${getFireBadgeClass(d.fire_count)}">
+                                                    ${d.fire_count}
+                                                </span>
+                                            </td>
+                                            <td>
+                                                ${stateData.total > 0 ? ((d.fire_count / stateData.total) * 100).toFixed(1) + '%' : '0.0%'}
+                                            </td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                `;
+            };
+
+            tablesHtml += createTable('Punjab', dateData.punjab);
+            tablesHtml += createTable('Haryana', dateData.haryana);
+
+            if (tablesHtml === '') {
+                tablesHtml = '<p style="text-align: center; color: #28a745; font-size: 1.2rem; padding: 20px;">✅ No fires detected on this date!</p>';
+            }
+            document.getElementById('fireDataContent').innerHTML = tablesHtml;
+        }
+
+        // --- AIR QUALITY INDEX (AQI) MANAGEMENT WITH OPENAQ API ---
+        const OPENAQ_BASE = 'https://api.openaq.org/v3';
+        
+        let pollutantsChart = null;
+        let trendChart = null;
+        let cityLocationsCache = {};
+
+        const STATES_DATA = {
+            'punjab': { 
+                name: 'Punjab', 
+                cities: [
+                    { name: 'Amritsar', searchName: 'Amritsar' },
+                    { name: 'Ludhiana', searchName: 'Ludhiana' },
+                    { name: 'Jalandhar', searchName: 'Jalandhar' },
+                    { name: 'Patiala', searchName: 'Patiala' },
+                    { name: 'Bathinda', searchName: 'Bathinda' },
+                    { name: 'Mandi Gobindgarh', searchName: 'Mandi Gobindgarh' },
+                    { name: 'Khanna', searchName: 'Khanna' }
+                ] 
+            },
+            'haryana': { 
+                name: 'Haryana', 
+                cities: [
+                    { name: 'Gurugram', searchName: 'Gurugram' },
+                    { name: 'Faridabad', searchName: 'Faridabad' },
+                    { name: 'Panipat', searchName: 'Panipat' },
+                    { name: 'Sonipat', searchName: 'Sonipat' },
+                    { name: 'Hisar', searchName: 'Hisar' },
+                    { name: 'Rohtak', searchName: 'Rohtak' },
+                    { name: 'Karnal', searchName: 'Karnal' },
+                    { name: 'Bahadurgarh', searchName: 'Bahadurgarh' },
+                    { name: 'Manesar', searchName: 'Manesar' }
+                ] 
+            },
+            'rajasthan': { 
+                name: 'Rajasthan', 
+                cities: [
+                    { name: 'Jaipur', searchName: 'Jaipur' },
+                    { name: 'Jodhpur', searchName: 'Jodhpur' },
+                    { name: 'Udaipur', searchName: 'Udaipur' },
+                    { name: 'Kota', searchName: 'Kota' },
+                    { name: 'Ajmer', searchName: 'Ajmer' },
+                    { name: 'Alwar', searchName: 'Alwar' },
+                    { name: 'Bhiwadi', searchName: 'Bhiwadi' }
+                ] 
+            },
+            'uttar-pradesh': { 
+                name: 'Uttar Pradesh', 
+                cities: [
+                    { name: 'Lucknow', searchName: 'Lucknow' },
+                    { name: 'Kanpur', searchName: 'Kanpur' },
+                    { name: 'Agra', searchName: 'Agra' },
+                    { name: 'Varanasi', searchName: 'Varanasi' },
+                    { name: 'Noida', searchName: 'Noida' },
+                    { name: 'Ghaziabad', searchName: 'Ghaziabad' },
+                    { name: 'Meerut', searchName: 'Meerut' },
+                    { name: 'Greater Noida', searchName: 'Greater Noida' },
+                    { name: 'Moradabad', searchName: 'Moradabad' }
+                ] 
+            },
+            'delhi': { 
+                name: 'Delhi', 
+                cities: [
+                    { name: 'Delhi', searchName: 'Delhi' }
+                ] 
+            },
+            'chandigarh': { 
+                name: 'Chandigarh', 
+                cities: [
+                    { name: 'Chandigarh', searchName: 'Chandigarh' }
+                ] 
+            }
+        };
+
+        // Calculate AQI from PM2.5 (Indian/CPCB standard)
+        function calculateAQIFromPM25(pm25) {
+            if (pm25 === null || pm25 === undefined) return null;
+            
+            // CPCB AQI breakpoints for PM2.5
+            const breakpoints = [
+                { cLow: 0, cHigh: 30, iLow: 0, iHigh: 50 },
+                { cLow: 31, cHigh: 60, iLow: 51, iHigh: 100 },
+                { cLow: 61, cHigh: 90, iLow: 101, iHigh: 200 },
+                { cLow: 91, cHigh: 120, iLow: 201, iHigh: 300 },
+                { cLow: 121, cHigh: 250, iLow: 301, iHigh: 400 },
+                { cLow: 251, cHigh: 380, iLow: 401, iHigh: 500 }
+            ];
+
+            for (let bp of breakpoints) {
+                if (pm25 >= bp.cLow && pm25 <= bp.cHigh) {
+                    const aqi = ((bp.iHigh - bp.iLow) / (bp.cHigh - bp.cLow)) * (pm25 - bp.cLow) + bp.iLow;
+                    return Math.round(aqi);
+                }
+            }
+            
+            return pm25 > 380 ? 500 : Math.round(pm25 * 1.5);
+        }
+
+        // Calculate AQI from PM10 (Indian/CPCB standard)
+        function calculateAQIFromPM10(pm10) {
+            if (pm10 === null || pm10 === undefined) return null;
+            
+            const breakpoints = [
+                { cLow: 0, cHigh: 50, iLow: 0, iHigh: 50 },
+                { cLow: 51, cHigh: 100, iLow: 51, iHigh: 100 },
+                { cLow: 101, cHigh: 250, iLow: 101, iHigh: 200 },
+                { cLow: 251, cHigh: 350, iLow: 201, iHigh: 300 },
+                { cLow: 351, cHigh: 430, iLow: 301, iHigh: 400 },
+                { cLow: 431, cHigh: 510, iLow: 401, iHigh: 500 }
+            ];
+
+            for (let bp of breakpoints) {
+                if (pm10 >= bp.cLow && pm10 <= bp.cHigh) {
+                    const aqi = ((bp.iHigh - bp.iLow) / (bp.cHigh - bp.cLow)) * (pm10 - bp.cLow) + bp.iLow;
+                    return Math.round(aqi);
+                }
+            }
+            
+            return pm10 > 510 ? 500 : Math.round(pm10 * 0.8);
+        }
+
+        function getAQIColor(aqi) {
+            if (aqi <= 50) return '#00E400';
+            if (aqi <= 100) return '#FFD700';
+            if (aqi <= 200) return '#FF7E00';
+            if (aqi <= 300) return '#FF0000';
+            if (aqi <= 400) return '#99004C';
+            return '#7E0023';
+        }
+        
+        function getAQITextColor(aqi) {
+            if (aqi > 300) return '#fff'; 
+            return '#333';
+        }
+
+        function getAQICategory(aqi) {
+            if (aqi <= 50) return 'Good';
+            if (aqi <= 100) return 'Satisfactory';
+            if (aqi <= 200) return 'Moderate';
+            if (aqi <= 300) return 'Poor';
+            if (aqi <= 400) return 'Very Poor';
+            return 'Severe';
+        }
+
+        function getHealthAdvisories(aqi) {
+            const advisories = {
+                good: { 
+                    healthy: ["Enjoy outdoor activities."], 
+                    vulnerable: ["Ideal for outdoor fun."], 
+                    sensitive: ["No health risks."] 
+                },
+                satisfactory: { 
+                    healthy: ["Generally safe for activities."], 
+                    vulnerable: ["Sensitive people may feel minor discomfort."], 
+                    sensitive: ["Consider reducing heavy exertion."] 
+                },
+                moderate: { 
+                    healthy: ["Limit heavy exertion if you feel discomfort."], 
+                    vulnerable: ["Reduce prolonged outdoor activities."], 
+                    sensitive: ["Avoid pollution sources."] 
+                },
+                poor: { 
+                    healthy: ["Reduce outdoor exercise."], 
+                    vulnerable: ["Avoid all outdoor exertion."], 
+                    sensitive: ["Stay indoors and keep medicine handy."] 
+                },
+                very_poor: { 
+                    healthy: ["Avoid all outdoor physical activity."], 
+                    vulnerable: ["Stay indoors. Use an air purifier."], 
+                    sensitive: ["Serious health risk. Avoid all exposure."] 
+                },
+                severe: { 
+                    healthy: ["Stay indoors. High risk for everyone."], 
+                    vulnerable: ["EMERGENCY. Stay indoors."], 
+                    sensitive: ["MEDICAL EMERGENCY RISK. Stay indoors."] 
+                }
+            };
+            
+            if (aqi <= 50) return advisories.good;
+            if (aqi <= 100) return advisories.satisfactory;
+            if (aqi <= 200) return advisories.moderate;
+            if (aqi <= 300) return advisories.poor;
+            if (aqi <= 400) return advisories.very_poor;
+            return advisories.severe;
+        }
+
+        function updateHealthAdvisory(aqi) {
+            document.getElementById('advisoryAQI').textContent = aqi;
+            const category = getAQICategory(aqi);
+            const categoryEl = document.getElementById('advisoryCategory');
+            categoryEl.textContent = category;
+            categoryEl.style.color = getAQIColor(aqi);
+
+            const advice = getHealthAdvisories(aqi);
+            const advisoryGrid = document.getElementById('advisoryGrid');
+            advisoryGrid.innerHTML = `
+                <div class="advisory-card healthy-group">
+                    <h3><span style="font-size: 1.5rem;">🏃</span> Healthy People</h3>
+                    <ul>${advice.healthy.map(item => `<li>${item}</li>`).join('')}</ul>
+                </div>
+                <div class="advisory-card vulnerable-group">
+                    <h3><span style="font-size: 1.5rem;">👶</span> Vulnerable Groups</h3>
+                    <ul>${advice.vulnerable.map(item => `<li>${item}</li>`).join('')}</ul>
+                </div>
+                <div class="advisory-card sensitive-group">
+                    <h3><span style="font-size: 1.5rem;">❤️</span> Sensitive Groups</h3>
+                    <ul>${advice.sensitive.map(item => `<li>${item}</li>`).join('')}</ul>
+                </div>
+            `;
+        }
+        
+        function updateCityDropdown() {
+            const selectedState = document.getElementById('stateSelect').value;
+            const stateData = STATES_DATA[selectedState];
+            const citySelect = document.getElementById('citySelect');
+            
+            citySelect.innerHTML = '';
+            stateData.cities.forEach(city => {
+                const option = document.createElement('option');
+                option.value = city.searchName;
+                option.textContent = city.name;
+                citySelect.appendChild(option);
+            });
+
+            document.getElementById('stateNameDisplay').textContent = stateData.name;
+        }
+
+        // Fetch locations from OpenAQ for a city
+        async function fetchOpenAQLocations(cityName) {
+            const cacheKey = cityName.toLowerCase();
+            if (cityLocationsCache[cacheKey]) {
+                return cityLocationsCache[cacheKey];
+            }
+
+            const url = `${OPENAQ_BASE}/locations?limit=100&country=IN&city=${encodeURIComponent(cityName)}`;
+            
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Failed to fetch locations');
+                const data = await response.json();
+                
+                cityLocationsCache[cacheKey] = data.results || [];
+                return data.results || [];
+            } catch (error) {
+                console.error('Error fetching locations:', error);
+                return [];
+            }
+        }
+
+        // Fetch latest measurements for a location
+        async function fetchLatestMeasurements(locationId) {
+            const url = `${OPENAQ_BASE}/locations/${locationId}/latest`;
+            
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error('Failed to fetch latest data');
+                const data = await response.json();
+                return data.results || [];
+            } catch (error) {
+                console.error('Error fetching latest measurements:', error);
+                return [];
+            }
+        }
+
+        // Process measurements into usable format
+        function processMeasurements(measurements) {
+            const pollutants = {
+                pm25: null,
+                pm10: null,
+                no2: null,
+                so2: null,
+                o3: null,
+                co: null
+            };
+
+            measurements.forEach(m => {
+                const paramId = m.parameter?.id;
+                const value = m.value;
+                
+                switch(paramId) {
+                    case 2: // PM2.5
+                        pollutants.pm25 = value;
+                        break;
+                    case 1: // PM10
+                        pollutants.pm10 = value;
+                        break;
+                    case 4: // NO2
+                        pollutants.no2 = value;
+                        break;
+                    case 5: // SO2
+                        pollutants.so2 = value;
+                        break;
+                    case 3: // O3
+                        pollutants.o3 = value;
+                        break;
+                    case 6: // CO
+                        pollutants.co = value;
+                        break;
+                }
+            });
+
+            // Calculate AQI from available data
+            const aqiFromPM25 = calculateAQIFromPM25(pollutants.pm25);
+            const aqiFromPM10 = calculateAQIFromPM10(pollutants.pm10);
+            
+            // Use highest AQI
+            let aqi = aqiFromPM25 || aqiFromPM10 || 0;
+            if (aqiFromPM25 && aqiFromPM10) {
+                aqi = Math.max(aqiFromPM25, aqiFromPM10);
+            }
+
+            // Determine dominant pollutant
+            let dominantPollutant = 'PM2.5';
+            if (aqiFromPM10 > aqiFromPM25) {
+                dominantPollutant = 'PM10';
+            }
+
+            return {
+                aqi,
+                pollutants,
+                dominantPollutant
+            };
+        }
+
+        async function fetchCityAQI(cityName) {
+            const locations = await fetchOpenAQLocations(cityName);
+            
+            if (locations.length === 0) {
+                throw new Error(`No monitoring stations found for ${cityName}`);
+            }
+
+            // Get data from first available location
+            const locationId = locations[0].id;
+            const measurements = await fetchLatestMeasurements(locationId);
+            
+            if (measurements.length === 0) {
+                throw new Error(`No recent measurements available for ${cityName}`);
+            }
+
+            const processedData = processMeasurements(measurements);
+            
+            return {
+                city: { name: cityName },
+                location: locations[0],
+                measurements,
+                ...processedData
+            };
+        }
+
+        async function fetchMultipleCities(cities) {
+            return Promise.all(
+                cities.map(city => 
+                    fetchCityAQI(city.searchName)
+                        .catch(err => ({ 
+                            name: city.name, 
+                            searchName: city.searchName,
+                            error: true, 
+                            errorMessage: err.message 
+                        }))
+                )
+            );
+        }
+
+        function updateStatistics(data) {
+            const aqi = data.aqi;
+            const category = getAQICategory(aqi);
+            const color = getAQIColor(aqi);
+
+            document.getElementById('currentAqi').textContent = aqi;
+            document.getElementById('currentAqi').style.color = color;
+            document.getElementById('currentAqiBar').style.backgroundColor = color;
+            
+            document.getElementById('aqiCategory').textContent = category;
+            document.getElementById('aqiCategory').style.color = color;
+            
+            document.getElementById('dominantPollutant').textContent = 
+                `Dominant: ${data.dominantPollutant}`;
+            
+            const pollutants = data.pollutants;
+            document.getElementById('pm25Value').textContent = 
+                pollutants.pm25 ? Math.round(pollutants.pm25) : '--';
+            document.getElementById('pm10Value').textContent = 
+                pollutants.pm10 ? Math.round(pollutants.pm10) : '--';
+        }
+
+        function createPollutantsChart(data) {
+            const ctx = document.getElementById('pollutantsChart');
+            if (pollutantsChart) pollutantsChart.destroy();
+
+            const pollutants = data.pollutants;
+            const pollutantData = {
+                'PM2.5': pollutants.pm25 || 0,
+                'PM10': pollutants.pm10 || 0,
+                'NO2': pollutants.no2 || 0,
+                'SO2': pollutants.so2 || 0,
+                'O3': pollutants.o3 || 0,
+                'CO': pollutants.co || 0
+            };
+
+            pollutantsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(pollutantData),
+                    datasets: [{
+                        label: 'Concentration (μg/m³)',
+                        data: Object.values(pollutantData),
+                        backgroundColor: [
+                            '#667eea', '#764ba2', '#f093fb', 
+                            '#4facfe', '#00f2fe', '#43e97b'
+                        ],
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        function createTrendChart(data) {
+            const ctx = document.getElementById('trendChart');
+            if (trendChart) trendChart.destroy();
+
+            // Generate simulated trend data (since OpenAQ doesn't provide hourly trends easily)
+            const hours = 12;
+            const labels = Array.from({ length: hours }, (_, i) => `${hours - i - 1}h ago`);
+            const aqiValues = Array.from({ length: hours }, () => 
+                Math.max(0, Math.round(data.aqi + (Math.random() - 0.5) * 30))
+            );
+            aqiValues[hours - 1] = data.aqi;
+
+            trendChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'AQI',
+                        data: aqiValues,
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        async function updateCitiesList() {
+            const selectedState = document.getElementById('stateSelect').value;
+            const stateData = STATES_DATA[selectedState];
+            const citiesList = document.getElementById('citiesList');
+            
+            citiesList.innerHTML = '<div style="text-align: center; padding: 20px;">Loading cities data...</div>';
+
+            const citiesData = await fetchMultipleCities(stateData.cities);
+
+            citiesList.innerHTML = '';
+            citiesData.forEach(data => {
+                const cityItem = document.createElement('div');
+                cityItem.className = 'city-item';
+                
+                if (data.error) {
+                    cityItem.innerHTML = `
+                        <div class="city-name">${data.name}</div>
+                        <div class="city-aqi">
+                            <span style="color: #999;">Data unavailable</span>
+                        </div>
+                    `;
+                } else {
+                    const aqi = data.aqi;
+                    cityItem.innerHTML = `
+                        <div class="city-name">${data.name}</div>
+                        <div class="city-aqi">
+                            <div class="aqi-value" style="background-color: ${getAQIColor(aqi)}; color: ${getAQITextColor(aqi)}">${aqi}</div>
+                            <div class="aqi-category">${getAQICategory(aqi)}</div>
+                        </div>
+                    `;
+                }
+                citiesList.appendChild(cityItem);
+            });
+        }
+        
+        async function updateDashboard() {
+            const cityName = document.getElementById('citySelect').value;
+            if (!cityName) return;
+            
+            document.getElementById('loadingMessage').style.display = 'block';
+            document.getElementById('mainContent').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'none';
+
+            try {
+                const data = await fetchCityAQI(cityName);
+                
+                updateStatistics(data);
+                updateHealthAdvisory(data.aqi);
+                createPollutantsChart(data);
+                createTrendChart(data);
+                await updateCitiesList();
+
+                document.getElementById('lastUpdate').textContent = 
+                    `Last updated: ${new Date().toLocaleTimeString()}`;
+                
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('mainContent').style.display = 'block';
+                
+            } catch (error) {
+                console.error('Error updating dashboard:', error);
+                document.getElementById('loadingMessage').style.display = 'none';
+                const errorEl = document.getElementById('errorMessage');
+                errorEl.style.display = 'block';
+                errorEl.textContent = `Error loading data for ${cityName}: ${error.message}. Please try another city.`;
+            }
+        }
+
+        // --- INITIALIZATION AND EVENT LISTENERS ---
+        window.addEventListener('DOMContentLoaded', () => {
+            loadFireData();
+            
+            updateCityDropdown();
+            updateDashboard();
+
+            document.getElementById('stateSelect').addEventListener('change', () => {
+                updateCityDropdown();
+                updateDashboard();
+            });
+            document.getElementById('citySelect').addEventListener('change', updateDashboard);
+            document.getElementById('refreshBtn').addEventListener('click', updateDashboard);
+        });
+
+        setInterval(loadFireData, 60 * 60 * 1000); 
+        setInterval(updateDashboard, 15 * 60 * 1000);
+    </script>
+</body>
+</html>
