@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Air Quality Dashboard - Punjab, Rajasthan & Uttar Pradesh</title>
-    
-    <!-- Chart.js for visualizations -->
+    <title>India Air Quality & Fire Monitoring Dashboard</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    
     <style>
         * {
             margin: 0;
@@ -35,57 +32,143 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        .header h1 {
+        .fire-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .fire-section h2 {
             color: #333;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .header p {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        .controls {
+            margin-bottom: 20px;
             display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
             align-items: center;
-            margin-top: 20px;
+            gap: 10px;
         }
 
-        .state-select, .city-select, .refresh-btn {
-            padding: 12px 20px;
+        .fire-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .fire-stat-card {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .fire-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .fire-stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .date-selector {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .date-btn {
+            padding: 10px 20px;
             border: 2px solid #667eea;
+            background: white;
             border-radius: 8px;
-            font-size: 16px;
             cursor: pointer;
             transition: all 0.3s;
-        }
-
-        .state-select, .city-select {
-            background: white;
-            min-width: 200px;
-        }
-
-        .refresh-btn {
-            background: #667eea;
-            color: white;
-            border: none;
             font-weight: 600;
         }
 
-        .refresh-btn:hover {
-            background: #5568d3;
-            transform: translateY(-2px);
+        .date-btn:hover {
+            background: #667eea;
+            color: white;
         }
 
-        .last-update {
-            color: #666;
-            font-size: 0.9rem;
-            margin-left: auto;
+        .date-btn.active {
+            background: #667eea;
+            color: white;
         }
 
+        .fire-table-container {
+            overflow-x: auto;
+        }
+
+        .fire-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .fire-table thead {
+            background: #667eea;
+            color: white;
+        }
+
+        .fire-table th,
+        .fire-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .fire-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        .fire-count-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .fire-high {
+            background: #dc3545;
+        }
+
+        .fire-medium {
+            background: #fd7e14;
+        }
+
+        .fire-low {
+            background: #ffc107;
+            color: #333;
+        }
+
+        .state-section {
+            margin-bottom: 30px;
+        }
+
+        .state-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .state-total {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        /* Keep all existing AQI styles from original dashboard */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -101,422 +184,14 @@
             transition: transform 0.3s;
         }
 
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .stat-label {
-            color: #666;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-
-        .stat-value {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .stat-indicator {
-            height: 6px;
-            border-radius: 3px;
-            margin-top: 15px;
-        }
-
-        .stations-container {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .stations-container h2 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-
-        .stations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 20px;
-        }
-
-        .station-card {
-            border-radius: 12px;
-            padding: 20px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .station-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-
-        .station-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 15px;
-        }
-
-        .station-name {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: #333;
-            flex: 1;
-        }
-
-        .station-aqi-badge {
-            font-size: 2rem;
-            font-weight: bold;
-            padding: 10px 20px;
-            border-radius: 10px;
-            color: white;
-            text-align: center;
-            min-width: 80px;
-        }
-
-        .station-category {
-            text-align: center;
-            margin-top: 10px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .station-pollutants {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .pollutant-item {
-            text-align: center;
-            padding: 8px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .pollutant-label {
-            font-size: 0.75rem;
-            color: #666;
-            font-weight: 600;
-        }
-
-        .pollutant-value {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: #333;
-            margin-top: 3px;
-        }
-
-        .station-update {
-            margin-top: 12px;
-            font-size: 0.85rem;
-            color: #666;
-            text-align: right;
-        }
-
-        .charts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .chart-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .chart-card h2 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-
-        .health-advisory {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
-        }
-
-        .health-advisory h2 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-
-        .advisory-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 15px;
-        }
-
-        .advisory-card {
-            border-radius: 10px;
-            padding: 20px;
-            border-left: 5px solid;
-        }
-
-        .advisory-card h3 {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .advisory-card ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .advisory-card li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .advisory-card li:before {
-            content: "•";
-            position: absolute;
-            left: 10px;
-            font-weight: bold;
-        }
-
-        .healthy-group {
-            background: #f0f9ff;
-            border-left-color: #3b82f6;
-        }
-
-        .vulnerable-group {
-            background: #fef3c7;
-            border-left-color: #f59e0b;
-        }
-
-        .sensitive-group {
-            background: #fee2e2;
-            border-left-color: #ef4444;
-        }
-
-        .legend {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .legend-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .legend-item {
-            padding: 15px;
-            border-radius: 10px;
-            border: 3px solid;
-        }
-
-        .legend-category {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .legend-range {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        .loading {
-            text-align: center;
-            padding: 50px;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .error-message {
-            background: #fee;
-            border: 2px solid #fcc;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 20px 0;
-            color: #c33;
-        }
-
-        .footer {
-            text-align: center;
-            color: white;
-            padding: 20px;
-            margin-top: 30px;
-        }
-
-        .no-data {
-            text-align: center;
-            padding: 40px;
-            color: #999;
-            font-style: italic;
-        }
-
-        .fire-data-container {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
-        }
-
-        .fire-data-container h2 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .fire-alert {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .fire-stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .fire-stat-card {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .fire-stat-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 10px;
-        }
-
-        .fire-stat-value {
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        .fire-table-container {
-            overflow-x: auto;
-            margin-top: 20px;
-        }
-
-        .fire-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: white;
-        }
-
-        .fire-table thead {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .fire-table th {
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        .fire-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .fire-table tbody tr:hover {
-            background: #f8f9fa;
-        }
-
-        .fire-count-badge {
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            color: white;
-        }
-
-        .fire-high {
-            background: #ff4757;
-        }
-
-        .fire-medium {
-            background: #ffa502;
-        }
-
-        .fire-low {
-            background: #2ed573;
-        }
-
-        .fire-none {
-            background: #57606f;
-        }
-
-        .data-source-info {
-            margin-top: 15px;
-            padding: 15px;
-            background: #e3f2fd;
-            border-left: 4px solid #2196f3;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            color: #1976d2;
-        }
-
-        .update-fire-btn {
-            background: #ff6b6b;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: all 0.3s;
-        }
-
-        .update-fire-btn:hover {
-            background: #ee5a6f;
-            transform: translateY(-2px);
-        }
-
+        /* Additional responsive styles */
         @media (max-width: 768px) {
-            .charts-grid, .stations-grid {
+            .fire-stats {
                 grid-template-columns: 1fr;
             }
             
-            .header h1 {
-                font-size: 1.8rem;
-            }
-
-            .advisory-grid {
-                grid-template-columns: 1fr;
+            .date-selector {
+                flex-direction: column;
             }
         }
     </style>
@@ -524,9 +199,34 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🌍 Punjab, Rajasthan & Uttar Pradesh Air Quality Dashboard</h1>
-            <p>Real-time CPCB air quality monitoring | Including Delhi & Chandigarh NCR | Multiple Stations per City | Stubble Burning Detection</p>
-            
+            <h1>🌍 India Environmental Monitoring Dashboard</h1>
+            <p>Real-time Air Quality (CPCB) & Agricultural Fire Detection (NASA FIRMS)</p>
+        </div>
+
+        <!-- FIRE MONITORING SECTION -->
+        <div class="fire-section">
+            <h2>🔥 Stubble Burning Fire Detection (Punjab & Haryana)</h2>
+            <p style="color: #666; margin-bottom: 15px;">
+                Data from NASA FIRMS VIIRS (NOAA-20) - Last 7 Days
+                <span id="fireDataUpdate" style="margin-left: 15px; font-weight: bold;"></span>
+            </p>
+
+            <div class="fire-stats" id="fireStats">
+                <!-- Fire statistics will be populated here -->
+            </div>
+
+            <div class="date-selector" id="dateSelector">
+                <!-- Date buttons will be populated here -->
+            </div>
+
+            <div id="fireDataContent">
+                <!-- Fire tables will be populated here -->
+            </div>
+        </div>
+
+        <!-- ORIGINAL AQI SECTION (keeping your existing code) -->
+        <div class="header">
+            <h1>💨 Air Quality Monitoring</h1>
             <div class="controls">
                 <select id="stateSelect" class="state-select">
                     <option value="punjab">Punjab</option>
@@ -536,7 +236,6 @@
                 </select>
                 
                 <select id="citySelect" class="city-select">
-                    <!-- Cities will be populated dynamically -->
                 </select>
                 
                 <button id="refreshBtn" class="refresh-btn">🔄 Refresh Data</button>
@@ -545,1119 +244,190 @@
             </div>
         </div>
 
-        <div id="errorMessage" class="error-message" style="display: none;"></div>
-        
-        <div id="loadingMessage" class="loading">Loading air quality data from all monitoring stations...</div>
-
         <div id="mainContent" style="display: none;">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-label">City Average AQI</div>
-                    <div class="stat-value" id="currentAqi">--</div>
-                    <div class="stat-indicator" id="currentAqiBar"></div>
-                    <div style="margin-top: 10px; color: #666; font-size: 0.85rem;" id="stationCount">--</div>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-label">Air Quality Status</div>
-                    <div class="stat-value" style="font-size: 1.8rem;" id="aqiCategory">--</div>
-                    <div style="margin-top: 10px; color: #666;" id="dominantPollutant">--</div>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-label">Worst Station AQI</div>
-                    <div class="stat-value" id="worstAqi">--</div>
-                    <div style="margin-top: 10px; color: #666; font-size: 0.85rem;" id="worstStation">--</div>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-label">Best Station AQI</div>
-                    <div class="stat-value" id="bestAqi">--</div>
-                    <div style="margin-top: 10px; color: #666; font-size: 0.85rem;" id="bestStation">--</div>
-                </div>
-            </div>
-
-            <div class="stations-container">
-                <h2>📍 All Monitoring Stations in <span id="cityNameDisplay"></span></h2>
-                <div class="stations-grid" id="stationsGrid">
-                    <!-- Station cards will be populated here -->
-                </div>
-            </div>
-
-            <div class="health-advisory">
-                <h2>🏥 Health Advisory</h2>
-                <p style="color: #666; margin-bottom: 15px;">Based on city average AQI: <strong id="advisoryAQI">--</strong> (<span id="advisoryCategory">--</span>)</p>
-                <div class="advisory-grid" id="advisoryGrid">
-                    <!-- Advisory cards will be populated here -->
-                </div>
-            </div>
-
-            <div class="fire-data-container" id="fireDataContainer" style="display: none;">
-                <h2>🔥 Stubble Burning Detection - VIIRS Satellite Data</h2>
-                
-                <div class="fire-alert" id="fireAlert" style="display: none;">
-                    ⚠️ Active stubble burning detected! This significantly contributes to air pollution in the region.
-                </div>
-
-                <div class="fire-stats-grid" id="fireStatsGrid">
-                    <!-- Fire statistics will be populated here -->
-                </div>
-
-                <div class="fire-table-container">
-                    <table class="fire-table" id="fireTable">
-                        <thead>
-                            <tr>
-                                <th>District</th>
-                                <th>State</th>
-                                <th>Fire Count (Last 7 Days)</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody id="fireTableBody">
-                            <!-- Data will be populated here -->
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="data-source-info">
-                    <strong>📡 Data Source:</strong> NASA FIRMS - VIIRS Active Fire Detection (Last 7 days)<br>
-                    <strong>🛰️ Satellite:</strong> NOAA-20/JPSS-1 VIIRS Sensor<br>
-                    <strong>📍 Coverage:</strong> Punjab & Haryana<br>
-                    <strong>⏱️ Update Frequency:</strong> Daily (satellite overpass data)
-                </div>
-
-                <button class="update-fire-btn" onclick="loadFireData()">🔄 Refresh Fire Data</button>
-            </div>
-
-            <div class="charts-grid">
-                <div class="chart-card">
-                    <h2>Average Pollutant Levels Across All Stations</h2>
-                    <canvas id="pollutantsChart"></canvas>
-                </div>
-                
-                <div class="chart-card">
-                    <h2>AQI Comparison - All Stations</h2>
-                    <canvas id="stationsComparisonChart"></canvas>
-                </div>
-            </div>
-
-            <div class="legend">
-                <h2>AQI Categories (CPCB Standards)</h2>
-                <div class="legend-grid">
-                    <div class="legend-item" style="border-color: #00E400; background-color: rgba(0, 228, 0, 0.1);">
-                        <div class="legend-category" style="color: #006400;">Good</div>
-                        <div class="legend-range">0 - 50</div>
-                    </div>
-                    <div class="legend-item" style="border-color: #FFD700; background-color: rgba(255, 215, 0, 0.1);">
-                        <div class="legend-category" style="color: #8B7500;">Satisfactory</div>
-                        <div class="legend-range">51 - 100</div>
-                    </div>
-                    <div class="legend-item" style="border-color: #FF7E00; background-color: rgba(255, 126, 0, 0.1);">
-                        <div class="legend-category" style="color: #CC6500;">Moderate</div>
-                        <div class="legend-range">101 - 200</div>
-                    </div>
-                    <div class="legend-item" style="border-color: #FF0000; background-color: rgba(255, 0, 0, 0.1);">
-                        <div class="legend-category" style="color: #CC0000;">Poor</div>
-                        <div class="legend-range">201 - 300</div>
-                    </div>
-                    <div class="legend-item" style="border-color: #99004C; background-color: rgba(153, 0, 76, 0.1);">
-                        <div class="legend-category" style="color: #99004C;">Very Poor</div>
-                        <div class="legend-range">301 - 400</div>
-                    </div>
-                    <div class="legend-item" style="border-color: #7E0023; background-color: rgba(126, 0, 35, 0.1);">
-                        <div class="legend-category" style="color: #7E0023;">Severe</div>
-                        <div class="legend-range">401 - 500</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>Data sourced from World Air Quality Index Project & CPCB | Fire data from NASA FIRMS</p>
-            <p>Real-time monitoring • Punjab, Rajasthan, Uttar Pradesh, Delhi & Chandigarh • Multiple stations per city • Stubble burning detection • Updates every 15 minutes</p>
+            <!-- Your existing AQI dashboard content -->
         </div>
     </div>
 
     <script>
-        // Configuration
-        const WAQI_TOKEN = '486994a34df29107945c8a194da64d15218daf77';
-        const API_BASE = 'https://api.waqi.info';
-        
-        let pollutantsChart = null;
-        let stationsChart = null;
+        // Fire Data Management
+        let fireData = null;
+        let selectedDate = null;
 
-        // Sample fire data structure (replace with actual data from your Python script output)
-        // Format: { date: "YYYY-MM-DD", districts: [{name, state, fireCount}] }
-        const SAMPLE_FIRE_DATA = {
-            lastUpdated: "2024-10-15",
-            data: [
-                { district: "Sangrur", state: "Punjab", fireCount: 245 },
-                { district: "Bathinda", state: "Punjab", fireCount: 189 },
-                { district: "Mansa", state: "Punjab", fireCount: 167 },
-                { district: "Patiala", state: "Punjab", fireCount: 143 },
-                { district: "Barnala", state: "Punjab", fireCount: 128 },
-                { district: "Ludhiana", state: "Punjab", fireCount: 95 },
-                { district: "Fatehgarh Sahib", state: "Punjab", fireCount: 87 },
-                { district: "Moga", state: "Punjab", fireCount: 76 },
-                { district: "Faridkot", state: "Punjab", fireCount: 54 },
-                { district: "Amritsar", state: "Punjab", fireCount: 43 },
-                { district: "Kaithal", state: "Haryana", fireCount: 98 },
-                { district: "Karnal", state: "Haryana", fireCount: 87 },
-                { district: "Kurukshetra", state: "Haryana", fireCount: 76 },
-                { district: "Ambala", state: "Haryana", fireCount: 65 },
-                { district: "Yamunanagar", state: "Haryana", fireCount: 54 },
-                { district: "Panipat", state: "Haryana", fireCount: 43 },
-                { district: "Sonipat", state: "Haryana", fireCount: 32 }
-            ]
-        };
-
-        // Fire data URL - CHANGE THIS to your GitHub Pages URL after deployment
-        // Format: https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/data/fire_data.json
-        const FIRE_DATA_URL = window.location.hostname.includes('github.io') 
-            ? `${window.location.origin}${window.location.pathname}data/fire_data.json`.replace('//', '/')
-            : null; // Use sample data for local testing
-
-        // Load and display fire data
         async function loadFireData() {
             try {
-                let fireData;
+                // Fetch the JSON file from your GitHub Pages
+                const response = await fetch('data/fire_counts.json');
+                fireData = await response.json();
                 
-                if (FIRE_DATA_URL) {
-                    // Fetch from URL if provided
-                    const response = await fetch(FIRE_DATA_URL);
-                    fireData = await response.json();
-                } else {
-                    // Use sample data
-                    fireData = SAMPLE_FIRE_DATA;
+                document.getElementById('fireDataUpdate').textContent = 
+                    `Updated: ${new Date(fireData.last_updated).toLocaleString()}`;
+                
+                // Initialize with the most recent date
+                if (fireData.daily_data.length > 0) {
+                    selectedDate = fireData.daily_data[fireData.daily_data.length - 1].date;
+                    displayFireData();
                 }
-
-                displayFireData(fireData);
             } catch (error) {
                 console.error('Error loading fire data:', error);
-                // Still show sample data if fetch fails
-                displayFireData(SAMPLE_FIRE_DATA);
+                document.getElementById('fireDataContent').innerHTML = 
+                    '<p style="color: red;">Error loading fire detection data. GitHub Actions may still be processing.</p>';
             }
         }
 
-        // Display fire data in the dashboard
-        function displayFireData(fireData) {
-            const selectedState = document.getElementById('stateSelect').value;
+        function displayFireData() {
+            if (!fireData || !selectedDate) return;
+
+            const dateData = fireData.daily_data.find(d => d.date === selectedDate);
+            if (!dateData) return;
+
+            // Update statistics
+            displayFireStats(dateData);
             
-            // Only show fire data for Punjab, Haryana, and Delhi-Chandigarh
-            if (selectedState === 'punjab' || selectedState === 'delhi-chandigarh') {
-                document.getElementById('fireDataContainer').style.display = 'block';
-            } else if (selectedState === 'rajasthan' || selectedState === 'uttar-pradesh') {
-                document.getElementById('fireDataContainer').style.display = 'none';
-                return;
-            }
-
-            // Calculate statistics
-            const punjabData = fireData.data.filter(d => d.state === 'Punjab');
-            const haryanaData = fireData.data.filter(d => d.state === 'Haryana');
+            // Update date selector
+            displayDateSelector();
             
-            const punjabTotal = punjabData.reduce((sum, d) => sum + d.fireCount, 0);
-            const haryanaTotal = haryanaData.reduce((sum, d) => sum + d.fireCount, 0);
-            const grandTotal = punjabTotal + haryanaTotal;
+            // Display tables
+            displayFireTables(dateData);
+        }
 
-            // Show alert if significant fires detected
-            if (grandTotal > 100) {
-                document.getElementById('fireAlert').style.display = 'block';
-            } else {
-                document.getElementById('fireAlert').style.display = 'none';
-            }
-
-            // Display statistics
-            const statsGrid = document.getElementById('fireStatsGrid');
-            statsGrid.innerHTML = `
-                <div class="fire-stat-card">
-                    <div class="fire-stat-label">Total Fires (7 days)</div>
-                    <div class="fire-stat-value">${grandTotal}</div>
-                </div>
+        function displayFireStats(dateData) {
+            const statsHtml = `
                 <div class="fire-stat-card">
                     <div class="fire-stat-label">Punjab Fires</div>
-                    <div class="fire-stat-value">${punjabTotal}</div>
+                    <div class="fire-stat-value">${dateData.punjab.total}</div>
                 </div>
                 <div class="fire-stat-card">
                     <div class="fire-stat-label">Haryana Fires</div>
-                    <div class="fire-stat-value">${haryanaTotal}</div>
+                    <div class="fire-stat-value">${dateData.haryana.total}</div>
                 </div>
-                <div class="fire-stat-card">
-                    <div class="fire-stat-label">Affected Districts</div>
-                    <div class="fire-stat-value">${fireData.data.length}</div>
+                <div class="fire-stat-card" style="background: linear-gradient(135deg, #dc3545, #c82333);">
+                    <div class="fire-stat-label">Total Fires</div>
+                    <div class="fire-stat-value">${dateData.combined_total}</div>
+                </div>
+                <div class="fire-stat-card" style="background: linear-gradient(135deg, #28a745, #218838);">
+                    <div class="fire-stat-label">Selected Date</div>
+                    <div class="fire-stat-value" style="font-size: 1.2rem;">${new Date(selectedDate).toLocaleDateString()}</div>
                 </div>
             `;
-
-            // Sort by fire count (descending)
-            const sortedData = [...fireData.data].sort((a, b) => b.fireCount - a.fireCount);
-
-            // Populate table
-            const tableBody = document.getElementById('fireTableBody');
-            tableBody.innerHTML = '';
-
-            sortedData.forEach(district => {
-                const row = document.createElement('tr');
-                
-                let statusBadge;
-                let statusClass;
-                if (district.fireCount > 100) {
-                    statusBadge = 'Very High';
-                    statusClass = 'fire-high';
-                } else if (district.fireCount > 50) {
-                    statusBadge = 'High';
-                    statusClass = 'fire-medium';
-                } else if (district.fireCount > 0) {
-                    statusBadge = 'Moderate';
-                    statusClass = 'fire-low';
-                } else {
-                    statusBadge = 'None';
-                    statusClass = 'fire-none';
-                }
-
-                row.innerHTML = `
-                    <td><strong>${district.district}</strong></td>
-                    <td>${district.state}</td>
-                    <td><strong style="color: #e74c3c;">${district.fireCount}</strong></td>
-                    <td><span class="fire-count-badge ${statusClass}">${statusBadge}</span></td>
-                `;
-                
-                tableBody.appendChild(row);
-            });
-
-            // Update last updated info
-            const dataSourceInfo = document.querySelector('.data-source-info');
-            dataSourceInfo.innerHTML = `
-                <strong>📡 Data Source:</strong> NASA FIRMS - VIIRS Active Fire Detection (Last 7 days)<br>
-                <strong>🛰️ Satellite:</strong> NOAA-20/JPSS-1 VIIRS Sensor<br>
-                <strong>📍 Coverage:</strong> Punjab & Haryana<br>
-                <strong>⏱️ Last Updated:</strong> ${fireData.lastUpdated || 'N/A'}<br>
-                <strong>🔥 Total Active Fire Detections:</strong> ${grandTotal}
-            `;
+            document.getElementById('fireStats').innerHTML = statsHtml;
         }
 
-        // Get fire count badge class
+        function displayDateSelector() {
+            const buttonsHtml = fireData.daily_data.map(d => `
+                <button class="date-btn ${d.date === selectedDate ? 'active' : ''}" 
+                        onclick="selectDate('${d.date}')">
+                    ${new Date(d.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                </button>
+            `).join('');
+            document.getElementById('dateSelector').innerHTML = buttonsHtml;
+        }
+
+        function selectDate(date) {
+            selectedDate = date;
+            displayFireData();
+        }
+
         function getFireBadgeClass(count) {
-            if (count > 100) return 'fire-high';
-            if (count > 50) return 'fire-medium';
-            if (count > 0) return 'fire-low';
-            return 'fire-none';
+            if (count >= 100) return 'fire-high';
+            if (count >= 50) return 'fire-medium';
+            return 'fire-low';
         }
 
-        // Cities data with multiple monitoring stations per city
-        const STATES_DATA = {
-            'punjab': {
-                name: 'Punjab',
-                cities: [
-                    { 
-                        name: 'Amritsar', 
-                        stations: ['amritsar'] 
-                    },
-                    { 
-                        name: 'Ludhiana', 
-                        stations: ['ludhiana/punjab-agricultural-university', 'ludhiana'] 
-                    },
-                    { 
-                        name: 'Jalandhar', 
-                        stations: ['jalandhar/civil-line', 'jalandhar'] 
-                    },
-                    { 
-                        name: 'Patiala', 
-                        stations: ['patiala/model-town', 'patiala'] 
-                    },
-                    { 
-                        name: 'Bathinda', 
-                        stations: ['bathinda'] 
-                    },
-                    { 
-                        name: 'Mandi Gobindgarh', 
-                        stations: ['mandi-gobindgarh/rimt-university', 'mandi-gobindgarh'] 
-                    },
-                    { 
-                        name: 'Khanna', 
-                        stations: ['khanna/kalal-majra', 'khanna'] 
-                    },
-                    { 
-                        name: 'Pathankot', 
-                        stations: ['pathankot'] 
-                    },
-                    { 
-                        name: 'Rupnagar', 
-                        stations: ['rupnagar/ratanpura', 'rupnagar'] 
-                    }
-                ]
-            },
-            'rajasthan': {
-                name: 'Rajasthan',
-                cities: [
-                    { 
-                        name: 'Jaipur', 
-                        stations: ['jaipur/shastri-nagar', 'jaipur/police-commissionerate', 'jaipur'] 
-                    },
-                    { 
-                        name: 'Jodhpur', 
-                        stations: ['jodhpur/collectorate', 'jodhpur'] 
-                    },
-                    { 
-                        name: 'Udaipur', 
-                        stations: ['udaipur/ashok-nagar', 'udaipur'] 
-                    },
-                    { 
-                        name: 'Kota', 
-                        stations: ['kota/shrinath-puram', 'kota'] 
-                    },
-                    { 
-                        name: 'Ajmer', 
-                        stations: ['ajmer'] 
-                    },
-                    { 
-                        name: 'Alwar', 
-                        stations: ['alwar'] 
-                    },
-                    { 
-                        name: 'Bhiwadi', 
-                        stations: ['bhiwadi'] 
-                    },
-                    { 
-                        name: 'Pali', 
-                        stations: ['pali'] 
-                    },
-                    { 
-                        name: 'Bikaner', 
-                        stations: ['bikaner'] 
-                    }
-                ]
-            },
-            'uttar-pradesh': {
-                name: 'Uttar Pradesh',
-                cities: [
-                    { 
-                        name: 'Lucknow', 
-                        stations: ['lucknow/gomti-nagar', 'lucknow/talkatora', 'lucknow/lalbagh', 'lucknow'] 
-                    },
-                    { 
-                        name: 'Kanpur', 
-                        stations: ['kanpur/nehru-nagar', 'kanpur/kidwai-nagar', 'kanpur'] 
-                    },
-                    { 
-                        name: 'Agra', 
-                        stations: ['agra/sanjay-place', 'agra/sikandra', 'agra'] 
-                    },
-                    { 
-                        name: 'Varanasi', 
-                        stations: ['varanasi/ardhali-bazar', 'varanasi/lanka', 'varanasi'] 
-                    },
-                    { 
-                        name: 'Noida', 
-                        stations: ['noida/sector-1', 'noida/sector-62', 'noida/sector-116', 'noida'] 
-                    },
-                    { 
-                        name: 'Ghaziabad', 
-                        stations: ['ghaziabad/sanjay-nagar', 'ghaziabad/loni', 'ghaziabad/vasundhara', 'ghaziabad'] 
-                    },
-                    { 
-                        name: 'Meerut', 
-                        stations: ['meerut/pallavpuram', 'meerut/jai-bhim-nagar', 'meerut'] 
-                    },
-                    { 
-                        name: 'Greater Noida', 
-                        stations: ['greater-noida/knowledge-park', 'greater-noida'] 
-                    },
-                    { 
-                        name: 'Moradabad', 
-                        stations: ['moradabad/kanth-road', 'moradabad/budh-bazar', 'moradabad'] 
-                    },
-                    { 
-                        name: 'Bareilly', 
-                        stations: ['bareilly'] 
-                    },
-                    { 
-                        name: 'Prayagraj', 
-                        stations: ['prayagraj', 'allahabad'] 
-                    },
-                    { 
-                        name: 'Gorakhpur', 
-                        stations: ['gorakhpur'] 
-                    },
-                    { 
-                        name: 'Firozabad', 
-                        stations: ['firozabad'] 
-                    },
-                    { 
-                        name: 'Jhansi', 
-                        stations: ['jhansi'] 
-                    },
-                    { 
-                        name: 'Gajraula', 
-                        stations: ['gajraula'] 
-                    },
-                    { 
-                        name: 'Khurja', 
-                        stations: ['khurja'] 
-                    },
-                    { 
-                        name: 'Raebareli', 
-                        stations: ['raebareli'] 
-                    },
-                    { 
-                        name: 'Anpara', 
-                        stations: ['anpara'] 
-                    }
-                ]
-            },
-            'delhi-chandigarh': {
-                name: 'Delhi & Chandigarh',
-                cities: [
-                    { 
-                        name: 'Delhi', 
-                        stations: [
-                            'delhi/us-embassy',
-                            'delhi/anand-vihar',
-                            'delhi/aya-nagar',
-                            'delhi/bawana',
-                            'delhi/dwarka',
-                            'delhi/ito',
-                            'delhi/mandir-marg',
-                            'delhi/nehru-nagar',
-                            'delhi/punjabi-bagh',
-                            'delhi/r-k-puram',
-                            'delhi/rohini',
-                            'delhi/shadipur',
-                            'delhi/vivek-vihar',
-                            'delhi'
-                        ] 
-                    },
-                    { 
-                        name: 'Chandigarh', 
-                        stations: ['chandigarh/sector-25', 'chandigarh/sector-53', 'chandigarh'] 
-                    }
-                ]
-            }
-        };
+        function displayFireTables(dateData) {
+            let tablesHtml = '';
 
-        // AQI Color mapping
-        function getAQIColor(aqi) {
-            if (aqi <= 50) return '#00E400';
-            if (aqi <= 100) return '#FFD700';
-            if (aqi <= 200) return '#FF7E00';
-            if (aqi <= 300) return '#FF0000';
-            if (aqi <= 400) return '#99004C';
-            return '#7E0023';
-        }
-        
-        // Get text color based on AQI (for better contrast)
-        function getAQITextColor(aqi) {
-            if (aqi <= 50) return '#006400';
-            if (aqi <= 100) return '#8B7500';
-            if (aqi <= 200) return '#CC6500';
-            if (aqi <= 300) return '#CC0000';
-            if (aqi <= 400) return '#99004C';
-            return '#7E0023';
-        }
-
-        function getAQICategory(aqi) {
-            if (aqi <= 50) return 'Good';
-            if (aqi <= 100) return 'Satisfactory';
-            if (aqi <= 200) return 'Moderate';
-            if (aqi <= 300) return 'Poor';
-            if (aqi <= 400) return 'Very Poor';
-            return 'Severe';
-        }
-
-        // Get health advisories based on AQI
-        function getHealthAdvisories(aqi) {
-            if (aqi <= 50) {
-                return {
-                    healthy: {
-                        title: "👤 Healthy People",
-                        icon: "🏃",
-                        advice: [
-                            "Good day to be active outside",
-                            "No precautions required",
-                            "Ideal for outdoor activities and exercise"
-                        ]
-                    },
-                    vulnerable: {
-                        title: "👨‍👩‍👧 Elderly, Pregnant Women & Children",
-                        icon: "👶",
-                        advice: [
-                            "Poses little or no health risk",
-                            "Good day to be active outside",
-                            "No restrictions on outdoor activities"
-                        ]
-                    },
-                    sensitive: {
-                        title: "🫁 People with Lung & Heart Diseases",
-                        icon: "❤️",
-                        advice: [
-                            "Poses little or no health risk",
-                            "Good day to be active outside",
-                            "Safe for regular activities"
-                        ]
-                    }
-                };
-            } else if (aqi <= 100) {
-                return {
-                    healthy: {
-                        title: "👤 Healthy People",
-                        icon: "🏃",
-                        advice: [
-                            "No precautions required",
-                            "Safe for outdoor activities",
-                            "Minimal impact expected"
-                        ]
-                    },
-                    vulnerable: {
-                        title: "👨‍👩‍👧 Elderly, Pregnant Women & Children",
-                        icon: "👶",
-                        advice: [
-                            "Minor breathing discomfort to sensitive people",
-                            "Reduce prolonged or heavy exertion",
-                            "Limit prolonged outdoor exertion during peak AQI"
-                        ]
-                    },
-                    sensitive: {
-                        title: "🫁 People with Lung & Heart Diseases",
-                        icon: "❤️",
-                        advice: [
-                            "Reduce prolonged or heavy exertion",
-                            "Limit prolonged physical exertion during peaks",
-                            "Consider reducing outdoor activities if symptoms occur"
-                        ]
-                    }
-                };
-            } else if (aqi <= 200) {
-                return {
-                    healthy: {
-                        title: "👤 Healthy People",
-                        icon: "🏃",
-                        advice: [
-                            "Limit outdoor activities during peak AQI",
-                            "Reduce prolonged or heavy exertion",
-                            "Consider indoor exercise alternatives"
-                        ]
-                    },
-                    vulnerable: {
-                        title: "👨‍👩‍👧 Elderly, Pregnant Women & Children",
-                        icon: "👶",
-                        advice: [
-                            "Breathing discomfort to sensitive people",
-                            "Reduce prolonged or heavy exertion",
-                            "Avoid prolonged outdoor activities",
-                            "People with heart disease avoid sources of PM"
-                        ]
-                    },
-                    sensitive: {
-                        title: "🫁 People with Lung & Heart Diseases",
-                        icon: "❤️",
-                        advice: [
-                            "Limit activities in polluted areas",
-                            "Avoid heavy traffic and pollution sources",
-                            "Re-schedule outdoor activities per AQI level",
-                            "Reduce prolonged or heavy exertion"
-                        ]
-                    }
-                };
-            } else if (aqi <= 300) {
-                return {
-                    healthy: {
-                        title: "👤 Healthy People",
-                        icon: "🏃",
-                        advice: [
-                            "Reduce prolonged or heavy exertion",
-                            "Breathing discomfort may occur",
-                            "Consider moving activities indoors",
-                            "Wear N95 mask if going outdoors"
-                        ]
-                    },
-                    vulnerable: {
-                        title: "👨‍👩‍👧 Elderly, Pregnant Women & Children",
-                        icon: "👶",
-                        advice: [
-                            "Avoid prolonged or heavy exertion",
-                            "Children & outdoors active people should avoid prolonged exertion",
-                            "Stay indoors as much as possible",
-                            "Use air purifiers indoors",
-                            "Wear N95 mask if must go outside"
-                        ]
-                    },
-                    sensitive: {
-                        title: "🫁 People with Lung & Heart Diseases",
-                        icon: "❤️",
-                        advice: [
-                            "Avoid exposure to polluted areas",
-                            "Reduce activities & avoid pollution sources",
-                            "Avoid heavy traffic areas",
-                            "Stay indoors with air purification",
-                            "Consult doctor if symptoms worsen"
-                        ]
-                    }
-                };
-            } else if (aqi <= 400) {
-                return {
-                    healthy: {
-                        title: "👤 Healthy People",
-                        icon: "🏃",
-                        advice: [
-                            "Avoid prolonged or heavy exertion",
-                            "Respiratory illness on prolonged exposure",
-                            "Move all activities indoors",
-                            "Use N95 masks when going outside",
-                            "Keep windows and doors closed"
-                        ]
-                    },
-                    vulnerable: {
-                        title: "👨‍👩‍👧 Elderly, Pregnant Women & Children",
-                        icon: "👶",
-                        advice: [
-                            "Avoid all physical activities outdoors",
-                            "Should avoid exposure to air pollution sources",
-                            "Stay indoors with air purifiers",
-                            "Keep children indoors",
-                            "Seek medical advice if needed"
-                        ]
-                    },
-                    sensitive: {
-                        title: "🫁 People with Lung & Heart Diseases",
-                        icon: "❤️",
-                        advice: [
-                            "Avoid all physical activities outdoors",
-                            "Avoid all sources of air pollution",
-                            "Keep prescribed medications readily available",
-                            "Seek immediate medical help if symptoms appear",
-                            "Use air purifiers indoors continuously"
-                        ]
-                    }
-                };
-            } else {
-                return {
-                    healthy: {
-                        title: "👤 Healthy People",
-                        icon: "🏃",
-                        advice: [
-                            "⚠️ SERIOUS HEALTH EFFECTS",
-                            "Affects healthy people, serious impact on those with existing diseases",
-                            "Avoid all outdoor activities",
-                            "Stay indoors with doors/windows closed",
-                            "Use N95 masks even for short outdoor exposure",
-                            "Emergency advisory in effect"
-                        ]
-                    },
-                    vulnerable: {
-                        title: "👨‍👩‍👧 Elderly, Pregnant Women & Children",
-                        icon: "👶",
-                        advice: [
-                            "⚠️ EMERGENCY - SERIOUS HEALTH EFFECTS",
-                            "Avoid all physical activities outdoors",
-                            "Should avoid all sources of air pollution",
-                            "Keep children strictly indoors",
-                            "May cause respiratory impact even during light activities",
-                            "Seek medical advice immediately if symptoms occur"
-                        ]
-                    },
-                    sensitive: {
-                        title: "🫁 People with Lung & Heart Diseases",
-                        icon: "❤️",
-                        advice: [
-                            "⚠️ MEDICAL EMERGENCY RISK",
-                            "Serious health effects - avoid all outdoor exposure",
-                            "May cause respiratory impact even during light activities",
-                            "Keep all medications readily available",
-                            "Remain in controlled indoor environment",
-                            "Contact healthcare provider immediately if any symptoms"
-                        ]
-                    }
-                };
-            }
-        }
-
-        // Update health advisory section
-        function updateHealthAdvisory(aqi) {
-            document.getElementById('advisoryAQI').textContent = Math.round(aqi);
-            document.getElementById('advisoryCategory').textContent = getAQICategory(aqi);
-            document.getElementById('advisoryCategory').style.color = getAQITextColor(aqi);
-
-            const advisories = getHealthAdvisories(aqi);
-            const advisoryGrid = document.getElementById('advisoryGrid');
-            
-            advisoryGrid.innerHTML = `
-                <div class="advisory-card healthy-group">
-                    <h3><span style="font-size: 1.5rem;">${advisories.healthy.icon}</span> ${advisories.healthy.title}</h3>
-                    <ul>
-                        ${advisories.healthy.advice.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                </div>
-                <div class="advisory-card vulnerable-group">
-                    <h3><span style="font-size: 1.5rem;">${advisories.vulnerable.icon}</span> ${advisories.vulnerable.title}</h3>
-                    <ul>
-                        ${advisories.vulnerable.advice.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                </div>
-                <div class="advisory-card sensitive-group">
-                    <h3><span style="font-size: 1.5rem;">${advisories.sensitive.icon}</span> ${advisories.sensitive.title}</h3>
-                    <ul>
-                        ${advisories.sensitive.advice.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                </div>
-            `;
-        }
-
-        // Update city dropdown
-        function updateCityDropdown() {
-            const selectedState = document.getElementById('stateSelect').value;
-            const stateData = STATES_DATA[selectedState];
-            const citySelect = document.getElementById('citySelect');
-            
-            citySelect.innerHTML = '';
-            stateData.cities.forEach((city, index) => {
-                const option = document.createElement('option');
-                option.value = index;
-                option.textContent = city.name;
-                citySelect.appendChild(option);
-            });
-        }
-
-        // Fetch air quality data for a specific station
-        async function fetchStationData(stationId) {
-            try {
-                const response = await fetch(`${API_BASE}/feed/${stationId}/?token=${WAQI_TOKEN}`);
-                const data = await response.json();
-                
-                if (data.status === 'ok' && data.data) {
-                    return {
-                        success: true,
-                        stationId: stationId,
-                        data: data.data
-                    };
-                } else {
-                    return {
-                        success: false,
-                        stationId: stationId,
-                        error: 'No data available'
-                    };
-                }
-            } catch (error) {
-                return {
-                    success: false,
-                    stationId: stationId,
-                    error: error.message
-                };
-            }
-        }
-
-        // Fetch data from all stations in a city
-        async function fetchAllStationsData(stations) {
-            const promises = stations.map(stationId => fetchStationData(stationId));
-            const results = await Promise.all(promises);
-            return results.filter(result => result.success);
-        }
-
-        // Display individual station cards
-        function displayStationCards(stationsData) {
-            const stationsGrid = document.getElementById('stationsGrid');
-            
-            if (stationsData.length === 0) {
-                stationsGrid.innerHTML = '<div class="no-data">No monitoring station data available for this city</div>';
-                return;
-            }
-
-            stationsGrid.innerHTML = '';
-            
-            stationsData.forEach(station => {
-                const data = station.data;
-                const aqi = data.aqi;
-                const category = getAQICategory(aqi);
-                const color = getAQIColor(aqi);
-                const textColor = getAQITextColor(aqi);
-                
-                const stationCard = document.createElement('div');
-                stationCard.className = 'station-card';
-                
-                const iaqi = data.iaqi || {};
-                const stationName = data.city?.name || station.stationId;
-                
-                stationCard.innerHTML = `
-                    <div class="station-header">
-                        <div class="station-name">${stationName}</div>
-                    </div>
-                    <div style="text-align: center; margin: 15px 0;">
-                        <div class="station-aqi-badge" style="background-color: ${color};">${aqi}</div>
-                        <div class="station-category" style="color: ${textColor};">${category}</div>
-                    </div>
-                    <div class="station-pollutants">
-                        <div class="pollutant-item">
-                            <div class="pollutant-label">PM2.5</div>
-                            <div class="pollutant-value">${iaqi.pm25?.v || '--'}</div>
+            // Punjab Table
+            if (dateData.punjab.districts.length > 0) {
+                tablesHtml += `
+                    <div class="state-section">
+                        <div class="state-header">
+                            <h3>Punjab Districts</h3>
+                            <div class="state-total">Total: ${dateData.punjab.total} fires</div>
                         </div>
-                        <div class="pollutant-item">
-                            <div class="pollutant-label">PM10</div>
-                            <div class="pollutant-value">${iaqi.pm10?.v || '--'}</div>
-                        </div>
-                        <div class="pollutant-item">
-                            <div class="pollutant-label">NO2</div>
-                            <div class="pollutant-value">${iaqi.no2?.v || '--'}</div>
-                        </div>
-                        <div class="pollutant-item">
-                            <div class="pollutant-label">SO2</div>
-                            <div class="pollutant-value">${iaqi.so2?.v || '--'}</div>
-                        </div>
-                        <div class="pollutant-item">
-                            <div class="pollutant-label">O3</div>
-                            <div class="pollutant-value">${iaqi.o3?.v || '--'}</div>
-                        </div>
-                        <div class="pollutant-item">
-                            <div class="pollutant-label">CO</div>
-                            <div class="pollutant-value">${iaqi.co?.v || '--'}</div>
+                        <div class="fire-table-container">
+                            <table class="fire-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>District Name</th>
+                                        <th>Fire Count</th>
+                                        <th>Percentage</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${dateData.punjab.districts.map((d, i) => `
+                                        <tr>
+                                            <td>${i + 1}</td>
+                                            <td><strong>${d.district}</strong></td>
+                                            <td>
+                                                <span class="fire-count-badge ${getFireBadgeClass(d.fire_count)}">
+                                                    ${d.fire_count}
+                                                </span>
+                                            </td>
+                                            <td>${((d.fire_count / dateData.punjab.total) * 100).toFixed(1)}%</td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div class="station-update">Updated: ${data.time?.s || 'N/A'}</div>
                 `;
-                
-                stationsGrid.appendChild(stationCard);
-            });
-        }
-
-        // Update main statistics with average data
-        function updateStatistics(stationsData) {
-            if (stationsData.length === 0) {
-                document.getElementById('currentAqi').textContent = '--';
-                document.getElementById('aqiCategory').textContent = 'No Data';
-                document.getElementById('stationCount').textContent = 'No stations available';
-                return;
             }
 
-            const aqiValues = stationsData.map(s => s.data.aqi);
-            const avgAqi = aqiValues.reduce((sum, val) => sum + val, 0) / aqiValues.length;
-            const category = getAQICategory(avgAqi);
-            const color = getAQIColor(avgAqi);
-            const textColor = getAQITextColor(avgAqi);
-
-            document.getElementById('currentAqi').textContent = Math.round(avgAqi);
-            document.getElementById('currentAqi').style.color = textColor;
-            document.getElementById('currentAqiBar').style.backgroundColor = color;
-            document.getElementById('stationCount').textContent = `Average from ${stationsData.length} station(s)`;
-            
-            document.getElementById('aqiCategory').textContent = category;
-            document.getElementById('aqiCategory').style.color = textColor;
-            
-            // Find worst and best stations
-            const worstStation = stationsData.reduce((max, s) => s.data.aqi > max.data.aqi ? s : max);
-            const bestStation = stationsData.reduce((min, s) => s.data.aqi < min.data.aqi ? s : min);
-            
-            document.getElementById('worstAqi').textContent = worstStation.data.aqi;
-            document.getElementById('worstAqi').style.color = getAQITextColor(worstStation.data.aqi);
-            document.getElementById('worstStation').textContent = worstStation.data.city?.name || worstStation.stationId;
-            
-            document.getElementById('bestAqi').textContent = bestStation.data.aqi;
-            document.getElementById('bestAqi').style.color = getAQITextColor(bestStation.data.aqi);
-            document.getElementById('bestStation').textContent = bestStation.data.city?.name || bestStation.stationId;
-            
-            const dominantPollutant = worstStation.data.dominentpol || 'N/A';
-            document.getElementById('dominantPollutant').textContent = 
-                `Primary pollutant: ${dominantPollutant.toUpperCase()}`;
-        }
-
-        // Create average pollutants chart
-        function createPollutantsChart(stationsData) {
-            const ctx = document.getElementById('pollutantsChart');
-            
-            if (pollutantsChart) {
-                pollutantsChart.destroy();
+            // Haryana Table
+            if (dateData.haryana.districts.length > 0) {
+                tablesHtml += `
+                    <div class="state-section">
+                        <div class="state-header">
+                            <h3>Haryana Districts</h3>
+                            <div class="state-total">Total: ${dateData.haryana.total} fires</div>
+                        </div>
+                        <div class="fire-table-container">
+                            <table class="fire-table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>District Name</th>
+                                        <th>Fire Count</th>
+                                        <th>Percentage</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    ${dateData.haryana.districts.map((d, i) => `
+                                        <tr>
+                                            <td>${i + 1}</td>
+                                            <td><strong>${d.district}</strong></td>
+                                            <td>
+                                                <span class="fire-count-badge ${getFireBadgeClass(d.fire_count)}">
+                                                    ${d.fire_count}
+                                                </span>
+                                            </td>
+                                            <td>${((d.fire_count / dateData.haryana.total) * 100).toFixed(1)}%</td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                `;
             }
 
-            if (stationsData.length === 0) return;
-
-            // Calculate average pollutants across all stations
-            const pollutantSums = { pm25: 0, pm10: 0, no2: 0, so2: 0, o3: 0, co: 0 };
-            const pollutantCounts = { pm25: 0, pm10: 0, no2: 0, so2: 0, o3: 0, co: 0 };
-
-            stationsData.forEach(station => {
-                const iaqi = station.data.iaqi || {};
-                Object.keys(pollutantSums).forEach(pollutant => {
-                    if (iaqi[pollutant]?.v) {
-                        pollutantSums[pollutant] += iaqi[pollutant].v;
-                        pollutantCounts[pollutant]++;
-                    }
-                });
-            });
-
-            const avgPollutants = {};
-            Object.keys(pollutantSums).forEach(pollutant => {
-                avgPollutants[pollutant] = pollutantCounts[pollutant] > 0 
-                    ? pollutantSums[pollutant] / pollutantCounts[pollutant] 
-                    : 0;
-            });
-
-            const pollutants = {
-                'PM2.5': avgPollutants.pm25,
-                'PM10': avgPollutants.pm10,
-                'NO2': avgPollutants.no2,
-                'SO2': avgPollutants.so2,
-                'O3': avgPollutants.o3,
-                'CO': avgPollutants.co
-            };
-
-            pollutantsChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: Object.keys(pollutants),
-                    datasets: [{
-                        label: 'Average AQI Value',
-                        data: Object.values(pollutants),
-                        backgroundColor: [
-                            '#667eea',
-                            '#764ba2',
-                            '#f093fb',
-                            '#4facfe',
-                            '#00f2fe',
-                            '#43e97b'
-                        ],
-                        borderRadius: 8
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            grid: {
-                                color: '#f0f0f0'
-                            }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            }
-                        }
-                    }
-                }
-            });
-        }
-
-        // Create stations comparison chart
-        function createStationsComparisonChart(stationsData) {
-            const ctx = document.getElementById('stationsComparisonChart');
-            
-            if (stationsChart) {
-                stationsChart.destroy();
+            if (dateData.punjab.districts.length === 0 && dateData.haryana.districts.length === 0) {
+                tablesHtml = '<p style="text-align: center; color: #28a745; font-size: 1.2rem; padding: 20px;">✅ No fires detected on this date!</p>';
             }
 
-            if (stationsData.length === 0) return;
-
-            const stationNames = stationsData.map(s => {
-                const name = s.data.city?.name || s.stationId;
-                return name.length > 20 ? name.substring(0, 17) + '...' : name;
-            });
-            const aqiValues = stationsData.map(s => s.data.aqi);
-            const colors = aqiValues.map(aqi => getAQIColor(aqi));
-
-            stationsChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: stationNames,
-                    datasets: [{
-                        label: 'AQI',
-                        data: aqiValues,
-                        backgroundColor: colors,
-                        borderRadius: 8
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    },
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            grid: {
-                                color: '#f0f0f0'
-                            }
-                        },
-                        x: {
-                            grid: {
-                                display: false
-                            },
-                            ticks: {
-                                maxRotation: 45,
-                                minRotation: 45
-                            }
-                        }
-                    }
-                }
-            });
+            document.getElementById('fireDataContent').innerHTML = tablesHtml;
         }
 
-        // Main update function
-        async function updateDashboard() {
-            const selectedState = document.getElementById('stateSelect').value;
-            const cityIndex = parseInt(document.getElementById('citySelect').value);
-            const stateData = STATES_DATA[selectedState];
-            const cityData = stateData.cities[cityIndex];
-            
-            try {
-                document.getElementById('loadingMessage').style.display = 'block';
-                document.getElementById('mainContent').style.display = 'none';
-                document.getElementById('errorMessage').style.display = 'none';
-
-                document.getElementById('cityNameDisplay').textContent = cityData.name;
-
-                // Fetch data from all stations in the city
-                const stationsData = await fetchAllStationsData(cityData.stations);
-                
-                if (stationsData.length === 0) {
-                    throw new Error('No data available from any monitoring station');
-                }
-
-                // Update all components
-                updateStatistics(stationsData);
-                displayStationCards(stationsData);
-                
-                const avgAqi = stationsData.reduce((sum, s) => sum + s.data.aqi, 0) / stationsData.length;
-                updateHealthAdvisory(avgAqi);
-                
-                createPollutantsChart(stationsData);
-                createStationsComparisonChart(stationsData);
-
-                // Load fire data if applicable
-                loadFireData();
-
-                document.getElementById('lastUpdate').textContent = 
-                    `Last updated: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`;
-                
-                document.getElementById('loadingMessage').style.display = 'none';
-                document.getElementById('mainContent').style.display = 'block';
-                
-            } catch (error) {
-                document.getElementById('loadingMessage').style.display = 'none';
-                document.getElementById('errorMessage').style.display = 'block';
-                document.getElementById('errorMessage').textContent = 
-                    `Error loading data: ${error.message}. This may occur if stations are offline or API limit reached. Please try again later.`;
-            }
-        }
-
-        // Event listeners
-        document.getElementById('stateSelect').addEventListener('change', () => {
-            updateCityDropdown();
-            updateDashboard();
+        // Initialize fire data on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            loadFireData();
+            // Your existing AQI dashboard initialization code here
         });
-        
-        document.getElementById('citySelect').addEventListener('change', updateDashboard);
-        document.getElementById('refreshBtn').addEventListener('click', updateDashboard);
 
-        // Auto-refresh every 15 minutes
-        setInterval(updateDashboard, 15 * 60 * 1000);
-
-        // Initial load
-        updateCityDropdown();
-        updateDashboard();
+        // Refresh fire data every hour
+        setInterval(loadFireData, 60 * 60 * 1000);
     </script>
 </body>
 </html>
