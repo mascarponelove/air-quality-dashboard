@@ -634,26 +634,36 @@
             if (!fireData || !selectedDate) return;
 
             const dateData = fireData.daily_data.find(d => d.date === selectedDate);
-            if (!dateData) return;
+            if (!dateData) {
+                 // If no data for the selected date, clear the display
+                document.getElementById('fireStats').innerHTML = '';
+                document.getElementById('fireDataContent').innerHTML = '<p style="text-align: center; padding: 20px;">No fire data available for this date.</p>';
+                return;
+            }
 
             displayFireStats(dateData);
             displayDateSelector();
             displayFireTables(dateData);
         }
 
+        // CORRECTED: Safely access data
         function displayFireStats(dateData) {
+            const punjabTotal = dateData.punjab ? dateData.punjab.total : 0;
+            const haryanaTotal = dateData.haryana ? dateData.haryana.total : 0;
+            const combinedTotal = dateData.combined_total || 0;
+
             const statsHtml = `
                 <div class="fire-stat-card">
                     <div class="fire-stat-label">Punjab Fires</div>
-                    <div class="fire-stat-value">${dateData.punjab.total}</div>
+                    <div class="fire-stat-value">${punjabTotal}</div>
                 </div>
                 <div class="fire-stat-card">
                     <div class="fire-stat-label">Haryana Fires</div>
-                    <div class="fire-stat-value">${dateData.haryana.total}</div>
+                    <div class="fire-stat-value">${haryanaTotal}</div>
                 </div>
                 <div class="fire-stat-card" style="background: linear-gradient(135deg, #dc3545, #c82333);">
                     <div class="fire-stat-label">Total Fires</div>
-                    <div class="fire-stat-value">${dateData.combined_total}</div>
+                    <div class="fire-stat-value">${combinedTotal}</div>
                 </div>
                 <div class="fire-stat-card" style="background: linear-gradient(135deg, #28a745, #218838);">
                     <div class="fire-stat-label">Selected Date</div>
@@ -684,15 +694,18 @@
             return 'fire-low';
         }
 
+        // CORRECTED: More robust function to create tables
         function displayFireTables(dateData) {
             let tablesHtml = '';
-            const createTable = (stateName, data) => {
-                if (!data || data.districts.length === 0) return '';
+            const createTable = (stateName, stateData) => {
+                // Check for existence of stateData, its districts property, and if it has items
+                if (!stateData || !stateData.districts || stateData.districts.length === 0) return '';
+                
                 return `
                     <div class="state-section">
                         <div class="state-header">
                             <h3>${stateName} Districts</h3>
-                            <div class="state-total">Total: ${data.total} fires</div>
+                            <div class="state-total">Total: ${stateData.total} fires</div>
                         </div>
                         <div class="fire-table-container">
                             <table class="fire-table">
@@ -702,7 +715,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    ${data.districts.map((d, i) => `
+                                    ${stateData.districts.map((d, i) => `
                                         <tr>
                                             <td>${i + 1}</td>
                                             <td><strong>${d.district}</strong></td>
@@ -711,7 +724,9 @@
                                                     ${d.fire_count}
                                                 </span>
                                             </td>
-                                            <td>${((d.fire_count / data.total) * 100).toFixed(1)}%</td>
+                                            <td>
+                                                ${stateData.total > 0 ? ((d.fire_count / stateData.total) * 100).toFixed(1) + '%' : '0.0%'}
+                                            </td>
                                         </tr>
                                     `).join('')}
                                 </tbody>
@@ -756,7 +771,7 @@
         }
         
         function getAQITextColor(aqi) {
-            if (aqi > 300) return '#fff'; // White text for very poor and severe for better contrast
+            if (aqi > 300) return '#fff'; 
             return '#333';
         }
 
