@@ -80,10 +80,50 @@
             transform: translateY(-2px);
         }
 
+        .refresh-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
         .last-update {
             color: #666;
             font-size: 0.9rem;
             margin-left: auto;
+        }
+
+        .progress-container {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: #f0f0f0;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .progress-text {
+            color: #666;
+            margin-top: 10px;
+            font-size: 0.9rem;
         }
 
         .stats-grid {
@@ -358,6 +398,15 @@
             color: #c33;
         }
 
+        .warning-message {
+            background: #fef3c7;
+            border: 2px solid #fbbf24;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #92400e;
+        }
+
         .footer {
             text-align: center;
             color: white;
@@ -546,8 +595,15 @@
         </div>
 
         <div id="errorMessage" class="error-message" style="display: none;"></div>
+        <div id="warningMessage" class="warning-message" style="display: none;"></div>
         
-        <div id="loadingMessage" class="loading">Loading air quality data from all monitoring stations...</div>
+        <div id="progressContainer" class="progress-container" style="display: none;">
+            <h3 style="margin-bottom: 10px; color: #333;">Loading Station Data...</h3>
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill" style="width: 0%;">0%</div>
+            </div>
+            <div id="progressText" class="progress-text">Initializing...</div>
+        </div>
 
         <div id="mainContent" style="display: none;">
             <div class="stats-grid">
@@ -679,15 +735,17 @@
     </div>
 
     <script>
-        // Configuration
+        // Configuration - Token extracted from provided code
         const WAQI_TOKEN = '486994a34df29107945c8a194da64d15218daf77';
         const API_BASE = 'https://api.waqi.info';
+        const REQUEST_DELAY = 1000; // 1 second delay between requests to avoid rate limiting
+        const MAX_RETRIES = 2; // Retry failed requests
         
         let pollutantsChart = null;
         let stationsChart = null;
+        let isLoading = false;
 
-        // Sample fire data structure (replace with actual data from your Python script output)
-        // Format: { date: "YYYY-MM-DD", districts: [{name, state, fireCount}] }
+        // Sample fire data
         const SAMPLE_FIRE_DATA = {
             lastUpdated: "2024-10-15",
             data: [
@@ -711,47 +769,38 @@
             ]
         };
 
-        // Fire data URL - CHANGE THIS to your GitHub Pages URL after deployment
-        // Format: https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/data/fire_data.json
         const FIRE_DATA_URL = window.location.hostname.includes('github.io') 
             ? `${window.location.origin}${window.location.pathname}data/fire_data.json`.replace('//', '/')
-            : null; // Use sample data for local testing
+            : null;
 
-        // Load and display fire data
         async function loadFireData() {
             try {
                 let fireData;
                 
                 if (FIRE_DATA_URL) {
-                    // Fetch from URL if provided
                     const response = await fetch(FIRE_DATA_URL);
                     fireData = await response.json();
                 } else {
-                    // Use sample data
                     fireData = SAMPLE_FIRE_DATA;
                 }
 
                 displayFireData(fireData);
             } catch (error) {
                 console.error('Error loading fire data:', error);
-                // Still show sample data if fetch fails
                 displayFireData(SAMPLE_FIRE_DATA);
             }
         }
 
-        // Display fire data in the dashboard
         function displayFireData(fireData) {
             const selectedState = document.getElementById('stateSelect').value;
             
-            // Only show fire data for Punjab, Haryana, and Delhi-Chandigarh
             if (selectedState === 'punjab' || selectedState === 'delhi-chandigarh') {
                 document.getElementById('fireDataContainer').style.display = 'block';
-            } else if (selectedState === 'rajasthan' || selectedState === 'uttar-pradesh') {
+            } else {
                 document.getElementById('fireDataContainer').style.display = 'none';
                 return;
             }
 
-            // Calculate statistics
             const punjabData = fireData.data.filter(d => d.state === 'Punjab');
             const haryanaData = fireData.data.filter(d => d.state === 'Haryana');
             
@@ -759,14 +808,12 @@
             const haryanaTotal = haryanaData.reduce((sum, d) => sum + d.fireCount, 0);
             const grandTotal = punjabTotal + haryanaTotal;
 
-            // Show alert if significant fires detected
             if (grandTotal > 100) {
                 document.getElementById('fireAlert').style.display = 'block';
             } else {
                 document.getElementById('fireAlert').style.display = 'none';
             }
 
-            // Display statistics
             const statsGrid = document.getElementById('fireStatsGrid');
             statsGrid.innerHTML = `
                 <div class="fire-stat-card">
@@ -787,18 +834,14 @@
                 </div>
             `;
 
-            // Sort by fire count (descending)
             const sortedData = [...fireData.data].sort((a, b) => b.fireCount - a.fireCount);
-
-            // Populate table
             const tableBody = document.getElementById('fireTableBody');
             tableBody.innerHTML = '';
 
             sortedData.forEach(district => {
                 const row = document.createElement('tr');
                 
-                let statusBadge;
-                let statusClass;
+                let statusBadge, statusClass;
                 if (district.fireCount > 100) {
                     statusBadge = 'Very High';
                     statusClass = 'fire-high';
@@ -823,7 +866,6 @@
                 tableBody.appendChild(row);
             });
 
-            // Update last updated info
             const dataSourceInfo = document.querySelector('.data-source-info');
             dataSourceInfo.innerHTML = `
                 <strong>📡 Data Source:</strong> NASA FIRMS - VIIRS Active Fire Detection (Last 7 days)<br>
@@ -834,173 +876,50 @@
             `;
         }
 
-        // Get fire count badge class
-        function getFireBadgeClass(count) {
-            if (count > 100) return 'fire-high';
-            if (count > 50) return 'fire-medium';
-            if (count > 0) return 'fire-low';
-            return 'fire-none';
-        }
-
-        // Cities data with multiple monitoring stations per city
         const STATES_DATA = {
             'punjab': {
                 name: 'Punjab',
                 cities: [
-                    { 
-                        name: 'Amritsar', 
-                        stations: ['amritsar'] 
-                    },
-                    { 
-                        name: 'Ludhiana', 
-                        stations: ['ludhiana/punjab-agricultural-university', 'ludhiana'] 
-                    },
-                    { 
-                        name: 'Jalandhar', 
-                        stations: ['jalandhar/civil-line', 'jalandhar'] 
-                    },
-                    { 
-                        name: 'Patiala', 
-                        stations: ['patiala/model-town', 'patiala'] 
-                    },
-                    { 
-                        name: 'Bathinda', 
-                        stations: ['bathinda'] 
-                    },
-                    { 
-                        name: 'Mandi Gobindgarh', 
-                        stations: ['mandi-gobindgarh/rimt-university', 'mandi-gobindgarh'] 
-                    },
-                    { 
-                        name: 'Khanna', 
-                        stations: ['khanna/kalal-majra', 'khanna'] 
-                    },
-                    { 
-                        name: 'Pathankot', 
-                        stations: ['pathankot'] 
-                    },
-                    { 
-                        name: 'Rupnagar', 
-                        stations: ['rupnagar/ratanpura', 'rupnagar'] 
-                    }
+                    { name: 'Amritsar', stations: ['amritsar'] },
+                    { name: 'Ludhiana', stations: ['ludhiana'] },
+                    { name: 'Jalandhar', stations: ['jalandhar'] },
+                    { name: 'Patiala', stations: ['patiala'] },
+                    { name: 'Bathinda', stations: ['bathinda'] },
+                    { name: 'Mandi Gobindgarh', stations: ['mandi-gobindgarh'] },
+                    { name: 'Khanna', stations: ['khanna'] },
+                    { name: 'Pathankot', stations: ['pathankot'] },
+                    { name: 'Rupnagar', stations: ['rupnagar'] }
                 ]
             },
             'rajasthan': {
                 name: 'Rajasthan',
                 cities: [
-                    { 
-                        name: 'Jaipur', 
-                        stations: ['jaipur/shastri-nagar', 'jaipur/police-commissionerate', 'jaipur'] 
-                    },
-                    { 
-                        name: 'Jodhpur', 
-                        stations: ['jodhpur/collectorate', 'jodhpur'] 
-                    },
-                    { 
-                        name: 'Udaipur', 
-                        stations: ['udaipur/ashok-nagar', 'udaipur'] 
-                    },
-                    { 
-                        name: 'Kota', 
-                        stations: ['kota/shrinath-puram', 'kota'] 
-                    },
-                    { 
-                        name: 'Ajmer', 
-                        stations: ['ajmer'] 
-                    },
-                    { 
-                        name: 'Alwar', 
-                        stations: ['alwar'] 
-                    },
-                    { 
-                        name: 'Bhiwadi', 
-                        stations: ['bhiwadi'] 
-                    },
-                    { 
-                        name: 'Pali', 
-                        stations: ['pali'] 
-                    },
-                    { 
-                        name: 'Bikaner', 
-                        stations: ['bikaner'] 
-                    }
+                    { name: 'Jaipur', stations: ['jaipur'] },
+                    { name: 'Jodhpur', stations: ['jodhpur'] },
+                    { name: 'Udaipur', stations: ['udaipur'] },
+                    { name: 'Kota', stations: ['kota'] },
+                    { name: 'Ajmer', stations: ['ajmer'] },
+                    { name: 'Alwar', stations: ['alwar'] },
+                    { name: 'Bhiwadi', stations: ['bhiwadi'] },
+                    { name: 'Pali', stations: ['pali'] },
+                    { name: 'Bikaner', stations: ['bikaner'] }
                 ]
             },
             'uttar-pradesh': {
                 name: 'Uttar Pradesh',
                 cities: [
-                    { 
-                        name: 'Lucknow', 
-                        stations: ['lucknow/gomti-nagar', 'lucknow/talkatora', 'lucknow/lalbagh', 'lucknow'] 
-                    },
-                    { 
-                        name: 'Kanpur', 
-                        stations: ['kanpur/nehru-nagar', 'kanpur/kidwai-nagar', 'kanpur'] 
-                    },
-                    { 
-                        name: 'Agra', 
-                        stations: ['agra/sanjay-place', 'agra/sikandra', 'agra'] 
-                    },
-                    { 
-                        name: 'Varanasi', 
-                        stations: ['varanasi/ardhali-bazar', 'varanasi/lanka', 'varanasi'] 
-                    },
-                    { 
-                        name: 'Noida', 
-                        stations: ['noida/sector-1', 'noida/sector-62', 'noida/sector-116', 'noida'] 
-                    },
-                    { 
-                        name: 'Ghaziabad', 
-                        stations: ['ghaziabad/sanjay-nagar', 'ghaziabad/loni', 'ghaziabad/vasundhara', 'ghaziabad'] 
-                    },
-                    { 
-                        name: 'Meerut', 
-                        stations: ['meerut/pallavpuram', 'meerut/jai-bhim-nagar', 'meerut'] 
-                    },
-                    { 
-                        name: 'Greater Noida', 
-                        stations: ['greater-noida/knowledge-park', 'greater-noida'] 
-                    },
-                    { 
-                        name: 'Moradabad', 
-                        stations: ['moradabad/kanth-road', 'moradabad/budh-bazar', 'moradabad'] 
-                    },
-                    { 
-                        name: 'Bareilly', 
-                        stations: ['bareilly'] 
-                    },
-                    { 
-                        name: 'Prayagraj', 
-                        stations: ['prayagraj', 'allahabad'] 
-                    },
-                    { 
-                        name: 'Gorakhpur', 
-                        stations: ['gorakhpur'] 
-                    },
-                    { 
-                        name: 'Firozabad', 
-                        stations: ['firozabad'] 
-                    },
-                    { 
-                        name: 'Jhansi', 
-                        stations: ['jhansi'] 
-                    },
-                    { 
-                        name: 'Gajraula', 
-                        stations: ['gajraula'] 
-                    },
-                    { 
-                        name: 'Khurja', 
-                        stations: ['khurja'] 
-                    },
-                    { 
-                        name: 'Raebareli', 
-                        stations: ['raebareli'] 
-                    },
-                    { 
-                        name: 'Anpara', 
-                        stations: ['anpara'] 
-                    }
+                    { name: 'Lucknow', stations: ['lucknow'] },
+                    { name: 'Kanpur', stations: ['kanpur'] },
+                    { name: 'Agra', stations: ['agra'] },
+                    { name: 'Varanasi', stations: ['varanasi'] },
+                    { name: 'Noida', stations: ['noida'] },
+                    { name: 'Ghaziabad', stations: ['ghaziabad'] },
+                    { name: 'Meerut', stations: ['meerut'] },
+                    { name: 'Greater Noida', stations: ['greater-noida'] },
+                    { name: 'Moradabad', stations: ['moradabad'] },
+                    { name: 'Bareilly', stations: ['bareilly'] },
+                    { name: 'Prayagraj', stations: ['prayagraj'] },
+                    { name: 'Gorakhpur', stations: ['gorakhpur'] }
                 ]
             },
             'delhi-chandigarh': {
@@ -1011,29 +930,16 @@
                         stations: [
                             'delhi/us-embassy',
                             'delhi/anand-vihar',
-                            'delhi/aya-nagar',
-                            'delhi/bawana',
                             'delhi/dwarka',
                             'delhi/ito',
-                            'delhi/mandir-marg',
-                            'delhi/nehru-nagar',
-                            'delhi/punjabi-bagh',
-                            'delhi/r-k-puram',
-                            'delhi/rohini',
-                            'delhi/shadipur',
-                            'delhi/vivek-vihar',
-                            'delhi'
+                            'delhi/rohini'
                         ] 
                     },
-                    { 
-                        name: 'Chandigarh', 
-                        stations: ['chandigarh/sector-25', 'chandigarh/sector-53', 'chandigarh'] 
-                    }
+                    { name: 'Chandigarh', stations: ['chandigarh'] }
                 ]
             }
         };
 
-        // AQI Color mapping
         function getAQIColor(aqi) {
             if (aqi <= 50) return '#00E400';
             if (aqi <= 100) return '#FFD700';
@@ -1043,7 +949,6 @@
             return '#7E0023';
         }
         
-        // Get text color based on AQI (for better contrast)
         function getAQITextColor(aqi) {
             if (aqi <= 50) return '#006400';
             if (aqi <= 100) return '#8B7500';
@@ -1062,7 +967,6 @@
             return 'Severe';
         }
 
-        // Get health advisories based on AQI
         function getHealthAdvisories(aqi) {
             if (aqi <= 50) {
                 return {
@@ -1173,7 +1077,6 @@
                         icon: "👶",
                         advice: [
                             "Avoid prolonged or heavy exertion",
-                            "Children & outdoors active people should avoid prolonged exertion",
                             "Stay indoors as much as possible",
                             "Use air purifiers indoors",
                             "Wear N95 mask if must go outside"
@@ -1185,7 +1088,6 @@
                         advice: [
                             "Avoid exposure to polluted areas",
                             "Reduce activities & avoid pollution sources",
-                            "Avoid heavy traffic areas",
                             "Stay indoors with air purification",
                             "Consult doctor if symptoms worsen"
                         ]
@@ -1198,7 +1100,6 @@
                         icon: "🏃",
                         advice: [
                             "Avoid prolonged or heavy exertion",
-                            "Respiratory illness on prolonged exposure",
                             "Move all activities indoors",
                             "Use N95 masks when going outside",
                             "Keep windows and doors closed"
@@ -1209,7 +1110,6 @@
                         icon: "👶",
                         advice: [
                             "Avoid all physical activities outdoors",
-                            "Should avoid exposure to air pollution sources",
                             "Stay indoors with air purifiers",
                             "Keep children indoors",
                             "Seek medical advice if needed"
@@ -1220,7 +1120,6 @@
                         icon: "❤️",
                         advice: [
                             "Avoid all physical activities outdoors",
-                            "Avoid all sources of air pollution",
                             "Keep prescribed medications readily available",
                             "Seek immediate medical help if symptoms appear",
                             "Use air purifiers indoors continuously"
@@ -1234,7 +1133,6 @@
                         icon: "🏃",
                         advice: [
                             "⚠️ SERIOUS HEALTH EFFECTS",
-                            "Affects healthy people, serious impact on those with existing diseases",
                             "Avoid all outdoor activities",
                             "Stay indoors with doors/windows closed",
                             "Use N95 masks even for short outdoor exposure",
@@ -1247,9 +1145,7 @@
                         advice: [
                             "⚠️ EMERGENCY - SERIOUS HEALTH EFFECTS",
                             "Avoid all physical activities outdoors",
-                            "Should avoid all sources of air pollution",
                             "Keep children strictly indoors",
-                            "May cause respiratory impact even during light activities",
                             "Seek medical advice immediately if symptoms occur"
                         ]
                     },
@@ -1259,9 +1155,7 @@
                         advice: [
                             "⚠️ MEDICAL EMERGENCY RISK",
                             "Serious health effects - avoid all outdoor exposure",
-                            "May cause respiratory impact even during light activities",
                             "Keep all medications readily available",
-                            "Remain in controlled indoor environment",
                             "Contact healthcare provider immediately if any symptoms"
                         ]
                     }
@@ -1269,7 +1163,6 @@
             }
         }
 
-        // Update health advisory section
         function updateHealthAdvisory(aqi) {
             document.getElementById('advisoryAQI').textContent = Math.round(aqi);
             document.getElementById('advisoryCategory').textContent = getAQICategory(aqi);
@@ -1300,7 +1193,6 @@
             `;
         }
 
-        // Update city dropdown
         function updateCityDropdown() {
             const selectedState = document.getElementById('stateSelect').value;
             const stateData = STATES_DATA[selectedState];
@@ -1315,26 +1207,51 @@
             });
         }
 
-        // Fetch air quality data for a specific station
-        async function fetchStationData(stationId) {
+        function updateProgress(current, total, stationName) {
+            const percentage = Math.round((current / total) * 100);
+            const progressFill = document.getElementById('progressFill');
+            const progressText = document.getElementById('progressText');
+            
+            progressFill.style.width = percentage + '%';
+            progressFill.textContent = percentage + '%';
+            progressText.textContent = `Loading station ${current} of ${total}: ${stationName}`;
+        }
+
+        async function fetchStationData(stationId, retryCount = 0) {
             try {
+                console.log(`Fetching data for station: ${stationId}`);
                 const response = await fetch(`${API_BASE}/feed/${stationId}/?token=${WAQI_TOKEN}`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
                 const data = await response.json();
                 
-                if (data.status === 'ok' && data.data) {
+                if (data.status === 'ok' && data.data && data.data.aqi) {
+                    console.log(`✓ Success: ${stationId} - AQI: ${data.data.aqi}`);
                     return {
                         success: true,
                         stationId: stationId,
                         data: data.data
                     };
                 } else {
+                    console.warn(`✗ No data: ${stationId} - Status: ${data.status}`);
                     return {
                         success: false,
                         stationId: stationId,
-                        error: 'No data available'
+                        error: data.data || 'No AQI data available'
                     };
                 }
             } catch (error) {
+                console.error(`✗ Error: ${stationId} - ${error.message}`);
+                
+                if (retryCount < MAX_RETRIES) {
+                    console.log(`Retrying ${stationId}... (Attempt ${retryCount + 1}/${MAX_RETRIES})`);
+                    await new Promise(resolve => setTimeout(resolve, 2000));
+                    return fetchStationData(stationId, retryCount + 1);
+                }
+                
                 return {
                     success: false,
                     stationId: stationId,
@@ -1343,14 +1260,29 @@
             }
         }
 
-        // Fetch data from all stations in a city
         async function fetchAllStationsData(stations) {
-            const promises = stations.map(stationId => fetchStationData(stationId));
-            const results = await Promise.all(promises);
-            return results.filter(result => result.success);
+            const results = [];
+            const total = stations.length;
+            
+            console.log(`Starting to fetch ${total} stations sequentially...`);
+            
+            for (let i = 0; i < stations.length; i++) {
+                updateProgress(i + 1, total, stations[i]);
+                
+                const result = await fetchStationData(stations[i]);
+                if (result.success) {
+                    results.push(result);
+                }
+                
+                if (i < stations.length - 1) {
+                    await new Promise(resolve => setTimeout(resolve, REQUEST_DELAY));
+                }
+            }
+            
+            console.log(`Fetch complete: ${results.length}/${total} stations successful`);
+            return results;
         }
 
-        // Display individual station cards
         function displayStationCards(stationsData) {
             const stationsGrid = document.getElementById('stationsGrid');
             
@@ -1415,7 +1347,6 @@
             });
         }
 
-        // Update main statistics with average data
         function updateStatistics(stationsData) {
             if (stationsData.length === 0) {
                 document.getElementById('currentAqi').textContent = '--';
@@ -1438,7 +1369,6 @@
             document.getElementById('aqiCategory').textContent = category;
             document.getElementById('aqiCategory').style.color = textColor;
             
-            // Find worst and best stations
             const worstStation = stationsData.reduce((max, s) => s.data.aqi > max.data.aqi ? s : max);
             const bestStation = stationsData.reduce((min, s) => s.data.aqi < min.data.aqi ? s : min);
             
@@ -1455,7 +1385,6 @@
                 `Primary pollutant: ${dominantPollutant.toUpperCase()}`;
         }
 
-        // Create average pollutants chart
         function createPollutantsChart(stationsData) {
             const ctx = document.getElementById('pollutantsChart');
             
@@ -1465,7 +1394,6 @@
 
             if (stationsData.length === 0) return;
 
-            // Calculate average pollutants across all stations
             const pollutantSums = { pm25: 0, pm10: 0, no2: 0, so2: 0, o3: 0, co: 0 };
             const pollutantCounts = { pm25: 0, pm10: 0, no2: 0, so2: 0, o3: 0, co: 0 };
 
@@ -1538,7 +1466,6 @@
             });
         }
 
-        // Create stations comparison chart
         function createStationsComparisonChart(stationsData) {
             const ctx = document.getElementById('stationsComparisonChart');
             
@@ -1595,28 +1522,43 @@
             });
         }
 
-        // Main update function
         async function updateDashboard() {
+            if (isLoading) {
+                console.log('Already loading, please wait...');
+                return;
+            }
+
             const selectedState = document.getElementById('stateSelect').value;
             const cityIndex = parseInt(document.getElementById('citySelect').value);
             const stateData = STATES_DATA[selectedState];
             const cityData = stateData.cities[cityIndex];
             
             try {
-                document.getElementById('loadingMessage').style.display = 'block';
+                isLoading = true;
+                document.getElementById('refreshBtn').disabled = true;
+                document.getElementById('progressContainer').style.display = 'block';
                 document.getElementById('mainContent').style.display = 'none';
                 document.getElementById('errorMessage').style.display = 'none';
+                document.getElementById('warningMessage').style.display = 'none';
 
                 document.getElementById('cityNameDisplay').textContent = cityData.name;
 
-                // Fetch data from all stations in the city
+                console.log(`\n=== Fetching data for ${cityData.name} ===`);
+                console.log(`Total stations: ${cityData.stations.length}`);
+                
                 const stationsData = await fetchAllStationsData(cityData.stations);
                 
                 if (stationsData.length === 0) {
-                    throw new Error('No data available from any monitoring station');
+                    throw new Error('No data available from any monitoring station. Please try another city or check back later.');
                 }
 
-                // Update all components
+                const failedCount = cityData.stations.length - stationsData.length;
+                if (failedCount > 0) {
+                    const warningMsg = document.getElementById('warningMessage');
+                    warningMsg.textContent = `⚠️ Note: ${failedCount} out of ${cityData.stations.length} stations could not be reached. Displaying data from ${stationsData.length} available station(s).`;
+                    warningMsg.style.display = 'block';
+                }
+
                 updateStatistics(stationsData);
                 displayStationCards(stationsData);
                 
@@ -1626,24 +1568,28 @@
                 createPollutantsChart(stationsData);
                 createStationsComparisonChart(stationsData);
 
-                // Load fire data if applicable
                 loadFireData();
 
                 document.getElementById('lastUpdate').textContent = 
                     `Last updated: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}`;
                 
-                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('progressContainer').style.display = 'none';
                 document.getElementById('mainContent').style.display = 'block';
                 
+                console.log('=== Dashboard update complete ===\n');
+                
             } catch (error) {
-                document.getElementById('loadingMessage').style.display = 'none';
+                console.error('Dashboard error:', error);
+                document.getElementById('progressContainer').style.display = 'none';
                 document.getElementById('errorMessage').style.display = 'block';
                 document.getElementById('errorMessage').textContent = 
-                    `Error loading data: ${error.message}. This may occur if stations are offline or API limit reached. Please try again later.`;
+                    `Error loading data: ${error.message}`;
+            } finally {
+                isLoading = false;
+                document.getElementById('refreshBtn').disabled = false;
             }
         }
 
-        // Event listeners
         document.getElementById('stateSelect').addEventListener('change', () => {
             updateCityDropdown();
             updateDashboard();
@@ -1652,10 +1598,8 @@
         document.getElementById('citySelect').addEventListener('change', updateDashboard);
         document.getElementById('refreshBtn').addEventListener('click', updateDashboard);
 
-        // Auto-refresh every 15 minutes
         setInterval(updateDashboard, 15 * 60 * 1000);
 
-        // Initial load
         updateCityDropdown();
         updateDashboard();
     </script>
