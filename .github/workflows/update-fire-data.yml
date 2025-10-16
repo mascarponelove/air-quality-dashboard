@@ -2,9 +2,9 @@ name: Update Fire Count Data
 
 on:
   schedule:
-    # Run every 6 hours at minute 0
+    # Run every 6 hours
     - cron: '0 */6 * * *'
-  workflow_dispatch:  # Allow manual triggering from GitHub UI
+  workflow_dispatch:  # Allow manual triggering
 
 jobs:
   process-fire-data:
@@ -22,6 +22,12 @@ jobs:
     - name: Install dependencies
       run: |
         pip install geopandas pandas requests shapely pyproj
+        
+    - name: Download district shapefiles
+      run: |
+        mkdir -p shapefiles
+        # You'll need to commit these shapefiles to your repo
+        # or download from a public source
         
     - name: Run fire data processing script
       run: python scripts/process_fire_data.py
