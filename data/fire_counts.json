@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-10-16T18:24:17.138059Z",
+  "last_updated": "2025-10-17T01:15:59.792791Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -414,21 +414,33 @@
       "haryana": {
         "districts": [
           {
+            "district": "Ambala",
+            "fire_count": 2
+          },
+          {
+            "district": "Hisar",
+            "fire_count": 2
+          },
+          {
             "district": "Yamunanagar",
             "fire_count": 2
           },
           {
-            "district": "Ambala",
+            "district": "Jhajjar",
             "fire_count": 1
           },
           {
-            "district": "Hisar",
+            "district": "Kurukshetra",
+            "fire_count": 1
+          },
+          {
+            "district": "Panipat",
             "fire_count": 1
           }
         ],
-        "total": 4
+        "total": 9
       },
-      "combined_total": 52
+      "combined_total": 57
     }
   ]
 }

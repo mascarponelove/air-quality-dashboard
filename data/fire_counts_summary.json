@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-10-16T18:24:17.152274Z",
-  "total_fire_count": 201,
+  "last_updated": "2025-10-17T01:15:59.807053Z",
+  "total_fire_count": 206,
   "date_range": {
     "start": "2025-10-09",
     "end": "2025-10-16"
@@ -29,12 +29,12 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 12
+      "total_fires": 13
     },
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 12
+      "total_fires": 13
     },
     {
       "state": "Haryana",
@@ -72,14 +72,14 @@
       "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Kapurthala",
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 2
+      "state": "Punjab",
+      "district": "Kapurthala",
+      "total_fires": 3
     },
     {
       "state": "Punjab",
@@ -98,17 +98,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
+      "district": "Kurukshetra",
       "total_fires": 2
     },
     {
       "state": "Haryana",
-      "district": "Charki Dadri",
-      "total_fires": 1
+      "district": "Ambala",
+      "total_fires": 2
     }
   ],
   "state_totals": {
     "punjab": 139,
-    "haryana": 62
+    "haryana": 67
   }
 }
