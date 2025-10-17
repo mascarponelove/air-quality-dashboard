@@ -1,25 +1,25 @@
 {
-  "last_updated": "2025-10-17T06:24:37.606519Z",
-  "total_fire_count": 200,
+  "last_updated": "2025-10-17T12:35:03.091488Z",
+  "total_fire_count": 238,
   "date_range": {
     "start": "2025-10-10",
-    "end": "2025-10-16"
+    "end": "2025-10-17"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 55
+      "total_fires": 66
     },
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 39
+      "total_fires": 46
     },
     {
       "state": "Punjab",
       "district": "Firozpur",
-      "total_fires": 17
+      "total_fires": 20
     },
     {
       "state": "Haryana",
@@ -37,28 +37,48 @@
       "total_fires": 9
     },
     {
+      "state": "Punjab",
+      "district": "Patiala",
+      "total_fires": 8
+    },
+    {
+      "state": "Punjab",
+      "district": "Fazilka",
+      "total_fires": 6
+    },
+    {
       "state": "Haryana",
       "district": "Faridabad",
       "total_fires": 6
     },
     {
       "state": "Punjab",
-      "district": "Fazilka",
-      "total_fires": 4
-    },
-    {
-      "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 4
+      "district": "Gurdaspur",
+      "total_fires": 5
     },
     {
       "state": "Punjab",
       "district": "Bathinda",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Sirsa",
       "total_fires": 4
     },
     {
       "state": "Punjab",
-      "district": "Gurdaspur",
+      "district": "Sangrur",
+      "total_fires": 4
+    },
+    {
+      "state": "Haryana",
+      "district": "Yamunanagar",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Fatehabad",
       "total_fires": 3
     },
     {
@@ -68,7 +88,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Fatehabad",
+      "district": "Kurukshetra",
       "total_fires": 3
     },
     {
@@ -77,38 +97,18 @@
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 3
-    },
-    {
       "state": "Punjab",
-      "district": "Pathankot",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Sangrur",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Sirsa",
+      "district": "Jalandhar",
       "total_fires": 2
     },
     {
       "state": "Haryana",
       "district": "Ambala",
       "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Kurukshetra",
-      "total_fires": 2
     }
   ],
   "state_totals": {
-    "punjab": 139,
-    "haryana": 61
+    "punjab": 174,
+    "haryana": 64
   }
 }
