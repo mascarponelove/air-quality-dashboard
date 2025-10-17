@@ -179,7 +179,6 @@
             font-weight: bold;
         }
         
-        /* Styles from original AQI dashboard */
         .controls {
             display: flex;
             gap: 15px;
@@ -450,7 +449,6 @@
             margin-top: 30px;
         }
 
-        /* Additional responsive styles */
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 1.8rem;
@@ -607,7 +605,6 @@
     </div>
 
     <script>
-        // --- FIRE DATA MANAGEMENT ---
         let fireData = null;
         let selectedDate = null;
 
@@ -635,7 +632,6 @@
 
             const dateData = fireData.daily_data.find(d => d.date === selectedDate);
             if (!dateData) {
-                 // If no data for the selected date, clear the display
                 document.getElementById('fireStats').innerHTML = '';
                 document.getElementById('fireDataContent').innerHTML = '<p style="text-align: center; padding: 20px;">No fire data available for this date.</p>';
                 return;
@@ -646,7 +642,6 @@
             displayFireTables(dateData);
         }
 
-        // CORRECTED: Safely access data
         function displayFireStats(dateData) {
             const punjabTotal = dateData.punjab ? dateData.punjab.total : 0;
             const haryanaTotal = dateData.haryana ? dateData.haryana.total : 0;
@@ -694,11 +689,9 @@
             return 'fire-low';
         }
 
-        // CORRECTED: More robust function to create tables
         function displayFireTables(dateData) {
             let tablesHtml = '';
             const createTable = (stateName, stateData) => {
-                // Check for existence of stateData, its districts property, and if it has items
                 if (!stateData || !stateData.districts || stateData.districts.length === 0) return '';
                 
                 return `
@@ -745,7 +738,6 @@
             document.getElementById('fireDataContent').innerHTML = tablesHtml;
         }
 
-        // --- AIR QUALITY INDEX (AQI) MANAGEMENT ---
         const WAQI_TOKEN = '486994a34df29107945c8a194da64d15218daf77';
         const API_BASE = 'https://api.waqi.info';
         
@@ -893,7 +885,15 @@
                         borderRadius: 8
                     }]
                 },
-                options: { responsive: true, plugins: { legend: { display: false } } }
+                options: { 
+                    responsive: true, 
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
             });
         }
 
@@ -906,19 +906,36 @@
             aqiValues[23] = data.aqi; 
 
             trendChart = new Chart(ctx, {
-                type: 'line',
+                type: 'bar',
                 data: {
                     labels: hours,
                     datasets: [{
                         label: 'AQI',
                         data: aqiValues,
-                        borderColor: '#667eea',
-                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
-                        fill: true,
-                        tension: 0.4
+                        backgroundColor: '#667eea',
+                        borderRadius: 5,
+                        borderWidth: 1,
+                        borderColor: '#5568d3'
                     }]
                 },
-                options: { responsive: true, plugins: { legend: { display: false } }, scales: { x: { ticks: { maxTicksLimit: 8 } } } }
+                options: { 
+                    responsive: true, 
+                    plugins: { 
+                        legend: { display: false } 
+                    }, 
+                    scales: { 
+                        x: { 
+                            ticks: { maxTicksLimit: 8 } 
+                        },
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'AQI Value'
+                            }
+                        }
+                    }
+                }
             });
         }
 
@@ -981,7 +998,6 @@
             }
         }
 
-        // --- INITIALIZATION AND EVENT LISTENERS ---
         window.addEventListener('DOMContentLoaded', () => {
             loadFireData();
             
