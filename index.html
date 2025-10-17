@@ -492,6 +492,103 @@
                 </div>
         </div>
 
+        <div class="fire-section">
+            <h2>🌾 Agricultural Emissions Calculator (RBEE Model)</h2>
+            <p style="color: #666; margin-bottom: 15px;">
+                Calculate pollutant emissions from crop residue burning
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 20px;">
+                <div>
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Select Year:</label>
+                    <select id="emissionYear" class="state-select" style="width: 100%;">
+                        <option value="">Choose Year</option>
+                        <option value="2020-2019">2020-2021</option>
+                        <option value="2019-2018">2019-2020</option>
+                        <option value="2018-2017">2018-2019</option>
+                        <option value="2017-2016">2017-2018</option>
+                        <option value="2016-2015">2016-2017</option>
+                        <option value="2015-2014">2015-2016</option>
+                        <option value="2014-2013">2014-2015</option>
+                        <option value="2013-2012">2013-2014</option>
+                        <option value="2012-2011">2012-2013</option>
+                        <option value="2011-2010">2011-2012</option>
+                        <option value="2010-2009">2010-2011</option>
+                        <option value="Any Others">Any Others (Manual Input)</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Select State:</label>
+                    <select id="emissionState" class="state-select" style="width: 100%;">
+                        <option value="">Choose State</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="West Bengal">West Bengal</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Select Crop:</label>
+                    <select id="emissionCrop" class="state-select" style="width: 100%;">
+                        <option value="">Choose Crop</option>
+                        <option value="Rice">Rice</option>
+                        <option value="Wheat">Wheat</option>
+                        <option value="Coarse Cereals">Coarse Cereals</option>
+                        <option value="Total Pulses">Total Pulses</option>
+                        <option value="Oilseeds">Oilseeds</option>
+                        <option value="Sugarcane">Sugarcane</option>
+                        <option value="Cotton">Cotton</option>
+                        <option value="Jute & Mesta">Jute & Mesta</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Select Pollutant:</label>
+                    <select id="emissionPollutant" class="state-select" style="width: 100%;">
+                        <option value="">Choose Pollutant</option>
+                        <option value="PM2.5">PM2.5</option>
+                        <option value="PM10">PM10</option>
+                        <option value="SO2">SO₂</option>
+                        <option value="CO2">CO₂</option>
+                        <option value="CO">CO</option>
+                        <option value="NOx">NOₓ</option>
+                        <option value="N2O">N₂O</option>
+                        <option value="NH3">NH₃</option>
+                        <option value="CH4">CH₄</option>
+                        <option value="NMVOC">NMVOC</option>
+                        <option value="EC">EC</option>
+                        <option value="OC">OC</option>
+                        <option value="PAH">PAH</option>
+                    </select>
+                </div>
+
+                <div id="customProductionDiv" style="display: none;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Crop Production (Mt):</label>
+                    <input type="number" id="customProduction" class="state-select" style="width: 100%;" step="0.001" min="0" placeholder="Enter production in million tonnes">
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <button id="calculateEmissions" class="refresh-btn" style="font-size: 1.1rem; padding: 15px 40px;">
+                    🧮 Calculate Emissions
+                </button>
+            </div>
+
+            <div id="emissionResult" style="display: none; background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 25px; border-radius: 15px; text-align: center; margin-top: 20px;">
+                <h3 style="margin-bottom: 10px; font-size: 1.3rem;">Total Emissions</h3>
+                <div style="font-size: 2.5rem; font-weight: bold;" id="emissionValue">--</div>
+                <div style="font-size: 1.1rem; margin-top: 10px; opacity: 0.9;" id="emissionDetails">--</div>
+            </div>
+        </div>
+
         <div class="header">
             <h1>💨 Air Quality Monitoring</h1>
             <div class="controls">
