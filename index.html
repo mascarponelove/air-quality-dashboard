@@ -449,6 +449,74 @@
             margin-top: 30px;
         }
 
+        /* Emissions Calculator Styles */
+        .emission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .emission-field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .emission-field label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95rem;
+        }
+
+        .emission-result-card {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+        }
+
+        .emission-result-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            opacity: 0.95;
+        }
+
+        .emission-value {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 15px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .emission-details {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .info-box h4 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #555;
+            line-height: 1.6;
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 1.8rem;
@@ -465,6 +533,9 @@
             .date-selector {
                 flex-direction: column;
             }
+            .emission-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -472,9 +543,10 @@
     <div class="container">
         <div class="header">
             <h1>🌍 India Environmental Monitoring Dashboard</h1>
-            <p>Real-time Air Quality (CPCB) & Agricultural Fire Detection (NASA FIRMS)</p>
+            <p>Real-time Air Quality (CPCB) & Agricultural Fire Detection (NASA FIRMS) & Emissions Calculator (RBEE Model)</p>
         </div>
 
+        <!-- FIRE DETECTION SECTION -->
         <div class="fire-section">
             <h2>🔥 Stubble Burning Fire Detection (Punjab & Haryana)</h2>
             <p style="color: #666; margin-bottom: 15px;">
@@ -482,25 +554,29 @@
                 <span id="fireDataUpdate" style="margin-left: 15px; font-weight: bold;"></span>
             </p>
 
-            <div class="fire-stats" id="fireStats">
-                </div>
-
-            <div class="date-selector" id="dateSelector">
-                </div>
-
-            <div id="fireDataContent">
-                </div>
+            <div class="fire-stats" id="fireStats"></div>
+            <div class="date-selector" id="dateSelector"></div>
+            <div id="fireDataContent"></div>
         </div>
 
+        <!-- EMISSIONS CALCULATOR SECTION -->
         <div class="fire-section">
             <h2>🌾 Agricultural Emissions Calculator (RBEE Model)</h2>
             <p style="color: #666; margin-bottom: 15px;">
-                Calculate pollutant emissions from crop residue burning
+                Calculate pollutant emissions from crop residue burning based on production data
             </p>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 20px;">
-                <div>
-                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Select Year:</label>
+            <div class="info-box">
+                <h4>📊 Data Sources for Emission Calculation:</h4>
+                <p><strong>1. Crop Coefficients:</strong> Residue-to-product ratios by state (embedded data)<br>
+                <strong>2. Pollutant Factors:</strong> Emission factors in g/kg for 13 pollutants (embedded data)<br>
+                <strong>3. Production Data:</strong> Historical crop production (2010-2021) in Million Tonnes (embedded data)<br>
+                <strong>Formula:</strong> Emission (Gg/yr) = Production (Mt) × Crop Coefficient × Pollutant Factor</p>
+            </div>
+
+            <div class="emission-grid">
+                <div class="emission-field">
+                    <label>Select Year:</label>
                     <select id="emissionYear" class="state-select" style="width: 100%;">
                         <option value="">Choose Year</option>
                         <option value="2020-2019">2020-2021</option>
@@ -518,8 +594,8 @@
                     </select>
                 </div>
 
-                <div>
-                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Select State:</label>
+                <div class="emission-field">
+                    <label>Select State:</label>
                     <select id="emissionState" class="state-select" style="width: 100%;">
                         <option value="">Choose State</option>
                         <option value="Punjab">Punjab</option>
@@ -535,8 +611,8 @@
                     </select>
                 </div>
 
-                <div>
-                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Select Crop:</label>
+                <div class="emission-field">
+                    <label>Select Crop:</label>
                     <select id="emissionCrop" class="state-select" style="width: 100%;">
                         <option value="">Choose Crop</option>
                         <option value="Rice">Rice</option>
@@ -550,45 +626,46 @@
                     </select>
                 </div>
 
-                <div>
-                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Select Pollutant:</label>
+                <div class="emission-field">
+                    <label>Select Pollutant:</label>
                     <select id="emissionPollutant" class="state-select" style="width: 100%;">
                         <option value="">Choose Pollutant</option>
-                        <option value="PM2.5">PM2.5</option>
-                        <option value="PM10">PM10</option>
-                        <option value="SO2">SO₂</option>
-                        <option value="CO2">CO₂</option>
-                        <option value="CO">CO</option>
-                        <option value="NOx">NOₓ</option>
-                        <option value="N2O">N₂O</option>
-                        <option value="NH3">NH₃</option>
-                        <option value="CH4">CH₄</option>
-                        <option value="NMVOC">NMVOC</option>
-                        <option value="EC">EC</option>
-                        <option value="OC">OC</option>
-                        <option value="PAH">PAH</option>
+                        <option value="PM2.5">PM2.5 (Particulate Matter)</option>
+                        <option value="PM10">PM10 (Particulate Matter)</option>
+                        <option value="SO2">SO₂ (Sulfur Dioxide)</option>
+                        <option value="CO2">CO₂ (Carbon Dioxide)</option>
+                        <option value="CO">CO (Carbon Monoxide)</option>
+                        <option value="NOx">NOₓ (Nitrogen Oxides)</option>
+                        <option value="N2O">N₂O (Nitrous Oxide)</option>
+                        <option value="NH3">NH₃ (Ammonia)</option>
+                        <option value="CH4">CH₄ (Methane)</option>
+                        <option value="NMVOC">NMVOC (Non-Methane VOC)</option>
+                        <option value="EC">EC (Elemental Carbon)</option>
+                        <option value="OC">OC (Organic Carbon)</option>
+                        <option value="PAH">PAH (Polycyclic Aromatic Hydrocarbons)</option>
                     </select>
                 </div>
 
-                <div id="customProductionDiv" style="display: none;">
-                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #333;">Crop Production (Mt):</label>
+                <div class="emission-field" id="customProductionDiv" style="display: none;">
+                    <label>Crop Production (Mt):</label>
                     <input type="number" id="customProduction" class="state-select" style="width: 100%;" step="0.001" min="0" placeholder="Enter production in million tonnes">
                 </div>
             </div>
 
-            <div style="text-align: center; margin: 20px 0;">
-                <button id="calculateEmissions" class="refresh-btn" style="font-size: 1.1rem; padding: 15px 40px;">
+            <div style="text-align: center; margin: 30px 0;">
+                <button id="calculateEmissions" class="refresh-btn" style="font-size: 1.1rem; padding: 15px 50px;">
                     🧮 Calculate Emissions
                 </button>
             </div>
 
-            <div id="emissionResult" style="display: none; background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 25px; border-radius: 15px; text-align: center; margin-top: 20px;">
-                <h3 style="margin-bottom: 10px; font-size: 1.3rem;">Total Emissions</h3>
-                <div style="font-size: 2.5rem; font-weight: bold;" id="emissionValue">--</div>
-                <div style="font-size: 1.1rem; margin-top: 10px; opacity: 0.9;" id="emissionDetails">--</div>
+            <div id="emissionResult" class="emission-result-card" style="display: none;">
+                <h3>Total Emissions Result</h3>
+                <div class="emission-value" id="emissionValue">--</div>
+                <div class="emission-details" id="emissionDetails">--</div>
             </div>
         </div>
 
+        <!-- AIR QUALITY SECTION -->
         <div class="header">
             <h1>💨 Air Quality Monitoring</h1>
             <div class="controls">
@@ -601,8 +678,7 @@
                     <option value="chandigarh">Chandigarh</option>
                 </select>
                 
-                <select id="citySelect" class="city-select">
-                </select>
+                <select id="citySelect" class="city-select"></select>
                 
                 <button id="refreshBtn" class="refresh-btn">🔄 Refresh Data</button>
                 
@@ -644,8 +720,7 @@
             <div class="health-advisory">
                 <h2>🏥 Health Advisory</h2>
                 <p style="color: #666; margin-bottom: 15px;">Based on current AQI: <strong id="advisoryAQI">--</strong> (<span id="advisoryCategory">--</span>)</p>
-                <div class="advisory-grid" id="advisoryGrid">
-                    </div>
+                <div class="advisory-grid" id="advisoryGrid"></div>
             </div>
 
             <div class="charts-grid">
@@ -697,11 +772,14 @@
         </div>
 
         <div class="footer">
-            <p>Air quality data sourced from World Air Quality Index Project & CPCB. Fire data from NASA FIRMS.</p>
+            <p>Air quality data sourced from World Air Quality Index Project & CPCB. Fire data from NASA FIRMS. Emissions calculator based on RBEE Model.</p>
         </div>
     </div>
 
     <script>
+        // ============================================
+        // FIRE DATA MANAGEMENT
+        // ============================================
         let fireData = null;
         let selectedDate = null;
 
@@ -835,6 +913,142 @@
             document.getElementById('fireDataContent').innerHTML = tablesHtml;
         }
 
+        // ============================================
+        // EMISSIONS CALCULATOR
+        // ============================================
+        
+        // DATA SOURCE: All emission calculator data is embedded in JavaScript
+        // 1. Crop Coefficients - Residue-to-product ratios by state
+        const cropCoefficients = {
+            'Punjab': {'Rice': 1.065152, 'Wheat': 0.312288, 'Coarse Cereals': 0.3036, 'Total Pulses': 0.18105, 'Oilseeds': 0.10455, 'Sugarcane': 0.03621, 'Cotton': 0.54, 'Jute & Mesta': 0.54},
+            'Haryana': {'Rice': 1.065152, 'Wheat': 0.312288, 'Coarse Cereals': 0.3036, 'Total Pulses': 0.18105, 'Oilseeds': 0.10455, 'Sugarcane': 0.03621, 'Cotton': 0.54, 'Jute & Mesta': 0.54},
+            'Uttar Pradesh': {'Rice': 0.33286, 'Wheat': 0.312288, 'Coarse Cereals': 0.3036, 'Total Pulses': 0.18105, 'Oilseeds': 0.10455, 'Sugarcane': 0.03621, 'Cotton': 0.54, 'Jute & Mesta': 0.54},
+            'Madhya Pradesh': {'Rice': 0.33286, 'Wheat': 0.312288, 'Coarse Cereals': 0.3036, 'Total Pulses': 0.18105, 'Oilseeds': 0.10455, 'Sugarcane': 0.03621, 'Cotton': 0.54, 'Jute & Mesta': 0.54},
+            'Rajasthan': {'Rice': 0.33286, 'Wheat': 0.312288, 'Coarse Cereals': 0.3036, 'Total Pulses': 0.18105, 'Oilseeds': 0.10455, 'Sugarcane': 0.03621, 'Cotton': 0.54, 'Jute & Mesta': 0.54},
+            'West Bengal': {'Rice': 0.33286, 'Wheat': 0.312288, 'Coarse Cereals': 0.3036, 'Total Pulses': 0.18105, 'Oilseeds': 0.10455, 'Sugarcane': 0.03621, 'Cotton': 0.54, 'Jute & Mesta': 0.54},
+            'Bihar': {'Rice': 0.33286, 'Wheat': 0.312288, 'Coarse Cereals': 0.3036, 'Total Pulses': 0.18105, 'Oilseeds': 0.10455, 'Sugarcane': 0.03621, 'Cotton': 0.54, 'Jute & Mesta': 0.54},
+            'Andhra Pradesh': {'Rice': 0.33286, 'Wheat': 0.312288, 'Coarse Cereals': 0.3036, 'Total Pulses': 0.18105, 'Oilseeds': 0.10455, 'Sugarcane': 0.03621, 'Cotton': 0.54, 'Jute & Mesta': 0.54},
+            'Karnataka': {'Rice': 0.66572, 'Wheat': 0.312288, 'Coarse Cereals': 0.3036, 'Total Pulses': 0.18105, 'Oilseeds': 0.10455, 'Sugarcane': 0.03621, 'Cotton': 0.54, 'Jute & Mesta': 0.54},
+            'Maharashtra': {'Rice': 0.33286, 'Wheat': 0.312288, 'Coarse Cereals': 0.3036, 'Total Pulses': 0.18105, 'Oilseeds': 0.10455, 'Sugarcane': 0.03621, 'Cotton': 0.54, 'Jute & Mesta': 0.54}
+        };
+
+        // 2. Pollutant Emission Factors - grams of pollutant per kg of crop residue burned
+        const pollutantFactors = {
+            'PM2.5': {'Rice': 8.3, 'Wheat': 7.6, 'Coarse Cereals': 4.1, 'Total Pulses': 3.9, 'Oilseeds': 3.9, 'Sugarcane': 3.8, 'Cotton': 3.9, 'Jute & Mesta': 3},
+            'PM10': {'Rice': 9.1, 'Wheat': 5.7, 'Coarse Cereals': 4.3, 'Total Pulses': 8.05, 'Oilseeds': 8.05, 'Sugarcane': 4, 'Cotton': 4.35, 'Jute & Mesta': 4.35},
+            'SO2': {'Rice': 0.18, 'Wheat': 0.4, 'Coarse Cereals': 0.44, 'Total Pulses': 0.216, 'Oilseeds': 0.216, 'Sugarcane': 0.21, 'Cotton': 0.21, 'Jute & Mesta': 0.21},
+            'CO2': {'Rice': 1177, 'Wheat': 1787, 'Coarse Cereals': 2327, 'Total Pulses': 1130, 'Oilseeds': 1130, 'Sugarcane': 1130, 'Cotton': 1345, 'Jute & Mesta': 1345},
+            'CO': {'Rice': 93, 'Wheat': 28, 'Coarse Cereals': 114.7, 'Total Pulses': 86.3, 'Oilseeds': 86.3, 'Sugarcane': 34.7, 'Cotton': 105.82, 'Jute & Mesta': 105.82},
+            'NOx': {'Rice': 2.28, 'Wheat': 1.70, 'Coarse Cereals': 4.3, 'Total Pulses': 0.7, 'Oilseeds': 0.7, 'Sugarcane': 2.6, 'Cotton': 2.49, 'Jute & Mesta': 2.49},
+            'N2O': {'Rice': 0.48, 'Wheat': 0.74, 'Coarse Cereals': 0.74, 'Total Pulses': 0.74, 'Oilseeds': 0.74, 'Sugarcane': 0.74, 'Cotton': 0.74, 'Jute & Mesta': 0.74},
+            'NH3': {'Rice': 4.1, 'Wheat': 1.3, 'Coarse Cereals': 0.68, 'Total Pulses': 1.3, 'Oilseeds': 1.3, 'Sugarcane': 1, 'Cotton': 1.3, 'Jute & Mesta': 1.3},
+            'CH4': {'Rice': 9.56, 'Wheat': 3.55, 'Coarse Cereals': 4.4, 'Total Pulses': 4.56, 'Oilseeds': 1.3, 'Sugarcane': 1, 'Cotton': 1.3, 'Jute & Mesta': 1.3},
+            'NMVOC': {'Rice': 7, 'Wheat': 7, 'Coarse Cereals': 10, 'Total Pulses': 7, 'Oilseeds': 7, 'Sugarcane': 2.2, 'Cotton': 7, 'Jute & Mesta': 7},
+            'EC': {'Rice': 0.51, 'Wheat': 0.16, 'Coarse Cereals': 0.95, 'Total Pulses': 0.47, 'Oilseeds': 0.47, 'Sugarcane': 0.7, 'Cotton': 0.82, 'Jute & Mesta': 0.82},
+            'OC': {'Rice': 2.99, 'Wheat': 0.29, 'Coarse Cereals': 2.25, 'Total Pulses': 0.7, 'Oilseeds': 0.7, 'Sugarcane': 3.3, 'Cotton': 1.83, 'Jute & Mesta': 1.83},
+            'PAH': {'Rice': 0.005, 'Wheat': 0.0037, 'Coarse Cereals': 0.0017, 'Total Pulses': 0.0017, 'Oilseeds': 0.0017, 'Sugarcane': 0.0017, 'Cotton': 0.0017, 'Jute & Mesta': 0.0017}
+        };
+
+        // 3. Historical Production Data - Million Tonnes (Mt) by year and state
+        const productionData = {
+            '2020-2019': {
+                'Punjab': {'Rice': 11779.28, 'Wheat': 17615.563, 'Coarse Cereals': 433.2929, 'Total Pulses': 27.1606, 'Oilseeds': 151.99, 'Sugarcane': 7302.02, 'Cotton': 1206, 'Jute & Mesta': 0.0},
+                'Haryana': {'Rice': 4824.298, 'Wheat': 11876.3893, 'Coarse Cereals': 1098.40004, 'Total Pulses': 60.39192, 'Oilseeds': 3476.23, 'Sugarcane': 7730.39, 'Cotton': 2484, 'Jute & Mesta': 0.0},
+                'Uttar Pradesh': {'Rice': 15517.797, 'Wheat': 33815.496, 'Coarse Cereals': 2712.10272, 'Total Pulses': 1428.704, 'Oilseeds': 3064.88, 'Sugarcane': 179539.1, 'Cotton': 0, 'Jute & Mesta': 0.0},
+                'Madhya Pradesh': {'Rice': 4778.148, 'Wheat': 19607.143, 'Coarse Cereals': 4955.42691, 'Total Pulses': 3754.925, 'Oilseeds': 10311.71, 'Sugarcane': 7433.75, 'Cotton': 1646, 'Jute & Mesta': 2.18},
+                'Rajasthan': {'Rice': 480.52928, 'Wheat': 10916.118, 'Coarse Cereals': 7328.04413, 'Total Pulses': 4089.71759, 'Oilseeds': 15817.98, 'Sugarcane': 326.19, 'Cotton': 2788, 'Jute & Mesta': 0.0},
+                'West Bengal': {'Rice': 15881.4437, 'Wheat': 509.938064, 'Coarse Cereals': 45.236262, 'Total Pulses': 133.658648, 'Oilseeds': 2438.97, 'Sugarcane': 1527.58, 'Cotton': 0, 'Jute & Mesta': 8067.38},
+                'Bihar': {'Rice': 6297.989067, 'Wheat': 5579.7171, 'Coarse Cereals': 2019.33497, 'Total Pulses': 183.05564, 'Oilseeds': 287.5, 'Sugarcane': 13578.83, 'Cotton': 0.0, 'Jute & Mesta': 802.12},
+                'Andhra Pradesh': {'Rice': 8658.884988, 'Wheat': 0, 'Coarse Cereals': 2509.173, 'Total Pulses': 1092.721, 'Oilseeds': 903.79, 'Sugarcane': 6724, 'Cotton': 2508, 'Jute & Mesta': 21.31},
+                'Karnataka': {'Rice': 3634.48, 'Wheat': 179.7, 'Coarse Cereals': 6776.1392, 'Total Pulses': 1976.29, 'Oilseeds': 920.7, 'Sugarcane': 38181, 'Cotton': 2330, 'Jute & Mesta': 0.0},
+                'Maharashtra': {'Rice': 2897.58732, 'Wheat': 1793.67809, 'Coarse Cereals': 4370.6272, 'Total Pulses': 3625.72008, 'Oilseeds': 4965.85, 'Sugarcane': 69311.87, 'Cotton': 6639, 'Jute & Mesta': 0.0}
+            },
+            '2019-2018': {
+                'Punjab': {'Rice': 11779.28, 'Wheat': 17615.563, 'Coarse Cereals': 433.2929, 'Total Pulses': 27.1606, 'Oilseeds': 151.99, 'Sugarcane': 7302.02, 'Cotton': 1206, 'Jute & Mesta': 0.0},
+                'Haryana': {'Rice': 4824.298, 'Wheat': 11876.3893, 'Coarse Cereals': 1098.40004, 'Total Pulses': 60.39192, 'Oilseeds': 3476.23, 'Sugarcane': 7730.39, 'Cotton': 2484, 'Jute & Mesta': 0.0},
+                'Uttar Pradesh': {'Rice': 15517.797, 'Wheat': 33815.496, 'Coarse Cereals': 2712.10272, 'Total Pulses': 1428.704, 'Oilseeds': 3064.88, 'Sugarcane': 179539.1, 'Cotton': 0, 'Jute & Mesta': 0.0},
+                'Madhya Pradesh': {'Rice': 4778.148, 'Wheat': 19607.143, 'Coarse Cereals': 4955.42691, 'Total Pulses': 3754.925, 'Oilseeds': 10311.71, 'Sugarcane': 7433.75, 'Cotton': 1646, 'Jute & Mesta': 2.18},
+                'Rajasthan': {'Rice': 480.52928, 'Wheat': 10916.118, 'Coarse Cereals': 7328.04413, 'Total Pulses': 4089.71759, 'Oilseeds': 15817.98, 'Sugarcane': 326.19, 'Cotton': 2788, 'Jute & Mesta': 0.0},
+                'West Bengal': {'Rice': 15881.4437, 'Wheat': 509.938064, 'Coarse Cereals': 45.236262, 'Total Pulses': 133.658648, 'Oilseeds': 2438.97, 'Sugarcane': 1527.58, 'Cotton': 0, 'Jute & Mesta': 8067.38},
+                'Bihar': {'Rice': 6297.989067, 'Wheat': 5579.7171, 'Coarse Cereals': 2019.33497, 'Total Pulses': 183.05564, 'Oilseeds': 287.5, 'Sugarcane': 13578.83, 'Cotton': 0.0, 'Jute & Mesta': 802.12},
+                'Andhra Pradesh': {'Rice': 8658.884988, 'Wheat': 0, 'Coarse Cereals': 2509.173, 'Total Pulses': 1092.721, 'Oilseeds': 903.79, 'Sugarcane': 6724, 'Cotton': 2508, 'Jute & Mesta': 21.31},
+                'Karnataka': {'Rice': 3634.48, 'Wheat': 179.7, 'Coarse Cereals': 6776.1392, 'Total Pulses': 1976.29, 'Oilseeds': 920.7, 'Sugarcane': 38181, 'Cotton': 2330, 'Jute & Mesta': 0.0},
+                'Maharashtra': {'Rice': 2897.58732, 'Wheat': 1793.67809, 'Coarse Cereals': 4370.6272, 'Total Pulses': 3625.72008, 'Oilseeds': 4965.85, 'Sugarcane': 69311.87, 'Cotton': 6639, 'Jute & Mesta': 0.0}
+            }
+            // Additional years can be added here with actual historical data
+        };
+
+        // Show/hide custom production field based on year selection
+        document.getElementById('emissionYear').addEventListener('change', function() {
+            const customDiv = document.getElementById('customProductionDiv');
+            if (this.value === 'Any Others') {
+                customDiv.style.display = 'block';
+            } else {
+                customDiv.style.display = 'none';
+            }
+        });
+
+        // Calculate emissions button handler
+        document.getElementById('calculateEmissions').addEventListener('click', function() {
+            const year = document.getElementById('emissionYear').value;
+            const state = document.getElementById('emissionState').value;
+            const crop = document.getElementById('emissionCrop').value;
+            const pollutant = document.getElementById('emissionPollutant').value;
+            const customProduction = parseFloat(document.getElementById('customProduction').value) || 0;
+
+            // Input validation
+            if (!year || !state || !crop || !pollutant) {
+                alert('⚠️ Please select all fields before calculating emissions.');
+                return;
+            }
+
+            // Determine production value
+            let production = 0;
+            let productionSource = '';
+            
+            if (year === 'Any Others') {
+                if (customProduction === 0) {
+                    alert('⚠️ Please enter crop production value in Million Tonnes (Mt).');
+                    return;
+                }
+                production = customProduction;
+                productionSource = 'Manual Input';
+            } else {
+                if (productionData[year] && productionData[year][state] && productionData[year][state][crop] !== undefined) {
+                    production = productionData[year][state][crop];
+                    productionSource = `Database (${year})`;
+                } else {
+                    alert('⚠️ Production data not available for the selected combination. Please try "Any Others" for manual input.');
+                    return;
+                }
+            }
+
+            // Get emission coefficients
+            const cropCoeff = cropCoefficients[state][crop];
+            const pollutantFactor = pollutantFactors[pollutant][crop];
+
+            // Calculate total emission in Gigagrams per year (Gg/yr)
+            // Formula: Emission (Gg/yr) = Production (Mt) × Crop Coefficient × Pollutant Factor (g/kg)
+            const emission = production * cropCoeff * pollutantFactor;
+
+            // Display results
+            document.getElementById('emissionResult').style.display = 'block';
+            document.getElementById('emissionValue').textContent = emission.toFixed(3) + ' Gg/yr';
+            
+            const pollutantName = document.getElementById('emissionPollutant').options[document.getElementById('emissionPollutant').selectedIndex].text;
+            document.getElementById('emissionDetails').innerHTML = `
+                <strong>${pollutantName}</strong> emissions from <strong>${crop}</strong> burning in <strong>${state}</strong><br>
+                Production: ${production.toFixed(2)} Mt | Crop Coeff: ${cropCoeff} | Pollutant Factor: ${pollutantFactor} g/kg<br>
+                Data Source: ${productionSource}
+            `;
+
+            // Smooth scroll to results
+            document.getElementById('emissionResult').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+
+        // ============================================
+        // AIR QUALITY INDEX (AQI) MANAGEMENT
+        // ============================================
         const WAQI_TOKEN = '486994a34df29107945c8a194da64d15218daf77';
         const API_BASE = 'https://api.waqi.info';
         
@@ -1095,9 +1309,11 @@
             }
         }
 
+        // ============================================
+        // INITIALIZATION
+        // ============================================
         window.addEventListener('DOMContentLoaded', () => {
             loadFireData();
-            
             updateCityDropdown();
             updateDashboard();
 
