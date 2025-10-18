@@ -1,35 +1,35 @@
 {
-  "last_updated": "2025-10-18T01:12:12.130441Z",
-  "total_fire_count": 243,
+  "last_updated": "2025-10-18T06:22:42.074992Z",
+  "total_fire_count": 230,
   "date_range": {
-    "start": "2025-10-10",
+    "start": "2025-10-11",
     "end": "2025-10-17"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 66
+      "total_fires": 64
     },
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 46
+      "total_fires": 44
     },
     {
       "state": "Punjab",
       "district": "Firozpur",
-      "total_fires": 20
-    },
-    {
-      "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 14
+      "total_fires": 19
     },
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 13
+      "total_fires": 12
+    },
+    {
+      "state": "Haryana",
+      "district": "Jind",
+      "total_fires": 12
     },
     {
       "state": "Haryana",
@@ -52,18 +52,18 @@
       "total_fires": 6
     },
     {
-      "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 6
-    },
-    {
       "state": "Punjab",
       "district": "Fazilka",
-      "total_fires": 6
+      "total_fires": 5
     },
     {
       "state": "Punjab",
       "district": "Gurdaspur",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Faridabad",
       "total_fires": 5
     },
     {
@@ -73,22 +73,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 3
-    },
-    {
-      "state": "Haryana",
-      "district": "Fatehabad",
-      "total_fires": 3
-    },
-    {
-      "state": "Haryana",
       "district": "Panipat",
       "total_fires": 3
     },
     {
       "state": "Haryana",
       "district": "Kurukshetra",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Fatehabad",
       "total_fires": 3
     },
     {
@@ -105,10 +100,15 @@
       "state": "Haryana",
       "district": "Ambala",
       "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Pathankot",
+      "total_fires": 2
     }
   ],
   "state_totals": {
-    "punjab": 176,
-    "haryana": 67
+    "punjab": 169,
+    "haryana": 61
   }
 }
