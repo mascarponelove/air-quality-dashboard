@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-10-17T18:21:50.240923Z",
-  "total_fire_count": 238,
+  "last_updated": "2025-10-18T01:12:12.130441Z",
+  "total_fire_count": 243,
   "date_range": {
     "start": "2025-10-10",
     "end": "2025-10-17"
@@ -34,7 +34,7 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 9
+      "total_fires": 10
     },
     {
       "state": "Punjab",
@@ -43,7 +43,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Fazilka",
+      "district": "Bathinda",
+      "total_fires": 7
+    },
+    {
+      "state": "Haryana",
+      "district": "Sirsa",
       "total_fires": 6
     },
     {
@@ -53,18 +58,13 @@
     },
     {
       "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 5
+      "district": "Fazilka",
+      "total_fires": 6
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
+      "district": "Gurdaspur",
       "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 4
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 174,
-    "haryana": 64
+    "punjab": 176,
+    "haryana": 67
   }
 }
