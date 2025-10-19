@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-10-18T18:21:07.050768Z",
-  "total_fire_count": 248,
+  "last_updated": "2025-10-19T01:24:09.647567Z",
+  "total_fire_count": 254,
   "date_range": {
     "start": "2025-10-11",
     "end": "2025-10-18"
@@ -24,7 +24,7 @@
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 13
+      "total_fires": 14
     },
     {
       "state": "Haryana",
@@ -52,6 +52,11 @@
       "total_fires": 6
     },
     {
+      "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 6
+    },
+    {
       "state": "Punjab",
       "district": "Gurdaspur",
       "total_fires": 6
@@ -63,17 +68,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
+      "district": "Panipat",
       "total_fires": 5
     },
     {
-      "state": "Punjab",
-      "district": "Sangrur",
+      "state": "Haryana",
+      "district": "Kurukshetra",
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Jalandhar",
+      "state": "Haryana",
+      "district": "Yamunanagar",
       "total_fires": 4
     },
     {
@@ -82,8 +87,13 @@
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Kurukshetra",
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 4
+    },
+    {
+      "state": "Punjab",
+      "district": "Sangrur",
       "total_fires": 4
     },
     {
@@ -95,20 +105,10 @@
       "state": "Punjab",
       "district": "Sri Muktsar Sahib",
       "total_fires": 3
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Pathankot",
-      "total_fires": 2
     }
   ],
   "state_totals": {
     "punjab": 182,
-    "haryana": 66
+    "haryana": 72
   }
 }
