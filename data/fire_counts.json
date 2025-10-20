@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-10-19T18:21:26.422106Z",
+  "last_updated": "2025-10-20T01:21:25.277474Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -484,7 +484,11 @@
         "districts": [
           {
             "district": "Hisar",
-            "fire_count": 6
+            "fire_count": 7
+          },
+          {
+            "district": "Panipat",
+            "fire_count": 3
           },
           {
             "district": "Fatehabad",
@@ -507,9 +511,9 @@
             "fire_count": 1
           }
         ],
-        "total": 13
+        "total": 17
       },
-      "combined_total": 65
+      "combined_total": 69
     }
   ]
 }
