@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-10-20T18:26:05.068806Z",
-  "total_fire_count": 335,
+  "last_updated": "2025-10-21T01:17:48.129967Z",
+  "total_fire_count": 337,
   "date_range": {
     "start": "2025-10-13",
     "end": "2025-10-20"
@@ -83,8 +83,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Kurukshetra",
-      "total_fires": 4
+      "district": "Faridabad",
+      "total_fires": 5
     },
     {
       "state": "Punjab",
@@ -98,7 +98,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Yamunanagar",
+      "district": "Kurukshetra",
       "total_fires": 4
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 255,
-    "haryana": 80
+    "haryana": 82
   }
 }
