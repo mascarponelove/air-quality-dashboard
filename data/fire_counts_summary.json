@@ -1,25 +1,25 @@
 {
-  "last_updated": "2025-10-21T01:17:48.129967Z",
-  "total_fire_count": 337,
+  "last_updated": "2025-10-21T06:25:56.159723Z",
+  "total_fire_count": 322,
   "date_range": {
-    "start": "2025-10-13",
+    "start": "2025-10-14",
     "end": "2025-10-20"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 93
+      "total_fires": 92
     },
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 54
+      "total_fires": 52
     },
     {
       "state": "Punjab",
       "district": "Firozpur",
-      "total_fires": 30
+      "total_fires": 26
     },
     {
       "state": "Haryana",
@@ -59,21 +59,11 @@
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 8
+      "total_fires": 6
     },
     {
       "state": "Punjab",
       "district": "Sangrur",
-      "total_fires": 6
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 6
-    },
-    {
-      "state": "Punjab",
-      "district": "Jalandhar",
       "total_fires": 5
     },
     {
@@ -82,9 +72,19 @@
       "total_fires": 5
     },
     {
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Kurukshetra",
+      "total_fires": 4
+    },
+    {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 5
+      "total_fires": 4
     },
     {
       "state": "Punjab",
@@ -98,7 +98,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Kurukshetra",
+      "district": "Yamunanagar",
       "total_fires": 4
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 255,
-    "haryana": 82
+    "punjab": 246,
+    "haryana": 76
   }
 }
