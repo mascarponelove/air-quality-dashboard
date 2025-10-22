@@ -238,73 +238,59 @@
             transform: translateY(-5px);
         }
 
-        .stat-card h3 {
+        .stat-label {
             color: #666;
             font-size: 0.9rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
+            margin-bottom: 8px;
         }
 
         .stat-value {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #667eea;
             margin-bottom: 5px;
         }
 
-        .stat-label {
-            color: #888;
-            font-size: 0.85rem;
+        .aqi-bar {
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .aqi-bar-fill {
+            height: 100%;
+            transition: width 0.5s, background-color 0.5s;
         }
 
         .chart-container {
             background: white;
             border-radius: 15px;
             padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .chart-container h2 {
             color: #333;
             margin-bottom: 20px;
-            font-size: 1.5rem;
         }
 
-        .loading-message {
-            background: white;
-            border-radius: 15px;
-            padding: 50px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .loading-message h2 {
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-
-        .error-message {
-            background: #fee;
-            border: 2px solid #fcc;
-            border-radius: 15px;
-            padding: 20px;
-            color: #c33;
-            margin-bottom: 20px;
+        .chart-container canvas {
+            max-height: 400px;
         }
 
         .health-advisory {
             background: white;
             border-radius: 15px;
             padding: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .health-advisory h2 {
             color: #333;
             margin-bottom: 20px;
-            font-size: 1.5rem;
         }
 
         .advisory-summary {
@@ -312,13 +298,13 @@
             color: white;
             padding: 20px;
             border-radius: 10px;
-            margin-bottom: 20px;
             text-align: center;
+            margin-bottom: 20px;
         }
 
         .advisory-summary h3 {
-            font-size: 2.5rem;
-            margin-bottom: 5px;
+            font-size: 3rem;
+            margin: 10px 0;
         }
 
         .advisory-grid {
@@ -328,43 +314,41 @@
         }
 
         .advisory-card {
-            padding: 20px;
             border-radius: 10px;
-            border-left: 4px solid;
+            padding: 20px;
+            color: white;
+        }
+
+        .healthy-group {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+        }
+
+        .vulnerable-group {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+        }
+
+        .sensitive-group {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
         }
 
         .advisory-card h3 {
             margin-bottom: 15px;
-            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .advisory-card ul {
             list-style: none;
-            padding: 0;
         }
 
         .advisory-card li {
             padding: 8px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
         }
 
         .advisory-card li:last-child {
             border-bottom: none;
-        }
-
-        .healthy-group {
-            background: #e8f5e9;
-            border-left-color: #4caf50;
-        }
-
-        .vulnerable-group {
-            background: #fff3e0;
-            border-left-color: #ff9800;
-        }
-
-        .sensitive-group {
-            background: #ffebee;
-            border-left-color: #f44336;
         }
 
         .cities-comparison {
@@ -372,32 +356,32 @@
             border-radius: 15px;
             padding: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
         }
 
         .cities-comparison h2 {
             color: #333;
             margin-bottom: 20px;
-            font-size: 1.5rem;
         }
 
         .cities-list {
             display: grid;
-            gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
         }
 
         .city-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            transition: background 0.3s;
+            transition: all 0.3s;
         }
 
         .city-item:hover {
-            background: #e9ecef;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .city-name {
@@ -406,41 +390,40 @@
         }
 
         .city-aqi {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            text-align: right;
         }
 
         .aqi-value {
+            display: inline-block;
             padding: 8px 16px;
             border-radius: 8px;
             font-weight: bold;
-            min-width: 60px;
-            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
         }
 
         .aqi-category {
+            font-size: 0.8rem;
             color: #666;
-            font-size: 0.9rem;
         }
 
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.8rem;
-            }
+        #loadingMessage {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2rem;
+            color: #667eea;
+        }
 
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
+        #errorMessage {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.1rem;
+            color: #dc3545;
+            display: none;
+        }
 
-            .controls {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .state-select, .city-select {
-                width: 100%;
-            }
+        #mainContent {
+            display: none;
         }
     </style>
 </head>
@@ -448,103 +431,92 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <h1>🌏 India Air Quality & Fire Monitoring Dashboard</h1>
-            <p>Real-time monitoring of air quality indices and agricultural fires across India</p>
+            <h1>🌍 India Air Quality & Fire Monitoring Dashboard</h1>
+            <p>Real-time air quality data and fire incident tracking for Northern India states</p>
         </div>
 
-        <!-- Loading Message -->
-        <div id="loadingMessage" class="loading-message" style="display: none;">
-            <h2>Loading data...</h2>
-            <p>Please wait while we fetch the latest information</p>
-        </div>
-
-        <!-- Error Message -->
-        <div id="errorMessage" class="error-message" style="display: none;"></div>
-
-        <!-- Main Content -->
-        <div id="mainContent">
-            <!-- Fire Detection Section -->
-            <div class="fire-section">
-                <h2>
-                    <span style="font-size: 1.8rem;">🔥</span>
-                    Agricultural Fire Detection - Punjab & Haryana
-                </h2>
-
-                <!-- Fire Statistics -->
-                <div class="fire-stats">
-                    <div class="fire-stat-card">
-                        <div class="fire-stat-label">Total Fires (7 days)</div>
-                        <div class="fire-stat-value" id="totalFireCount">0</div>
-                    </div>
-                    <div class="fire-stat-card" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
-                        <div class="fire-stat-label">Punjab Fires</div>
-                        <div class="fire-stat-value" id="punjabFireCount">0</div>
-                    </div>
-                    <div class="fire-stat-card" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
-                        <div class="fire-stat-label">Haryana Fires</div>
-                        <div class="fire-stat-value" id="haryanaFireCount">0</div>
-                    </div>
-                    <div class="fire-stat-card" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
-                        <div class="fire-stat-label">Affected Districts</div>
-                        <div class="fire-stat-value" id="affectedDistricts">0</div>
-                    </div>
+        <!-- Fire Data Section -->
+        <div class="fire-section">
+            <h2>🔥 Fire Incidents Monitoring (Punjab & Haryana)</h2>
+            
+            <div class="fire-stats">
+                <div class="fire-stat-card">
+                    <div class="fire-stat-label">Total Fire Count</div>
+                    <div class="fire-stat-value" id="totalFireCount">-</div>
                 </div>
-
-                <!-- Date Selector -->
-                <div class="date-selector" id="dateSelector"></div>
-
-                <!-- Fire Tables -->
-                <div id="fireDataDisplay"></div>
+                <div class="fire-stat-card">
+                    <div class="fire-stat-label">Punjab Incidents</div>
+                    <div class="fire-stat-value" id="punjabFireCount">-</div>
+                </div>
+                <div class="fire-stat-card">
+                    <div class="fire-stat-label">Haryana Incidents</div>
+                    <div class="fire-stat-value" id="haryanaFireCount">-</div>
+                </div>
+                <div class="fire-stat-card">
+                    <div class="fire-stat-label">Affected Districts</div>
+                    <div class="fire-stat-value" id="affectedDistricts">-</div>
+                </div>
             </div>
 
-            <!-- Air Quality Section -->
+            <div class="date-selector" id="dateSelector"></div>
+            <div id="fireDataDisplay"></div>
+        </div>
+
+        <!-- Air Quality Section -->
+        <div class="header">
+            <h2 style="color: #667eea; margin-bottom: 15px;">🌤️ Air Quality Monitoring</h2>
             <div class="controls">
-                <label style="font-weight: 600; color: white;">Select State:</label>
                 <select id="stateSelect" class="state-select">
                     <option value="delhi">Delhi</option>
+                    <option value="chandigarh">Chandigarh</option>
                     <option value="punjab">Punjab</option>
                     <option value="haryana">Haryana</option>
+                    <option value="rajasthan">Rajasthan</option>
                     <option value="up">Uttar Pradesh</option>
                 </select>
-
-                <label style="font-weight: 600; color: white;">Select City:</label>
                 <select id="citySelect" class="city-select"></select>
-
                 <button id="refreshBtn" class="refresh-btn">🔄 Refresh Data</button>
-
-                <div class="last-update" id="lastUpdate">Last updated: --</div>
+                <span class="last-update" id="lastUpdate">Last updated: --</span>
             </div>
+        </div>
 
-            <!-- Statistics Grid -->
+        <div id="loadingMessage">Loading air quality data...</div>
+        <div id="errorMessage"></div>
+
+        <div id="mainContent">
+            <!-- Statistics Cards -->
             <div class="stats-grid">
                 <div class="stat-card">
-                    <h3>Current AQI</h3>
+                    <div class="stat-label">Current AQI</div>
                     <div class="stat-value" id="currentAqi">--</div>
                     <div class="stat-label" id="aqiCategory">Loading...</div>
-                    <div style="height: 8px; background: #eee; border-radius: 4px; margin-top: 15px; overflow: hidden;">
-                        <div id="currentAqiBar" style="height: 100%; width: 0%; transition: all 0.5s;"></div>
+                    <div class="aqi-bar">
+                        <div class="aqi-bar-fill" id="currentAqiBar"></div>
                     </div>
                 </div>
 
                 <div class="stat-card">
-                    <h3>Pollutant Levels</h3>
-                    <div style="font-size: 1.2rem; color: #333;" id="dominantPollutant">--</div>
-                    <div style="margin-top: 15px; color: #666;">
-                        <div style="display: flex; justify-content: space-between; margin: 8px 0;">
-                            <span>PM2.5:</span>
-                            <strong id="pm25Value">--</strong>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; margin: 8px 0;">
-                            <span>PM10:</span>
-                            <strong id="pm10Value">--</strong>
-                        </div>
-                    </div>
+                    <div class="stat-label">PM2.5</div>
+                    <div class="stat-value" id="pm25Value">--</div>
+                    <div class="stat-label">μg/m³</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-label">PM10</div>
+                    <div class="stat-value" id="pm10Value">--</div>
+                    <div class="stat-label">μg/m³</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-label" id="dominantPollutant">Dominant: --</div>
+                    <div class="stat-value">📊</div>
+                    <div class="stat-label">Pollutant</div>
                 </div>
             </div>
 
-            <!-- Charts -->
+            <!-- Pollutants Chart -->
             <div class="chart-container">
-                <h2>📊 Pollutants Breakdown</h2>
+                <h2>🔬 Current Pollutant Levels</h2>
                 <canvas id="pollutantsChart"></canvas>
             </div>
 
@@ -579,9 +551,9 @@
         
         // GitHub Configuration for Fire Data
         const FIRE_DATA_CONFIG = {
-            githubUser: 'mascarponelove',     // Replace with your GitHub username
-            repoName: 'air-quality-dashboard',       // Replace with your repository name
-            branch: 'main'                           // or 'master' if that's your default branch
+            githubUser: 'mascarponelove',
+            repoName: 'air-quality-dashboard',
+            branch: 'main'
         };
 
         // WAQI API Configuration
@@ -595,7 +567,7 @@
         };
 
         // ============================================
-        // STATE & CITY DATA (UNCHANGED FROM ORIGINAL)
+        // STATE & CITY DATA - COMPREHENSIVE LIST
         // ============================================
         const STATES_DATA = {
             delhi: {
@@ -605,7 +577,20 @@
                     { name: 'Anand Vihar', id: '@8944' },
                     { name: 'Dwarka', id: '@8979' },
                     { name: 'R K Puram', id: '@8978' },
-                    { name: 'Punjabi Bagh', id: '@8977' }
+                    { name: 'Punjabi Bagh', id: '@8977' },
+                    { name: 'ITO', id: '@9050' },
+                    { name: 'Rohini', id: '@8975' },
+                    { name: 'Shadipur', id: '@8980' },
+                    { name: 'Vivek Vihar', id: '@8976' }
+                ]
+            },
+            chandigarh: {
+                name: 'Chandigarh',
+                cities: [
+                    { name: 'Chandigarh', id: 'chandigarh' },
+                    { name: 'Sector-22, Chandigarh', id: '@13741' },
+                    { name: 'Sector-25, Chandigarh', id: '@12428' },
+                    { name: 'Sector-53, Chandigarh', id: '@13876' }
                 ]
             },
             punjab: {
@@ -615,7 +600,24 @@
                     { name: 'Ludhiana', id: 'ludhiana' },
                     { name: 'Jalandhar', id: 'jalandhar' },
                     { name: 'Patiala', id: 'patiala' },
-                    { name: 'Bathinda', id: 'bathinda' }
+                    { name: 'Bathinda', id: 'bathinda' },
+                    { name: 'Khanna', id: 'khanna' },
+                    { name: 'Mandi Gobindgarh', id: 'mandi-gobindgarh' },
+                    { name: 'Rupnagar (Ropar)', id: 'rupnagar' },
+                    { name: 'Pathankot', id: 'pathankot' },
+                    { name: 'Mohali (SAS Nagar)', id: 'mohali' },
+                    { name: 'Batala', id: 'batala' },
+                    { name: 'Dera Bassi', id: 'dera-bassi' },
+                    { name: 'Gurdaspur', id: 'gurdaspur' },
+                    { name: 'Faridkot', id: 'faridkot' },
+                    { name: 'Fatehgarh Sahib', id: 'fatehgarh-sahib' },
+                    { name: 'Fazilka', id: 'fazilka' },
+                    { name: 'Ferozepur', id: 'ferozepur' },
+                    { name: 'Hoshiarpur', id: 'hoshiarpur' },
+                    { name: 'Kapurthala', id: 'kapurthala' },
+                    { name: 'Mansa', id: 'mansa' },
+                    { name: 'Moga', id: 'moga' },
+                    { name: 'Sangrur', id: 'sangrur' }
                 ]
             },
             haryana: {
@@ -624,8 +626,52 @@
                     { name: 'Gurugram', id: 'gurgaon' },
                     { name: 'Faridabad', id: 'faridabad' },
                     { name: 'Rohtak', id: 'rohtak' },
+                    { name: 'Panipat', id: 'panipat' },
+                    { name: 'Ambala', id: 'ambala' },
+                    { name: 'Karnal', id: 'karnal' },
                     { name: 'Hisar', id: 'hisar' },
-                    { name: 'Panipat', id: 'panipat' }
+                    { name: 'Sonipat', id: 'sonipat' },
+                    { name: 'Panchkula', id: 'panchkula' },
+                    { name: 'Yamunanagar', id: 'yamunanagar' },
+                    { name: 'Kurukshetra', id: 'kurukshetra' },
+                    { name: 'Bahadurgarh', id: 'bahadurgarh' },
+                    { name: 'Bhiwani', id: 'bhiwani' },
+                    { name: 'Kaithal', id: 'kaithal' },
+                    { name: 'Palwal', id: 'palwal' },
+                    { name: 'Sirsa', id: 'sirsa' },
+                    { name: 'Rewari', id: 'rewari' },
+                    { name: 'Fatehabad', id: 'fatehabad' },
+                    { name: 'Jind', id: 'jind' },
+                    { name: 'Mahendragarh', id: 'mahendragarh' },
+                    { name: 'Manesar', id: 'manesar' },
+                    { name: 'Dharuhera', id: 'dharuhera' },
+                    { name: 'Ballabhgarh', id: 'ballabhgarh' },
+                    { name: 'Charkhi Dadri', id: 'charkhi-dadri' }
+                ]
+            },
+            rajasthan: {
+                name: 'Rajasthan',
+                cities: [
+                    { name: 'Jaipur', id: 'jaipur' },
+                    { name: 'Jodhpur', id: 'jodhpur' },
+                    { name: 'Kota', id: 'kota' },
+                    { name: 'Udaipur', id: 'udaipur' },
+                    { name: 'Ajmer', id: 'ajmer' },
+                    { name: 'Alwar', id: 'alwar' },
+                    { name: 'Bikaner', id: 'bikaner' },
+                    { name: 'Bhiwadi', id: 'bhiwadi' },
+                    { name: 'Pali', id: 'pali' },
+                    { name: 'Sikar', id: 'sikar' },
+                    { name: 'Sri Ganganagar', id: 'sri-ganganagar' },
+                    { name: 'Bharatpur', id: 'bharatpur' },
+                    { name: 'Bhilwara', id: 'bhilwara' },
+                    { name: 'Churu', id: 'churu' },
+                    { name: 'Jhunjhunu', id: 'jhunjhunu' },
+                    { name: 'Barmer', id: 'barmer' },
+                    { name: 'Jaisalmer', id: 'jaisalmer' },
+                    { name: 'Nagaur', id: 'nagaur' },
+                    { name: 'Tonk', id: 'tonk' },
+                    { name: 'Dausa', id: 'dausa' }
                 ]
             },
             up: {
@@ -635,7 +681,25 @@
                     { name: 'Kanpur', id: 'kanpur' },
                     { name: 'Agra', id: 'agra' },
                     { name: 'Varanasi', id: 'varanasi' },
-                    { name: 'Noida', id: 'noida' }
+                    { name: 'Noida', id: 'noida' },
+                    { name: 'Ghaziabad', id: 'ghaziabad' },
+                    { name: 'Meerut', id: 'meerut' },
+                    { name: 'Prayagraj (Allahabad)', id: 'prayagraj' },
+                    { name: 'Greater Noida', id: 'greater-noida' },
+                    { name: 'Gorakhpur', id: 'gorakhpur' },
+                    { name: 'Moradabad', id: 'moradabad' },
+                    { name: 'Muzaffarnagar', id: 'muzaffarnagar' },
+                    { name: 'Baghpat', id: 'baghpat' },
+                    { name: 'Bulandshahr', id: 'bulandshahr' },
+                    { name: 'Hapur', id: 'hapur' },
+                    { name: 'Bareilly', id: 'bareilly' },
+                    { name: 'Firozabad', id: 'firozabad' },
+                    { name: 'Mathura', id: 'mathura' },
+                    { name: 'Jhansi', id: 'jhansi' },
+                    { name: 'Khurja', id: 'khurja' },
+                    { name: 'Gajraula', id: 'gajraula' },
+                    { name: 'Raebareli', id: 'raebareli' },
+                    { name: 'Vrindavan', id: 'vrindavan' }
                 ]
             }
         };
@@ -648,7 +712,6 @@
 
         async function loadFireData() {
             try {
-                // Add cache-busting parameter to ensure fresh data
                 const timestamp = new Date().getTime();
                 
                 const [dailyResponse, summaryResponse] = await Promise.all([
@@ -700,95 +763,82 @@
                 return;
             }
 
-            const sortedData = [...dailyData].reverse();
-            sortedData.forEach(day => {
+            dailyData.slice(-10).forEach(dayData => {
                 const btn = document.createElement('button');
                 btn.className = 'date-btn';
-                btn.textContent = new Date(day.date).toLocaleDateString('en-US', { 
-                    month: 'short', 
-                    day: 'numeric' 
-                });
-                btn.onclick = () => selectDate(day.date);
+                btn.textContent = dayData.date;
+                btn.onclick = () => selectDate(dayData.date);
                 dateSelector.appendChild(btn);
             });
         }
 
         function selectDate(date) {
             selectedDate = date;
-            
-            const buttons = document.querySelectorAll('.date-btn');
-            buttons.forEach(btn => {
-                const btnDate = new Date(date).toLocaleDateString('en-US', { 
-                    month: 'short', 
-                    day: 'numeric' 
-                });
-                if (btn.textContent === btnDate) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
+            document.querySelectorAll('.date-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent === date);
             });
-
-            displayFireDataForDate(date);
+            displayFireData();
         }
 
-        function displayFireDataForDate(date) {
-            if (!fireData || !fireData.daily_data) return;
+        function displayFireData() {
+            if (!fireData || !selectedDate) return;
 
-            const dayData = fireData.daily_data.find(d => d.date === date);
+            const dayData = fireData.daily_data.find(d => d.date === selectedDate);
             if (!dayData) return;
 
-            const fireDataDisplay = document.getElementById('fireDataDisplay');
-            fireDataDisplay.innerHTML = `
-                <div class="state-section">
-                    ${createStateTable('Punjab', dayData.punjab)}
-                </div>
-                <div class="state-section">
-                    ${createStateTable('Haryana', dayData.haryana)}
-                </div>
-            `;
-        }
+            const punjabData = dayData.state_data.punjab || [];
+            const haryanaData = dayData.state_data.haryana || [];
 
-        function createStateTable(stateName, stateData) {
-            const sortedDistricts = stateData.districts.sort((a, b) => b.fire_count - a.fire_count);
+            const display = document.getElementById('fireDataDisplay');
+            display.innerHTML = '';
 
-            let tableRows = '';
-            sortedDistricts.forEach((district, index) => {
-                const severity = district.fire_count > 20 ? 'fire-high' : 
-                                district.fire_count > 10 ? 'fire-medium' : 'fire-low';
-                tableRows += `
-                    <tr>
-                        <td>${index + 1}</td>
-                        <td>${district.district}</td>
-                        <td><span class="fire-count-badge ${severity}">${district.fire_count}</span></td>
-                    </tr>
+            [
+                { name: 'Punjab', data: punjabData, color: '#667eea' },
+                { name: 'Haryana', data: haryanaData, color: '#764ba2' }
+            ].forEach(({ name, data, color }) => {
+                if (data.length === 0) return;
+
+                const section = document.createElement('div');
+                section.className = 'state-section';
+
+                const totalFires = data.reduce((sum, d) => sum + d.fire_count, 0);
+                section.innerHTML = `
+                    <div class="state-header" style="background: ${color};">
+                        <h3>${name}</h3>
+                        <span class="state-total">${totalFires} fires</span>
+                    </div>
+                    <div class="fire-table-container">
+                        <table class="fire-table">
+                            <thead>
+                                <tr>
+                                    <th>District</th>
+                                    <th>Fire Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${data.map(d => `
+                                    <tr>
+                                        <td>${d.district}</td>
+                                        <td>
+                                            <span class="fire-count-badge ${
+                                                d.fire_count > 100 ? 'fire-high' :
+                                                d.fire_count > 50 ? 'fire-medium' : 'fire-low'
+                                            }">
+                                                ${d.fire_count}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
                 `;
+                display.appendChild(section);
             });
-
-            return `
-                <div class="state-header">
-                    <h3>${stateName}</h3>
-                    <div class="state-total">${stateData.total} fires</div>
-                </div>
-                <div class="fire-table-container">
-                    <table class="fire-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 60px;">#</th>
-                                <th>District</th>
-                                <th style="width: 120px;">Fire Count</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${tableRows || '<tr><td colspan="3" style="text-align: center;">No fires detected</td></tr>'}
-                        </tbody>
-                    </table>
-                </div>
-            `;
         }
 
         // ============================================
-        // AQI FUNCTIONS (UNCHANGED FROM ORIGINAL)
+        // AIR QUALITY FUNCTIONS
         // ============================================
         let pollutantsChart = null;
         let trendChart = null;
@@ -796,9 +846,9 @@
         function getAQIColor(aqi) {
             if (aqi <= 50) return '#00e400';
             if (aqi <= 100) return '#ffff00';
-            if (aqi <= 200) return '#ff7e00';
-            if (aqi <= 300) return '#ff0000';
-            if (aqi <= 400) return '#8f3f97';
+            if (aqi <= 150) return '#ff7e00';
+            if (aqi <= 200) return '#ff0000';
+            if (aqi <= 300) return '#8f3f97';
             return '#7e0023';
         }
 
@@ -808,52 +858,47 @@
 
         function getAQICategory(aqi) {
             if (aqi <= 50) return 'Good';
-            if (aqi <= 100) return 'Satisfactory';
-            if (aqi <= 200) return 'Moderate';
-            if (aqi <= 300) return 'Poor';
-            if (aqi <= 400) return 'Very Poor';
-            return 'Severe';
+            if (aqi <= 100) return 'Moderate';
+            if (aqi <= 150) return 'Unhealthy for Sensitive Groups';
+            if (aqi <= 200) return 'Unhealthy';
+            if (aqi <= 300) return 'Very Unhealthy';
+            return 'Hazardous';
         }
 
         function getHealthAdvisories(aqi) {
             const advisories = {
-                good: {
-                    healthy: ['Enjoy outdoor activities', 'Air quality is excellent'],
-                    vulnerable: ['Normal outdoor activities permitted'],
-                    sensitive: ['No health implications']
-                },
-                satisfactory: {
-                    healthy: ['Can enjoy usual outdoor activities'],
-                    vulnerable: ['Consider reducing prolonged outdoor exertion'],
-                    sensitive: ['May experience minor breathing discomfort']
-                },
-                moderate: {
-                    healthy: ['Reduce prolonged or heavy outdoor exertion'],
-                    vulnerable: ['Limit prolonged outdoor exertion'],
-                    sensitive: ['May experience breathing discomfort']
-                },
-                poor: {
-                    healthy: ['Reduce prolonged or heavy outdoor exertion'],
-                    vulnerable: ['Avoid prolonged outdoor exertion'],
-                    sensitive: ['May experience breathing difficulties', 'Should avoid outdoor activities']
-                },
-                very_poor: {
-                    healthy: ['Avoid prolonged outdoor exertion', 'Consider wearing a mask'],
-                    vulnerable: ['Avoid all outdoor activities', 'Stay indoors'],
-                    sensitive: ['Severe respiratory discomfort possible', 'Wear N95 mask if going outside']
-                },
-                severe: {
-                    healthy: ['Avoid all outdoor activities', 'Stay indoors', 'Use air purifiers'],
-                    vulnerable: ['Emergency conditions', 'Stay indoors with air purification'],
-                    sensitive: ['Medical attention may be needed', 'Absolutely avoid going outdoors']
-                }
+                healthy: [],
+                vulnerable: [],
+                sensitive: []
             };
-            if (aqi <= 50) return advisories.good;
-            if (aqi <= 100) return advisories.satisfactory;
-            if (aqi <= 200) return advisories.moderate;
-            if (aqi <= 300) return advisories.poor;
-            if (aqi <= 400) return advisories.very_poor;
-            return advisories.severe;
+
+            if (aqi <= 50) {
+                advisories.healthy = ['Air quality is ideal for outdoor activities'];
+                advisories.vulnerable = ['Enjoy outdoor activities'];
+                advisories.sensitive = ['Perfect conditions for all activities'];
+            } else if (aqi <= 100) {
+                advisories.healthy = ['Air quality is acceptable', 'Normal outdoor activities OK'];
+                advisories.vulnerable = ['May experience slight symptoms', 'Limit prolonged outdoor exertion'];
+                advisories.sensitive = ['Watch for symptoms', 'Reduce prolonged or heavy outdoor exertion'];
+            } else if (aqi <= 150) {
+                advisories.healthy = ['Some may experience respiratory symptoms', 'Reduce prolonged outdoor exertion'];
+                advisories.vulnerable = ['Increase likelihood of symptoms', 'Reduce prolonged or heavy exertion', 'Watch for coughing or shortness of breath'];
+                advisories.sensitive = ['High risk of symptoms', 'Avoid prolonged outdoor activities', 'Move activities indoors or reschedule'];
+            } else if (aqi <= 200) {
+                advisories.healthy = ['May experience health effects', 'Limit outdoor exertion', 'Consider moving activities indoors'];
+                advisories.vulnerable = ['Serious health effects likely', 'Avoid prolonged exertion', 'Keep outdoor activities short', 'Stay indoors if possible'];
+                advisories.sensitive = ['Severe health effects expected', 'Avoid all outdoor physical activities', 'Remain indoors and keep activity level low'];
+            } else if (aqi <= 300) {
+                advisories.healthy = ['Everyone may experience effects', 'Avoid outdoor activities', 'Move all activities indoors'];
+                advisories.vulnerable = ['Emergency conditions likely', 'Remain indoors', 'Use air purifiers if available', 'Seek medical attention if needed'];
+                advisories.sensitive = ['Critical health alert', 'Stay indoors at all times', 'Avoid all physical activities', 'Seek medical care if experiencing symptoms'];
+            } else {
+                advisories.healthy = ['Health warning of emergency conditions', 'Everyone should avoid outdoor activities'];
+                advisories.vulnerable = ['Serious health threat to everyone', 'Stay indoors with filtered air'];
+                advisories.sensitive = ['Hazardous conditions', 'Emergency measures required', 'Seek immediate shelter'];
+            }
+
+            return advisories;
         }
 
         function updateHealthAdvisory(aqi) {
