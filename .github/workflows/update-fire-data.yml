@@ -20,12 +20,12 @@ jobs:
       with:
         fetch-depth: 0  # Fetch all history for proper git operations
     
-    # Step 2: Set up Python environment
+    # Step 2: Set up Python environment (FIXED - removed cache line)
     - name: Set up Python 3.10
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
-        cache: 'pip'  # Cache pip dependencies for faster runs
+        # Removed: cache: 'pip' (this was causing the error)
     
     # Step 3: Install system dependencies for geospatial libraries
     - name: Install GDAL and system dependencies
