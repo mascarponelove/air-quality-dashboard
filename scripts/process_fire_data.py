@@ -201,6 +201,9 @@ def create_json_output(district_counts):
     print(f"Processing {len(unique_dates)} dates...")
     
     for date in unique_dates:
+    if isinstance(date, str):    
+        date_str = date
+    else:   
         date_str = date.strftime('%Y-%m-%d')
         date_data = district_counts[district_counts['ACQ_DATE'] == date]
         
