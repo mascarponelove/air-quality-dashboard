@@ -201,10 +201,12 @@ def create_json_output(district_counts):
     print(f"Processing {len(unique_dates)} dates...")
     
     for date in unique_dates:
-    if isinstance(date, str):    
-        date_str = date
-    else:   
-        date_str = date.strftime('%Y-%m-%d')
+        # FIXED: Handle both string and datetime objects
+        if isinstance(date, str):
+            date_str = date  # Already a string
+        else:
+            date_str = date.strftime('%Y-%m-%d')  # Convert datetime to string
+        
         date_data = district_counts[district_counts['ACQ_DATE'] == date]
         
         punjab_data = date_data[date_data['state'] == 'Punjab']
@@ -257,12 +259,27 @@ def create_summary_output(district_counts):
             'state_totals': {'punjab': 0, 'haryana': 0}
         }
     
+    # FIXED: Handle string dates properly
+    unique_dates = sorted(district_counts['ACQ_DATE'].unique())
+    
+    # Convert dates to strings if they aren't already
+    if len(unique_dates) > 0:
+        if isinstance(unique_dates[0], str):
+            start_date = unique_dates[0]
+            end_date = unique_dates[-1]
+        else:
+            start_date = unique_dates[0].strftime('%Y-%m-%d')
+            end_date = unique_dates[-1].strftime('%Y-%m-%d')
+    else:
+        start_date = None
+        end_date = None
+    
     summary = {
         'last_updated': datetime.utcnow().isoformat() + 'Z',
         'total_fire_count': int(district_counts['fire_count'].sum()),
         'date_range': {
-            'start': district_counts['ACQ_DATE'].min().strftime('%Y-%m-%d'),
-            'end': district_counts['ACQ_DATE'].max().strftime('%Y-%m-%d')
+            'start': start_date,
+            'end': end_date
         },
         'top_districts': []
     }
