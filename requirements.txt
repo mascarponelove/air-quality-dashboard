@@ -1,5 +1,7 @@
+# Compatible versions - tested and working
 geopandas==0.14.0
 pandas==2.1.1
 requests==2.31.0
 shapely==2.0.2
 pyproj==3.6.1
+numpy==1.26.4
