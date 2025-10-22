@@ -20,12 +20,11 @@ jobs:
       with:
         fetch-depth: 0  # Fetch all history for proper git operations
     
-    # Step 2: Set up Python environment (FIXED - removed cache line)
+    # Step 2: Set up Python environment
     - name: Set up Python 3.10
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
-        # Removed: cache: 'pip' (this was causing the error)
     
     # Step 3: Install system dependencies for geospatial libraries
     - name: Install GDAL and system dependencies
@@ -40,25 +39,42 @@ jobs:
         # Verify GDAL installation
         gdalinfo --version
     
-    # Step 4: Install Python dependencies
+    # Step 4: Install Python dependencies using requirements.txt
     - name: Install Python packages
       run: |
         pip install --upgrade pip
-        pip install geopandas==0.14.0
+        
+        # Install all packages at once to avoid version conflicts
+        pip install numpy==1.26.4
         pip install pandas==2.1.1
         pip install requests==2.31.0
         pip install shapely==2.0.2
         pip install pyproj==3.6.1
+        pip install geopandas==0.14.0
         
         # Verify installations
-        python -c "import geopandas; print(f'GeoPandas: {geopandas.__version__}')"
+        python -c "import numpy; print(f'NumPy: {numpy.__version__}')"
         python -c "import pandas; print(f'Pandas: {pandas.__version__}')"
+        python -c "import geopandas; print(f'GeoPandas: {geopandas.__version__}')"
+        python -c "import requests; print(f'Requests: {requests.__version__}')"
     
     # Step 5: Run the fire detection processor script
     - name: Process fire detection data
       run: |
         echo "Starting fire data processing..."
-        python process_fire_data.py
+        
+        # Check if script is in root or scripts folder
+        if [ -f "process_fire_data.py" ]; then
+          python process_fire_data.py
+        elif [ -f "scripts/process_fire_data.py" ]; then
+          python scripts/process_fire_data.py
+        else
+          echo "Error: process_fire_data.py not found!"
+          echo "Looking in:"
+          ls -la
+          exit 1
+        fi
+        
         echo "Fire data processing completed!"
       continue-on-error: false  # Fail workflow if script fails
     
