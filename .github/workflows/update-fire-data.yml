@@ -39,24 +39,44 @@ jobs:
         # Verify GDAL installation
         gdalinfo --version
     
-    # Step 4: Install Python dependencies using requirements.txt
+    # Step 4: Install Python dependencies in correct order
     - name: Install Python packages
       run: |
         pip install --upgrade pip
         
-        # Install all packages at once to avoid version conflicts
+        # Install packages in specific order to avoid version conflicts
+        echo "Installing NumPy..."
         pip install numpy==1.26.4
+        
+        echo "Installing Pandas..."
         pip install pandas==2.1.1
+        
+        echo "Installing Requests..."
         pip install requests==2.31.0
+        
+        echo "Installing Shapely..."
         pip install shapely==2.0.2
+        
+        echo "Installing PyProj..."
         pip install pyproj==3.6.1
+        
+        echo "Installing Fiona (compatible version)..."
+        pip install fiona==1.9.5
+        
+        echo "Installing GeoPandas..."
         pip install geopandas==0.14.0
         
-        # Verify installations
-        python -c "import numpy; print(f'NumPy: {numpy.__version__}')"
-        python -c "import pandas; print(f'Pandas: {pandas.__version__}')"
-        python -c "import geopandas; print(f'GeoPandas: {geopandas.__version__}')"
-        python -c "import requests; print(f'Requests: {requests.__version__}')"
+        echo ""
+        echo "Verifying installations..."
+        python -c "import numpy; print(f'✓ NumPy: {numpy.__version__}')"
+        python -c "import pandas; print(f'✓ Pandas: {pandas.__version__}')"
+        python -c "import requests; print(f'✓ Requests: {requests.__version__}')"
+        python -c "import shapely; print(f'✓ Shapely: {shapely.__version__}')"
+        python -c "import pyproj; print(f'✓ PyProj: {pyproj.__version__}')"
+        python -c "import fiona; print(f'✓ Fiona: {fiona.__version__}')"
+        python -c "import geopandas; print(f'✓ GeoPandas: {geopandas.__version__}')"
+        echo ""
+        echo "All packages installed successfully!"
     
     # Step 5: Run the fire detection processor script
     - name: Process fire detection data
