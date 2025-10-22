@@ -1,41 +1,129 @@
-name: Update Fire Count Data
+name: Update Fire Detection Data
 
+# Runs automatically every 12 hours and can be manually triggered
 on:
   schedule:
-    # Run every 6 hours
-    - cron: '0 */6 * * *'
-  workflow_dispatch:  # Allow manual triggering
+    - cron: '0 */12 * * *'  # Every 12 hours at minute 0
+  workflow_dispatch:  # Allows manual trigger from GitHub Actions tab
+  push:
+    branches:
+      - main  # Also runs when you push to main branch
 
 jobs:
-  process-fire-data:
+  update-fire-data:
     runs-on: ubuntu-latest
     
     steps:
+    # Step 1: Checkout your repository
     - name: Checkout repository
       uses: actions/checkout@v3
-      
-    - name: Set up Python
+      with:
+        fetch-depth: 0  # Fetch all history for proper git operations
+    
+    # Step 2: Set up Python environment
+    - name: Set up Python 3.10
       uses: actions/setup-python@v4
       with:
         python-version: '3.10'
-        
-    - name: Install dependencies
+        cache: 'pip'  # Cache pip dependencies for faster runs
+    
+    # Step 3: Install system dependencies for geospatial libraries
+    - name: Install GDAL and system dependencies
       run: |
-        pip install geopandas pandas requests shapely pyproj
+        sudo apt-get update
+        sudo apt-get install -y \
+          gdal-bin \
+          libgdal-dev \
+          libspatialindex-dev \
+          python3-gdal
         
-    - name: Download district shapefiles
+        # Verify GDAL installation
+        gdalinfo --version
+    
+    # Step 4: Install Python dependencies
+    - name: Install Python packages
       run: |
-        mkdir -p shapefiles
-        # You'll need to commit these shapefiles to your repo
-        # or download from a public source
+        pip install --upgrade pip
+        pip install geopandas==0.14.0
+        pip install pandas==2.1.1
+        pip install requests==2.31.0
+        pip install shapely==2.0.2
+        pip install pyproj==3.6.1
         
-    - name: Run fire data processing script
-      run: python scripts/process_fire_data.py
-      
-    - name: Commit and push updated data
+        # Verify installations
+        python -c "import geopandas; print(f'GeoPandas: {geopandas.__version__}')"
+        python -c "import pandas; print(f'Pandas: {pandas.__version__}')"
+    
+    # Step 5: Run the fire detection processor script
+    - name: Process fire detection data
+      run: |
+        echo "Starting fire data processing..."
+        python process_fire_data.py
+        echo "Fire data processing completed!"
+      continue-on-error: false  # Fail workflow if script fails
+    
+    # Step 6: Check if data files were created
+    - name: Verify output files
+      run: |
+        if [ -f "data/fire_counts.json" ]; then
+          echo "✓ fire_counts.json created successfully"
+          ls -lh data/fire_counts.json
+        else
+          echo "✗ ERROR: fire_counts.json not found!"
+          exit 1
+        fi
+        
+        if [ -f "data/fire_counts_summary.json" ]; then
+          echo "✓ fire_counts_summary.json created successfully"
+          ls -lh data/fire_counts_summary.json
+        else
+          echo "✗ ERROR: fire_counts_summary.json not found!"
+          exit 1
+        fi
+    
+    # Step 7: Commit and push updated data files
+    - name: Commit and push changes
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
+        git config --local user.name "GitHub Actions Bot"
+        
+        # Add only the data files
         git add data/fire_counts.json data/fire_counts_summary.json
-        git diff --quiet && git diff --staged --quiet || git commit -m "Update fire count data - $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
-        git push
+        
+        # Check if there are changes to commit
+        if git diff --staged --quiet; then
+          echo "No changes to commit - data is up to date"
+        else
+          # Get current timestamp
+          TIMESTAMP=$(date +'%Y-%m-%d %H:%M UTC')
+          
+          # Commit with timestamp
+          git commit -m "🔥 Update fire data - ${TIMESTAMP}"
+          
+          # Push changes
+          git push
+          
+          echo "✓ Changes committed and pushed successfully"
+        fi
+    
+    # Step 8: Create a summary comment (optional - for tracking)
+    - name: Generate run summary
+      if: always()
+      run: |
+        echo "## Fire Data Update Summary" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Workflow Run:** $(date +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        if [ -f "data/fire_counts_summary.json" ]; then
+          TOTAL_FIRES=$(python -c "import json; data=json.load(open('data/fire_counts_summary.json')); print(data['total_fire_count'])")
+          PUNJAB_FIRES=$(python -c "import json; data=json.load(open('data/fire_counts_summary.json')); print(data['state_totals']['punjab'])")
+          HARYANA_FIRES=$(python -c "import json; data=json.load(open('data/fire_counts_summary.json')); print(data['state_totals']['haryana'])")
+          
+          echo "**Total Fires Detected:** $TOTAL_FIRES" >> $GITHUB_STEP_SUMMARY
+          echo "- Punjab: $PUNJAB_FIRES" >> $GITHUB_STEP_SUMMARY
+          echo "- Haryana: $HARYANA_FIRES" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "✓ Data files updated successfully" >> $GITHUB_STEP_SUMMARY
