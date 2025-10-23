@@ -1,25 +1,30 @@
 {
-  "last_updated": "2025-10-23T01:11:23.954188Z",
-  "total_fire_count": 577,
+  "last_updated": "2025-10-23T12:32:36.000838Z",
+  "total_fire_count": 585,
   "date_range": {
-    "start": "2025-10-15",
-    "end": "2025-10-22"
+    "start": "2025-10-16",
+    "end": "2025-10-23"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 133
+      "total_fires": 137
     },
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 77
+      "total_fires": 76
     },
     {
       "state": "Punjab",
       "district": "Firozpur",
-      "total_fires": 49
+      "total_fires": 48
+    },
+    {
+      "state": "Punjab",
+      "district": "Gurdaspur",
+      "total_fires": 31
     },
     {
       "state": "Punjab",
@@ -28,32 +33,27 @@
     },
     {
       "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 29
-    },
-    {
-      "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 21
-    },
-    {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 20
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 19
-    },
-    {
-      "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 17
+      "total_fires": 23
     },
     {
       "state": "Punjab",
       "district": "Kapurthala",
+      "total_fires": 19
+    },
+    {
+      "state": "Haryana",
+      "district": "Sirsa",
+      "total_fires": 19
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 17
+    },
+    {
+      "state": "Punjab",
+      "district": "Sangrur",
       "total_fires": 15
     },
     {
@@ -63,23 +63,28 @@
     },
     {
       "state": "Punjab",
-      "district": "Sangrur",
-      "total_fires": 13
-    },
-    {
-      "state": "Punjab",
       "district": "Sri Muktsar Sahib",
-      "total_fires": 13
+      "total_fires": 14
     },
     {
-      "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
-      "total_fires": 10
+      "state": "Haryana",
+      "district": "Jind",
+      "total_fires": 13
     },
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 10
+      "total_fires": 11
+    },
+    {
+      "state": "Punjab",
+      "district": "Sahibzada Ajit Singh Nag*",
+      "total_fires": 11
+    },
+    {
+      "state": "Haryana",
+      "district": "Kurukshetra",
+      "total_fires": 9
     },
     {
       "state": "Haryana",
@@ -88,27 +93,22 @@
     },
     {
       "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
-      "total_fires": 8
-    },
-    {
-      "state": "Punjab",
       "district": "Mansa",
       "total_fires": 8
     },
     {
       "state": "Haryana",
-      "district": "Kurukshetra",
+      "district": "Karnal",
       "total_fires": 8
     },
     {
       "state": "Punjab",
-      "district": "Fatehgarh Sahib",
-      "total_fires": 7
+      "district": "Shahid Bhagat Singh Nagar",
+      "total_fires": 8
     }
   ],
   "state_totals": {
-    "punjab": 450,
-    "haryana": 127
+    "punjab": 466,
+    "haryana": 119
   }
 }
