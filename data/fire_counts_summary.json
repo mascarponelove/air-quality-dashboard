@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-10-25T12:29:01.092325Z",
-  "total_fire_count": 600,
+  "last_updated": "2025-10-26T01:14:24.236757Z",
+  "total_fire_count": 606,
   "date_range": {
     "start": "2025-10-18",
     "end": "2025-10-25"
@@ -14,7 +14,7 @@
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 60
+      "total_fires": 61
     },
     {
       "state": "Punjab",
@@ -53,13 +53,18 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
+      "district": "Sirsa",
       "total_fires": 17
     },
     {
       "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 16
+      "district": "Hisar",
+      "total_fires": 17
+    },
+    {
+      "state": "Punjab",
+      "district": "Sahibzada Ajit Singh Nag*",
+      "total_fires": 15
     },
     {
       "state": "Punjab",
@@ -68,8 +73,8 @@
     },
     {
       "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
-      "total_fires": 14
+      "district": "Jalandhar",
+      "total_fires": 13
     },
     {
       "state": "Punjab",
@@ -77,9 +82,9 @@
       "total_fires": 13
     },
     {
-      "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 13
+      "state": "Haryana",
+      "district": "Kaithal",
+      "total_fires": 9
     },
     {
       "state": "Haryana",
@@ -89,11 +94,6 @@
     {
       "state": "Haryana",
       "district": "Karnal",
-      "total_fires": 9
-    },
-    {
-      "state": "Haryana",
-      "district": "Kaithal",
       "total_fires": 9
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 482,
-    "haryana": 118
+    "punjab": 484,
+    "haryana": 122
   }
 }
