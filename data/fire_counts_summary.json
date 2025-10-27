@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-10-26T12:29:24.884616Z",
-  "total_fire_count": 710,
+  "last_updated": "2025-10-27T01:17:00.136270Z",
+  "total_fire_count": 722,
   "date_range": {
     "start": "2025-10-19",
     "end": "2025-10-26"
@@ -24,12 +24,12 @@
     {
       "state": "Punjab",
       "district": "Sangrur",
-      "total_fires": 46
+      "total_fires": 47
     },
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 44
+      "total_fires": 45
     },
     {
       "state": "Punjab",
@@ -39,7 +39,7 @@
     {
       "state": "Punjab",
       "district": "Kapurthala",
-      "total_fires": 27
+      "total_fires": 28
     },
     {
       "state": "Punjab",
@@ -52,18 +52,18 @@
       "total_fires": 21
     },
     {
-      "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
-      "total_fires": 18
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 21
     },
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 18
+      "total_fires": 20
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
+      "state": "Punjab",
+      "district": "Sahibzada Ajit Singh Nag*",
       "total_fires": 18
     },
     {
@@ -98,17 +98,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Palwal",
-      "total_fires": 9
+      "district": "Kurukshetra",
+      "total_fires": 10
     },
     {
       "state": "Haryana",
-      "district": "Kaithal",
+      "district": "Palwal",
       "total_fires": 9
     }
   ],
   "state_totals": {
-    "punjab": 576,
-    "haryana": 134
+    "punjab": 581,
+    "haryana": 141
   }
 }
