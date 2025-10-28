@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-10-27T12:34:22.771743Z",
-  "total_fire_count": 788,
+  "last_updated": "2025-10-28T01:13:29.279812Z",
+  "total_fire_count": 796,
   "date_range": {
     "start": "2025-10-20",
     "end": "2025-10-27"
@@ -54,7 +54,7 @@
     {
       "state": "Haryana",
       "district": "Sirsa",
-      "total_fires": 24
+      "total_fires": 25
     },
     {
       "state": "Haryana",
@@ -69,12 +69,17 @@
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 15
+      "total_fires": 17
     },
     {
       "state": "Punjab",
       "district": "Fazilka",
       "total_fires": 14
+    },
+    {
+      "state": "Punjab",
+      "district": "Sri Muktsar Sahib",
+      "total_fires": 12
     },
     {
       "state": "Haryana",
@@ -83,32 +88,27 @@
     },
     {
       "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
-      "total_fires": 12
-    },
-    {
-      "state": "Punjab",
       "district": "Fatehgarh Sahib",
       "total_fires": 12
     },
     {
-      "state": "Punjab",
-      "district": "Mansa",
-      "total_fires": 10
-    },
-    {
       "state": "Haryana",
       "district": "Karnal",
-      "total_fires": 10
+      "total_fires": 11
     },
     {
       "state": "Haryana",
-      "district": "Kaithal",
-      "total_fires": 10
+      "district": "Fatehabad",
+      "total_fires": 11
+    },
+    {
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 11
     }
   ],
   "state_totals": {
-    "punjab": 648,
-    "haryana": 140
+    "punjab": 651,
+    "haryana": 145
   }
 }
