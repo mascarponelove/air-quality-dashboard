@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-10-28T12:31:23.327344Z",
-  "total_fire_count": 780,
+  "last_updated": "2025-10-29T01:15:02.606208Z",
+  "total_fire_count": 784,
   "date_range": {
     "start": "2025-10-21",
     "end": "2025-10-28"
@@ -34,7 +34,7 @@
     {
       "state": "Punjab",
       "district": "Kapurthala",
-      "total_fires": 38
+      "total_fires": 39
     },
     {
       "state": "Punjab",
@@ -47,13 +47,13 @@
       "total_fires": 30
     },
     {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 25
-    },
-    {
       "state": "Punjab",
       "district": "Jalandhar",
+      "total_fires": 26
+    },
+    {
+      "state": "Haryana",
+      "district": "Sirsa",
       "total_fires": 25
     },
     {
@@ -77,23 +77,23 @@
       "total_fires": 14
     },
     {
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 14
+    },
+    {
       "state": "Haryana",
       "district": "Hisar",
       "total_fires": 14
     },
     {
       "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 13
+      "district": "Fazilka",
+      "total_fires": 12
     },
     {
       "state": "Haryana",
       "district": "Kurukshetra",
-      "total_fires": 12
-    },
-    {
-      "state": "Punjab",
-      "district": "Fazilka",
       "total_fires": 12
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 649,
-    "haryana": 131
+    "punjab": 652,
+    "haryana": 132
   }
 }
