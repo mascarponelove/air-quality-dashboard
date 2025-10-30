@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-10-29T12:34:24.671865Z",
-  "total_fire_count": 761,
+  "last_updated": "2025-10-30T01:12:58.711328Z",
+  "total_fire_count": 765,
   "date_range": {
     "start": "2025-10-22",
     "end": "2025-10-29"
@@ -43,12 +43,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Patiala",
+      "district": "Jalandhar",
       "total_fires": 28
     },
     {
       "state": "Punjab",
-      "district": "Jalandhar",
+      "district": "Patiala",
       "total_fires": 28
     },
     {
@@ -59,7 +59,7 @@
     {
       "state": "Punjab",
       "district": "Sahibzada Ajit Singh Nag*",
-      "total_fires": 16
+      "total_fires": 18
     },
     {
       "state": "Punjab",
@@ -78,18 +78,18 @@
     },
     {
       "state": "Haryana",
-      "district": "Jind",
+      "district": "Hisar",
       "total_fires": 13
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
+      "district": "Jind",
       "total_fires": 13
     },
     {
       "state": "Punjab",
       "district": "Moga",
-      "total_fires": 12
+      "total_fires": 13
     },
     {
       "state": "Punjab",
@@ -103,12 +103,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Fatehabad",
+      "district": "Kurukshetra",
       "total_fires": 10
     }
   ],
   "state_totals": {
-    "punjab": 643,
-    "haryana": 118
+    "punjab": 646,
+    "haryana": 119
   }
 }
