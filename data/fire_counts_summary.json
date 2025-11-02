@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-01T12:27:47.944449Z",
-  "total_fire_count": 1294,
+  "last_updated": "2025-11-02T01:15:15.493003Z",
+  "total_fire_count": 1301,
   "date_range": {
     "start": "2025-10-25",
     "end": "2025-11-01"
@@ -79,7 +79,12 @@
     {
       "state": "Haryana",
       "district": "Fatehabad",
-      "total_fires": 23
+      "total_fires": 24
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 21
     },
     {
       "state": "Punjab",
@@ -93,13 +98,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 20
-    },
-    {
-      "state": "Haryana",
       "district": "Sirsa",
-      "total_fires": 17
+      "total_fires": 18
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 1168,
-    "haryana": 126
+    "punjab": 1169,
+    "haryana": 132
   }
 }
