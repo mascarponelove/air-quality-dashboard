@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-02T12:28:51.794084Z",
+  "last_updated": "2025-11-03T01:14:19.158649Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -823,7 +823,7 @@
           },
           {
             "district": "Kapurthala",
-            "fire_count": 14
+            "fire_count": 15
           },
           {
             "district": "Bathinda",
@@ -878,16 +878,20 @@
             "fire_count": 1
           }
         ],
-        "total": 278
+        "total": 279
       },
       "haryana": {
         "districts": [
+          {
+            "district": "Fatehabad",
+            "fire_count": 6
+          },
           {
             "district": "Kaithal",
             "fire_count": 6
           },
           {
-            "district": "Fatehabad",
+            "district": "Hisar",
             "fire_count": 5
           },
           {
@@ -895,15 +899,15 @@
             "fire_count": 5
           },
           {
-            "district": "Hisar",
-            "fire_count": 4
-          },
-          {
             "district": "Jind",
             "fire_count": 4
           },
           {
             "district": "Sirsa",
+            "fire_count": 4
+          },
+          {
+            "district": "Sonipat",
             "fire_count": 3
           },
           {
@@ -913,6 +917,10 @@
           {
             "district": "Rohtak",
             "fire_count": 2
+          },
+          {
+            "district": "Faridabad",
+            "fire_count": 1
           },
           {
             "district": "Gurugram",
@@ -927,13 +935,13 @@
             "fire_count": 1
           },
           {
-            "district": "Sonipat",
+            "district": "Yamunanagar",
             "fire_count": 1
           }
         ],
-        "total": 35
+        "total": 42
       },
-      "combined_total": 313
+      "combined_total": 321
     }
   ]
 }

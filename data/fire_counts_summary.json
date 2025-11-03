@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-02T12:28:51.811874Z",
-  "total_fire_count": 1530,
+  "last_updated": "2025-11-03T01:14:19.176220Z",
+  "total_fire_count": 1538,
   "date_range": {
     "start": "2025-10-26",
     "end": "2025-11-02"
@@ -28,12 +28,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 81
+      "district": "Kapurthala",
+      "total_fires": 82
     },
     {
       "state": "Punjab",
-      "district": "Kapurthala",
+      "district": "Patiala",
       "total_fires": 81
     },
     {
@@ -79,7 +79,7 @@
     {
       "state": "Haryana",
       "district": "Fatehabad",
-      "total_fires": 26
+      "total_fires": 27
     },
     {
       "state": "Punjab",
@@ -89,7 +89,7 @@
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 24
+      "total_fires": 25
     },
     {
       "state": "Punjab",
@@ -99,7 +99,7 @@
     {
       "state": "Haryana",
       "district": "Sirsa",
-      "total_fires": 20
+      "total_fires": 21
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 1378,
-    "haryana": 152
+    "punjab": 1379,
+    "haryana": 159
   }
 }
