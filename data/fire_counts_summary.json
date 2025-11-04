@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-03T12:34:05.104740Z",
-  "total_fire_count": 1487,
+  "last_updated": "2025-11-04T01:11:00.283594Z",
+  "total_fire_count": 1494,
   "date_range": {
     "start": "2025-10-27",
     "end": "2025-11-03"
@@ -58,13 +58,13 @@
     },
     {
       "state": "Punjab",
-      "district": "Jalandhar",
+      "district": "Moga",
       "total_fires": 48
     },
     {
       "state": "Punjab",
-      "district": "Moga",
-      "total_fires": 47
+      "district": "Jalandhar",
+      "total_fires": 48
     },
     {
       "state": "Punjab",
@@ -103,12 +103,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Barnala",
+      "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 16
     }
   ],
   "state_totals": {
-    "punjab": 1345,
-    "haryana": 142
+    "punjab": 1346,
+    "haryana": 148
   }
 }
