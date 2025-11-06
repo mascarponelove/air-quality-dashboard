@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-05T12:32:41.315668Z",
-  "total_fire_count": 1614,
+  "last_updated": "2025-11-06T01:13:45.833572Z",
+  "total_fire_count": 1646,
   "date_range": {
     "start": "2025-10-29",
     "end": "2025-11-05"
@@ -9,7 +9,7 @@
     {
       "state": "Punjab",
       "district": "Sangrur",
-      "total_fires": 286
+      "total_fires": 287
     },
     {
       "state": "Punjab",
@@ -24,21 +24,21 @@
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 91
+      "total_fires": 95
     },
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 88
-    },
-    {
-      "state": "Punjab",
-      "district": "Moga",
-      "total_fires": 76
+      "total_fires": 91
     },
     {
       "state": "Punjab",
       "district": "Bathinda",
+      "total_fires": 77
+    },
+    {
+      "state": "Punjab",
+      "district": "Moga",
       "total_fires": 76
     },
     {
@@ -53,12 +53,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
-      "total_fires": 67
+      "district": "Ludhiana",
+      "total_fires": 72
     },
     {
       "state": "Punjab",
-      "district": "Ludhiana",
+      "district": "Sri Muktsar Sahib",
       "total_fires": 67
     },
     {
@@ -69,7 +69,7 @@
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 44
+      "total_fires": 50
     },
     {
       "state": "Punjab",
@@ -80,6 +80,11 @@
       "state": "Haryana",
       "district": "Fatehabad",
       "total_fires": 25
+    },
+    {
+      "state": "Haryana",
+      "district": "Sirsa",
+      "total_fires": 23
     },
     {
       "state": "Punjab",
@@ -93,13 +98,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 21
-    },
-    {
-      "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 20
+      "total_fires": 22
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 1468,
-    "haryana": 146
+    "punjab": 1490,
+    "haryana": 156
   }
 }
