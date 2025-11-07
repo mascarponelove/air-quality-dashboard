@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-06T12:33:18.666216Z",
-  "total_fire_count": 1759,
+  "last_updated": "2025-11-07T01:12:50.762317Z",
+  "total_fire_count": 1780,
   "date_range": {
     "start": "2025-10-30",
     "end": "2025-11-06"
@@ -14,7 +14,7 @@
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 200
+      "total_fires": 201
     },
     {
       "state": "Punjab",
@@ -24,12 +24,12 @@
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 97
+      "total_fires": 98
     },
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 96
+      "total_fires": 97
     },
     {
       "state": "Punjab",
@@ -44,7 +44,7 @@
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 84
+      "total_fires": 86
     },
     {
       "state": "Punjab",
@@ -78,8 +78,13 @@
     },
     {
       "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 29
+    },
+    {
+      "state": "Haryana",
       "district": "Fatehabad",
-      "total_fires": 28
+      "total_fires": 29
     },
     {
       "state": "Punjab",
@@ -88,8 +93,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 25
+      "district": "Sirsa",
+      "total_fires": 24
     },
     {
       "state": "Punjab",
@@ -100,15 +105,10 @@
       "state": "Haryana",
       "district": "Jind",
       "total_fires": 22
-    },
-    {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 22
     }
   ],
   "state_totals": {
-    "punjab": 1574,
-    "haryana": 185
+    "punjab": 1581,
+    "haryana": 199
   }
 }

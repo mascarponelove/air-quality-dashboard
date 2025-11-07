@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-06T12:33:18.647190Z",
+  "last_updated": "2025-11-07T01:12:50.743595Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -867,7 +867,11 @@
           },
           {
             "district": "Tarn Taran",
-            "fire_count": 22
+            "fire_count": 23
+          },
+          {
+            "district": "Ludhiana",
+            "fire_count": 16
           },
           {
             "district": "Fazilka",
@@ -876,10 +880,6 @@
           {
             "district": "Sangrur",
             "fire_count": 15
-          },
-          {
-            "district": "Ludhiana",
-            "fire_count": 14
           },
           {
             "district": "Firozpur",
@@ -899,15 +899,19 @@
           },
           {
             "district": "Patiala",
-            "fire_count": 7
+            "fire_count": 8
           },
           {
             "district": "Amritsar",
-            "fire_count": 6
+            "fire_count": 7
           },
           {
             "district": "Jalandhar",
             "fire_count": 5
+          },
+          {
+            "district": "Fatehgarh Sahib",
+            "fire_count": 3
           },
           {
             "district": "Gurdaspur",
@@ -924,39 +928,43 @@
           {
             "district": "Barnala",
             "fire_count": 1
-          },
-          {
-            "district": "Fatehgarh Sahib",
-            "fire_count": 1
           }
         ],
-        "total": 187
+        "total": 194
       },
       "haryana": {
         "districts": [
+          {
+            "district": "Hisar",
+            "fire_count": 8
+          },
           {
             "district": "Jind",
             "fire_count": 8
           },
           {
             "district": "Sonipat",
-            "fire_count": 5
+            "fire_count": 6
           },
           {
             "district": "Fatehabad",
-            "fire_count": 4
-          },
-          {
-            "district": "Hisar",
-            "fire_count": 4
+            "fire_count": 5
           },
           {
             "district": "Karnal",
-            "fire_count": 4
+            "fire_count": 5
           },
           {
             "district": "Kaithal",
+            "fire_count": 4
+          },
+          {
+            "district": "Sirsa",
             "fire_count": 3
+          },
+          {
+            "district": "Faridabad",
+            "fire_count": 2
           },
           {
             "district": "Panipat",
@@ -967,21 +975,25 @@
             "fire_count": 1
           },
           {
+            "district": "Jhajjar",
+            "fire_count": 1
+          },
+          {
             "district": "Palwal",
+            "fire_count": 1
+          },
+          {
+            "district": "Rewari",
             "fire_count": 1
           },
           {
             "district": "Rohtak",
             "fire_count": 1
-          },
-          {
-            "district": "Sirsa",
-            "fire_count": 1
           }
         ],
-        "total": 34
+        "total": 48
       },
-      "combined_total": 221
+      "combined_total": 242
     }
   ]
 }
