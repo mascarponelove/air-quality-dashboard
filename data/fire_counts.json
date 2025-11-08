@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-07T12:30:46.299036Z",
+  "last_updated": "2025-11-08T01:07:53.768023Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -915,7 +915,7 @@
         "districts": [
           {
             "district": "Sangrur",
-            "fire_count": 39
+            "fire_count": 40
           },
           {
             "district": "Firozpur",
@@ -966,12 +966,12 @@
             "fire_count": 6
           },
           {
-            "district": "Fatehgarh Sahib",
+            "district": "Amritsar",
             "fire_count": 5
           },
           {
-            "district": "Amritsar",
-            "fire_count": 3
+            "district": "Fatehgarh Sahib",
+            "fire_count": 5
           },
           {
             "district": "Gurdaspur",
@@ -986,13 +986,13 @@
             "fire_count": 2
           }
         ],
-        "total": 285
+        "total": 288
       },
       "haryana": {
         "districts": [
           {
             "district": "Fatehabad",
-            "fire_count": 10
+            "fire_count": 11
           },
           {
             "district": "Hisar",
@@ -1000,7 +1000,7 @@
           },
           {
             "district": "Jind",
-            "fire_count": 7
+            "fire_count": 8
           },
           {
             "district": "Bhiwani",
@@ -1008,6 +1008,10 @@
           },
           {
             "district": "Sirsa",
+            "fire_count": 4
+          },
+          {
+            "district": "Faridabad",
             "fire_count": 3
           },
           {
@@ -1015,11 +1019,15 @@
             "fire_count": 3
           },
           {
-            "district": "Faridabad",
+            "district": "Jhajjar",
             "fire_count": 2
           },
           {
             "district": "Kaithal",
+            "fire_count": 2
+          },
+          {
+            "district": "Karnal",
             "fire_count": 2
           },
           {
@@ -1031,17 +1039,13 @@
             "fire_count": 2
           },
           {
-            "district": "Jhajjar",
-            "fire_count": 1
-          },
-          {
             "district": "Palwal",
             "fire_count": 1
           }
         ],
-        "total": 47
+        "total": 54
       },
-      "combined_total": 332
+      "combined_total": 342
     }
   ]
 }
