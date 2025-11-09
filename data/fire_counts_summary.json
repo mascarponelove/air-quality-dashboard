@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-08T12:28:06.009728Z",
-  "total_fire_count": 1904,
+  "last_updated": "2025-11-09T01:16:26.482041Z",
+  "total_fire_count": 1918,
   "date_range": {
     "start": "2025-11-01",
     "end": "2025-11-08"
@@ -29,7 +29,7 @@
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 131
+      "total_fires": 132
     },
     {
       "state": "Punjab",
@@ -39,7 +39,7 @@
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 90
+      "total_fires": 97
     },
     {
       "state": "Punjab",
@@ -79,12 +79,12 @@
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 41
+      "total_fires": 42
     },
     {
       "state": "Punjab",
       "district": "Faridkot",
-      "total_fires": 38
+      "total_fires": 39
     },
     {
       "state": "Haryana",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 1633,
-    "haryana": 271
+    "punjab": 1642,
+    "haryana": 276
   }
 }
