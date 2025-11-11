@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-10T12:32:37.174990Z",
-  "total_fire_count": 1700,
+  "last_updated": "2025-11-11T01:12:57.811624Z",
+  "total_fire_count": 1706,
   "date_range": {
     "start": "2025-11-03",
     "end": "2025-11-10"
@@ -38,13 +38,13 @@
     },
     {
       "state": "Punjab",
-      "district": "Mansa",
-      "total_fires": 81
+      "district": "Bathinda",
+      "total_fires": 82
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 80
+      "district": "Mansa",
+      "total_fires": 81
     },
     {
       "state": "Punjab",
@@ -59,16 +59,16 @@
     {
       "state": "Haryana",
       "district": "Jind",
-      "total_fires": 71
-    },
-    {
-      "state": "Punjab",
-      "district": "Amritsar",
-      "total_fires": 49
+      "total_fires": 73
     },
     {
       "state": "Punjab",
       "district": "Faridkot",
+      "total_fires": 49
+    },
+    {
+      "state": "Punjab",
+      "district": "Amritsar",
       "total_fires": 49
     },
     {
@@ -104,11 +104,11 @@
     {
       "state": "Haryana",
       "district": "Kaithal",
-      "total_fires": 16
+      "total_fires": 17
     }
   ],
   "state_totals": {
-    "punjab": 1412,
-    "haryana": 288
+    "punjab": 1414,
+    "haryana": 292
   }
 }
