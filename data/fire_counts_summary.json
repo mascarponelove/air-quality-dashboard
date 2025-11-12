@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-11T12:32:18.631911Z",
-  "total_fire_count": 1831,
+  "last_updated": "2025-11-12T01:12:10.161488Z",
+  "total_fire_count": 1843,
   "date_range": {
     "start": "2025-11-04",
     "end": "2025-11-11"
@@ -39,7 +39,7 @@
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 99
+      "total_fires": 100
     },
     {
       "state": "Punjab",
@@ -63,22 +63,22 @@
     },
     {
       "state": "Punjab",
-      "district": "Faridkot",
+      "district": "Jalandhar",
       "total_fires": 55
     },
     {
       "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 50
-    },
-    {
-      "state": "Punjab",
-      "district": "Amritsar",
-      "total_fires": 50
+      "district": "Faridkot",
+      "total_fires": 55
     },
     {
       "state": "Haryana",
       "district": "Hisar",
+      "total_fires": 51
+    },
+    {
+      "state": "Punjab",
+      "district": "Amritsar",
       "total_fires": 50
     },
     {
@@ -93,22 +93,22 @@
     },
     {
       "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 28
+    },
+    {
+      "state": "Haryana",
       "district": "Sirsa",
       "total_fires": 28
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 27
-    },
-    {
-      "state": "Haryana",
       "district": "Kaithal",
-      "total_fires": 23
+      "total_fires": 24
     }
   ],
   "state_totals": {
-    "punjab": 1512,
-    "haryana": 319
+    "punjab": 1518,
+    "haryana": 325
   }
 }
