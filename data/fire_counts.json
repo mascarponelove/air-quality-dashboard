@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-13T12:33:39.075442Z",
+  "last_updated": "2025-11-14T01:12:11.064857Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -1000,6 +1000,10 @@
           },
           {
             "district": "Sonipat",
+            "fire_count": 4
+          },
+          {
+            "district": "Jhajjar",
             "fire_count": 3
           },
           {
@@ -1007,11 +1011,15 @@
             "fire_count": 2
           },
           {
-            "district": "Jhajjar",
+            "district": "Faridabad",
             "fire_count": 2
           },
           {
             "district": "Karnal",
+            "fire_count": 2
+          },
+          {
+            "district": "Sirsa",
             "fire_count": 2
           },
           {
@@ -1033,15 +1041,11 @@
           {
             "district": "Panipat",
             "fire_count": 1
-          },
-          {
-            "district": "Sirsa",
-            "fire_count": 1
           }
         ],
-        "total": 31
+        "total": 36
       },
-      "combined_total": 118
+      "combined_total": 123
     }
   ]
 }

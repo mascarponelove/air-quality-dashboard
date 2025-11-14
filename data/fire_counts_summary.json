@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-13T12:33:39.094859Z",
-  "total_fire_count": 1795,
+  "last_updated": "2025-11-14T01:12:11.084828Z",
+  "total_fire_count": 1800,
   "date_range": {
     "start": "2025-11-06",
     "end": "2025-11-13"
@@ -84,7 +84,7 @@
     {
       "state": "Haryana",
       "district": "Sonipat",
-      "total_fires": 35
+      "total_fires": 36
     },
     {
       "state": "Punjab",
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 1421,
-    "haryana": 374
+    "haryana": 379
   }
 }
