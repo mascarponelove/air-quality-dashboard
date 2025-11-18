@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-17T12:32:26.686307Z",
-  "total_fire_count": 1112,
+  "last_updated": "2025-11-18T01:12:12.837347Z",
+  "total_fire_count": 1124,
   "date_range": {
     "start": "2025-11-10",
     "end": "2025-11-17"
@@ -9,7 +9,7 @@
     {
       "state": "Punjab",
       "district": "Sri Muktsar Sahib",
-      "total_fires": 108
+      "total_fires": 109
     },
     {
       "state": "Punjab",
@@ -58,13 +58,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 39
+      "district": "Hisar",
+      "total_fires": 40
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 38
+      "district": "Rohtak",
+      "total_fires": 40
     },
     {
       "state": "Haryana",
@@ -87,6 +87,11 @@
       "total_fires": 22
     },
     {
+      "state": "Haryana",
+      "district": "Sirsa",
+      "total_fires": 19
+    },
+    {
       "state": "Punjab",
       "district": "Amritsar",
       "total_fires": 17
@@ -98,17 +103,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 17
-    },
-    {
-      "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 11
+      "district": "Faridabad",
+      "total_fires": 13
     }
   ],
   "state_totals": {
-    "punjab": 843,
-    "haryana": 269
+    "punjab": 844,
+    "haryana": 280
   }
 }
