@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-18T12:34:28.259537Z",
-  "total_fire_count": 960,
+  "last_updated": "2025-11-19T01:11:51.753789Z",
+  "total_fire_count": 969,
   "date_range": {
     "start": "2025-11-11",
     "end": "2025-11-18"
@@ -29,7 +29,7 @@
     {
       "state": "Punjab",
       "district": "Firozpur",
-      "total_fires": 56
+      "total_fires": 57
     },
     {
       "state": "Punjab",
@@ -48,18 +48,18 @@
     },
     {
       "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 41
-    },
-    {
-      "state": "Haryana",
       "district": "Rohtak",
       "total_fires": 41
     },
     {
       "state": "Haryana",
+      "district": "Jind",
+      "total_fires": 41
+    },
+    {
+      "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 37
+      "total_fires": 38
     },
     {
       "state": "Haryana",
@@ -79,7 +79,7 @@
     {
       "state": "Haryana",
       "district": "Sirsa",
-      "total_fires": 21
+      "total_fires": 23
     },
     {
       "state": "Punjab",
@@ -94,21 +94,21 @@
     {
       "state": "Haryana",
       "district": "Kaithal",
-      "total_fires": 15
+      "total_fires": 16
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 14
+      "total_fires": 16
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 13
+      "total_fires": 14
     }
   ],
   "state_totals": {
-    "punjab": 703,
-    "haryana": 257
+    "punjab": 704,
+    "haryana": 265
   }
 }
