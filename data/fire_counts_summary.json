@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-19T12:33:07.909075Z",
-  "total_fire_count": 756,
+  "last_updated": "2025-11-20T01:10:22.042739Z",
+  "total_fire_count": 773,
   "date_range": {
     "start": "2025-11-12",
     "end": "2025-11-19"
@@ -14,7 +14,7 @@
     {
       "state": "Punjab",
       "district": "Fazilka",
-      "total_fires": 76
+      "total_fires": 79
     },
     {
       "state": "Punjab",
@@ -59,7 +59,12 @@
     {
       "state": "Haryana",
       "district": "Sonipat",
-      "total_fires": 32
+      "total_fires": 33
+    },
+    {
+      "state": "Haryana",
+      "district": "Sirsa",
+      "total_fires": 27
     },
     {
       "state": "Haryana",
@@ -68,18 +73,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 20
+      "district": "Jhajjar",
+      "total_fires": 19
     },
     {
       "state": "Punjab",
       "district": "Sangrur",
       "total_fires": 18
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 17
     },
     {
       "state": "Punjab",
@@ -103,12 +103,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
-      "total_fires": 10
+      "district": "Fatehgarh Sahib",
+      "total_fires": 11
     }
   ],
   "state_totals": {
-    "punjab": 536,
-    "haryana": 220
+    "punjab": 543,
+    "haryana": 230
   }
 }
