@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-20T12:32:08.248899Z",
-  "total_fire_count": 612,
+  "last_updated": "2025-11-21T01:11:12.615987Z",
+  "total_fire_count": 620,
   "date_range": {
     "start": "2025-11-13",
     "end": "2025-11-20"
@@ -42,6 +42,11 @@
       "total_fires": 29
     },
     {
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 28
+    },
+    {
       "state": "Punjab",
       "district": "Moga",
       "total_fires": 27
@@ -53,8 +58,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 26
+      "district": "Jind",
+      "total_fires": 24
     },
     {
       "state": "Haryana",
@@ -65,11 +70,6 @@
       "state": "Haryana",
       "district": "Hisar",
       "total_fires": 22
-    },
-    {
-      "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 21
     },
     {
       "state": "Haryana",
@@ -84,7 +84,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 11
+      "total_fires": 13
     },
     {
       "state": "Haryana",
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 422,
-    "haryana": 190
+    "haryana": 198
   }
 }
