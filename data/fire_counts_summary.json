@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-24T12:32:53.352443Z",
-  "total_fire_count": 273,
+  "last_updated": "2025-11-25T01:11:41.611866Z",
+  "total_fire_count": 283,
   "date_range": {
     "start": "2025-11-17",
     "end": "2025-11-24"
@@ -19,12 +19,7 @@
     {
       "state": "Haryana",
       "district": "Sonipat",
-      "total_fires": 21
-    },
-    {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 17
+      "total_fires": 22
     },
     {
       "state": "Haryana",
@@ -33,7 +28,17 @@
     },
     {
       "state": "Haryana",
+      "district": "Sirsa",
+      "total_fires": 17
+    },
+    {
+      "state": "Haryana",
       "district": "Hisar",
+      "total_fires": 16
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
       "total_fires": 16
     },
     {
@@ -44,11 +49,6 @@
     {
       "state": "Punjab",
       "district": "Fazilka",
-      "total_fires": 15
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
       "total_fires": 15
     },
     {
@@ -67,9 +67,19 @@
       "total_fires": 10
     },
     {
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 8
+    },
+    {
       "state": "Haryana",
       "district": "Bhiwani",
       "total_fires": 8
+    },
+    {
+      "state": "Haryana",
+      "district": "Kaithal",
+      "total_fires": 7
     },
     {
       "state": "Haryana",
@@ -78,12 +88,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Fatehgarh Sahib",
+      "district": "Faridkot",
       "total_fires": 6
     },
     {
       "state": "Punjab",
-      "district": "Faridkot",
+      "district": "Fatehgarh Sahib",
       "total_fires": 6
     },
     {
@@ -95,20 +105,10 @@
       "state": "Haryana",
       "district": "Fatehabad",
       "total_fires": 5
-    },
-    {
-      "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 4
-    },
-    {
-      "state": "Punjab",
-      "district": "Amritsar",
-      "total_fires": 4
     }
   ],
   "state_totals": {
-    "punjab": 132,
-    "haryana": 141
+    "punjab": 137,
+    "haryana": 146
   }
 }
