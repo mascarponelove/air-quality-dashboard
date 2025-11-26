@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-25T12:33:28.808556Z",
-  "total_fire_count": 233,
+  "last_updated": "2025-11-26T01:12:10.973681Z",
+  "total_fire_count": 243,
   "date_range": {
     "start": "2025-11-18",
     "end": "2025-11-25"
@@ -43,8 +43,13 @@
     },
     {
       "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 14
+    },
+    {
+      "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 13
+      "total_fires": 14
     },
     {
       "state": "Haryana",
@@ -53,13 +58,18 @@
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 9
+      "district": "Kaithal",
+      "total_fires": 10
     },
     {
       "state": "Haryana",
-      "district": "Kaithal",
+      "district": "Panipat",
       "total_fires": 9
+    },
+    {
+      "state": "Punjab",
+      "district": "Mansa",
+      "total_fires": 7
     },
     {
       "state": "Punjab",
@@ -73,18 +83,8 @@
     },
     {
       "state": "Punjab",
-      "district": "Mansa",
-      "total_fires": 7
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 7
-    },
-    {
-      "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 5
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 109,
-    "haryana": 124
+    "punjab": 110,
+    "haryana": 133
   }
 }
