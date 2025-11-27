@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-26T12:33:51.623048Z",
+  "last_updated": "2025-11-27T01:11:04.196226Z",
   "total_fire_count": 217,
   "date_range": {
     "start": "2025-11-19",
@@ -22,8 +22,8 @@
       "total_fires": 14
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
+      "state": "Punjab",
+      "district": "Fazilka",
       "total_fires": 13
     },
     {
@@ -32,8 +32,8 @@
       "total_fires": 13
     },
     {
-      "state": "Punjab",
-      "district": "Fazilka",
+      "state": "Haryana",
+      "district": "Hisar",
       "total_fires": 13
     },
     {
@@ -77,8 +77,8 @@
       "total_fires": 6
     },
     {
-      "state": "Punjab",
-      "district": "Ludhiana",
+      "state": "Haryana",
+      "district": "Bhiwani",
       "total_fires": 5
     },
     {
@@ -87,8 +87,8 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Bhiwani",
+      "state": "Punjab",
+      "district": "Ludhiana",
       "total_fires": 5
     },
     {
