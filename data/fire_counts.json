@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-11-28T12:31:47.173828Z",
+  "last_updated": "2025-11-29T01:10:26.136840Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -470,6 +470,10 @@
             "fire_count": 1
           },
           {
+            "district": "Kapurthala",
+            "fire_count": 1
+          },
+          {
             "district": "Rupnagar",
             "fire_count": 1
           },
@@ -478,12 +482,20 @@
             "fire_count": 1
           }
         ],
-        "total": 11
+        "total": 12
       },
       "haryana": {
         "districts": [
           {
+            "district": "Faridabad",
+            "fire_count": 3
+          },
+          {
             "district": "Hisar",
+            "fire_count": 3
+          },
+          {
+            "district": "Rohtak",
             "fire_count": 2
           },
           {
@@ -495,15 +507,11 @@
             "fire_count": 1
           },
           {
-            "district": "Faridabad",
-            "fire_count": 1
-          },
-          {
             "district": "Fatehabad",
             "fire_count": 1
           },
           {
-            "district": "Rohtak",
+            "district": "Jhajjar",
             "fire_count": 1
           },
           {
@@ -511,9 +519,9 @@
             "fire_count": 1
           }
         ],
-        "total": 9
+        "total": 14
       },
-      "combined_total": 20
+      "combined_total": 26
     }
   ]
 }

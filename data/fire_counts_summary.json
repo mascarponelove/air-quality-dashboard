@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-28T12:31:47.186977Z",
-  "total_fire_count": 196,
+  "last_updated": "2025-11-29T01:10:26.150434Z",
+  "total_fire_count": 202,
   "date_range": {
     "start": "2025-11-21",
     "end": "2025-11-28"
@@ -14,7 +14,7 @@
     {
       "state": "Haryana",
       "district": "Rohtak",
-      "total_fires": 18
+      "total_fires": 19
     },
     {
       "state": "Haryana",
@@ -23,13 +23,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 14
+      "district": "Faridabad",
+      "total_fires": 15
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 13
+      "district": "Hisar",
+      "total_fires": 15
     },
     {
       "state": "Punjab",
@@ -39,17 +39,7 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 10
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 8
-    },
-    {
-      "state": "Haryana",
-      "district": "Fatehabad",
-      "total_fires": 8
+      "total_fires": 11
     },
     {
       "state": "Haryana",
@@ -58,7 +48,17 @@
     },
     {
       "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 8
+    },
+    {
+      "state": "Punjab",
       "district": "Jalandhar",
+      "total_fires": 8
+    },
+    {
+      "state": "Haryana",
+      "district": "Fatehabad",
       "total_fires": 8
     },
     {
@@ -72,11 +72,6 @@
       "total_fires": 6
     },
     {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 5
-    },
-    {
       "state": "Punjab",
       "district": "Moga",
       "total_fires": 5
@@ -84,6 +79,11 @@
     {
       "state": "Punjab",
       "district": "Ludhiana",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Yamunanagar",
       "total_fires": 5
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 75,
-    "haryana": 121
+    "punjab": 76,
+    "haryana": 126
   }
 }
