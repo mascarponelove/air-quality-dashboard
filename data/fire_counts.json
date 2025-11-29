@@ -1,62 +1,8 @@
 {
-  "last_updated": "2025-11-29T01:10:26.136840Z",
+  "last_updated": "2025-11-29T12:29:27.987363Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2025-11-21",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Bathinda",
-            "fire_count": 3
-          },
-          {
-            "district": "Fazilka",
-            "fire_count": 2
-          },
-          {
-            "district": "Sri Muktsar Sahib",
-            "fire_count": 2
-          },
-          {
-            "district": "Jalandhar",
-            "fire_count": 1
-          },
-          {
-            "district": "Patiala",
-            "fire_count": 1
-          },
-          {
-            "district": "Tarn Taran",
-            "fire_count": 1
-          }
-        ],
-        "total": 10
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Hisar",
-            "fire_count": 2
-          },
-          {
-            "district": "Rohtak",
-            "fire_count": 2
-          },
-          {
-            "district": "Jind",
-            "fire_count": 1
-          },
-          {
-            "district": "Sirsa",
-            "fire_count": 1
-          }
-        ],
-        "total": 6
-      },
-      "combined_total": 16
-    },
     {
       "date": "2025-11-22",
       "punjab": {
@@ -522,6 +468,52 @@
         "total": 14
       },
       "combined_total": 26
+    },
+    {
+      "date": "2025-11-29",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Bathinda",
+            "fire_count": 1
+          },
+          {
+            "district": "Sri Muktsar Sahib",
+            "fire_count": 1
+          }
+        ],
+        "total": 2
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Ambala",
+            "fire_count": 1
+          },
+          {
+            "district": "Bhiwani",
+            "fire_count": 1
+          },
+          {
+            "district": "Hisar",
+            "fire_count": 1
+          },
+          {
+            "district": "Kurukshetra",
+            "fire_count": 1
+          },
+          {
+            "district": "Panipat",
+            "fire_count": 1
+          },
+          {
+            "district": "Rohtak",
+            "fire_count": 1
+          }
+        ],
+        "total": 6
+      },
+      "combined_total": 8
     }
   ]
 }
