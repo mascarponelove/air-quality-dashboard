@@ -1,86 +1,8 @@
 {
-  "last_updated": "2025-11-30T01:20:39.770892Z",
+  "last_updated": "2025-11-30T12:29:07.265469Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2025-11-22",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Bathinda",
-            "fire_count": 4
-          },
-          {
-            "district": "Fazilka",
-            "fire_count": 4
-          },
-          {
-            "district": "Firozpur",
-            "fire_count": 2
-          },
-          {
-            "district": "Mansa",
-            "fire_count": 2
-          },
-          {
-            "district": "Sri Muktsar Sahib",
-            "fire_count": 2
-          },
-          {
-            "district": "Tarn Taran",
-            "fire_count": 2
-          },
-          {
-            "district": "Amritsar",
-            "fire_count": 1
-          },
-          {
-            "district": "Moga",
-            "fire_count": 1
-          }
-        ],
-        "total": 18
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Faridabad",
-            "fire_count": 3
-          },
-          {
-            "district": "Hisar",
-            "fire_count": 3
-          },
-          {
-            "district": "Fatehabad",
-            "fire_count": 2
-          },
-          {
-            "district": "Panipat",
-            "fire_count": 2
-          },
-          {
-            "district": "Rohtak",
-            "fire_count": 2
-          },
-          {
-            "district": "Sonipat",
-            "fire_count": 2
-          },
-          {
-            "district": "Bhiwani",
-            "fire_count": 1
-          },
-          {
-            "district": "Jhajjar",
-            "fire_count": 1
-          }
-        ],
-        "total": 16
-      },
-      "combined_total": 34
-    },
     {
       "date": "2025-11-23",
       "punjab": {
@@ -526,6 +448,36 @@
         "total": 11
       },
       "combined_total": 13
+    },
+    {
+      "date": "2025-11-30",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Fazilka",
+            "fire_count": 1
+          },
+          {
+            "district": "Sri Muktsar Sahib",
+            "fire_count": 1
+          }
+        ],
+        "total": 2
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Hisar",
+            "fire_count": 3
+          },
+          {
+            "district": "Rohtak",
+            "fire_count": 1
+          }
+        ],
+        "total": 4
+      },
+      "combined_total": 6
     }
   ]
 }
