@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-11-29T12:29:28.000499Z",
-  "total_fire_count": 194,
+  "last_updated": "2025-11-30T01:20:39.784242Z",
+  "total_fire_count": 199,
   "date_range": {
     "start": "2025-11-22",
     "end": "2025-11-29"
@@ -18,13 +18,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
+      "district": "Faridabad",
       "total_fires": 17
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 15
+      "district": "Sonipat",
+      "total_fires": 17
     },
     {
       "state": "Haryana",
@@ -34,7 +34,7 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 11
+      "total_fires": 12
     },
     {
       "state": "Punjab",
@@ -63,6 +63,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Sirsa",
+      "total_fires": 6
+    },
+    {
+      "state": "Haryana",
       "district": "Ambala",
       "total_fires": 5
     },
@@ -83,11 +88,6 @@
     },
     {
       "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
       "district": "Panipat",
       "total_fires": 5
     },
@@ -97,18 +97,18 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Bhiwani",
+      "state": "Punjab",
+      "district": "Amritsar",
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Amritsar",
+      "state": "Haryana",
+      "district": "Bhiwani",
       "total_fires": 4
     }
   ],
   "state_totals": {
     "punjab": 68,
-    "haryana": 126
+    "haryana": 131
   }
 }
