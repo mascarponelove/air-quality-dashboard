@@ -1,45 +1,50 @@
 {
-  "last_updated": "2025-12-01T01:24:55.615295Z",
-  "total_fire_count": 202,
+  "last_updated": "2025-12-01T12:33:37.657107Z",
+  "total_fire_count": 169,
   "date_range": {
-    "start": "2025-11-23",
-    "end": "2025-11-30"
+    "start": "2025-11-24",
+    "end": "2025-12-01"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Kaithal",
-      "total_fires": 20
-    },
-    {
-      "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
-      "total_fires": 18
-    },
-    {
-      "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 17
-    },
-    {
-      "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 17
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 16
+      "total_fires": 22
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 15
+      "total_fires": 14
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 12
     },
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 14
+      "total_fires": 12
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 12
+    },
+    {
+      "state": "Punjab",
+      "district": "Sri Muktsar Sahib",
+      "total_fires": 8
+    },
+    {
+      "state": "Punjab",
+      "district": "Fazilka",
+      "total_fires": 8
+    },
+    {
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 8
     },
     {
       "state": "Haryana",
@@ -58,38 +63,33 @@
     },
     {
       "state": "Haryana",
-      "district": "Fatehabad",
-      "total_fires": 6
-    },
-    {
-      "state": "Punjab",
-      "district": "Fazilka",
-      "total_fires": 6
-    },
-    {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 6
-    },
-    {
-      "state": "Punjab",
-      "district": "Ludhiana",
+      "district": "Yamunanagar",
       "total_fires": 5
     },
     {
       "state": "Haryana",
-      "district": "Ambala",
+      "district": "Sirsa",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Kurukshetra",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Fatehabad",
       "total_fires": 5
     },
     {
       "state": "Haryana",
       "district": "Jind",
-      "total_fires": 5
+      "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 5
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 4
     },
     {
       "state": "Punjab",
@@ -98,17 +98,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Bhiwani",
-      "total_fires": 3
+      "district": "Ambala",
+      "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Amritsar",
+      "state": "Haryana",
+      "district": "Karnal",
       "total_fires": 3
     }
   ],
   "state_totals": {
-    "punjab": 58,
-    "haryana": 144
+    "punjab": 46,
+    "haryana": 123
   }
 }
