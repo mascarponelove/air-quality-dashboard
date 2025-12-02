@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-12-01T12:33:37.657107Z",
-  "total_fire_count": 169,
+  "last_updated": "2025-12-02T01:13:29.984578Z",
+  "total_fire_count": 172,
   "date_range": {
     "start": "2025-11-24",
     "end": "2025-12-01"
@@ -9,7 +9,7 @@
     {
       "state": "Haryana",
       "district": "Kaithal",
-      "total_fires": 22
+      "total_fires": 23
     },
     {
       "state": "Haryana",
@@ -43,12 +43,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
+      "district": "Panipat",
       "total_fires": 8
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
+      "district": "Sonipat",
       "total_fires": 8
     },
     {
@@ -60,6 +60,11 @@
       "state": "Punjab",
       "district": "Jalandhar",
       "total_fires": 7
+    },
+    {
+      "state": "Haryana",
+      "district": "Jind",
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -80,11 +85,6 @@
       "state": "Haryana",
       "district": "Fatehabad",
       "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 4
     },
     {
       "state": "Punjab",
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 46,
-    "haryana": 123
+    "haryana": 126
   }
 }
