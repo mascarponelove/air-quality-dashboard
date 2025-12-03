@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-12-02T12:35:01.164118Z",
-  "total_fire_count": 163,
+  "last_updated": "2025-12-03T01:14:01.847644Z",
+  "total_fire_count": 172,
   "date_range": {
     "start": "2025-11-25",
     "end": "2025-12-02"
@@ -9,22 +9,22 @@
     {
       "state": "Haryana",
       "district": "Kaithal",
-      "total_fires": 20
+      "total_fires": 21
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
+      "total_fires": 15
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
       "total_fires": 14
     },
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 12
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 11
+      "total_fires": 13
     },
     {
       "state": "Haryana",
@@ -37,6 +37,11 @@
       "total_fires": 9
     },
     {
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 9
+    },
+    {
       "state": "Punjab",
       "district": "Sri Muktsar Sahib",
       "total_fires": 8
@@ -44,11 +49,6 @@
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 8
-    },
-    {
-      "state": "Haryana",
-      "district": "Sonipat",
       "total_fires": 8
     },
     {
@@ -63,6 +63,16 @@
     },
     {
       "state": "Haryana",
+      "district": "Jind",
+      "total_fires": 6
+    },
+    {
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
       "district": "Sirsa",
       "total_fires": 5
     },
@@ -73,18 +83,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
       "district": "Fatehabad",
       "total_fires": 5
-    },
-    {
-      "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 4
     },
     {
       "state": "Punjab",
@@ -97,18 +97,18 @@
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Karnal",
+      "state": "Punjab",
+      "district": "Hoshiarpur",
       "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
+      "state": "Haryana",
+      "district": "Karnal",
       "total_fires": 3
     }
   ],
   "state_totals": {
-    "punjab": 42,
-    "haryana": 121
+    "punjab": 43,
+    "haryana": 129
   }
 }
