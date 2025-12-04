@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-12-03T12:34:27.531134Z",
-  "total_fire_count": 160,
+  "last_updated": "2025-12-04T01:13:37.301325Z",
+  "total_fire_count": 166,
   "date_range": {
     "start": "2025-11-26",
     "end": "2025-12-03"
@@ -14,21 +14,21 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 13
+      "total_fires": 15
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 11
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 10
+      "total_fires": 13
     },
     {
       "state": "Haryana",
       "district": "Sonipat",
+      "total_fires": 10
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
       "total_fires": 10
     },
     {
@@ -73,12 +73,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Kurukshetra",
+      "district": "Fatehabad",
       "total_fires": 5
     },
     {
       "state": "Haryana",
-      "district": "Fatehabad",
+      "district": "Kurukshetra",
       "total_fires": 5
     },
     {
@@ -97,18 +97,18 @@
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Karnal",
+      "state": "Punjab",
+      "district": "Jalandhar",
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Palwal",
+      "state": "Punjab",
+      "district": "Hoshiarpur",
       "total_fires": 3
     }
   ],
   "state_totals": {
-    "punjab": 42,
-    "haryana": 118
+    "punjab": 43,
+    "haryana": 123
   }
 }
