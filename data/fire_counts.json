@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-04T12:35:32.584330Z",
+  "last_updated": "2025-12-05T01:14:18.250061Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -434,6 +434,10 @@
             "fire_count": 1
           },
           {
+            "district": "Ludhiana",
+            "fire_count": 1
+          },
+          {
             "district": "Sri Muktsar Sahib",
             "fire_count": 1
           },
@@ -442,10 +446,22 @@
             "fire_count": 1
           }
         ],
-        "total": 5
+        "total": 6
       },
       "haryana": {
         "districts": [
+          {
+            "district": "Jhajjar",
+            "fire_count": 3
+          },
+          {
+            "district": "Faridabad",
+            "fire_count": 1
+          },
+          {
+            "district": "Hisar",
+            "fire_count": 1
+          },
           {
             "district": "Karnal",
             "fire_count": 1
@@ -459,9 +475,9 @@
             "fire_count": 1
           }
         ],
-        "total": 3
+        "total": 8
       },
-      "combined_total": 8
+      "combined_total": 14
     }
   ]
 }
