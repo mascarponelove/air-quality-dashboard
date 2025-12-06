@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-12-05T12:33:32.959768Z",
-  "total_fire_count": 149,
+  "last_updated": "2025-12-06T01:10:47.555343Z",
+  "total_fire_count": 155,
   "date_range": {
     "start": "2025-11-28",
     "end": "2025-12-05"
@@ -14,12 +14,12 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 16
+      "total_fires": 17
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 12
+      "total_fires": 13
     },
     {
       "state": "Haryana",
@@ -32,14 +32,19 @@
       "total_fires": 9
     },
     {
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 8
+    },
+    {
       "state": "Punjab",
       "district": "Sangrur",
       "total_fires": 7
     },
     {
-      "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 6
+      "state": "Punjab",
+      "district": "Fazilka",
+      "total_fires": 5
     },
     {
       "state": "Punjab",
@@ -52,23 +57,13 @@
       "total_fires": 5
     },
     {
-      "state": "Punjab",
-      "district": "Fazilka",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 4
-    },
-    {
       "state": "Haryana",
       "district": "Rohtak",
+      "total_fires": 4
+    },
+    {
+      "state": "Punjab",
+      "district": "Jalandhar",
       "total_fires": 4
     },
     {
@@ -78,12 +73,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Palwal",
+      "district": "Sirsa",
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Jalandhar",
+      "state": "Haryana",
+      "district": "Yamunanagar",
+      "total_fires": 4
+    },
+    {
+      "state": "Haryana",
+      "district": "Palwal",
       "total_fires": 4
     },
     {
@@ -93,22 +93,22 @@
     },
     {
       "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
       "district": "Gurdaspur",
       "total_fires": 3
     },
     {
       "state": "Punjab",
-      "district": "Kapurthala",
-      "total_fires": 2
+      "district": "Bathinda",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 3
     }
   ],
   "state_totals": {
-    "punjab": 44,
-    "haryana": 105
+    "punjab": 46,
+    "haryana": 109
   }
 }
