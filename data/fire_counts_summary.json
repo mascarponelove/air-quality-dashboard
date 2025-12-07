@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-12-06T12:29:39.208895Z",
-  "total_fire_count": 136,
+  "last_updated": "2025-12-07T01:20:44.690395Z",
+  "total_fire_count": 143,
   "date_range": {
     "start": "2025-11-29",
     "end": "2025-12-06"
@@ -14,12 +14,12 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 16
+      "total_fires": 17
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 10
+      "total_fires": 11
     },
     {
       "state": "Haryana",
@@ -29,6 +29,11 @@
     {
       "state": "Haryana",
       "district": "Sonipat",
+      "total_fires": 8
+    },
+    {
+      "state": "Haryana",
+      "district": "Rewari",
       "total_fires": 8
     },
     {
@@ -43,22 +48,17 @@
     },
     {
       "state": "Haryana",
+      "district": "Palwal",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
       "district": "Kurukshetra",
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Rewari",
-      "total_fires": 5
-    },
-    {
       "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
-      "district": "Jind",
+      "district": "Bathinda",
       "total_fires": 4
     },
     {
@@ -68,17 +68,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Palwal",
+      "district": "Jind",
+      "total_fires": 4
+    },
+    {
+      "state": "Punjab",
+      "district": "Sri Muktsar Sahib",
       "total_fires": 4
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Gurdaspur",
       "total_fires": 3
     },
     {
@@ -88,17 +88,17 @@
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
+      "district": "Gurdaspur",
       "total_fires": 3
     },
     {
       "state": "Punjab",
-      "district": "Jalandhar",
+      "district": "Ludhiana",
       "total_fires": 2
     },
     {
       "state": "Punjab",
-      "district": "Ludhiana",
+      "district": "Jalandhar",
       "total_fires": 2
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 35,
-    "haryana": 101
+    "punjab": 36,
+    "haryana": 107
   }
 }
