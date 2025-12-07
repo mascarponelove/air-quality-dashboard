@@ -1,9 +1,9 @@
 {
-  "last_updated": "2025-12-07T01:20:44.690395Z",
-  "total_fire_count": 143,
+  "last_updated": "2025-12-07T12:29:09.410436Z",
+  "total_fire_count": 141,
   "date_range": {
-    "start": "2025-11-29",
-    "end": "2025-12-06"
+    "start": "2025-11-30",
+    "end": "2025-12-07"
   },
   "top_districts": [
     {
@@ -14,12 +14,7 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 17
-    },
-    {
-      "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 11
+      "total_fires": 16
     },
     {
       "state": "Haryana",
@@ -28,8 +23,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 8
+      "district": "Faridabad",
+      "total_fires": 9
     },
     {
       "state": "Haryana",
@@ -38,8 +33,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 7
+      "district": "Palwal",
+      "total_fires": 8
+    },
+    {
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 8
     },
     {
       "state": "Punjab",
@@ -48,18 +48,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Palwal",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Kurukshetra",
-      "total_fires": 5
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 4
+      "district": "Hisar",
+      "total_fires": 6
     },
     {
       "state": "Punjab",
@@ -73,17 +63,32 @@
     },
     {
       "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
+      "district": "Jalandhar",
       "total_fires": 4
     },
     {
       "state": "Punjab",
-      "district": "Hoshiarpur",
+      "district": "Ludhiana",
       "total_fires": 3
     },
     {
       "state": "Haryana",
       "district": "Yamunanagar",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Kurukshetra",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
       "total_fires": 3
     },
     {
@@ -93,22 +98,17 @@
     },
     {
       "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 2
+      "district": "Sri Muktsar Sahib",
+      "total_fires": 3
     },
     {
       "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 2
+      "district": "Bathinda",
+      "total_fires": 3
     }
   ],
   "state_totals": {
-    "punjab": 36,
-    "haryana": 107
+    "punjab": 37,
+    "haryana": 104
   }
 }
