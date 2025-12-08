@@ -1,62 +1,8 @@
 {
-  "last_updated": "2025-12-08T01:14:30.619000Z",
+  "last_updated": "2025-12-08T12:33:49.096790Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2025-11-30",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Sangrur",
-            "fire_count": 6
-          },
-          {
-            "district": "Fazilka",
-            "fire_count": 1
-          },
-          {
-            "district": "Sri Muktsar Sahib",
-            "fire_count": 1
-          }
-        ],
-        "total": 8
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Kaithal",
-            "fire_count": 12
-          },
-          {
-            "district": "Jhajjar",
-            "fire_count": 5
-          },
-          {
-            "district": "Panipat",
-            "fire_count": 5
-          },
-          {
-            "district": "Hisar",
-            "fire_count": 3
-          },
-          {
-            "district": "Sonipat",
-            "fire_count": 2
-          },
-          {
-            "district": "Faridabad",
-            "fire_count": 1
-          },
-          {
-            "district": "Rohtak",
-            "fire_count": 1
-          }
-        ],
-        "total": 29
-      },
-      "combined_total": 37
-    },
     {
       "date": "2025-12-01",
       "punjab": {
@@ -434,6 +380,64 @@
         "total": 11
       },
       "combined_total": 15
+    },
+    {
+      "date": "2025-12-08",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Gurdaspur",
+            "fire_count": 2
+          },
+          {
+            "district": "Hoshiarpur",
+            "fire_count": 2
+          },
+          {
+            "district": "Shahid Bhagat Singh Nagar",
+            "fire_count": 2
+          },
+          {
+            "district": "Fatehgarh Sahib",
+            "fire_count": 1
+          },
+          {
+            "district": "Firozpur",
+            "fire_count": 1
+          },
+          {
+            "district": "Jalandhar",
+            "fire_count": 1
+          },
+          {
+            "district": "Kapurthala",
+            "fire_count": 1
+          },
+          {
+            "district": "Moga",
+            "fire_count": 1
+          }
+        ],
+        "total": 11
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Faridabad",
+            "fire_count": 1
+          },
+          {
+            "district": "Hisar",
+            "fire_count": 1
+          },
+          {
+            "district": "Sirsa",
+            "fire_count": 1
+          }
+        ],
+        "total": 3
+      },
+      "combined_total": 14
     }
   ]
 }
