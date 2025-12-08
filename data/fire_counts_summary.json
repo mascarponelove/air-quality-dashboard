@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-12-07T12:29:09.410436Z",
-  "total_fire_count": 141,
+  "last_updated": "2025-12-08T01:14:30.631044Z",
+  "total_fire_count": 145,
   "date_range": {
     "start": "2025-11-30",
     "end": "2025-12-07"
@@ -8,13 +8,13 @@
   "top_districts": [
     {
       "state": "Haryana",
-      "district": "Kaithal",
+      "district": "Jhajjar",
       "total_fires": 18
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 16
+      "district": "Kaithal",
+      "total_fires": 18
     },
     {
       "state": "Haryana",
@@ -28,7 +28,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Rewari",
+      "district": "Sonipat",
       "total_fires": 8
     },
     {
@@ -38,13 +38,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
+      "district": "Rewari",
       "total_fires": 8
-    },
-    {
-      "state": "Punjab",
-      "district": "Sangrur",
-      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -53,13 +48,13 @@
     },
     {
       "state": "Punjab",
-      "district": "Fazilka",
-      "total_fires": 4
+      "district": "Sangrur",
+      "total_fires": 6
     },
     {
       "state": "Haryana",
       "district": "Jind",
-      "total_fires": 4
+      "total_fires": 5
     },
     {
       "state": "Punjab",
@@ -68,12 +63,17 @@
     },
     {
       "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 3
+      "district": "Gurdaspur",
+      "total_fires": 4
+    },
+    {
+      "state": "Punjab",
+      "district": "Fazilka",
+      "total_fires": 4
     },
     {
       "state": "Haryana",
-      "district": "Yamunanagar",
+      "district": "Kurukshetra",
       "total_fires": 3
     },
     {
@@ -82,8 +82,18 @@
       "total_fires": 3
     },
     {
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Sri Muktsar Sahib",
+      "total_fires": 3
+    },
+    {
       "state": "Haryana",
-      "district": "Kurukshetra",
+      "district": "Yamunanagar",
       "total_fires": 3
     },
     {
@@ -93,22 +103,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
       "district": "Bathinda",
       "total_fires": 3
     }
   ],
   "state_totals": {
-    "punjab": 37,
-    "haryana": 104
+    "punjab": 38,
+    "haryana": 107
   }
 }
