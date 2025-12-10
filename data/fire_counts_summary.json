@@ -1,11 +1,16 @@
 {
-  "last_updated": "2025-12-09T12:34:11.660080Z",
-  "total_fire_count": 164,
+  "last_updated": "2025-12-10T01:15:27.509984Z",
+  "total_fire_count": 169,
   "date_range": {
     "start": "2025-12-02",
     "end": "2025-12-09"
   },
   "top_districts": [
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 19
+    },
     {
       "state": "Punjab",
       "district": "Mansa",
@@ -13,13 +18,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 17
-    },
-    {
-      "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 12
+      "total_fires": 13
     },
     {
       "state": "Haryana",
@@ -52,6 +52,11 @@
       "total_fires": 7
     },
     {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 6
+    },
+    {
       "state": "Punjab",
       "district": "Jalandhar",
       "total_fires": 6
@@ -65,11 +70,6 @@
       "state": "Haryana",
       "district": "Hisar",
       "total_fires": 6
-    },
-    {
-      "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 5
     },
     {
       "state": "Haryana",
@@ -88,6 +88,11 @@
     },
     {
       "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
       "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 3
     },
@@ -97,18 +102,13 @@
       "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 3
-    },
-    {
       "state": "Haryana",
-      "district": "Kurukshetra",
+      "district": "Ambala",
       "total_fires": 2
     }
   ],
   "state_totals": {
-    "punjab": 68,
-    "haryana": 96
+    "punjab": 69,
+    "haryana": 100
   }
 }
