@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-12-10T12:34:48.829008Z",
-  "total_fire_count": 161,
+  "last_updated": "2025-12-11T01:16:17.229538Z",
+  "total_fire_count": 162,
   "date_range": {
     "start": "2025-12-03",
     "end": "2025-12-10"
@@ -38,12 +38,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Jalandhar",
+      "district": "Gurdaspur",
       "total_fires": 7
     },
     {
       "state": "Punjab",
-      "district": "Gurdaspur",
+      "district": "Jalandhar",
       "total_fires": 7
     },
     {
@@ -57,13 +57,13 @@
       "total_fires": 7
     },
     {
-      "state": "Haryana",
-      "district": "Rohtak",
+      "state": "Punjab",
+      "district": "Sri Muktsar Sahib",
       "total_fires": 6
     },
     {
-      "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
+      "state": "Haryana",
+      "district": "Rohtak",
       "total_fires": 6
     },
     {
@@ -83,6 +83,11 @@
     },
     {
       "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
       "district": "Bathinda",
       "total_fires": 3
     },
@@ -92,23 +97,18 @@
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 3
-    },
-    {
       "state": "Punjab",
       "district": "Kapurthala",
       "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 2
+      "district": "Jind",
+      "total_fires": 3
     }
   ],
   "state_totals": {
-    "punjab": 73,
+    "punjab": 74,
     "haryana": 88
   }
 }
