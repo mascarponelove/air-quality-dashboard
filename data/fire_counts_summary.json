@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-12-11T12:35:41.379610Z",
-  "total_fire_count": 159,
+  "last_updated": "2025-12-12T01:16:07.713714Z",
+  "total_fire_count": 166,
   "date_range": {
     "start": "2025-12-04",
     "end": "2025-12-11"
@@ -19,17 +19,12 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 12
+      "total_fires": 13
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
       "total_fires": 10
-    },
-    {
-      "state": "Haryana",
-      "district": "Rewari",
-      "total_fires": 9
     },
     {
       "state": "Punjab",
@@ -38,7 +33,17 @@
     },
     {
       "state": "Haryana",
+      "district": "Rewari",
+      "total_fires": 9
+    },
+    {
+      "state": "Haryana",
       "district": "Sonipat",
+      "total_fires": 7
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 7
     },
     {
@@ -48,17 +53,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 6
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
+      "district": "Sri Muktsar Sahib",
       "total_fires": 6
     },
     {
       "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
+      "district": "Gurdaspur",
       "total_fires": 6
     },
     {
@@ -68,7 +68,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
+      "district": "Palwal",
       "total_fires": 5
     },
     {
@@ -78,13 +78,18 @@
     },
     {
       "state": "Haryana",
-      "district": "Palwal",
+      "district": "Hisar",
       "total_fires": 5
     },
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 3
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Sirsa",
+      "total_fires": 4
     },
     {
       "state": "Punjab",
@@ -98,17 +103,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 3
-    },
-    {
-      "state": "Haryana",
       "district": "Jind",
       "total_fires": 3
     }
   ],
   "state_totals": {
-    "punjab": 75,
-    "haryana": 84
+    "punjab": 77,
+    "haryana": 89
   }
 }
