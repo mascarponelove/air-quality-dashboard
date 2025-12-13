@@ -1,70 +1,8 @@
 {
-  "last_updated": "2025-12-13T01:11:39.992178Z",
+  "last_updated": "2025-12-13T12:30:26.784388Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2025-12-05",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Bathinda",
-            "fire_count": 2
-          },
-          {
-            "district": "Hoshiarpur",
-            "fire_count": 1
-          },
-          {
-            "district": "Jalandhar",
-            "fire_count": 1
-          },
-          {
-            "district": "Shahid Bhagat Singh Nagar",
-            "fire_count": 1
-          }
-        ],
-        "total": 5
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Sonipat",
-            "fire_count": 3
-          },
-          {
-            "district": "Faridabad",
-            "fire_count": 2
-          },
-          {
-            "district": "Jhajjar",
-            "fire_count": 2
-          },
-          {
-            "district": "Ambala",
-            "fire_count": 1
-          },
-          {
-            "district": "Charki Dadri",
-            "fire_count": 1
-          },
-          {
-            "district": "Kurukshetra",
-            "fire_count": 1
-          },
-          {
-            "district": "Palwal",
-            "fire_count": 1
-          },
-          {
-            "district": "Panipat",
-            "fire_count": 1
-          }
-        ],
-        "total": 12
-      },
-      "combined_total": 17
-    },
     {
       "date": "2025-12-06",
       "punjab": {
@@ -482,6 +420,23 @@
         "total": 7
       },
       "combined_total": 8
+    },
+    {
+      "date": "2025-12-13",
+      "punjab": {
+        "districts": [],
+        "total": 0
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Palwal",
+            "fire_count": 2
+          }
+        ],
+        "total": 2
+      },
+      "combined_total": 2
     }
   ]
 }
