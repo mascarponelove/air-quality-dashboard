@@ -1,9 +1,9 @@
 {
-  "last_updated": "2025-12-14T01:20:56.561923Z",
-  "total_fire_count": 153,
+  "last_updated": "2025-12-14T12:30:08.651739Z",
+  "total_fire_count": 145,
   "date_range": {
-    "start": "2025-12-06",
-    "end": "2025-12-13"
+    "start": "2025-12-07",
+    "end": "2025-12-14"
   },
   "top_districts": [
     {
@@ -14,7 +14,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 13
+      "total_fires": 12
     },
     {
       "state": "Haryana",
@@ -24,16 +24,11 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 11
+      "total_fires": 10
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 9
-    },
-    {
-      "state": "Haryana",
-      "district": "Rewari",
       "total_fires": 9
     },
     {
@@ -43,18 +38,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Palwal",
+      "district": "Rohtak",
       "total_fires": 7
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
+      "district": "Palwal",
       "total_fires": 6
-    },
-    {
-      "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 5
     },
     {
       "state": "Punjab",
@@ -67,14 +57,14 @@
       "total_fires": 5
     },
     {
-      "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
+      "state": "Haryana",
+      "district": "Sonipat",
       "total_fires": 5
     },
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 4
+      "total_fires": 5
     },
     {
       "state": "Haryana",
@@ -82,8 +72,8 @@
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Sirsa",
+      "state": "Punjab",
+      "district": "Sri Muktsar Sahib",
       "total_fires": 4
     },
     {
@@ -92,9 +82,9 @@
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Kapurthala",
-      "total_fires": 3
+      "state": "Haryana",
+      "district": "Sirsa",
+      "total_fires": 4
     },
     {
       "state": "Haryana",
@@ -103,12 +93,22 @@
     },
     {
       "state": "Punjab",
-      "district": "Firozpur",
+      "district": "Kapurthala",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Ambala",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Bhiwani",
       "total_fires": 2
     }
   ],
   "state_totals": {
-    "punjab": 68,
-    "haryana": 85
+    "punjab": 69,
+    "haryana": 76
   }
 }
