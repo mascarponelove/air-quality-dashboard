@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-12-13T12:30:26.796466Z",
-  "total_fire_count": 145,
+  "last_updated": "2025-12-14T01:20:56.561923Z",
+  "total_fire_count": 153,
   "date_range": {
     "start": "2025-12-06",
     "end": "2025-12-13"
@@ -14,6 +14,11 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
+      "total_fires": 13
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 11
     },
     {
@@ -43,11 +48,6 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 7
-    },
-    {
-      "state": "Haryana",
       "district": "Rohtak",
       "total_fires": 6
     },
@@ -58,22 +58,22 @@
     },
     {
       "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
-      "total_fires": 5
-    },
-    {
-      "state": "Punjab",
       "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 5
     },
     {
       "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 4
+      "district": "Bathinda",
+      "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Sirsa",
+      "state": "Punjab",
+      "district": "Sri Muktsar Sahib",
+      "total_fires": 5
+    },
+    {
+      "state": "Punjab",
+      "district": "Gurdaspur",
       "total_fires": 4
     },
     {
@@ -82,13 +82,13 @@
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Gurdaspur",
+      "state": "Haryana",
+      "district": "Sirsa",
       "total_fires": 4
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
+      "district": "Ludhiana",
       "total_fires": 4
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 67,
-    "haryana": 78
+    "punjab": 68,
+    "haryana": 85
   }
 }
