@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-12-16T12:35:17.120232Z",
-  "total_fire_count": 135,
+  "last_updated": "2025-12-17T01:12:09.394780Z",
+  "total_fire_count": 143,
   "date_range": {
     "start": "2025-12-09",
     "end": "2025-12-16"
@@ -12,29 +12,29 @@
       "total_fires": 17
     },
     {
+      "state": "Haryana",
+      "district": "Panipat",
+      "total_fires": 15
+    },
+    {
+      "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 13
+    },
+    {
       "state": "Punjab",
       "district": "Bathinda",
       "total_fires": 12
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 11
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
+      "district": "Jhajjar",
       "total_fires": 10
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
       "total_fires": 10
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 9
     },
     {
       "state": "Punjab",
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 70,
-    "haryana": 65
+    "haryana": 73
   }
 }
