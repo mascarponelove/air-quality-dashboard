@@ -1,9 +1,9 @@
 {
-  "last_updated": "2025-12-18T01:12:40.101912Z",
-  "total_fire_count": 103,
+  "last_updated": "2025-12-18T12:34:01.936512Z",
+  "total_fire_count": 90,
   "date_range": {
-    "start": "2025-12-10",
-    "end": "2025-12-17"
+    "start": "2025-12-11",
+    "end": "2025-12-18"
   },
   "top_districts": [
     {
@@ -19,12 +19,12 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 11
+      "total_fires": 8
     },
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 9
+      "total_fires": 8
     },
     {
       "state": "Haryana",
@@ -32,13 +32,8 @@
       "total_fires": 7
     },
     {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 6
-    },
-    {
-      "state": "Punjab",
-      "district": "Ludhiana",
+      "state": "Haryana",
+      "district": "Sonipat",
       "total_fires": 5
     },
     {
@@ -49,17 +44,17 @@
     {
       "state": "Haryana",
       "district": "Ambala",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 4
+      "total_fires": 3
     },
     {
       "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
-      "total_fires": 4
+      "district": "Hoshiarpur",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
@@ -72,8 +67,8 @@
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Rohtak",
+      "state": "Punjab",
+      "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 3
     },
     {
@@ -88,13 +83,8 @@
     },
     {
       "state": "Punjab",
-      "district": "Kapurthala",
+      "district": "Ludhiana",
       "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Bhiwani",
-      "total_fires": 1
     },
     {
       "state": "Haryana",
@@ -103,12 +93,22 @@
     },
     {
       "state": "Haryana",
+      "district": "Bhiwani",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
       "district": "Nuh",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Fazilka",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 43,
-    "haryana": 60
+    "punjab": 33,
+    "haryana": 57
   }
 }
