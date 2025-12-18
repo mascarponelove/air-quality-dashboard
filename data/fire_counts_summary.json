@@ -1,20 +1,20 @@
 {
-  "last_updated": "2025-12-17T12:35:31.760758Z",
-  "total_fire_count": 97,
+  "last_updated": "2025-12-18T01:12:40.101912Z",
+  "total_fire_count": 103,
   "date_range": {
     "start": "2025-12-10",
     "end": "2025-12-17"
   },
   "top_districts": [
     {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 14
+    },
+    {
       "state": "Haryana",
       "district": "Panipat",
       "total_fires": 13
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 12
     },
     {
       "state": "Haryana",
@@ -37,6 +37,16 @@
       "total_fires": 6
     },
     {
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Sirsa",
+      "total_fires": 5
+    },
+    {
       "state": "Haryana",
       "district": "Ambala",
       "total_fires": 4
@@ -44,11 +54,6 @@
     {
       "state": "Haryana",
       "district": "Sonipat",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
-      "district": "Sirsa",
       "total_fires": 4
     },
     {
@@ -62,8 +67,8 @@
       "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Ludhiana",
+      "state": "Haryana",
+      "district": "Hisar",
       "total_fires": 3
     },
     {
@@ -82,23 +87,18 @@
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 2
-    },
-    {
       "state": "Punjab",
       "district": "Kapurthala",
       "total_fires": 2
     },
     {
       "state": "Haryana",
-      "district": "Panchkula",
+      "district": "Bhiwani",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Bhiwani",
+      "district": "Panchkula",
       "total_fires": 1
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 39,
-    "haryana": 58
+    "punjab": 43,
+    "haryana": 60
   }
 }
