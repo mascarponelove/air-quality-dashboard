@@ -1,9 +1,9 @@
 {
-  "last_updated": "2025-12-21T12:30:27.584203Z",
-  "total_fire_count": 69,
+  "last_updated": "2025-12-22T01:19:21.597589Z",
+  "total_fire_count": 72,
   "date_range": {
     "start": "2025-12-14",
-    "end": "2025-12-20"
+    "end": "2025-12-21"
   },
   "top_districts": [
     {
@@ -18,6 +18,21 @@
     },
     {
       "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 6
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 6
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 6
+    },
+    {
+      "state": "Haryana",
       "district": "Panipat",
       "total_fires": 6
     },
@@ -27,28 +42,13 @@
       "total_fires": 6
     },
     {
-      "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 5
-    },
-    {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 5
-    },
-    {
       "state": "Punjab",
       "district": "Jalandhar",
       "total_fires": 5
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
+      "district": "Rohtak",
       "total_fires": 5
     },
     {
@@ -72,6 +72,11 @@
       "total_fires": 2
     },
     {
+      "state": "Punjab",
+      "district": "Fazilka",
+      "total_fires": 1
+    },
+    {
       "state": "Haryana",
       "district": "Kurukshetra",
       "total_fires": 1
@@ -79,11 +84,6 @@
     {
       "state": "Haryana",
       "district": "Kaithal",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Fazilka",
       "total_fires": 1
     },
     {
@@ -98,7 +98,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 27,
-    "haryana": 42
+    "punjab": 28,
+    "haryana": 44
   }
 }
