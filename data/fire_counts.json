@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-22T12:33:34.489196Z",
+  "last_updated": "2025-12-23T01:16:17.553631Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -248,6 +248,10 @@
       "punjab": {
         "districts": [
           {
+            "district": "Patiala",
+            "fire_count": 6
+          },
+          {
             "district": "Amritsar",
             "fire_count": 2
           },
@@ -258,20 +262,32 @@
           {
             "district": "Jalandhar",
             "fire_count": 1
+          },
+          {
+            "district": "Ludhiana",
+            "fire_count": 1
           }
         ],
-        "total": 4
+        "total": 11
       },
       "haryana": {
         "districts": [
+          {
+            "district": "Faridabad",
+            "fire_count": 2
+          },
+          {
+            "district": "Sonipat",
+            "fire_count": 2
+          },
           {
             "district": "Yamunanagar",
             "fire_count": 1
           }
         ],
-        "total": 1
+        "total": 5
       },
-      "combined_total": 5
+      "combined_total": 16
     }
   ]
 }

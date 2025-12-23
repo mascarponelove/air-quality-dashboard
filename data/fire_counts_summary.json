@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-12-22T12:33:34.498950Z",
-  "total_fire_count": 67,
+  "last_updated": "2025-12-23T01:16:17.563965Z",
+  "total_fire_count": 78,
   "date_range": {
     "start": "2025-12-15",
     "end": "2025-12-22"
@@ -8,8 +8,18 @@
   "top_districts": [
     {
       "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 8
+    },
+    {
+      "state": "Haryana",
       "district": "Sirsa",
       "total_fires": 7
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -17,8 +27,8 @@
       "total_fires": 6
     },
     {
-      "state": "Haryana",
-      "district": "Faridabad",
+      "state": "Punjab",
+      "district": "Patiala",
       "total_fires": 6
     },
     {
@@ -29,11 +39,6 @@
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 6
-    },
-    {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
       "total_fires": 6
     },
     {
@@ -48,6 +53,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
       "district": "Rohtak",
       "total_fires": 4
     },
@@ -57,14 +67,9 @@
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 3
-    },
-    {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 2
+      "total_fires": 3
     },
     {
       "state": "Punjab",
@@ -74,11 +79,6 @@
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Yamunanagar",
       "total_fires": 1
     },
     {
@@ -93,6 +93,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Yamunanagar",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
       "district": "Kurukshetra",
       "total_fires": 1
     },
@@ -103,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 26,
-    "haryana": 41
+    "punjab": 33,
+    "haryana": 45
   }
 }
