@@ -1,8 +1,8 @@
 {
-  "last_updated": "2025-12-26T01:16:01.655702Z",
-  "total_fire_count": 118,
+  "last_updated": "2025-12-26T12:33:02.370105Z",
+  "total_fire_count": 117,
   "date_range": {
-    "start": "2025-12-18",
+    "start": "2025-12-19",
     "end": "2025-12-25"
   },
   "top_districts": [
@@ -22,13 +22,13 @@
       "total_fires": 10
     },
     {
-      "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 10
-    },
-    {
       "state": "Punjab",
       "district": "Patiala",
+      "total_fires": 9
+    },
+    {
+      "state": "Haryana",
+      "district": "Sonipat",
       "total_fires": 9
     },
     {
@@ -43,18 +43,23 @@
     },
     {
       "state": "Punjab",
-      "district": "Ludhiana",
+      "district": "Amritsar",
       "total_fires": 4
     },
     {
       "state": "Punjab",
-      "district": "Amritsar",
+      "district": "Ludhiana",
       "total_fires": 4
     },
     {
       "state": "Punjab",
       "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 4
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
@@ -67,19 +72,9 @@
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 3
-    },
-    {
       "state": "Punjab",
       "district": "Jalandhar",
       "total_fires": 3
-    },
-    {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 2
     },
     {
       "state": "Haryana",
@@ -87,13 +82,18 @@
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Gurdaspur",
+      "state": "Haryana",
+      "district": "Kurukshetra",
       "total_fires": 2
     },
     {
       "state": "Haryana",
-      "district": "Kurukshetra",
+      "district": "Yamunanagar",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Gurdaspur",
       "total_fires": 2
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 62,
-    "haryana": 56
+    "haryana": 55
   }
 }
