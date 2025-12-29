@@ -1,9 +1,9 @@
 {
-  "last_updated": "2025-12-29T01:22:11.317732Z",
-  "total_fire_count": 130,
+  "last_updated": "2025-12-29T12:35:34.565009Z",
+  "total_fire_count": 131,
   "date_range": {
-    "start": "2025-12-21",
-    "end": "2025-12-28"
+    "start": "2025-12-22",
+    "end": "2025-12-29"
   },
   "top_districts": [
     {
@@ -22,19 +22,19 @@
       "total_fires": 10
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 10
-    },
-    {
       "state": "Punjab",
       "district": "Patiala",
       "total_fires": 9
     },
     {
       "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 9
+    },
+    {
+      "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 6
+      "total_fires": 5
     },
     {
       "state": "Punjab",
@@ -62,8 +62,13 @@
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
+      "state": "Haryana",
+      "district": "Jind",
+      "total_fires": 4
+    },
+    {
+      "state": "Haryana",
+      "district": "Ambala",
       "total_fires": 3
     },
     {
@@ -83,11 +88,6 @@
     },
     {
       "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Panipat",
       "total_fires": 2
     },
@@ -97,8 +97,8 @@
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Ambala",
+      "state": "Punjab",
+      "district": "Hoshiarpur",
       "total_fires": 2
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 63,
-    "haryana": 67
+    "haryana": 68
   }
 }
