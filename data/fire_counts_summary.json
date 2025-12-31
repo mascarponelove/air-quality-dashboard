@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-12-30T12:34:12.205990Z",
-  "total_fire_count": 119,
+  "last_updated": "2025-12-31T01:17:43.459328Z",
+  "total_fire_count": 121,
   "date_range": {
     "start": "2025-12-23",
     "end": "2025-12-30"
@@ -14,7 +14,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 18
+      "total_fires": 20
     },
     {
       "state": "Haryana",
@@ -37,11 +37,6 @@
       "total_fires": 5
     },
     {
-      "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
-      "total_fires": 4
-    },
-    {
       "state": "Haryana",
       "district": "Jind",
       "total_fires": 4
@@ -53,28 +48,8 @@
     },
     {
       "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Pathankot",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 3
-    },
-    {
-      "state": "Haryana",
-      "district": "Ambala",
-      "total_fires": 3
-    },
-    {
-      "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 3
+      "district": "Shahid Bhagat Singh Nagar",
+      "total_fires": 4
     },
     {
       "state": "Haryana",
@@ -83,7 +58,32 @@
     },
     {
       "state": "Punjab",
-      "district": "Fatehgarh Sahib",
+      "district": "Ludhiana",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Pathankot",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Patiala",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Ambala",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
       "total_fires": 2
     },
     {
@@ -93,22 +93,22 @@
     },
     {
       "state": "Punjab",
+      "district": "Fatehgarh Sahib",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
       "district": "Amritsar",
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Fazilka",
+      "state": "Haryana",
+      "district": "Charki Dadri",
       "total_fires": 1
     }
   ],
   "state_totals": {
     "punjab": 54,
-    "haryana": 65
+    "haryana": 67
   }
 }
