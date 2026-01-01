@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-01-01T01:24:08.597677Z",
-  "total_fire_count": 100,
+  "last_updated": "2026-01-01T12:33:51.278451Z",
+  "total_fire_count": 81,
   "date_range": {
-    "start": "2025-12-24",
+    "start": "2025-12-25",
     "end": "2025-12-30"
   },
   "top_districts": [
@@ -14,12 +14,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 14
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 8
+      "total_fires": 11
     },
     {
       "state": "Haryana",
@@ -28,23 +23,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Bhiwani",
-      "total_fires": 5
-    },
-    {
-      "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
-      "total_fires": 4
-    },
-    {
-      "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 4
+      "district": "Hisar",
+      "total_fires": 6
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 4
+      "district": "Bhiwani",
+      "total_fires": 5
     },
     {
       "state": "Haryana",
@@ -53,7 +38,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
+      "district": "Panipat",
       "total_fires": 3
     },
     {
@@ -63,8 +48,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
+      "district": "Jhajjar",
       "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 2
     },
     {
       "state": "Punjab",
@@ -73,7 +63,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Hoshiarpur",
+      "district": "Jalandhar",
       "total_fires": 2
     },
     {
@@ -82,18 +72,13 @@
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Amritsar",
-      "total_fires": 2
-    },
-    {
       "state": "Haryana",
-      "district": "Yamunanagar",
+      "district": "Mahendragarh",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Mahendragarh",
+      "district": "Gurugram",
       "total_fires": 1
     },
     {
@@ -105,10 +90,25 @@
       "state": "Punjab",
       "district": "Fazilka",
       "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Charki Dadri",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Moga",
+      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 46,
-    "haryana": 54
+    "punjab": 35,
+    "haryana": 46
   }
 }
