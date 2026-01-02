@@ -1,44 +1,29 @@
 {
-  "last_updated": "2026-01-02T01:18:06.801987Z",
-  "total_fire_count": 82,
+  "last_updated": "2026-01-02T12:32:28.479717Z",
+  "total_fire_count": 38,
   "date_range": {
-    "start": "2025-12-25",
+    "start": "2025-12-26",
     "end": "2026-01-01"
   },
   "top_districts": [
     {
-      "state": "Punjab",
-      "district": "Mansa",
-      "total_fires": 23
-    },
-    {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 12
-    },
-    {
-      "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 6
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 6
+      "total_fires": 9
     },
     {
       "state": "Haryana",
       "district": "Bhiwani",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Jind",
       "total_fires": 4
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
+      "district": "Ambala",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
       "total_fires": 3
     },
     {
@@ -48,17 +33,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Ambala",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
+      "district": "Jhajjar",
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Pathankot",
+      "state": "Haryana",
+      "district": "Jind",
       "total_fires": 2
     },
     {
@@ -72,13 +52,13 @@
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Charki Dadri",
-      "total_fires": 1
+      "state": "Punjab",
+      "district": "Pathankot",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
-      "district": "Gurugram",
+      "district": "Charki Dadri",
       "total_fires": 1
     },
     {
@@ -87,13 +67,13 @@
       "total_fires": 1
     },
     {
-      "state": "Punjab",
-      "district": "Barnala",
+      "state": "Haryana",
+      "district": "Sonipat",
       "total_fires": 1
     },
     {
       "state": "Punjab",
-      "district": "Hoshiarpur",
+      "district": "Bathinda",
       "total_fires": 1
     },
     {
@@ -103,12 +83,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Moga",
+      "district": "Sangrur",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 35,
-    "haryana": 47
+    "punjab": 7,
+    "haryana": 31
   }
 }
