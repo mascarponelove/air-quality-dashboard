@@ -1,20 +1,15 @@
 {
-  "last_updated": "2026-01-03T01:13:36.976055Z",
-  "total_fire_count": 38,
+  "last_updated": "2026-01-03T12:30:55.428603Z",
+  "total_fire_count": 30,
   "date_range": {
-    "start": "2025-12-26",
+    "start": "2025-12-27",
     "end": "2026-01-01"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 9
-    },
-    {
-      "state": "Haryana",
-      "district": "Bhiwani",
-      "total_fires": 4
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -23,13 +18,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
+      "district": "Panipat",
       "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 3
+      "district": "Hisar",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
@@ -58,6 +53,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Bhiwani",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
       "district": "Charki Dadri",
       "total_fires": 1
     },
@@ -73,11 +73,6 @@
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
       "district": "Fazilka",
       "total_fires": 1
     },
@@ -88,7 +83,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 7,
-    "haryana": 31
+    "punjab": 6,
+    "haryana": 24
   }
 }
