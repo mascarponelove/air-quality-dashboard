@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-01-04T12:31:16.633257Z",
-  "total_fire_count": 26,
+  "last_updated": "2026-01-05T01:23:54.427411Z",
+  "total_fire_count": 31,
   "date_range": {
     "start": "2025-12-28",
     "end": "2026-01-04"
@@ -9,11 +9,16 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 5
+      "total_fires": 7
     },
     {
       "state": "Haryana",
       "district": "Ambala",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
       "total_fires": 3
     },
     {
@@ -24,11 +29,6 @@
     {
       "state": "Haryana",
       "district": "Bhiwani",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
       "total_fires": 2
     },
     {
@@ -49,6 +49,16 @@
     {
       "state": "Haryana",
       "district": "Charki Dadri",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Gurugram",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Palwal",
       "total_fires": 1
     },
     {
@@ -74,6 +84,6 @@
   ],
   "state_totals": {
     "punjab": 6,
-    "haryana": 20
+    "haryana": 25
   }
 }
