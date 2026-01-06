@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-01-06T01:18:19.506753Z",
-  "total_fire_count": 34,
+  "last_updated": "2026-01-06T12:35:53.063282Z",
+  "total_fire_count": 30,
   "date_range": {
-    "start": "2025-12-29",
+    "start": "2025-12-30",
     "end": "2026-01-05"
   },
   "top_districts": [
@@ -13,22 +13,22 @@
     },
     {
       "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
       "district": "Jhajjar",
       "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
+      "district": "Jind",
       "total_fires": 2
     },
     {
       "state": "Haryana",
       "district": "Palwal",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
       "total_fires": 2
     },
     {
@@ -38,7 +38,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Kaithal",
+      "district": "Bhiwani",
       "total_fires": 1
     },
     {
@@ -48,12 +48,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
+      "district": "Kaithal",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Bhiwani",
+      "district": "Panipat",
       "total_fires": 1
     },
     {
@@ -64,11 +64,6 @@
     {
       "state": "Punjab",
       "district": "Fatehgarh Sahib",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Fazilka",
       "total_fires": 1
     },
     {
@@ -90,15 +85,10 @@
       "state": "Punjab",
       "district": "Kapurthala",
       "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Ambala",
-      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 8,
-    "haryana": 26
+    "punjab": 7,
+    "haryana": 23
   }
 }
