@@ -1,20 +1,25 @@
 {
-  "last_updated": "2026-01-07T01:18:05.972757Z",
-  "total_fire_count": 30,
+  "last_updated": "2026-01-07T12:36:32.334555Z",
+  "total_fire_count": 28,
   "date_range": {
-    "start": "2025-12-30",
-    "end": "2026-01-05"
+    "start": "2026-01-01",
+    "end": "2026-01-07"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 9
+      "total_fires": 7
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 4
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 3
+      "total_fires": 2
     },
     {
       "state": "Haryana",
@@ -32,8 +37,8 @@
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Pathankot",
+      "state": "Haryana",
+      "district": "Yamunanagar",
       "total_fires": 2
     },
     {
@@ -52,16 +57,6 @@
       "total_fires": 1
     },
     {
-      "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 1
-    },
-    {
       "state": "Punjab",
       "district": "Fatehgarh Sahib",
       "total_fires": 1
@@ -69,11 +64,6 @@
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
       "total_fires": 1
     },
     {
@@ -88,7 +78,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 7,
-    "haryana": 23
+    "punjab": 8,
+    "haryana": 20
   }
 }
