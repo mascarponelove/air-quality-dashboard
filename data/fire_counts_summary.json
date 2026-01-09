@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-01-09T01:18:41.337669Z",
-  "total_fire_count": 41,
+  "last_updated": "2026-01-09T12:35:26.230270Z",
+  "total_fire_count": 47,
   "date_range": {
-    "start": "2026-01-01",
-    "end": "2026-01-08"
+    "start": "2026-01-03",
+    "end": "2026-01-09"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 8
+      "total_fires": 7
     },
     {
       "state": "Haryana",
@@ -19,12 +19,22 @@
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 4
+      "total_fires": 6
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 4
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Palwal",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
@@ -33,18 +43,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Palwal",
-      "total_fires": 3
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Jind",
-      "total_fires": 2
+      "total_fires": 3
     },
     {
       "state": "Haryana",
@@ -53,7 +53,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Gurugram",
+      "district": "Jhajjar",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Mahendragarh",
       "total_fires": 1
     },
     {
@@ -72,8 +77,8 @@
       "total_fires": 1
     },
     {
-      "state": "Punjab",
-      "district": "Jalandhar",
+      "state": "Haryana",
+      "district": "Gurugram",
       "total_fires": 1
     },
     {
@@ -88,7 +93,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 12,
-    "haryana": 29
+    "punjab": 17,
+    "haryana": 30
   }
 }
