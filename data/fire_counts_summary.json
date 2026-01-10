@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-01-09T12:35:26.230270Z",
-  "total_fire_count": 47,
+  "last_updated": "2026-01-10T01:16:13.651033Z",
+  "total_fire_count": 51,
   "date_range": {
     "start": "2026-01-03",
     "end": "2026-01-09"
@@ -9,12 +9,12 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 7
+      "total_fires": 8
     },
     {
       "state": "Haryana",
       "district": "Rohtak",
-      "total_fires": 6
+      "total_fires": 7
     },
     {
       "state": "Punjab",
@@ -28,6 +28,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Bhiwani",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
       "district": "Palwal",
       "total_fires": 3
     },
@@ -38,12 +43,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Bhiwani",
+      "district": "Jind",
       "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Jind",
+      "district": "Jhajjar",
       "total_fires": 3
     },
     {
@@ -53,8 +58,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
+      "district": "Sonipat",
       "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Gurugram",
+      "total_fires": 1
     },
     {
       "state": "Haryana",
@@ -67,18 +77,8 @@
       "total_fires": 1
     },
     {
-      "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 1
-    },
-    {
       "state": "Punjab",
       "district": "Fatehgarh Sahib",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Gurugram",
       "total_fires": 1
     },
     {
@@ -94,6 +94,6 @@
   ],
   "state_totals": {
     "punjab": 17,
-    "haryana": 30
+    "haryana": 34
   }
 }
