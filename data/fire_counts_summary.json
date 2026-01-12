@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-01-12T01:21:42.278967Z",
-  "total_fire_count": 58,
+  "last_updated": "2026-01-12T12:37:28.161108Z",
+  "total_fire_count": 53,
   "date_range": {
-    "start": "2026-01-04",
-    "end": "2026-01-11"
+    "start": "2026-01-05",
+    "end": "2026-01-12"
   },
   "top_districts": [
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 8
+      "district": "Rohtak",
+      "total_fires": 7
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 7
+      "district": "Faridabad",
+      "total_fires": 6
     },
     {
       "state": "Punjab",
@@ -32,11 +32,6 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Palwal",
-      "total_fires": 3
-    },
-    {
       "state": "Punjab",
       "district": "Jalandhar",
       "total_fires": 3
@@ -47,14 +42,9 @@
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Bhiwani",
-      "total_fires": 3
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 3
+      "state": "Punjab",
+      "district": "Fatehgarh Sahib",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
@@ -62,8 +52,18 @@
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Fatehgarh Sahib",
+      "state": "Haryana",
+      "district": "Bhiwani",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Palwal",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
       "total_fires": 2
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 19,
-    "haryana": 39
+    "haryana": 34
   }
 }
