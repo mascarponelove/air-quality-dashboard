@@ -1,49 +1,44 @@
 {
-  "last_updated": "2026-01-13T01:15:06.562832Z",
-  "total_fire_count": 54,
+  "last_updated": "2026-01-13T12:37:26.930460Z",
+  "total_fire_count": 40,
   "date_range": {
-    "start": "2026-01-05",
+    "start": "2026-01-07",
     "end": "2026-01-12"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Rohtak",
-      "total_fires": 7
+      "total_fires": 5
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 7
+      "total_fires": 5
     },
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 6
+      "total_fires": 5
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 5
+      "total_fires": 4
     },
     {
       "state": "Haryana",
       "district": "Jind",
-      "total_fires": 5
+      "total_fires": 3
     },
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 3
+      "total_fires": 2
     },
     {
       "state": "Haryana",
       "district": "Yamunanagar",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Fatehgarh Sahib",
       "total_fires": 2
     },
     {
@@ -58,11 +53,6 @@
     },
     {
       "state": "Haryana",
-      "district": "Palwal",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Jhajjar",
       "total_fires": 2
     },
@@ -73,7 +63,17 @@
     },
     {
       "state": "Haryana",
+      "district": "Palwal",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
       "district": "Mahendragarh",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Fatehgarh Sahib",
       "total_fires": 1
     },
     {
@@ -83,17 +83,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Kaithal",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
       "district": "Gurugram",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Kapurthala",
       "total_fires": 1
     },
     {
@@ -108,7 +98,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 19,
-    "haryana": 35
+    "punjab": 14,
+    "haryana": 26
   }
 }
