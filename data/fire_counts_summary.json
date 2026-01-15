@@ -1,24 +1,24 @@
 {
-  "last_updated": "2026-01-14T12:36:30.207948Z",
-  "total_fire_count": 40,
+  "last_updated": "2026-01-15T01:16:41.489065Z",
+  "total_fire_count": 49,
   "date_range": {
     "start": "2026-01-07",
-    "end": "2026-01-12"
+    "end": "2026-01-14"
   },
   "top_districts": [
     {
       "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 5
+      "total_fires": 8
     },
     {
       "state": "Punjab",
       "district": "Gurdaspur",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
       "total_fires": 5
     },
     {
@@ -28,8 +28,23 @@
     },
     {
       "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
       "district": "Jind",
       "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Bhiwani",
+      "total_fires": 2
     },
     {
       "state": "Punjab",
@@ -43,23 +58,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Bhiwani",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 1
+      "total_fires": 2
     },
     {
       "state": "Haryana",
@@ -72,13 +72,28 @@
       "total_fires": 1
     },
     {
+      "state": "Haryana",
+      "district": "Kurukshetra",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 1
+    },
+    {
       "state": "Punjab",
       "district": "Fatehgarh Sahib",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Kurukshetra",
+      "district": "Karnal",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
       "total_fires": 1
     },
     {
@@ -90,15 +105,10 @@
       "state": "Punjab",
       "district": "Pathankot",
       "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
-      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 14,
-    "haryana": 26
+    "punjab": 15,
+    "haryana": 34
   }
 }
