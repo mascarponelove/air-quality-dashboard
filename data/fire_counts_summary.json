@@ -1,34 +1,19 @@
 {
-  "last_updated": "2026-01-16T01:19:13.495524Z",
-  "total_fire_count": 53,
+  "last_updated": "2026-01-16T12:34:45.797871Z",
+  "total_fire_count": 40,
   "date_range": {
-    "start": "2026-01-08",
+    "start": "2026-01-09",
     "end": "2026-01-15"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 10
-    },
-    {
-      "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 6
-    },
-    {
-      "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 5
+      "total_fires": 9
     },
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
-      "district": "Sonipat",
       "total_fires": 4
     },
     {
@@ -43,6 +28,16 @@
     },
     {
       "state": "Punjab",
+      "district": "Gurdaspur",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
       "district": "Jalandhar",
       "total_fires": 2
     },
@@ -53,17 +48,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Bhiwani",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Pathankot",
+      "district": "Yamunanagar",
       "total_fires": 1
     },
     {
@@ -77,18 +62,18 @@
       "total_fires": 1
     },
     {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 1
+    },
+    {
       "state": "Haryana",
       "district": "Ambala",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Palwal",
+      "district": "Rohtak",
       "total_fires": 1
     },
     {
@@ -105,10 +90,20 @@
       "state": "Haryana",
       "district": "Hisar",
       "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Gurugram",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Sahibzada Ajit Singh Nag*",
+      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 13,
-    "haryana": 40
+    "punjab": 9,
+    "haryana": 31
   }
 }
