@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-01-16T12:34:45.797871Z",
-  "total_fire_count": 40,
+  "last_updated": "2026-01-17T01:15:20.182539Z",
+  "total_fire_count": 42,
   "date_range": {
     "start": "2026-01-09",
-    "end": "2026-01-15"
+    "end": "2026-01-16"
   },
   "top_districts": [
     {
@@ -27,6 +27,11 @@
       "total_fires": 3
     },
     {
+      "state": "Haryana",
+      "district": "Karnal",
+      "total_fires": 3
+    },
+    {
       "state": "Punjab",
       "district": "Gurdaspur",
       "total_fires": 3
@@ -47,8 +52,8 @@
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Yamunanagar",
+      "state": "Punjab",
+      "district": "Bathinda",
       "total_fires": 1
     },
     {
@@ -62,13 +67,13 @@
       "total_fires": 1
     },
     {
-      "state": "Punjab",
-      "district": "Bathinda",
+      "state": "Haryana",
+      "district": "Ambala",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Ambala",
+      "district": "Yamunanagar",
       "total_fires": 1
     },
     {
@@ -79,11 +84,6 @@
     {
       "state": "Haryana",
       "district": "Kurukshetra",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Karnal",
       "total_fires": 1
     },
     {
@@ -104,6 +104,6 @@
   ],
   "state_totals": {
     "punjab": 9,
-    "haryana": 31
+    "haryana": 33
   }
 }
