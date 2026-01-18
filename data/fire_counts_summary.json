@@ -1,25 +1,25 @@
 {
-  "last_updated": "2026-01-18T01:24:18.643164Z",
-  "total_fire_count": 36,
+  "last_updated": "2026-01-18T12:31:09.402502Z",
+  "total_fire_count": 35,
   "date_range": {
-    "start": "2026-01-10",
-    "end": "2026-01-17"
+    "start": "2026-01-11",
+    "end": "2026-01-18"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 12
+      "total_fires": 10
     },
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 4
+      "total_fires": 5
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 3
+      "total_fires": 4
     },
     {
       "state": "Haryana",
@@ -37,8 +37,18 @@
       "total_fires": 2
     },
     {
+      "state": "Punjab",
+      "district": "Gurdaspur",
+      "total_fires": 2
+    },
+    {
       "state": "Haryana",
       "district": "Ambala",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Charki Dadri",
       "total_fires": 1
     },
     {
@@ -62,33 +72,13 @@
       "total_fires": 1
     },
     {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 1
-    },
-    {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Fatehgarh Sahib",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 4,
+    "punjab": 3,
     "haryana": 32
   }
 }
