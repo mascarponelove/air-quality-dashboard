@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-01-17T12:31:06.575628Z",
-  "total_fire_count": 31,
+  "last_updated": "2026-01-18T01:24:18.643164Z",
+  "total_fire_count": 36,
   "date_range": {
     "start": "2026-01-10",
-    "end": "2026-01-16"
+    "end": "2026-01-17"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 8
+      "total_fires": 12
     },
     {
       "state": "Haryana",
@@ -18,13 +18,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Karnal",
+      "district": "Jhajjar",
       "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 2
+      "district": "Karnal",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
@@ -89,6 +89,6 @@
   ],
   "state_totals": {
     "punjab": 4,
-    "haryana": 27
+    "haryana": 32
   }
 }
