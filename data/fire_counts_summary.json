@@ -1,40 +1,55 @@
 {
-  "last_updated": "2026-01-21T01:20:29.601063Z",
-  "total_fire_count": 74,
+  "last_updated": "2026-01-21T12:39:27.081976Z",
+  "total_fire_count": 109,
   "date_range": {
-    "start": "2026-01-13",
-    "end": "2026-01-20"
+    "start": "2026-01-14",
+    "end": "2026-01-21"
   },
   "top_districts": [
     {
-      "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 13
-    },
-    {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 12
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 7
+      "total_fires": 18
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
+      "total_fires": 16
+    },
+    {
+      "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 12
+    },
+    {
+      "state": "Haryana",
+      "district": "Ambala",
       "total_fires": 7
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 6
+    },
+    {
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 5
+    },
+    {
+      "state": "Punjab",
+      "district": "Rupnagar",
+      "total_fires": 5
+    },
+    {
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 5
     },
     {
       "state": "Haryana",
       "district": "Panipat",
       "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Ambala",
-      "total_fires": 3
     },
     {
       "state": "Haryana",
@@ -47,9 +62,24 @@
       "total_fires": 3
     },
     {
+      "state": "Punjab",
+      "district": "Shahid Bhagat Singh Nagar",
+      "total_fires": 2
+    },
+    {
       "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 3
+      "district": "Panchkula",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Pathankot",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 2
     },
     {
       "state": "Punjab",
@@ -57,8 +87,8 @@
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Rupnagar",
+      "state": "Haryana",
+      "district": "Mahendragarh",
       "total_fires": 2
     },
     {
@@ -68,47 +98,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Panchkula",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Jind",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 2
     },
     {
       "state": "Haryana",
       "district": "Charki Dadri",
       "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Mahendragarh",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 29,
-    "haryana": 45
+    "punjab": 55,
+    "haryana": 54
   }
 }
