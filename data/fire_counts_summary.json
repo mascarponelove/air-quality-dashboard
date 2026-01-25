@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-01-24T12:32:03.843139Z",
-  "total_fire_count": 119,
+  "last_updated": "2026-01-25T01:26:26.268615Z",
+  "total_fire_count": 120,
   "date_range": {
     "start": "2026-01-17",
-    "end": "2026-01-23"
+    "end": "2026-01-24"
   },
   "top_districts": [
     {
@@ -19,7 +19,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 11
+      "total_fires": 12
     },
     {
       "state": "Haryana",
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 65,
-    "haryana": 54
+    "haryana": 55
   }
 }
