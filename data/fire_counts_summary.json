@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-01-26T01:25:01.331337Z",
-  "total_fire_count": 120,
+  "last_updated": "2026-01-26T12:38:05.289284Z",
+  "total_fire_count": 126,
   "date_range": {
-    "start": "2026-01-18",
-    "end": "2026-01-25"
+    "start": "2026-01-19",
+    "end": "2026-01-26"
   },
   "top_districts": [
     {
@@ -14,12 +14,17 @@
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 17
+      "total_fires": 16
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 10
+      "total_fires": 9
+    },
+    {
+      "state": "Punjab",
+      "district": "Mansa",
+      "total_fires": 9
     },
     {
       "state": "Haryana",
@@ -32,19 +37,19 @@
       "total_fires": 7
     },
     {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 6
+    },
+    {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 7
+      "total_fires": 6
     },
     {
       "state": "Punjab",
       "district": "Jalandhar",
       "total_fires": 6
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 5
     },
     {
       "state": "Haryana",
@@ -53,17 +58,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
       "district": "Hisar",
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Amritsar",
+      "state": "Haryana",
+      "district": "Panchkula",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 3
     },
     {
@@ -72,8 +77,13 @@
       "total_fires": 3
     },
     {
+      "state": "Punjab",
+      "district": "Amritsar",
+      "total_fires": 3
+    },
+    {
       "state": "Haryana",
-      "district": "Panchkula",
+      "district": "Mahendragarh",
       "total_fires": 3
     },
     {
@@ -88,11 +98,6 @@
     },
     {
       "state": "Haryana",
-      "district": "Mahendragarh",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Kurukshetra",
       "total_fires": 2
     },
@@ -100,15 +105,10 @@
       "state": "Punjab",
       "district": "Kapurthala",
       "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Pathankot",
-      "total_fires": 2
     }
   ],
   "state_totals": {
-    "punjab": 66,
-    "haryana": 54
+    "punjab": 75,
+    "haryana": 51
   }
 }
