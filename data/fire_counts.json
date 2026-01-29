@@ -1,102 +1,8 @@
 {
-  "last_updated": "2026-01-29T01:29:51.695453Z",
+  "last_updated": "2026-01-29T12:45:00.409933Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-01-21",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Hoshiarpur",
-            "fire_count": 9
-          },
-          {
-            "district": "Gurdaspur",
-            "fire_count": 6
-          },
-          {
-            "district": "Jalandhar",
-            "fire_count": 4
-          },
-          {
-            "district": "Rupnagar",
-            "fire_count": 3
-          },
-          {
-            "district": "Bathinda",
-            "fire_count": 2
-          },
-          {
-            "district": "Pathankot",
-            "fire_count": 2
-          },
-          {
-            "district": "Amritsar",
-            "fire_count": 1
-          },
-          {
-            "district": "Fatehgarh Sahib",
-            "fire_count": 1
-          }
-        ],
-        "total": 28
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Ambala",
-            "fire_count": 4
-          },
-          {
-            "district": "Faridabad",
-            "fire_count": 3
-          },
-          {
-            "district": "Sonipat",
-            "fire_count": 3
-          },
-          {
-            "district": "Bhiwani",
-            "fire_count": 1
-          },
-          {
-            "district": "Hisar",
-            "fire_count": 1
-          },
-          {
-            "district": "Jhajjar",
-            "fire_count": 1
-          },
-          {
-            "district": "Jind",
-            "fire_count": 1
-          },
-          {
-            "district": "Kaithal",
-            "fire_count": 1
-          },
-          {
-            "district": "Kurukshetra",
-            "fire_count": 1
-          },
-          {
-            "district": "Mahendragarh",
-            "fire_count": 1
-          },
-          {
-            "district": "Palwal",
-            "fire_count": 1
-          },
-          {
-            "district": "Panipat",
-            "fire_count": 1
-          }
-        ],
-        "total": 19
-      },
-      "combined_total": 47
-    },
     {
       "date": "2026-01-22",
       "punjab": {
@@ -294,6 +200,23 @@
         "total": 2
       },
       "combined_total": 3
+    },
+    {
+      "date": "2026-01-29",
+      "punjab": {
+        "districts": [],
+        "total": 0
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Rohtak",
+            "fire_count": 2
+          }
+        ],
+        "total": 2
+      },
+      "combined_total": 2
     }
   ]
 }
