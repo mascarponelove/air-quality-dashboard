@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-01-28T12:39:15.219299Z",
-  "total_fire_count": 88,
+  "last_updated": "2026-01-29T01:29:51.704811Z",
+  "total_fire_count": 91,
   "date_range": {
     "start": "2026-01-21",
-    "end": "2026-01-26"
+    "end": "2026-01-28"
   },
   "top_districts": [
     {
@@ -12,14 +12,14 @@
       "total_fires": 12
     },
     {
-      "state": "Punjab",
-      "district": "Mansa",
+      "state": "Haryana",
+      "district": "Faridabad",
       "total_fires": 9
     },
     {
-      "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 7
+      "state": "Punjab",
+      "district": "Mansa",
+      "total_fires": 9
     },
     {
       "state": "Punjab",
@@ -29,7 +29,7 @@
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 5
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 49,
-    "haryana": 39
+    "punjab": 50,
+    "haryana": 41
   }
 }
