@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-01-31T01:27:04.387291Z",
-  "total_fire_count": 42,
+  "last_updated": "2026-01-31T12:36:51.068751Z",
+  "total_fire_count": 50,
   "date_range": {
-    "start": "2026-01-23",
-    "end": "2026-01-30"
+    "start": "2026-01-24",
+    "end": "2026-01-31"
   },
   "top_districts": [
     {
@@ -19,7 +19,7 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 5
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -27,9 +27,9 @@
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 4
+      "state": "Haryana",
+      "district": "Jind",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
@@ -37,13 +37,33 @@
       "total_fires": 3
     },
     {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 3
+    },
+    {
       "state": "Haryana",
-      "district": "Jind",
+      "district": "Karnal",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Charki Dadri",
       "total_fires": 1
     },
     {
       "state": "Haryana",
       "district": "Mahendragarh",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 1
     },
     {
@@ -68,7 +88,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 15,
-    "haryana": 27
+    "punjab": 16,
+    "haryana": 34
   }
 }
