@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-01-31T12:36:51.068751Z",
-  "total_fire_count": 50,
+  "last_updated": "2026-02-01T01:54:13.688102Z",
+  "total_fire_count": 51,
   "date_range": {
     "start": "2026-01-24",
     "end": "2026-01-31"
@@ -24,7 +24,7 @@
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 4
+      "total_fires": 5
     },
     {
       "state": "Haryana",
@@ -89,6 +89,6 @@
   ],
   "state_totals": {
     "punjab": 16,
-    "haryana": 34
+    "haryana": 35
   }
 }
