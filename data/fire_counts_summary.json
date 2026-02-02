@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-01T12:38:01.602613Z",
-  "total_fire_count": 54,
+  "last_updated": "2026-02-02T01:47:00.851522Z",
+  "total_fire_count": 58,
   "date_range": {
     "start": "2026-01-25",
     "end": "2026-02-01"
@@ -9,7 +9,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 10
+      "total_fires": 13
     },
     {
       "state": "Punjab",
@@ -47,18 +47,38 @@
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 2
-    },
-    {
       "state": "Punjab",
       "district": "Hoshiarpur",
       "total_fires": 2
     },
     {
       "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Amritsar",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
       "district": "Charki Dadri",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Yamunanagar",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Panchkula",
       "total_fires": 1
     },
     {
@@ -70,25 +90,10 @@
       "state": "Haryana",
       "district": "Panipat",
       "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Amritsar",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 1
     }
   ],
   "state_totals": {
     "punjab": 16,
-    "haryana": 38
+    "haryana": 42
   }
 }
