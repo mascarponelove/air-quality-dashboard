@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-02-02T12:47:25.513124Z",
-  "total_fire_count": 53,
+  "last_updated": "2026-02-03T01:46:14.615805Z",
+  "total_fire_count": 54,
   "date_range": {
     "start": "2026-01-26",
-    "end": "2026-02-01"
+    "end": "2026-02-02"
   },
   "top_districts": [
     {
@@ -39,7 +39,7 @@
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 3
+      "total_fires": 4
     },
     {
       "state": "Haryana",
@@ -88,7 +88,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 15,
+    "punjab": 16,
     "haryana": 38
   }
 }
