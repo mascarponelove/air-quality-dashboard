@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-03T12:48:24.121908Z",
+  "last_updated": "2026-02-04T01:29:43.547860Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -201,11 +201,15 @@
             "fire_count": 2
           },
           {
+            "district": "Bathinda",
+            "fire_count": 1
+          },
+          {
             "district": "Tarn Taran",
             "fire_count": 1
           }
         ],
-        "total": 10
+        "total": 11
       },
       "haryana": {
         "districts": [
@@ -218,6 +222,10 @@
             "fire_count": 1
           },
           {
+            "district": "Jhajjar",
+            "fire_count": 1
+          },
+          {
             "district": "Jind",
             "fire_count": 1
           },
@@ -226,9 +234,9 @@
             "fire_count": 1
           }
         ],
-        "total": 5
+        "total": 6
       },
-      "combined_total": 15
+      "combined_total": 17
     }
   ]
 }
