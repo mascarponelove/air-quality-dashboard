@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-02-04T01:29:43.556890Z",
-  "total_fire_count": 53,
+  "last_updated": "2026-02-04T12:47:04.091716Z",
+  "total_fire_count": 69,
   "date_range": {
     "start": "2026-01-28",
-    "end": "2026-02-03"
+    "end": "2026-02-04"
   },
   "top_districts": [
     {
@@ -14,16 +14,31 @@
     {
       "state": "Haryana",
       "district": "Rohtak",
+      "total_fires": 8
+    },
+    {
+      "state": "Punjab",
+      "district": "Gurdaspur",
       "total_fires": 7
     },
     {
       "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 4
+      "total_fires": 5
     },
     {
       "state": "Haryana",
       "district": "Jind",
+      "total_fires": 4
+    },
+    {
+      "state": "Haryana",
+      "district": "Sonipat",
       "total_fires": 4
     },
     {
@@ -32,28 +47,18 @@
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 3
-    },
-    {
       "state": "Punjab",
       "district": "Fazilka",
       "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Gurdaspur",
+      "district": "Karnal",
       "total_fires": 2
     },
     {
       "state": "Haryana",
-      "district": "Karnal",
+      "district": "Mahendragarh",
       "total_fires": 2
     },
     {
@@ -64,6 +69,11 @@
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Yamunanagar",
       "total_fires": 2
     },
     {
@@ -78,12 +88,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Charki Dadri",
+      "district": "Bhiwani",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Yamunanagar",
+      "district": "Charki Dadri",
       "total_fires": 1
     },
     {
@@ -95,15 +105,10 @@
       "state": "Haryana",
       "district": "Panchkula",
       "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Tarn Taran",
-      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 17,
-    "haryana": 36
+    "punjab": 22,
+    "haryana": 47
   }
 }
