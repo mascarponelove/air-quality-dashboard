@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-04T12:47:04.091716Z",
-  "total_fire_count": 69,
+  "last_updated": "2026-02-05T01:42:31.689398Z",
+  "total_fire_count": 81,
   "date_range": {
     "start": "2026-01-28",
     "end": "2026-02-04"
@@ -9,7 +9,12 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 10
+      "total_fires": 12
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 9
     },
     {
       "state": "Haryana",
@@ -24,12 +29,12 @@
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 5
+      "total_fires": 6
     },
     {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 5
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -43,12 +48,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 4
+      "district": "Fazilka",
+      "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Fazilka",
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 3
     },
     {
@@ -92,23 +97,18 @@
       "total_fires": 1
     },
     {
+      "state": "Punjab",
+      "district": "Fatehgarh Sahib",
+      "total_fires": 1
+    },
+    {
       "state": "Haryana",
       "district": "Charki Dadri",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Panchkula",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 22,
-    "haryana": 47
+    "punjab": 25,
+    "haryana": 56
   }
 }
