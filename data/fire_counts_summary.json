@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-06T12:47:55.747413Z",
-  "total_fire_count": 122,
+  "last_updated": "2026-02-07T01:29:11.113148Z",
+  "total_fire_count": 125,
   "date_range": {
     "start": "2026-01-30",
     "end": "2026-02-06"
@@ -9,7 +9,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 13
+      "total_fires": 14
     },
     {
       "state": "Haryana",
@@ -52,13 +52,13 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Panipat",
+      "state": "Punjab",
+      "district": "Kapurthala",
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Kapurthala",
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 4
     },
     {
@@ -67,8 +67,8 @@
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Mahendragarh",
+      "state": "Punjab",
+      "district": "Fazilka",
       "total_fires": 3
     },
     {
@@ -82,8 +82,8 @@
       "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Fazilka",
+      "state": "Haryana",
+      "district": "Mahendragarh",
       "total_fires": 3
     },
     {
@@ -93,22 +93,22 @@
     },
     {
       "state": "Punjab",
-      "district": "Rupnagar",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Yamunanagar",
+      "district": "Ludhiana",
       "total_fires": 2
     },
     {
       "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
+      "district": "Rupnagar",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Jalandhar",
       "total_fires": 2
     }
   ],
   "state_totals": {
-    "punjab": 43,
-    "haryana": 79
+    "punjab": 45,
+    "haryana": 80
   }
 }
