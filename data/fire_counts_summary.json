@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-07T12:37:16.002925Z",
-  "total_fire_count": 134,
+  "last_updated": "2026-02-08T02:05:54.067709Z",
+  "total_fire_count": 142,
   "date_range": {
     "start": "2026-01-31",
     "end": "2026-02-07"
@@ -10,6 +10,11 @@
       "state": "Punjab",
       "district": "Gurdaspur",
       "total_fires": 18
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 13
     },
     {
       "state": "Haryana",
@@ -23,18 +28,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 9
-    },
-    {
-      "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 8
-    },
-    {
-      "state": "Haryana",
       "district": "Sonipat",
-      "total_fires": 8
+      "total_fires": 10
     },
     {
       "state": "Punjab",
@@ -48,12 +43,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 5
+      "district": "Rohtak",
+      "total_fires": 8
     },
     {
       "state": "Punjab",
       "district": "Bathinda",
+      "total_fires": 6
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 5
     },
     {
@@ -62,13 +62,8 @@
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Mahendragarh",
-      "total_fires": 3
-    },
-    {
       "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
+      "district": "Fazilka",
       "total_fires": 3
     },
     {
@@ -83,32 +78,37 @@
     },
     {
       "state": "Haryana",
+      "district": "Mahendragarh",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
       "district": "Karnal",
       "total_fires": 3
     },
     {
       "state": "Punjab",
-      "district": "Fazilka",
+      "district": "Sahibzada Ajit Singh Nag*",
       "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Bhiwani",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Rupnagar",
+      "district": "Palwal",
       "total_fires": 2
     },
     {
       "state": "Punjab",
       "district": "Patiala",
       "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Bhiwani",
+      "total_fires": 2
     }
   ],
   "state_totals": {
-    "punjab": 58,
-    "haryana": 76
+    "punjab": 59,
+    "haryana": 83
   }
 }
