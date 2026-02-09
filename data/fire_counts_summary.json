@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-08T12:38:20.381337Z",
-  "total_fire_count": 158,
+  "last_updated": "2026-02-09T01:49:20.048979Z",
+  "total_fire_count": 159,
   "date_range": {
     "start": "2026-02-01",
     "end": "2026-02-08"
@@ -23,13 +23,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
+      "district": "Faridabad",
       "total_fires": 11
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 10
+      "district": "Sonipat",
+      "total_fires": 11
     },
     {
       "state": "Haryana",
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 69,
-    "haryana": 89
+    "haryana": 90
   }
 }
