@@ -1,74 +1,8 @@
 {
-  "last_updated": "2026-02-12T01:48:51.390452Z",
+  "last_updated": "2026-02-12T12:56:51.770172Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-02-04",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Gurdaspur",
-            "fire_count": 5
-          },
-          {
-            "district": "Bathinda",
-            "fire_count": 2
-          },
-          {
-            "district": "Fatehgarh Sahib",
-            "fire_count": 1
-          }
-        ],
-        "total": 8
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Jhajjar",
-            "fire_count": 5
-          },
-          {
-            "district": "Hisar",
-            "fire_count": 3
-          },
-          {
-            "district": "Faridabad",
-            "fire_count": 2
-          },
-          {
-            "district": "Mahendragarh",
-            "fire_count": 2
-          },
-          {
-            "district": "Panipat",
-            "fire_count": 2
-          },
-          {
-            "district": "Sonipat",
-            "fire_count": 2
-          },
-          {
-            "district": "Bhiwani",
-            "fire_count": 1
-          },
-          {
-            "district": "Nuh",
-            "fire_count": 1
-          },
-          {
-            "district": "Rohtak",
-            "fire_count": 1
-          },
-          {
-            "district": "Yamunanagar",
-            "fire_count": 1
-          }
-        ],
-        "total": 20
-      },
-      "combined_total": 28
-    },
     {
       "date": "2026-02-05",
       "punjab": {
@@ -533,6 +467,40 @@
         "total": 34
       },
       "combined_total": 78
+    },
+    {
+      "date": "2026-02-12",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Gurdaspur",
+            "fire_count": 12
+          },
+          {
+            "district": "Jalandhar",
+            "fire_count": 2
+          },
+          {
+            "district": "Sahibzada Ajit Singh Nag*",
+            "fire_count": 1
+          }
+        ],
+        "total": 15
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Karnal",
+            "fire_count": 1
+          },
+          {
+            "district": "Yamunanagar",
+            "fire_count": 1
+          }
+        ],
+        "total": 2
+      },
+      "combined_total": 17
     }
   ]
 }
