@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-11T12:58:31.067440Z",
+  "last_updated": "2026-02-12T01:48:51.390452Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -457,19 +457,19 @@
             "fire_count": 5
           },
           {
+            "district": "Ludhiana",
+            "fire_count": 4
+          },
+          {
+            "district": "Bathinda",
+            "fire_count": 2
+          },
+          {
             "district": "Fatehgarh Sahib",
             "fire_count": 2
           },
           {
-            "district": "Bathinda",
-            "fire_count": 1
-          },
-          {
             "district": "Kapurthala",
-            "fire_count": 1
-          },
-          {
-            "district": "Ludhiana",
             "fire_count": 1
           },
           {
@@ -481,7 +481,7 @@
             "fire_count": 1
           }
         ],
-        "total": 40
+        "total": 44
       },
       "haryana": {
         "districts": [
@@ -490,8 +490,16 @@
             "fire_count": 14
           },
           {
+            "district": "Jhajjar",
+            "fire_count": 4
+          },
+          {
             "district": "Rohtak",
             "fire_count": 3
+          },
+          {
+            "district": "Faridabad",
+            "fire_count": 2
           },
           {
             "district": "Hisar",
@@ -499,6 +507,14 @@
           },
           {
             "district": "Kaithal",
+            "fire_count": 2
+          },
+          {
+            "district": "Panipat",
+            "fire_count": 2
+          },
+          {
+            "district": "Sonipat",
             "fire_count": 2
           },
           {
@@ -512,19 +528,11 @@
           {
             "district": "Palwal",
             "fire_count": 1
-          },
-          {
-            "district": "Panipat",
-            "fire_count": 1
-          },
-          {
-            "district": "Sonipat",
-            "fire_count": 1
           }
         ],
-        "total": 26
+        "total": 34
       },
-      "combined_total": 66
+      "combined_total": 78
     }
   ]
 }

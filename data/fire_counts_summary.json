@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-11T12:58:31.081098Z",
-  "total_fire_count": 237,
+  "last_updated": "2026-02-12T01:48:51.403579Z",
+  "total_fire_count": 249,
   "date_range": {
     "start": "2026-02-04",
     "end": "2026-02-11"
@@ -23,13 +23,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Bhiwani",
-      "total_fires": 16
+      "district": "Faridabad",
+      "total_fires": 17
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 15
+      "district": "Bhiwani",
+      "total_fires": 16
     },
     {
       "state": "Haryana",
@@ -44,22 +44,22 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 10
+      "total_fires": 14
     },
     {
       "state": "Haryana",
       "district": "Sonipat",
-      "total_fires": 10
+      "total_fires": 11
     },
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 9
+      "total_fires": 10
     },
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 6
+      "total_fires": 7
     },
     {
       "state": "Punjab",
@@ -67,18 +67,23 @@
       "total_fires": 6
     },
     {
-      "state": "Punjab",
-      "district": "Fatehgarh Sahib",
-      "total_fires": 5
-    },
-    {
       "state": "Haryana",
       "district": "Jind",
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Palwal",
+      "state": "Punjab",
+      "district": "Fatehgarh Sahib",
+      "total_fires": 5
+    },
+    {
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 5
+    },
+    {
+      "state": "Punjab",
+      "district": "Amritsar",
       "total_fires": 4
     },
     {
@@ -87,8 +92,8 @@
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Rupnagar",
+      "state": "Haryana",
+      "district": "Palwal",
       "total_fires": 4
     },
     {
@@ -100,15 +105,10 @@
       "state": "Haryana",
       "district": "Kaithal",
       "total_fires": 4
-    },
-    {
-      "state": "Punjab",
-      "district": "Amritsar",
-      "total_fires": 4
     }
   ],
   "state_totals": {
-    "punjab": 117,
-    "haryana": 120
+    "punjab": 121,
+    "haryana": 128
   }
 }
