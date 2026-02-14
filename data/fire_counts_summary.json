@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-02-14T01:42:00.589953Z",
-  "total_fire_count": 227,
+  "last_updated": "2026-02-14T12:37:21.136903Z",
+  "total_fire_count": 240,
   "date_range": {
-    "start": "2026-02-06",
-    "end": "2026-02-13"
+    "start": "2026-02-07",
+    "end": "2026-02-14"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 42
+      "total_fires": 51
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 20
+      "total_fires": 25
     },
     {
       "state": "Punjab",
@@ -29,16 +29,26 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 14
+      "total_fires": 13
     },
     {
       "state": "Haryana",
       "district": "Rohtak",
-      "total_fires": 12
+      "total_fires": 11
     },
     {
       "state": "Haryana",
       "district": "Hisar",
+      "total_fires": 9
+    },
+    {
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 9
+    },
+    {
+      "state": "Punjab",
+      "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 9
     },
     {
@@ -53,8 +63,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 8
+      "district": "Kaithal",
+      "total_fires": 7
     },
     {
       "state": "Haryana",
@@ -63,33 +73,18 @@
     },
     {
       "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
-      "total_fires": 6
-    },
-    {
-      "state": "Punjab",
-      "district": "Kapurthala",
-      "total_fires": 5
-    },
-    {
-      "state": "Punjab",
       "district": "Fatehgarh Sahib",
       "total_fires": 5
     },
     {
       "state": "Haryana",
-      "district": "Kaithal",
-      "total_fires": 5
+      "district": "Karnal",
+      "total_fires": 4
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Karnal",
-      "total_fires": 5
+      "total_fires": 4
     },
     {
       "state": "Punjab",
@@ -98,17 +93,22 @@
     },
     {
       "state": "Punjab",
-      "district": "Rupnagar",
+      "district": "Kapurthala",
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Palwal",
+      "state": "Punjab",
+      "district": "Amritsar",
       "total_fires": 4
+    },
+    {
+      "state": "Punjab",
+      "district": "Rupnagar",
+      "total_fires": 3
     }
   ],
   "state_totals": {
-    "punjab": 131,
+    "punjab": 144,
     "haryana": 96
   }
 }
