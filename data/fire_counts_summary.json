@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-14T12:37:21.136903Z",
-  "total_fire_count": 240,
+  "last_updated": "2026-02-15T01:50:53.319251Z",
+  "total_fire_count": 244,
   "date_range": {
     "start": "2026-02-07",
     "end": "2026-02-14"
@@ -29,7 +29,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 13
+      "total_fires": 14
     },
     {
       "state": "Haryana",
@@ -39,16 +39,16 @@
     {
       "state": "Haryana",
       "district": "Hisar",
+      "total_fires": 10
+    },
+    {
+      "state": "Punjab",
+      "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 9
     },
     {
       "state": "Haryana",
       "district": "Sonipat",
-      "total_fires": 9
-    },
-    {
-      "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 9
     },
     {
@@ -77,9 +77,9 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Karnal",
-      "total_fires": 4
+      "state": "Punjab",
+      "district": "Amritsar",
+      "total_fires": 5
     },
     {
       "state": "Punjab",
@@ -87,8 +87,8 @@
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Bathinda",
+      "state": "Haryana",
+      "district": "Karnal",
       "total_fires": 4
     },
     {
@@ -98,7 +98,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Amritsar",
+      "district": "Bathinda",
       "total_fires": 4
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 144,
-    "haryana": 96
+    "punjab": 145,
+    "haryana": 99
   }
 }
