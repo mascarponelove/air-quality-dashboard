@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-15T12:38:56.117179Z",
-  "total_fire_count": 245,
+  "last_updated": "2026-02-16T01:46:57.368026Z",
+  "total_fire_count": 252,
   "date_range": {
     "start": "2026-02-08",
     "end": "2026-02-15"
@@ -24,7 +24,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 14
+      "total_fires": 16
     },
     {
       "state": "Haryana",
@@ -34,7 +34,7 @@
     {
       "state": "Haryana",
       "district": "Rohtak",
-      "total_fires": 11
+      "total_fires": 12
     },
     {
       "state": "Punjab",
@@ -45,6 +45,16 @@
       "state": "Punjab",
       "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 9
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 8
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 8
     },
     {
       "state": "Haryana",
@@ -62,11 +72,6 @@
       "total_fires": 7
     },
     {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 7
-    },
-    {
       "state": "Punjab",
       "district": "Fatehgarh Sahib",
       "total_fires": 6
@@ -74,11 +79,6 @@
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 6
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
       "total_fires": 6
     },
     {
@@ -102,13 +102,13 @@
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Karnal",
+      "state": "Punjab",
+      "district": "Bathinda",
       "total_fires": 4
     }
   ],
   "state_totals": {
-    "punjab": 149,
-    "haryana": 96
+    "punjab": 150,
+    "haryana": 102
   }
 }
