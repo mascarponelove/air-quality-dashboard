@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-17T12:53:23.490887Z",
+  "last_updated": "2026-02-18T01:48:43.712199Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -539,6 +539,10 @@
       "haryana": {
         "districts": [
           {
+            "district": "Panipat",
+            "fire_count": 3
+          },
+          {
             "district": "Kaithal",
             "fire_count": 2
           },
@@ -547,11 +551,15 @@
             "fire_count": 2
           },
           {
-            "district": "Panipat",
+            "district": "Rohtak",
             "fire_count": 2
           },
           {
-            "district": "Rohtak",
+            "district": "Faridabad",
+            "fire_count": 1
+          },
+          {
+            "district": "Jhajjar",
             "fire_count": 1
           },
           {
@@ -559,9 +567,9 @@
             "fire_count": 1
           }
         ],
-        "total": 8
+        "total": 12
       },
-      "combined_total": 13
+      "combined_total": 17
     }
   ]
 }

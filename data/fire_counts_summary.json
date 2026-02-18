@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-17T12:53:23.501383Z",
-  "total_fire_count": 277,
+  "last_updated": "2026-02-18T01:48:43.726374Z",
+  "total_fire_count": 281,
   "date_range": {
     "start": "2026-02-10",
     "end": "2026-02-17"
@@ -23,12 +23,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Bhiwani",
-      "total_fires": 14
+      "district": "Faridabad",
+      "total_fires": 15
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
+      "district": "Bhiwani",
       "total_fires": 14
     },
     {
@@ -44,11 +44,16 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 10
+      "total_fires": 11
     },
     {
       "state": "Haryana",
       "district": "Hisar",
+      "total_fires": 9
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 9
     },
     {
@@ -59,11 +64,6 @@
     {
       "state": "Haryana",
       "district": "Karnal",
-      "total_fires": 8
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
       "total_fires": 8
     },
     {
@@ -82,18 +82,18 @@
       "total_fires": 7
     },
     {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 6
-    },
-    {
       "state": "Haryana",
       "district": "Rohtak",
-      "total_fires": 6
+      "total_fires": 7
     },
     {
       "state": "Haryana",
       "district": "Sonipat",
+      "total_fires": 6
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
       "total_fires": 6
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 168,
-    "haryana": 109
+    "haryana": 113
   }
 }
