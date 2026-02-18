@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-02-18T01:48:43.726374Z",
-  "total_fire_count": 281,
+  "last_updated": "2026-02-18T12:53:58.042044Z",
+  "total_fire_count": 253,
   "date_range": {
-    "start": "2026-02-10",
-    "end": "2026-02-17"
+    "start": "2026-02-11",
+    "end": "2026-02-18"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 51
+      "total_fires": 46
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 29
+      "total_fires": 23
     },
     {
       "state": "Punjab",
@@ -23,23 +23,23 @@
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 15
-    },
-    {
-      "state": "Haryana",
       "district": "Bhiwani",
       "total_fires": 14
     },
     {
       "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 14
+      "district": "Shahid Bhagat Singh Nagar",
+      "total_fires": 13
+    },
+    {
+      "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 12
     },
     {
       "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
-      "total_fires": 14
+      "district": "Jalandhar",
+      "total_fires": 12
     },
     {
       "state": "Haryana",
@@ -53,32 +53,22 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 9
-    },
-    {
-      "state": "Haryana",
       "district": "Kaithal",
       "total_fires": 8
     },
     {
       "state": "Haryana",
-      "district": "Karnal",
-      "total_fires": 8
-    },
-    {
-      "state": "Punjab",
-      "district": "Fatehgarh Sahib",
-      "total_fires": 8
-    },
-    {
-      "state": "Haryana",
-      "district": "Ambala",
+      "district": "Panipat",
       "total_fires": 7
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
+      "total_fires": 7
+    },
+    {
+      "state": "Haryana",
+      "district": "Ambala",
       "total_fires": 7
     },
     {
@@ -93,8 +83,18 @@
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
+      "district": "Fatehgarh Sahib",
       "total_fires": 6
+    },
+    {
+      "state": "Haryana",
+      "district": "Karnal",
+      "total_fires": 6
+    },
+    {
+      "state": "Haryana",
+      "district": "Panchkula",
+      "total_fires": 5
     },
     {
       "state": "Punjab",
@@ -102,13 +102,13 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Panchkula",
+      "state": "Punjab",
+      "district": "Bathinda",
       "total_fires": 5
     }
   ],
   "state_totals": {
-    "punjab": 168,
-    "haryana": 113
+    "punjab": 149,
+    "haryana": 104
   }
 }
