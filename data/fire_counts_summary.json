@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-19T12:55:04.893430Z",
-  "total_fire_count": 193,
+  "last_updated": "2026-02-20T01:43:54.632644Z",
+  "total_fire_count": 198,
   "date_range": {
     "start": "2026-02-12",
     "end": "2026-02-19"
@@ -29,17 +29,17 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 10
+      "total_fires": 12
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 10
+      "total_fires": 11
     },
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 9
+      "total_fires": 10
     },
     {
       "state": "Haryana",
@@ -73,6 +73,11 @@
     },
     {
       "state": "Punjab",
+      "district": "Rupnagar",
+      "total_fires": 4
+    },
+    {
+      "state": "Punjab",
       "district": "Fatehgarh Sahib",
       "total_fires": 4
     },
@@ -88,11 +93,6 @@
     },
     {
       "state": "Punjab",
-      "district": "Rupnagar",
-      "total_fires": 4
-    },
-    {
-      "state": "Punjab",
       "district": "Ludhiana",
       "total_fires": 4
     },
@@ -102,13 +102,13 @@
       "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
+      "state": "Haryana",
+      "district": "Jind",
       "total_fires": 3
     }
   ],
   "state_totals": {
     "punjab": 117,
-    "haryana": 76
+    "haryana": 81
   }
 }
