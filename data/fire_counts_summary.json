@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-20T12:46:52.521290Z",
-  "total_fire_count": 194,
+  "last_updated": "2026-02-21T01:29:12.864538Z",
+  "total_fire_count": 200,
   "date_range": {
     "start": "2026-02-13",
     "end": "2026-02-20"
@@ -17,6 +17,11 @@
       "total_fires": 24
     },
     {
+      "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 13
+    },
+    {
       "state": "Punjab",
       "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 13
@@ -28,17 +33,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 12
-    },
-    {
-      "state": "Haryana",
       "district": "Jhajjar",
       "total_fires": 11
     },
     {
       "state": "Haryana",
       "district": "Hisar",
+      "total_fires": 10
+    },
+    {
+      "state": "Haryana",
+      "district": "Panchkula",
       "total_fires": 10
     },
     {
@@ -64,11 +69,6 @@
     {
       "state": "Haryana",
       "district": "Karnal",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Panchkula",
       "total_fires": 5
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 113,
-    "haryana": 81
+    "haryana": 87
   }
 }
