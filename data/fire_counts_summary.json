@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-02-22T12:38:28.936814Z",
-  "total_fire_count": 212,
+  "last_updated": "2026-02-23T01:47:26.539745Z",
+  "total_fire_count": 218,
   "date_range": {
     "start": "2026-02-15",
     "end": "2026-02-22"
@@ -17,24 +17,24 @@
       "total_fires": 20
     },
     {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 17
+    },
+    {
       "state": "Punjab",
       "district": "Jalandhar",
       "total_fires": 17
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 15
-    },
-    {
-      "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 12
+      "total_fires": 14
     },
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 11
+      "total_fires": 12
     },
     {
       "state": "Haryana",
@@ -48,17 +48,22 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 7
-    },
-    {
-      "state": "Haryana",
       "district": "Karnal",
       "total_fires": 7
     },
     {
       "state": "Haryana",
+      "district": "Panipat",
+      "total_fires": 7
+    },
+    {
+      "state": "Haryana",
       "district": "Ambala",
+      "total_fires": 6
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
       "total_fires": 6
     },
     {
@@ -73,8 +78,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 6
+      "district": "Sirsa",
+      "total_fires": 5
     },
     {
       "state": "Haryana",
@@ -100,15 +105,10 @@
       "state": "Punjab",
       "district": "Kapurthala",
       "total_fires": 4
-    },
-    {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 4
     }
   ],
   "state_totals": {
     "punjab": 111,
-    "haryana": 101
+    "haryana": 107
   }
 }
