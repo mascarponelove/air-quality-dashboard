@@ -1,11 +1,16 @@
 {
-  "last_updated": "2026-02-24T12:55:14.059575Z",
-  "total_fire_count": 188,
+  "last_updated": "2026-02-25T01:47:40.449837Z",
+  "total_fire_count": 200,
   "date_range": {
     "start": "2026-02-17",
     "end": "2026-02-24"
   },
   "top_districts": [
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 19
+    },
     {
       "state": "Punjab",
       "district": "Gurdaspur",
@@ -18,7 +23,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
+      "district": "Faridabad",
       "total_fires": 14
     },
     {
@@ -33,12 +38,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 12
+      "district": "Rohtak",
+      "total_fires": 10
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
+      "district": "Hisar",
       "total_fires": 9
     },
     {
@@ -48,7 +53,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
+      "district": "Sonipat",
       "total_fires": 8
     },
     {
@@ -74,11 +79,6 @@
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Sonipat",
       "total_fires": 5
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 86,
-    "haryana": 102
+    "haryana": 114
   }
 }
