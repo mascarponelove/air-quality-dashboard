@@ -1,11 +1,16 @@
 {
-  "last_updated": "2026-02-26T12:55:05.119764Z",
-  "total_fire_count": 208,
+  "last_updated": "2026-02-27T01:29:57.858653Z",
+  "total_fire_count": 218,
   "date_range": {
     "start": "2026-02-19",
     "end": "2026-02-26"
   },
   "top_districts": [
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 20
+    },
     {
       "state": "Punjab",
       "district": "Gurdaspur",
@@ -18,7 +23,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
+      "district": "Faridabad",
       "total_fires": 16
     },
     {
@@ -28,23 +33,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 13
-    },
-    {
-      "state": "Haryana",
       "district": "Karnal",
       "total_fires": 11
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 9
-    },
-    {
-      "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 9
+      "total_fires": 10
     },
     {
       "state": "Haryana",
@@ -57,8 +52,13 @@
       "total_fires": 9
     },
     {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 9
+    },
+    {
       "state": "Punjab",
-      "district": "Kapurthala",
+      "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 7
     },
     {
@@ -68,7 +68,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
+      "district": "Kapurthala",
       "total_fires": 7
     },
     {
@@ -87,8 +87,8 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Ambala",
+      "state": "Punjab",
+      "district": "Ludhiana",
       "total_fires": 4
     },
     {
@@ -98,17 +98,17 @@
     },
     {
       "state": "Punjab",
-      "district": "Ludhiana",
+      "district": "Sahibzada Ajit Singh Nag*",
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
+      "state": "Haryana",
+      "district": "Ambala",
       "total_fires": 4
     }
   ],
   "state_totals": {
     "punjab": 99,
-    "haryana": 109
+    "haryana": 119
   }
 }
