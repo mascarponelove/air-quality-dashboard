@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-02-28T01:23:55.184685Z",
-  "total_fire_count": 254,
+  "last_updated": "2026-02-28T12:35:29.603710Z",
+  "total_fire_count": 249,
   "date_range": {
-    "start": "2026-02-20",
-    "end": "2026-02-27"
+    "start": "2026-02-21",
+    "end": "2026-02-28"
   },
   "top_districts": [
     {
@@ -24,16 +24,11 @@
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 17
+      "total_fires": 16
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 14
-    },
-    {
-      "state": "Punjab",
-      "district": "Jalandhar",
       "total_fires": 13
     },
     {
@@ -47,24 +42,24 @@
       "total_fires": 12
     },
     {
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 11
+    },
+    {
       "state": "Haryana",
       "district": "Kurukshetra",
       "total_fires": 10
     },
     {
-      "state": "Punjab",
-      "district": "Kapurthala",
-      "total_fires": 9
-    },
-    {
-      "state": "Haryana",
-      "district": "Panchkula",
-      "total_fires": 9
-    },
-    {
       "state": "Haryana",
       "district": "Rohtak",
       "total_fires": 9
+    },
+    {
+      "state": "Punjab",
+      "district": "Kapurthala",
+      "total_fires": 8
     },
     {
       "state": "Haryana",
@@ -84,7 +79,12 @@
     {
       "state": "Punjab",
       "district": "Fatehgarh Sahib",
-      "total_fires": 5
+      "total_fires": 6
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -97,8 +97,8 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Panipat",
+      "state": "Punjab",
+      "district": "Sahibzada Ajit Singh Nag*",
       "total_fires": 5
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 113,
-    "haryana": 141
+    "punjab": 111,
+    "haryana": 138
   }
 }
