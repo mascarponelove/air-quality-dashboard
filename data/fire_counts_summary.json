@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-01T12:37:50.043335Z",
-  "total_fire_count": 251,
+  "last_updated": "2026-03-02T01:44:41.442905Z",
+  "total_fire_count": 257,
   "date_range": {
     "start": "2026-02-22",
     "end": "2026-03-01"
@@ -19,17 +19,17 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 17
+      "total_fires": 19
+    },
+    {
+      "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 16
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
       "total_fires": 16
-    },
-    {
-      "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 14
     },
     {
       "state": "Haryana",
@@ -42,24 +42,24 @@
       "total_fires": 13
     },
     {
-      "state": "Haryana",
-      "district": "Karnal",
-      "total_fires": 12
-    },
-    {
       "state": "Punjab",
       "district": "Jalandhar",
       "total_fires": 12
     },
     {
       "state": "Haryana",
-      "district": "Kurukshetra",
-      "total_fires": 10
+      "district": "Karnal",
+      "total_fires": 12
     },
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 9
+      "total_fires": 10
+    },
+    {
+      "state": "Haryana",
+      "district": "Kurukshetra",
+      "total_fires": 10
     },
     {
       "state": "Punjab",
@@ -73,7 +73,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
+      "district": "Ludhiana",
       "total_fires": 6
     },
     {
@@ -88,12 +88,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Rupnagar",
-      "total_fires": 5
+      "district": "Shahid Bhagat Singh Nagar",
+      "total_fires": 6
     },
     {
       "state": "Punjab",
-      "district": "Ludhiana",
+      "district": "Rupnagar",
       "total_fires": 5
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 108,
-    "haryana": 143
+    "punjab": 109,
+    "haryana": 148
   }
 }
