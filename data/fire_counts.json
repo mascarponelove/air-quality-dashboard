@@ -1,82 +1,8 @@
 {
-  "last_updated": "2026-03-03T01:47:07.811868Z",
+  "last_updated": "2026-03-03T12:43:17.595095Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-02-23",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Hoshiarpur",
-            "fire_count": 4
-          },
-          {
-            "district": "Gurdaspur",
-            "fire_count": 3
-          },
-          {
-            "district": "Amritsar",
-            "fire_count": 2
-          },
-          {
-            "district": "Rupnagar",
-            "fire_count": 2
-          },
-          {
-            "district": "Sahibzada Ajit Singh Nag*",
-            "fire_count": 1
-          },
-          {
-            "district": "Sri Muktsar Sahib",
-            "fire_count": 1
-          }
-        ],
-        "total": 13
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Faridabad",
-            "fire_count": 3
-          },
-          {
-            "district": "Jhajjar",
-            "fire_count": 3
-          },
-          {
-            "district": "Karnal",
-            "fire_count": 2
-          },
-          {
-            "district": "Rohtak",
-            "fire_count": 2
-          },
-          {
-            "district": "Ambala",
-            "fire_count": 1
-          },
-          {
-            "district": "Kurukshetra",
-            "fire_count": 1
-          },
-          {
-            "district": "Palwal",
-            "fire_count": 1
-          },
-          {
-            "district": "Sonipat",
-            "fire_count": 1
-          },
-          {
-            "district": "Yamunanagar",
-            "fire_count": 1
-          }
-        ],
-        "total": 15
-      },
-      "combined_total": 28
-    },
     {
       "date": "2026-02-24",
       "punjab": {
@@ -602,6 +528,48 @@
         "total": 23
       },
       "combined_total": 36
+    },
+    {
+      "date": "2026-03-03",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Bathinda",
+            "fire_count": 2
+          },
+          {
+            "district": "Gurdaspur",
+            "fire_count": 2
+          },
+          {
+            "district": "Shahid Bhagat Singh Nagar",
+            "fire_count": 2
+          },
+          {
+            "district": "Hoshiarpur",
+            "fire_count": 1
+          }
+        ],
+        "total": 7
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Jhajjar",
+            "fire_count": 1
+          },
+          {
+            "district": "Panipat",
+            "fire_count": 1
+          },
+          {
+            "district": "Sonipat",
+            "fire_count": 1
+          }
+        ],
+        "total": 3
+      },
+      "combined_total": 10
     }
   ]
 }
