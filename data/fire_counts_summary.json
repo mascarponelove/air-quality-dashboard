@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-02T12:45:15.474137Z",
-  "total_fire_count": 239,
+  "last_updated": "2026-03-03T01:47:07.826314Z",
+  "total_fire_count": 247,
   "date_range": {
     "start": "2026-02-23",
     "end": "2026-03-02"
@@ -14,12 +14,12 @@
     {
       "state": "Haryana",
       "district": "Bhiwani",
-      "total_fires": 21
+      "total_fires": 22
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 18
+      "total_fires": 19
     },
     {
       "state": "Haryana",
@@ -38,13 +38,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Karnal",
+      "district": "Hisar",
       "total_fires": 11
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 10
+      "district": "Karnal",
+      "total_fires": 11
     },
     {
       "state": "Haryana",
@@ -57,14 +57,19 @@
       "total_fires": 9
     },
     {
+      "state": "Haryana",
+      "district": "Panipat",
+      "total_fires": 9
+    },
+    {
       "state": "Punjab",
       "district": "Fatehgarh Sahib",
       "total_fires": 8
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 8
+      "district": "Sonipat",
+      "total_fires": 7
     },
     {
       "state": "Punjab",
@@ -74,7 +79,7 @@
     {
       "state": "Haryana",
       "district": "Yamunanagar",
-      "total_fires": 6
+      "total_fires": 7
     },
     {
       "state": "Punjab",
@@ -84,11 +89,6 @@
     {
       "state": "Punjab",
       "district": "Kapurthala",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Sonipat",
       "total_fires": 5
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 101,
-    "haryana": 138
+    "haryana": 146
   }
 }
