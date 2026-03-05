@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-04T12:44:06.697144Z",
-  "total_fire_count": 211,
+  "last_updated": "2026-03-05T01:44:01.797130Z",
+  "total_fire_count": 214,
   "date_range": {
     "start": "2026-02-25",
     "end": "2026-03-04"
@@ -19,7 +19,7 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 14
+      "total_fires": 15
     },
     {
       "state": "Punjab",
@@ -29,7 +29,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 12
+      "total_fires": 13
     },
     {
       "state": "Haryana",
@@ -63,7 +63,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Kurukshetra",
+      "district": "Yamunanagar",
       "total_fires": 5
     },
     {
@@ -77,13 +77,13 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Yamunanagar",
+      "state": "Punjab",
+      "district": "Bathinda",
       "total_fires": 5
     },
     {
-      "state": "Punjab",
-      "district": "Bathinda",
+      "state": "Haryana",
+      "district": "Kurukshetra",
       "total_fires": 5
     },
     {
@@ -97,8 +97,8 @@
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Karnal",
+      "state": "Punjab",
+      "district": "Sangrur",
       "total_fires": 4
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 95,
-    "haryana": 116
+    "haryana": 119
   }
 }
