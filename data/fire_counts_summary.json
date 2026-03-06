@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-05T12:48:42.223160Z",
-  "total_fire_count": 212,
+  "last_updated": "2026-03-06T01:46:07.191210Z",
+  "total_fire_count": 213,
   "date_range": {
     "start": "2026-02-26",
     "end": "2026-03-05"
@@ -18,17 +18,17 @@
     },
     {
       "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 14
+    },
+    {
+      "state": "Haryana",
       "district": "Jhajjar",
       "total_fires": 14
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 13
-    },
-    {
-      "state": "Haryana",
-      "district": "Faridabad",
       "total_fires": 13
     },
     {
@@ -63,11 +63,6 @@
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 5
-    },
-    {
-      "state": "Punjab",
       "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 5
     },
@@ -78,17 +73,17 @@
     },
     {
       "state": "Punjab",
-      "district": "Kapurthala",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 4
+      "district": "Bathinda",
+      "total_fires": 5
     },
     {
       "state": "Haryana",
       "district": "Mahendragarh",
+      "total_fires": 4
+    },
+    {
+      "state": "Punjab",
+      "district": "Kapurthala",
       "total_fires": 4
     },
     {
@@ -103,12 +98,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Karnal",
+      "district": "Yamunanagar",
+      "total_fires": 4
+    },
+    {
+      "state": "Punjab",
+      "district": "Pathankot",
       "total_fires": 3
     }
   ],
   "state_totals": {
     "punjab": 98,
-    "haryana": 114
+    "haryana": 115
   }
 }
