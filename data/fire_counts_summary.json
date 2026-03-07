@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-06T12:42:42.798355Z",
-  "total_fire_count": 203,
+  "last_updated": "2026-03-07T01:27:04.092800Z",
+  "total_fire_count": 210,
   "date_range": {
     "start": "2026-02-27",
     "end": "2026-03-06"
@@ -17,24 +17,24 @@
       "total_fires": 21
     },
     {
+      "state": "Haryana",
+      "district": "Panipat",
+      "total_fires": 16
+    },
+    {
       "state": "Punjab",
       "district": "Hoshiarpur",
       "total_fires": 13
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
+      "district": "Faridabad",
       "total_fires": 12
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 11
-    },
-    {
-      "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 10
+      "total_fires": 12
     },
     {
       "state": "Haryana",
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 93,
-    "haryana": 110
+    "haryana": 117
   }
 }
