@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-03-08T01:44:57.383774Z",
-  "total_fire_count": 167,
+  "last_updated": "2026-03-08T12:37:54.977772Z",
+  "total_fire_count": 148,
   "date_range": {
-    "start": "2026-02-28",
-    "end": "2026-03-07"
+    "start": "2026-03-01",
+    "end": "2026-03-08"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 22
+      "total_fires": 20
     },
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 16
+      "total_fires": 13
     },
     {
       "state": "Haryana",
@@ -24,22 +24,22 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 12
-    },
-    {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 10
-    },
-    {
-      "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 10
+      "total_fires": 9
     },
     {
       "state": "Punjab",
       "district": "Jalandhar",
       "total_fires": 9
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 8
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 8
     },
     {
       "state": "Haryana",
@@ -82,11 +82,6 @@
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 3
-    },
-    {
       "state": "Punjab",
       "district": "Bathinda",
       "total_fires": 3
@@ -97,18 +92,23 @@
       "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Rupnagar",
-      "total_fires": 3
+      "state": "Haryana",
+      "district": "Panchkula",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
-      "district": "Rewari",
+      "district": "Gurugram",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Rupnagar",
       "total_fires": 2
     }
   ],
   "state_totals": {
-    "punjab": 73,
-    "haryana": 94
+    "punjab": 66,
+    "haryana": 82
   }
 }
