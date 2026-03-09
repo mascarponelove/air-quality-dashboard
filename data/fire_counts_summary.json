@@ -1,54 +1,49 @@
 {
-  "last_updated": "2026-03-09T01:45:41.262320Z",
-  "total_fire_count": 153,
+  "last_updated": "2026-03-09T12:52:36.790415Z",
+  "total_fire_count": 138,
   "date_range": {
-    "start": "2026-03-01",
-    "end": "2026-03-08"
+    "start": "2026-03-02",
+    "end": "2026-03-09"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 20
+      "total_fires": 16
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 14
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
       "total_fires": 13
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
+      "district": "Panipat",
       "total_fires": 10
     },
     {
-      "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 9
-    },
-    {
       "state": "Haryana",
-      "district": "Rohtak",
+      "district": "Faridabad",
       "total_fires": 8
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 8
+      "total_fires": 7
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
+      "district": "Rohtak",
+      "total_fires": 7
+    },
+    {
+      "state": "Punjab",
+      "district": "Jalandhar",
       "total_fires": 6
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
+      "state": "Punjab",
+      "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 6
     },
     {
@@ -57,9 +52,9 @@
       "total_fires": 6
     },
     {
-      "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 5
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -68,12 +63,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
-      "total_fires": 4
-    },
-    {
-      "state": "Punjab",
-      "district": "Fatehgarh Sahib",
+      "district": "Tarn Taran",
       "total_fires": 4
     },
     {
@@ -83,32 +73,42 @@
     },
     {
       "state": "Punjab",
-      "district": "Tarn Taran",
+      "district": "Ludhiana",
       "total_fires": 4
     },
     {
       "state": "Haryana",
-      "district": "Karnal",
-      "total_fires": 3
+      "district": "Hisar",
+      "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Bhiwani",
+      "state": "Punjab",
+      "district": "Fatehgarh Sahib",
+      "total_fires": 4
+    },
+    {
+      "state": "Punjab",
+      "district": "Kapurthala",
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Yamunanagar",
+      "state": "Punjab",
+      "district": "Firozpur",
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Rewari",
+      "state": "Punjab",
+      "district": "Rupnagar",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Sri Muktsar Sahib",
       "total_fires": 2
     }
   ],
   "state_totals": {
-    "punjab": 67,
-    "haryana": 86
+    "punjab": 62,
+    "haryana": 76
   }
 }
