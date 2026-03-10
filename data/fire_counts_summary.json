@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-09T12:52:36.790415Z",
-  "total_fire_count": 138,
+  "last_updated": "2026-03-10T01:28:12.332011Z",
+  "total_fire_count": 146,
   "date_range": {
     "start": "2026-03-02",
     "end": "2026-03-09"
@@ -14,32 +14,27 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 13
+      "total_fires": 14
     },
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 10
+      "total_fires": 11
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
+      "total_fires": 10
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
       "total_fires": 8
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
       "total_fires": 7
-    },
-    {
-      "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 7
-    },
-    {
-      "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 6
     },
     {
       "state": "Punjab",
@@ -52,9 +47,19 @@
       "total_fires": 6
     },
     {
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 6
+    },
+    {
       "state": "Haryana",
       "district": "Sonipat",
       "total_fires": 6
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 5
     },
     {
       "state": "Haryana",
@@ -63,12 +68,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Tarn Taran",
+      "district": "Fatehgarh Sahib",
       "total_fires": 4
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
+      "district": "Tarn Taran",
       "total_fires": 4
     },
     {
@@ -82,8 +87,8 @@
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Fatehgarh Sahib",
+      "state": "Haryana",
+      "district": "Gurugram",
       "total_fires": 4
     },
     {
@@ -98,17 +103,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Rupnagar",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
       "district": "Sri Muktsar Sahib",
       "total_fires": 2
     }
   ],
   "state_totals": {
-    "punjab": 62,
-    "haryana": 76
+    "punjab": 63,
+    "haryana": 83
   }
 }
