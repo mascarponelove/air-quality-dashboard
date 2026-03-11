@@ -1,66 +1,8 @@
 {
-  "last_updated": "2026-03-11T01:28:06.556228Z",
+  "last_updated": "2026-03-11T12:47:38.924665Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-03-03",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Gurdaspur",
-            "fire_count": 3
-          },
-          {
-            "district": "Bathinda",
-            "fire_count": 2
-          },
-          {
-            "district": "Shahid Bhagat Singh Nagar",
-            "fire_count": 2
-          },
-          {
-            "district": "Hoshiarpur",
-            "fire_count": 1
-          },
-          {
-            "district": "Ludhiana",
-            "fire_count": 1
-          }
-        ],
-        "total": 9
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Jhajjar",
-            "fire_count": 3
-          },
-          {
-            "district": "Panipat",
-            "fire_count": 2
-          },
-          {
-            "district": "Rewari",
-            "fire_count": 2
-          },
-          {
-            "district": "Hisar",
-            "fire_count": 1
-          },
-          {
-            "district": "Sonipat",
-            "fire_count": 1
-          },
-          {
-            "district": "Yamunanagar",
-            "fire_count": 1
-          }
-        ],
-        "total": 10
-      },
-      "combined_total": 19
-    },
     {
       "date": "2026-03-04",
       "punjab": {
@@ -438,6 +380,32 @@
         "total": 10
       },
       "combined_total": 20
+    },
+    {
+      "date": "2026-03-11",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Patiala",
+            "fire_count": 2
+          }
+        ],
+        "total": 2
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Kurukshetra",
+            "fire_count": 3
+          },
+          {
+            "district": "Ambala",
+            "fire_count": 2
+          }
+        ],
+        "total": 5
+      },
+      "combined_total": 7
     }
   ]
 }
