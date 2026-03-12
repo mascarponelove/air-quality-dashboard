@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-11T12:47:38.936760Z",
-  "total_fire_count": 118,
+  "last_updated": "2026-03-12T01:28:16.213397Z",
+  "total_fire_count": 121,
   "date_range": {
     "start": "2026-03-04",
     "end": "2026-03-11"
@@ -83,6 +83,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Panchkula",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
       "district": "Palwal",
       "total_fires": 2
     },
@@ -98,17 +103,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Mahendragarh",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Karnal",
+      "district": "Nuh",
       "total_fires": 2
     }
   ],
   "state_totals": {
     "punjab": 53,
-    "haryana": 65
+    "haryana": 68
   }
 }
