@@ -1,66 +1,8 @@
 {
-  "last_updated": "2026-03-14T01:29:33.974844Z",
+  "last_updated": "2026-03-14T12:39:33.341208Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-03-06",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Firozpur",
-            "fire_count": 2
-          },
-          {
-            "district": "Tarn Taran",
-            "fire_count": 2
-          },
-          {
-            "district": "Hoshiarpur",
-            "fire_count": 1
-          },
-          {
-            "district": "Jalandhar",
-            "fire_count": 1
-          }
-        ],
-        "total": 6
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Kurukshetra",
-            "fire_count": 4
-          },
-          {
-            "district": "Panipat",
-            "fire_count": 4
-          },
-          {
-            "district": "Jhajjar",
-            "fire_count": 2
-          },
-          {
-            "district": "Karnal",
-            "fire_count": 2
-          },
-          {
-            "district": "Faridabad",
-            "fire_count": 1
-          },
-          {
-            "district": "Rohtak",
-            "fire_count": 1
-          },
-          {
-            "district": "Sonipat",
-            "fire_count": 1
-          }
-        ],
-        "total": 15
-      },
-      "combined_total": 21
-    },
     {
       "date": "2026-03-07",
       "punjab": {
@@ -362,6 +304,27 @@
         "total": 2
       },
       "combined_total": 8
+    },
+    {
+      "date": "2026-03-14",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Bathinda",
+            "fire_count": 1
+          },
+          {
+            "district": "Kapurthala",
+            "fire_count": 1
+          }
+        ],
+        "total": 2
+      },
+      "haryana": {
+        "districts": [],
+        "total": 0
+      },
+      "combined_total": 2
     }
   ]
 }
