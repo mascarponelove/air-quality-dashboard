@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-14T12:39:33.352355Z",
-  "total_fire_count": 86,
+  "last_updated": "2026-03-15T01:56:31.726684Z",
+  "total_fire_count": 92,
   "date_range": {
     "start": "2026-03-07",
     "end": "2026-03-14"
@@ -9,12 +9,12 @@
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 13
+      "total_fires": 15
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 10
+      "total_fires": 12
     },
     {
       "state": "Punjab",
@@ -62,19 +62,14 @@
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Gurugram",
+      "state": "Punjab",
+      "district": "Fatehgarh Sahib",
       "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Panchkula",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Palwal",
-      "total_fires": 2
+      "district": "Gurugram",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
@@ -82,13 +77,8 @@
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Fatehgarh Sahib",
-      "total_fires": 2
-    },
-    {
       "state": "Haryana",
-      "district": "Hisar",
+      "district": "Palwal",
       "total_fires": 2
     },
     {
@@ -103,12 +93,22 @@
     },
     {
       "state": "Haryana",
-      "district": "Sirsa",
+      "district": "Hisar",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Panchkula",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Ludhiana",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 41,
-    "haryana": 45
+    "punjab": 45,
+    "haryana": 47
   }
 }
