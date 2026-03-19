@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-18T12:59:33.436025Z",
+  "last_updated": "2026-03-19T01:50:36.520754Z",
   "total_fire_count": 63,
   "date_range": {
     "start": "2026-03-11",
@@ -7,13 +7,13 @@
   },
   "top_districts": [
     {
-      "state": "Haryana",
-      "district": "Sirsa",
+      "state": "Punjab",
+      "district": "Bathinda",
       "total_fires": 13
     },
     {
-      "state": "Punjab",
-      "district": "Bathinda",
+      "state": "Haryana",
+      "district": "Sirsa",
       "total_fires": 13
     },
     {
@@ -38,16 +38,6 @@
     },
     {
       "state": "Haryana",
-      "district": "Ambala",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Panchkula",
       "total_fires": 2
     },
@@ -58,27 +48,22 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 1
+      "district": "Faridabad",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
-      "district": "Karnal",
+      "district": "Ambala",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Nuh",
       "total_fires": 1
     },
     {
       "state": "Haryana",
       "district": "Rohtak",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Nuh",
       "total_fires": 1
     },
     {
@@ -89,6 +74,16 @@
     {
       "state": "Haryana",
       "district": "Sonipat",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Karnal",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
       "total_fires": 1
     },
     {
@@ -104,6 +99,11 @@
     {
       "state": "Punjab",
       "district": "Ludhiana",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 1
     }
   ],
