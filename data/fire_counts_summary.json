@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-03-19T01:50:36.520754Z",
-  "total_fire_count": 63,
+  "last_updated": "2026-03-19T12:54:10.199315Z",
+  "total_fire_count": 53,
   "date_range": {
-    "start": "2026-03-11",
+    "start": "2026-03-12",
     "end": "2026-03-17"
   },
   "top_districts": [
@@ -23,28 +23,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Kurukshetra",
-      "total_fires": 5
-    },
-    {
-      "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 3
-    },
-    {
-      "state": "Haryana",
       "district": "Gurugram",
       "total_fires": 3
-    },
-    {
-      "state": "Haryana",
-      "district": "Panchkula",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Fatehgarh Sahib",
-      "total_fires": 2
     },
     {
       "state": "Haryana",
@@ -53,12 +33,27 @@
     },
     {
       "state": "Haryana",
-      "district": "Ambala",
+      "district": "Kurukshetra",
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Nuh",
+      "state": "Punjab",
+      "district": "Fatehgarh Sahib",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Kapurthala",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Jalandhar",
       "total_fires": 1
     },
     {
@@ -68,12 +63,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Mahendragarh",
+      "district": "Sonipat",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
+      "district": "Panipat",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Mahendragarh",
       "total_fires": 1
     },
     {
@@ -88,27 +88,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Kapurthala",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
+      "district": "Patiala",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 21,
-    "haryana": 42
+    "punjab": 19,
+    "haryana": 34
   }
 }
