@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-20T12:48:02.394132Z",
-  "total_fire_count": 47,
+  "last_updated": "2026-03-21T01:28:10.000372Z",
+  "total_fire_count": 49,
   "date_range": {
     "start": "2026-03-13",
-    "end": "2026-03-17"
+    "end": "2026-03-20"
   },
   "top_districts": [
     {
@@ -19,7 +19,7 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 6
+      "total_fires": 7
     },
     {
       "state": "Haryana",
@@ -38,17 +38,22 @@
     },
     {
       "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
       "district": "Karnal",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
+      "district": "Mahendragarh",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Mahendragarh",
+      "district": "Panipat",
       "total_fires": 1
     },
     {
@@ -84,6 +89,6 @@
   ],
   "state_totals": {
     "punjab": 16,
-    "haryana": 31
+    "haryana": 33
   }
 }
