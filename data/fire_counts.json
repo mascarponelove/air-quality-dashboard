@@ -1,34 +1,8 @@
 {
-  "last_updated": "2026-03-21T01:28:09.992796Z",
+  "last_updated": "2026-03-21T12:37:34.916418Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-03-13",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Bathinda",
-            "fire_count": 6
-          }
-        ],
-        "total": 6
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Jhajjar",
-            "fire_count": 1
-          },
-          {
-            "district": "Sirsa",
-            "fire_count": 1
-          }
-        ],
-        "total": 2
-      },
-      "combined_total": 8
-    },
     {
       "date": "2026-03-14",
       "punjab": {

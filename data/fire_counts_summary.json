@@ -1,25 +1,25 @@
 {
-  "last_updated": "2026-03-21T01:28:10.000372Z",
-  "total_fire_count": 49,
+  "last_updated": "2026-03-21T12:37:34.923087Z",
+  "total_fire_count": 41,
   "date_range": {
-    "start": "2026-03-13",
+    "start": "2026-03-14",
     "end": "2026-03-20"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Sirsa",
-      "total_fires": 13
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
       "total_fires": 12
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 7
+      "total_fires": 6
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -88,7 +88,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 16,
-    "haryana": 33
+    "punjab": 10,
+    "haryana": 31
   }
 }
