@@ -1,44 +1,39 @@
 {
-  "last_updated": "2026-03-23T01:51:09.043481Z",
-  "total_fire_count": 44,
+  "last_updated": "2026-03-23T12:56:11.992741Z",
+  "total_fire_count": 25,
   "date_range": {
-    "start": "2026-03-15",
-    "end": "2026-03-22"
+    "start": "2026-03-16",
+    "end": "2026-03-23"
   },
   "top_districts": [
     {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 12
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 5
+    },
+    {
+      "state": "Punjab",
+      "district": "Gurdaspur",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Gurugram",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 3
+      "total_fires": 2
     },
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 3
+      "total_fires": 2
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
+      "district": "Rohtak",
       "total_fires": 2
     },
     {
@@ -48,17 +43,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 2
+      "district": "Gurugram",
+      "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Kurukshetra",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Mahendragarh",
+      "district": "Hisar",
       "total_fires": 1
     },
     {
@@ -69,16 +59,6 @@
     {
       "state": "Punjab",
       "district": "Fatehgarh Sahib",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Karnal",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
       "total_fires": 1
     },
     {
@@ -93,7 +73,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 11,
-    "haryana": 33
+    "punjab": 16,
+    "haryana": 9
   }
 }
