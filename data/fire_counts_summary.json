@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-25T01:48:49.428747Z",
-  "total_fire_count": 39,
+  "last_updated": "2026-03-25T12:58:30.078806Z",
+  "total_fire_count": 46,
   "date_range": {
-    "start": "2026-03-17",
-    "end": "2026-03-24"
+    "start": "2026-03-20",
+    "end": "2026-03-25"
   },
   "top_districts": [
     {
@@ -12,8 +12,8 @@
       "total_fires": 7
     },
     {
-      "state": "Punjab",
-      "district": "Gurdaspur",
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 5
     },
     {
@@ -22,29 +22,24 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 3
+      "state": "Punjab",
+      "district": "Gurdaspur",
+      "total_fires": 5
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Sirsa",
       "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
-      "total_fires": 2
+      "district": "Faridabad",
+      "total_fires": 3
     },
     {
       "state": "Punjab",
@@ -57,14 +52,19 @@
       "total_fires": 2
     },
     {
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 2
+    },
+    {
       "state": "Punjab",
       "district": "Kapurthala",
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 1
+      "state": "Punjab",
+      "district": "Sahibzada Ajit Singh Nag*",
+      "total_fires": 2
     },
     {
       "state": "Punjab",
@@ -83,7 +83,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 24,
-    "haryana": 15
+    "punjab": 26,
+    "haryana": 20
   }
 }
