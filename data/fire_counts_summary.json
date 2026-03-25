@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-24T13:00:19.578605Z",
-  "total_fire_count": 31,
+  "last_updated": "2026-03-25T01:48:49.428747Z",
+  "total_fire_count": 39,
   "date_range": {
     "start": "2026-03-17",
     "end": "2026-03-24"
@@ -17,18 +17,38 @@
       "total_fires": 5
     },
     {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 3
+    },
+    {
       "state": "Punjab",
       "district": "Hoshiarpur",
       "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
+      "district": "Panipat",
       "total_fires": 2
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
+      "district": "Hisar",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Sahibzada Ajit Singh Nag*",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
       "total_fires": 2
     },
     {
@@ -42,23 +62,8 @@
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
-      "total_fires": 2
-    },
-    {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
+      "district": "Sirsa",
       "total_fires": 1
     },
     {
@@ -78,7 +83,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 23,
-    "haryana": 8
+    "punjab": 24,
+    "haryana": 15
   }
 }
