@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-26T01:55:09.523938Z",
-  "total_fire_count": 46,
+  "last_updated": "2026-03-26T13:02:53.391006Z",
+  "total_fire_count": 49,
   "date_range": {
     "start": "2026-03-20",
-    "end": "2026-03-25"
+    "end": "2026-03-26"
   },
   "top_districts": [
     {
@@ -14,16 +14,16 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
+      "total_fires": 6
+    },
+    {
+      "state": "Punjab",
+      "district": "Gurdaspur",
       "total_fires": 5
     },
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 5
-    },
-    {
-      "state": "Punjab",
-      "district": "Gurdaspur",
       "total_fires": 5
     },
     {
@@ -47,13 +47,18 @@
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Rohtak",
+      "state": "Punjab",
+      "district": "Patiala",
       "total_fires": 2
     },
     {
       "state": "Punjab",
       "district": "Bathinda",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
       "total_fires": 2
     },
     {
@@ -73,7 +78,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Patiala",
+      "district": "Ludhiana",
       "total_fires": 1
     },
     {
@@ -83,7 +88,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 26,
-    "haryana": 20
+    "punjab": 28,
+    "haryana": 21
   }
 }
