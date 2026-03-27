@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-27T01:55:26.587792Z",
-  "total_fire_count": 56,
+  "last_updated": "2026-03-27T12:55:23.783120Z",
+  "total_fire_count": 58,
   "date_range": {
     "start": "2026-03-20",
-    "end": "2026-03-26"
+    "end": "2026-03-27"
   },
   "top_districts": [
     {
@@ -14,7 +14,7 @@
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 7
+      "total_fires": 8
     },
     {
       "state": "Haryana",
@@ -24,7 +24,7 @@
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 5
+      "total_fires": 6
     },
     {
       "state": "Punjab",
@@ -88,7 +88,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 28,
+    "punjab": 30,
     "haryana": 28
   }
 }
