@@ -1,11 +1,16 @@
 {
-  "last_updated": "2026-03-26T13:02:53.391006Z",
-  "total_fire_count": 49,
+  "last_updated": "2026-03-27T01:55:26.587792Z",
+  "total_fire_count": 56,
   "date_range": {
     "start": "2026-03-20",
     "end": "2026-03-26"
   },
   "top_districts": [
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 9
+    },
     {
       "state": "Punjab",
       "district": "Jalandhar",
@@ -13,17 +18,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
+      "district": "Panipat",
       "total_fires": 6
     },
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
       "total_fires": 5
     },
     {
@@ -33,7 +33,17 @@
     },
     {
       "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 4
+    },
+    {
+      "state": "Haryana",
       "district": "Faridabad",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
       "total_fires": 3
     },
     {
@@ -42,28 +52,18 @@
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 2
-    },
-    {
       "state": "Punjab",
       "district": "Bathinda",
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Rohtak",
+      "state": "Punjab",
+      "district": "Kapurthala",
       "total_fires": 2
     },
     {
       "state": "Punjab",
-      "district": "Kapurthala",
+      "district": "Patiala",
       "total_fires": 2
     },
     {
@@ -89,6 +89,6 @@
   ],
   "state_totals": {
     "punjab": 28,
-    "haryana": 21
+    "haryana": 28
   }
 }
