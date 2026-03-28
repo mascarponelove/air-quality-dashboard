@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-03-27T12:55:23.783120Z",
-  "total_fire_count": 58,
+  "last_updated": "2026-03-28T01:47:27.097560Z",
+  "total_fire_count": 65,
   "date_range": {
     "start": "2026-03-20",
     "end": "2026-03-27"
@@ -9,7 +9,7 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 9
+      "total_fires": 13
     },
     {
       "state": "Punjab",
@@ -27,14 +27,14 @@
       "total_fires": 6
     },
     {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
+      "state": "Haryana",
+      "district": "Hisar",
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 4
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 5
     },
     {
       "state": "Haryana",
@@ -53,7 +53,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
+      "district": "Patiala",
       "total_fires": 2
     },
     {
@@ -63,18 +63,18 @@
     },
     {
       "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
       "district": "Sahibzada Ajit Singh Nag*",
       "total_fires": 2
     },
     {
       "state": "Punjab",
-      "district": "Fatehgarh Sahib",
-      "total_fires": 1
+      "district": "Bathinda",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Nuh",
+      "total_fires": 2
     },
     {
       "state": "Punjab",
@@ -85,10 +85,15 @@
       "state": "Punjab",
       "district": "Rupnagar",
       "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Fatehgarh Sahib",
+      "total_fires": 1
     }
   ],
   "state_totals": {
     "punjab": 30,
-    "haryana": 28
+    "haryana": 35
   }
 }
