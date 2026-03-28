@@ -1,29 +1,8 @@
 {
-  "last_updated": "2026-03-28T01:47:27.087133Z",
+  "last_updated": "2026-03-28T12:43:14.110664Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-03-20",
-      "punjab": {
-        "districts": [],
-        "total": 0
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Hisar",
-            "fire_count": 1
-          },
-          {
-            "district": "Jhajjar",
-            "fire_count": 1
-          }
-        ],
-        "total": 2
-      },
-      "combined_total": 2
-    },
     {
       "date": "2026-03-21",
       "punjab": {
@@ -269,6 +248,28 @@
         "total": 7
       },
       "combined_total": 9
+    },
+    {
+      "date": "2026-03-28",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Hoshiarpur",
+            "fire_count": 1
+          }
+        ],
+        "total": 1
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Ambala",
+            "fire_count": 1
+          }
+        ],
+        "total": 1
+      },
+      "combined_total": 2
     }
   ]
 }
