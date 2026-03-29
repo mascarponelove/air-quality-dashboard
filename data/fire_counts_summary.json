@@ -1,25 +1,20 @@
 {
-  "last_updated": "2026-03-29T01:58:29.608645Z",
-  "total_fire_count": 65,
+  "last_updated": "2026-03-29T12:43:09.513474Z",
+  "total_fire_count": 61,
   "date_range": {
-    "start": "2026-03-21",
+    "start": "2026-03-22",
     "end": "2026-03-28"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 12
+      "total_fires": 11
     },
     {
       "state": "Punjab",
       "district": "Jalandhar",
       "total_fires": 8
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 6
     },
     {
       "state": "Punjab",
@@ -34,6 +29,11 @@
     {
       "state": "Haryana",
       "district": "Hisar",
+      "total_fires": 4
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 4
     },
     {
@@ -53,22 +53,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
+      "district": "Bathinda",
       "total_fires": 2
     },
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Nuh",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
       "total_fires": 2
     },
     {
@@ -78,12 +68,17 @@
     },
     {
       "state": "Punjab",
-      "district": "Rupnagar",
-      "total_fires": 1
+      "district": "Sahibzada Ajit Singh Nag*",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
-      "district": "Ambala",
+      "district": "Nuh",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Fatehgarh Sahib",
       "total_fires": 1
     },
     {
@@ -92,13 +87,13 @@
       "total_fires": 1
     },
     {
-      "state": "Punjab",
-      "district": "Fatehgarh Sahib",
+      "state": "Haryana",
+      "district": "Ambala",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 31,
-    "haryana": 34
+    "punjab": 30,
+    "haryana": 31
   }
 }
