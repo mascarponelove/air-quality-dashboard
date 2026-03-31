@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-31T01:56:43.556849Z",
-  "total_fire_count": 63,
+  "last_updated": "2026-03-31T13:06:12.905155Z",
+  "total_fire_count": 55,
   "date_range": {
-    "start": "2026-03-23",
-    "end": "2026-03-30"
+    "start": "2026-03-24",
+    "end": "2026-03-31"
   },
   "top_districts": [
     {
@@ -17,24 +17,9 @@
       "total_fires": 6
     },
     {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 6
-    },
-    {
-      "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 6
-    },
-    {
-      "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 5
-    },
-    {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 5
+      "total_fires": 4
     },
     {
       "state": "Haryana",
@@ -48,8 +33,18 @@
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 2
+      "district": "Gurdaspur",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
@@ -63,7 +58,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
+      "district": "Bathinda",
       "total_fires": 2
     },
     {
@@ -72,8 +67,18 @@
       "total_fires": 2
     },
     {
+      "state": "Punjab",
+      "district": "Sahibzada Ajit Singh Nag*",
+      "total_fires": 2
+    },
+    {
       "state": "Haryana",
       "district": "Ambala",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Sonipat",
       "total_fires": 1
     },
     {
@@ -83,7 +88,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 24,
+    "punjab": 16,
     "haryana": 39
   }
 }
