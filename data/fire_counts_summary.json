@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-01T13:09:24.769140Z",
-  "total_fire_count": 42,
+  "last_updated": "2026-04-02T01:53:18.279865Z",
+  "total_fire_count": 43,
   "date_range": {
     "start": "2026-03-25",
     "end": "2026-04-01"
@@ -28,6 +28,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
       "district": "Nuh",
       "total_fires": 2
     },
@@ -43,7 +48,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
+      "district": "Sonipat",
       "total_fires": 2
     },
     {
@@ -59,11 +64,6 @@
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Sonipat",
       "total_fires": 1
     },
     {
@@ -89,6 +89,6 @@
   ],
   "state_totals": {
     "punjab": 8,
-    "haryana": 34
+    "haryana": 35
   }
 }
