@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-02T13:01:39.972011Z",
-  "total_fire_count": 37,
+  "last_updated": "2026-04-03T01:54:34.123738Z",
+  "total_fire_count": 38,
   "date_range": {
     "start": "2026-03-26",
     "end": "2026-04-02"
@@ -83,6 +83,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Jind",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
       "district": "Gurugram",
       "total_fires": 1
     },
@@ -94,6 +99,6 @@
   ],
   "state_totals": {
     "punjab": 8,
-    "haryana": 29
+    "haryana": 30
   }
 }
