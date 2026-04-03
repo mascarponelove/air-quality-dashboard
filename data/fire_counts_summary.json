@@ -1,24 +1,24 @@
 {
-  "last_updated": "2026-04-03T01:54:34.123738Z",
-  "total_fire_count": 38,
+  "last_updated": "2026-04-03T12:54:23.232068Z",
+  "total_fire_count": 29,
   "date_range": {
-    "start": "2026-03-26",
+    "start": "2026-03-27",
     "end": "2026-04-02"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 13
+      "total_fires": 10
     },
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 5
+      "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
+      "state": "Haryana",
+      "district": "Faridabad",
       "total_fires": 2
     },
     {
@@ -28,62 +28,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Sonipat",
       "total_fires": 2
     },
     {
       "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 1
+      "district": "Shahid Bhagat Singh Nagar",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
       "district": "Ambala",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Rewari",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Jind",
       "total_fires": 1
     },
     {
@@ -93,12 +48,37 @@
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
+      "district": "Jind",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Rewari",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Gurdaspur",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Jalandhar",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 8,
-    "haryana": 30
+    "punjab": 6,
+    "haryana": 23
   }
 }
