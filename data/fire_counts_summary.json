@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-04T12:43:08.959739Z",
-  "total_fire_count": 22,
+  "last_updated": "2026-04-05T02:00:08.151240Z",
+  "total_fire_count": 28,
   "date_range": {
     "start": "2026-03-28",
     "end": "2026-04-04"
@@ -14,11 +14,16 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 2
+      "total_fires": 3
     },
     {
       "state": "Haryana",
       "district": "Hisar",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Gurugram",
       "total_fires": 2
     },
     {
@@ -28,7 +33,17 @@
     },
     {
       "state": "Haryana",
+      "district": "Rewari",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
       "district": "Sonipat",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
       "total_fires": 2
     },
     {
@@ -43,32 +58,22 @@
     },
     {
       "state": "Haryana",
-      "district": "Gurugram",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
       "district": "Jind",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Rewari",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
       "total_fires": 1
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
       "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Mansa",
+      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 4,
-    "haryana": 18
+    "punjab": 6,
+    "haryana": 22
   }
 }
