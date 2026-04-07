@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-06T12:59:57.152212Z",
+  "last_updated": "2026-04-07T01:57:28.343734Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -202,17 +202,30 @@
             "fire_count": 2
           },
           {
+            "district": "Bathinda",
+            "fire_count": 1
+          },
+          {
             "district": "Shahid Bhagat Singh Nagar",
             "fire_count": 1
           }
         ],
-        "total": 3
+        "total": 4
       },
       "haryana": {
-        "districts": [],
-        "total": 0
+        "districts": [
+          {
+            "district": "Jhajjar",
+            "fire_count": 3
+          },
+          {
+            "district": "Rohtak",
+            "fire_count": 1
+          }
+        ],
+        "total": 4
       },
-      "combined_total": 3
+      "combined_total": 8
     }
   ]
 }
