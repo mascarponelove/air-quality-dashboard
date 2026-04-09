@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-04-08T13:10:38.879618Z",
-  "total_fire_count": 36,
+  "last_updated": "2026-04-09T01:50:26.523270Z",
+  "total_fire_count": 37,
   "date_range": {
     "start": "2026-04-01",
-    "end": "2026-04-06"
+    "end": "2026-04-08"
   },
   "top_districts": [
     {
@@ -13,12 +13,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
+      "district": "Gurugram",
       "total_fires": 4
     },
     {
       "state": "Haryana",
-      "district": "Gurugram",
+      "district": "Faridabad",
       "total_fires": 4
     },
     {
@@ -33,22 +33,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Rewari",
       "total_fires": 2
     },
     {
@@ -58,17 +43,42 @@
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
+      "district": "Rewari",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Rupnagar",
       "total_fires": 1
     },
     {
       "state": "Punjab",
-      "district": "Fatehgarh Sahib",
+      "district": "Mansa",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Bhiwani",
       "total_fires": 1
     },
     {
       "state": "Punjab",
       "district": "Fazilka",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Fatehgarh Sahib",
       "total_fires": 1
     },
     {
@@ -82,18 +92,13 @@
       "total_fires": 1
     },
     {
-      "state": "Punjab",
-      "district": "Mansa",
-      "total_fires": 1
-    },
-    {
       "state": "Haryana",
-      "district": "Bhiwani",
+      "district": "Sonipat",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 13,
+    "punjab": 14,
     "haryana": 23
   }
 }
