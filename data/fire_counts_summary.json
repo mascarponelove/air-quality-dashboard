@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-10T13:35:40.692865Z",
-  "total_fire_count": 41,
+  "last_updated": "2026-04-11T01:52:08.176553Z",
+  "total_fire_count": 52,
   "date_range": {
     "start": "2026-04-04",
     "end": "2026-04-10"
@@ -9,12 +9,12 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 6
+      "total_fires": 9
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 5
+      "total_fires": 7
     },
     {
       "state": "Haryana",
@@ -22,23 +22,23 @@
       "total_fires": 4
     },
     {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 4
+    },
+    {
+      "state": "Punjab",
+      "district": "Rupnagar",
+      "total_fires": 3
+    },
+    {
       "state": "Punjab",
       "district": "Bathinda",
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 3
-    },
-    {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Rupnagar",
       "total_fires": 2
     },
     {
@@ -52,9 +52,19 @@
       "total_fires": 2
     },
     {
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 2
+    },
+    {
       "state": "Punjab",
       "district": "Hoshiarpur",
       "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Bhiwani",
+      "total_fires": 1
     },
     {
       "state": "Punjab",
@@ -73,7 +83,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Bhiwani",
+      "district": "Sirsa",
       "total_fires": 1
     },
     {
@@ -88,27 +98,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Sirsa",
+      "district": "Panipat",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Karnal",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
+      "district": "Palwal",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 15,
-    "haryana": 26
+    "punjab": 16,
+    "haryana": 36
   }
 }
