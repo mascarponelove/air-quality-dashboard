@@ -1,50 +1,8 @@
 {
-  "last_updated": "2026-04-12T02:04:31.182532Z",
+  "last_updated": "2026-04-12T12:52:11.888098Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-04-04",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Bathinda",
-            "fire_count": 1
-          },
-          {
-            "district": "Mansa",
-            "fire_count": 1
-          }
-        ],
-        "total": 2
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Panchkula",
-            "fire_count": 2
-          },
-          {
-            "district": "Faridabad",
-            "fire_count": 1
-          },
-          {
-            "district": "Gurugram",
-            "fire_count": 1
-          },
-          {
-            "district": "Hisar",
-            "fire_count": 1
-          },
-          {
-            "district": "Rewari",
-            "fire_count": 1
-          }
-        ],
-        "total": 6
-      },
-      "combined_total": 8
-    },
     {
       "date": "2026-04-05",
       "punjab": {
@@ -279,6 +237,56 @@
         "total": 4
       },
       "combined_total": 6
+    },
+    {
+      "date": "2026-04-12",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Patiala",
+            "fire_count": 1
+          }
+        ],
+        "total": 1
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Hisar",
+            "fire_count": 2
+          },
+          {
+            "district": "Fatehabad",
+            "fire_count": 1
+          },
+          {
+            "district": "Gurugram",
+            "fire_count": 1
+          },
+          {
+            "district": "Jind",
+            "fire_count": 1
+          },
+          {
+            "district": "Kaithal",
+            "fire_count": 1
+          },
+          {
+            "district": "Kurukshetra",
+            "fire_count": 1
+          },
+          {
+            "district": "Palwal",
+            "fire_count": 1
+          },
+          {
+            "district": "Panipat",
+            "fire_count": 1
+          }
+        ],
+        "total": 9
+      },
+      "combined_total": 10
     }
   ]
 }
