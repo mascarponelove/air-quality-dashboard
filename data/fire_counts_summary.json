@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-11T12:45:19.186455Z",
-  "total_fire_count": 56,
+  "last_updated": "2026-04-12T02:04:31.192415Z",
+  "total_fire_count": 58,
   "date_range": {
     "start": "2026-04-04",
     "end": "2026-04-11"
@@ -9,7 +9,7 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 9
+      "total_fires": 10
     },
     {
       "state": "Haryana",
@@ -27,6 +27,11 @@
       "total_fires": 4
     },
     {
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 3
+    },
+    {
       "state": "Punjab",
       "district": "Bathinda",
       "total_fires": 3
@@ -35,11 +40,6 @@
       "state": "Punjab",
       "district": "Rupnagar",
       "total_fires": 3
-    },
-    {
-      "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 2
     },
     {
       "state": "Haryana",
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 18,
-    "haryana": 38
+    "haryana": 40
   }
 }
