@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-14T13:16:11.375662Z",
-  "total_fire_count": 105,
+  "last_updated": "2026-04-15T02:01:06.623156Z",
+  "total_fire_count": 109,
   "date_range": {
     "start": "2026-04-08",
     "end": "2026-04-14"
@@ -13,6 +13,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 12
+    },
+    {
+      "state": "Haryana",
       "district": "Panipat",
       "total_fires": 12
     },
@@ -22,19 +27,14 @@
       "total_fires": 11
     },
     {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 11
-    },
-    {
       "state": "Punjab",
       "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 6
     },
     {
       "state": "Haryana",
-      "district": "Kurukshetra",
-      "total_fires": 5
+      "district": "Hisar",
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -48,17 +48,17 @@
     },
     {
       "state": "Haryana",
+      "district": "Kurukshetra",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
       "district": "Nuh",
       "total_fires": 4
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
       "total_fires": 4
     },
     {
@@ -103,12 +103,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Patiala",
+      "district": "Moga",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 25,
-    "haryana": 80
+    "punjab": 26,
+    "haryana": 83
   }
 }
