@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-15T13:14:40.098740Z",
-  "total_fire_count": 118,
+  "last_updated": "2026-04-16T02:10:24.538004Z",
+  "total_fire_count": 128,
   "date_range": {
     "start": "2026-04-08",
     "end": "2026-04-15"
@@ -8,8 +8,13 @@
   "top_districts": [
     {
       "state": "Haryana",
-      "district": "Palwal",
-      "total_fires": 13
+      "district": "Jhajjar",
+      "total_fires": 15
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
+      "total_fires": 14
     },
     {
       "state": "Haryana",
@@ -18,13 +23,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 12
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 12
+      "district": "Palwal",
+      "total_fires": 13
     },
     {
       "state": "Punjab",
@@ -38,13 +38,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
+      "district": "Faridabad",
       "total_fires": 6
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 5
+      "district": "Hisar",
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -53,7 +53,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Ludhiana",
+      "district": "Rupnagar",
       "total_fires": 4
     },
     {
@@ -62,13 +62,18 @@
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 3
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 4
     },
     {
       "state": "Punjab",
-      "district": "Rupnagar",
+      "district": "Gurdaspur",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
       "total_fires": 3
     },
     {
@@ -77,8 +82,13 @@
       "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Gurdaspur",
+      "state": "Haryana",
+      "district": "Gurugram",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Sirsa",
       "total_fires": 3
     },
     {
@@ -88,17 +98,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Jind",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Gurugram",
       "total_fires": 2
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 31,
-    "haryana": 87
+    "punjab": 32,
+    "haryana": 96
   }
 }
