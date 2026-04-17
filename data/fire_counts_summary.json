@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-16T13:20:54.904677Z",
-  "total_fire_count": 140,
+  "last_updated": "2026-04-17T02:05:10.724782Z",
+  "total_fire_count": 144,
   "date_range": {
     "start": "2026-04-09",
     "end": "2026-04-16"
@@ -27,19 +27,19 @@
       "total_fires": 14
     },
     {
-      "state": "Punjab",
-      "district": "Sangrur",
+      "state": "Haryana",
+      "district": "Faridabad",
       "total_fires": 8
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 7
+      "district": "Hisar",
+      "total_fires": 8
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 6
+      "state": "Punjab",
+      "district": "Sangrur",
+      "total_fires": 8
     },
     {
       "state": "Punjab",
@@ -58,11 +58,6 @@
     },
     {
       "state": "Haryana",
-      "district": "Nuh",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
       "district": "Ambala",
       "total_fires": 4
     },
@@ -73,12 +68,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 3
+      "district": "Nuh",
+      "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Kaithal",
+      "state": "Punjab",
+      "district": "Rupnagar",
       "total_fires": 3
     },
     {
@@ -97,8 +92,13 @@
       "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Rupnagar",
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Kaithal",
       "total_fires": 3
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 35,
-    "haryana": 105
+    "punjab": 36,
+    "haryana": 108
   }
 }
