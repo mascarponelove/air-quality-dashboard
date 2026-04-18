@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-17T13:08:43.945966Z",
+  "last_updated": "2026-04-18T01:55:53.395006Z",
   "total_fire_count": 150,
   "date_range": {
     "start": "2026-04-10",
@@ -13,12 +13,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
+      "district": "Palwal",
       "total_fires": 15
     },
     {
       "state": "Haryana",
-      "district": "Palwal",
+      "district": "Panipat",
       "total_fires": 15
     },
     {
@@ -63,6 +63,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Gurugram",
+      "total_fires": 4
+    },
+    {
+      "state": "Haryana",
       "district": "Nuh",
       "total_fires": 4
     },
@@ -72,18 +77,13 @@
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Gurugram",
-      "total_fires": 4
+      "state": "Punjab",
+      "district": "Kapurthala",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
       "district": "Sirsa",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Kapurthala",
       "total_fires": 3
     },
     {
@@ -103,7 +103,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Patiala",
+      "district": "Rupnagar",
       "total_fires": 2
     }
   ],
