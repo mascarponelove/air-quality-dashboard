@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-20T13:20:21.203784Z",
+  "last_updated": "2026-04-21T02:05:45.205183Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -446,6 +446,10 @@
             "fire_count": 6
           },
           {
+            "district": "Sahibzada Ajit Singh Nag*",
+            "fire_count": 3
+          },
+          {
             "district": "Fazilka",
             "fire_count": 2
           },
@@ -474,36 +478,40 @@
             "fire_count": 1
           },
           {
-            "district": "Sahibzada Ajit Singh Nag*",
-            "fire_count": 1
-          },
-          {
             "district": "Sangrur",
             "fire_count": 1
           }
         ],
-        "total": 29
+        "total": 31
       },
       "haryana": {
         "districts": [
           {
             "district": "Palwal",
-            "fire_count": 11
+            "fire_count": 12
+          },
+          {
+            "district": "Sonipat",
+            "fire_count": 7
+          },
+          {
+            "district": "Faridabad",
+            "fire_count": 5
+          },
+          {
+            "district": "Jhajjar",
+            "fire_count": 4
           },
           {
             "district": "Gurugram",
             "fire_count": 3
           },
           {
-            "district": "Sonipat",
+            "district": "Hisar",
             "fire_count": 3
           },
           {
-            "district": "Faridabad",
-            "fire_count": 2
-          },
-          {
-            "district": "Hisar",
+            "district": "Jind",
             "fire_count": 2
           },
           {
@@ -519,11 +527,7 @@
             "fire_count": 2
           },
           {
-            "district": "Jhajjar",
-            "fire_count": 1
-          },
-          {
-            "district": "Jind",
+            "district": "Bhiwani",
             "fire_count": 1
           },
           {
@@ -541,11 +545,15 @@
           {
             "district": "Rohtak",
             "fire_count": 1
+          },
+          {
+            "district": "Sirsa",
+            "fire_count": 1
           }
         ],
-        "total": 33
+        "total": 48
       },
-      "combined_total": 62
+      "combined_total": 79
     }
   ]
 }
