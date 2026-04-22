@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-21T13:14:27.633437Z",
-  "total_fire_count": 289,
+  "last_updated": "2026-04-22T02:05:12.152001Z",
+  "total_fire_count": 294,
   "date_range": {
     "start": "2026-04-14",
     "end": "2026-04-21"
@@ -14,12 +14,12 @@
     {
       "state": "Haryana",
       "district": "Sonipat",
-      "total_fires": 29
+      "total_fires": 30
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 19
+      "total_fires": 21
     },
     {
       "state": "Haryana",
@@ -33,17 +33,17 @@
     },
     {
       "state": "Haryana",
+      "district": "Gurugram",
+      "total_fires": 15
+    },
+    {
+      "state": "Haryana",
       "district": "Hisar",
       "total_fires": 15
     },
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 14
-    },
-    {
-      "state": "Haryana",
-      "district": "Gurugram",
       "total_fires": 14
     },
     {
@@ -87,8 +87,13 @@
       "total_fires": 6
     },
     {
+      "state": "Haryana",
+      "district": "Ambala",
+      "total_fires": 5
+    },
+    {
       "state": "Punjab",
-      "district": "Gurdaspur",
+      "district": "Sahibzada Ajit Singh Nag*",
       "total_fires": 4
     },
     {
@@ -98,17 +103,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
-      "district": "Ambala",
+      "district": "Gurdaspur",
       "total_fires": 4
     }
   ],
   "state_totals": {
     "punjab": 86,
-    "haryana": 203
+    "haryana": 208
   }
 }
