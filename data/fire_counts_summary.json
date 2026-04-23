@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-22T13:17:19.027275Z",
-  "total_fire_count": 314,
+  "last_updated": "2026-04-23T02:07:59.788665Z",
+  "total_fire_count": 331,
   "date_range": {
     "start": "2026-04-15",
     "end": "2026-04-22"
@@ -19,17 +19,17 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 24
+      "total_fires": 28
+    },
+    {
+      "state": "Haryana",
+      "district": "Gurugram",
+      "total_fires": 26
     },
     {
       "state": "Haryana",
       "district": "Rohtak",
       "total_fires": 19
-    },
-    {
-      "state": "Haryana",
-      "district": "Gurugram",
-      "total_fires": 16
     },
     {
       "state": "Haryana",
@@ -47,13 +47,13 @@
       "total_fires": 13
     },
     {
-      "state": "Punjab",
-      "district": "Sangrur",
+      "state": "Haryana",
+      "district": "Jind",
       "total_fires": 13
     },
     {
-      "state": "Haryana",
-      "district": "Jind",
+      "state": "Punjab",
+      "district": "Sangrur",
       "total_fires": 13
     },
     {
@@ -73,6 +73,11 @@
     },
     {
       "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 8
+    },
+    {
+      "state": "Punjab",
       "district": "Tarn Taran",
       "total_fires": 8
     },
@@ -82,13 +87,8 @@
       "total_fires": 8
     },
     {
-      "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 7
-    },
-    {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
+      "state": "Haryana",
+      "district": "Karnal",
       "total_fires": 7
     },
     {
@@ -97,8 +97,8 @@
       "total_fires": 7
     },
     {
-      "state": "Haryana",
-      "district": "Karnal",
+      "state": "Punjab",
+      "district": "Ludhiana",
       "total_fires": 7
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 98,
-    "haryana": 216
+    "punjab": 99,
+    "haryana": 232
   }
 }
