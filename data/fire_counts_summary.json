@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-24T13:12:21.342886Z",
-  "total_fire_count": 742,
+  "last_updated": "2026-04-25T01:58:07.858352Z",
+  "total_fire_count": 750,
   "date_range": {
     "start": "2026-04-17",
     "end": "2026-04-24"
@@ -9,7 +9,7 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 63
+      "total_fires": 65
     },
     {
       "state": "Haryana",
@@ -23,23 +23,23 @@
     },
     {
       "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 42
+    },
+    {
+      "state": "Haryana",
       "district": "Rohtak",
       "total_fires": 42
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 41
-    },
-    {
-      "state": "Haryana",
       "district": "Gurugram",
-      "total_fires": 34
+      "total_fires": 36
     },
     {
       "state": "Haryana",
       "district": "Jind",
-      "total_fires": 34
+      "total_fires": 35
     },
     {
       "state": "Haryana",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 237,
-    "haryana": 505
+    "punjab": 239,
+    "haryana": 511
   }
 }
