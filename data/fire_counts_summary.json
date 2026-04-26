@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-25T12:53:52.254571Z",
-  "total_fire_count": 1086,
+  "last_updated": "2026-04-26T02:11:55.970208Z",
+  "total_fire_count": 1120,
   "date_range": {
     "start": "2026-04-18",
     "end": "2026-04-25"
@@ -9,7 +9,7 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 84
+      "total_fires": 87
     },
     {
       "state": "Haryana",
@@ -24,12 +24,12 @@
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 62
+      "total_fires": 70
     },
     {
       "state": "Haryana",
       "district": "Sonipat",
-      "total_fires": 59
+      "total_fires": 61
     },
     {
       "state": "Haryana",
@@ -44,7 +44,7 @@
     {
       "state": "Haryana",
       "district": "Karnal",
-      "total_fires": 46
+      "total_fires": 48
     },
     {
       "state": "Haryana",
@@ -54,12 +54,12 @@
     {
       "state": "Haryana",
       "district": "Gurugram",
-      "total_fires": 37
+      "total_fires": 38
     },
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 32
+      "total_fires": 33
     },
     {
       "state": "Punjab",
@@ -77,6 +77,11 @@
       "total_fires": 26
     },
     {
+      "state": "Haryana",
+      "district": "Kaithal",
+      "total_fires": 26
+    },
+    {
       "state": "Punjab",
       "district": "Patiala",
       "total_fires": 26
@@ -87,9 +92,9 @@
       "total_fires": 25
     },
     {
-      "state": "Haryana",
-      "district": "Kaithal",
-      "total_fires": 25
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 24
     },
     {
       "state": "Punjab",
@@ -100,15 +105,10 @@
       "state": "Haryana",
       "district": "Faridabad",
       "total_fires": 23
-    },
-    {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 21
     }
   ],
   "state_totals": {
-    "punjab": 334,
-    "haryana": 752
+    "punjab": 349,
+    "haryana": 771
   }
 }

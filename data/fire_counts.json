@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-25T12:53:52.240767Z",
+  "last_updated": "2026-04-26T02:11:55.951263Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -791,7 +791,11 @@
           },
           {
             "district": "Bathinda",
-            "fire_count": 12
+            "fire_count": 13
+          },
+          {
+            "district": "Kapurthala",
+            "fire_count": 11
           },
           {
             "district": "Mansa",
@@ -806,6 +810,10 @@
             "fire_count": 7
           },
           {
+            "district": "Hoshiarpur",
+            "fire_count": 6
+          },
+          {
             "district": "Jalandhar",
             "fire_count": 6
           },
@@ -814,7 +822,7 @@
             "fire_count": 4
           },
           {
-            "district": "Kapurthala",
+            "district": "Moga",
             "fire_count": 4
           },
           {
@@ -826,10 +834,6 @@
             "fire_count": 3
           },
           {
-            "district": "Hoshiarpur",
-            "fire_count": 3
-          },
-          {
             "district": "Faridkot",
             "fire_count": 2
           },
@@ -838,7 +842,7 @@
             "fire_count": 2
           },
           {
-            "district": "Moga",
+            "district": "Ludhiana",
             "fire_count": 2
           },
           {
@@ -850,25 +854,25 @@
             "fire_count": 1
           }
         ],
-        "total": 101
+        "total": 116
       },
       "haryana": {
         "districts": [
+          {
+            "district": "Panipat",
+            "fire_count": 43
+          },
           {
             "district": "Rohtak",
             "fire_count": 36
           },
           {
-            "district": "Panipat",
-            "fire_count": 35
-          },
-          {
             "district": "Karnal",
-            "fire_count": 26
+            "fire_count": 28
           },
           {
             "district": "Jhajjar",
-            "fire_count": 24
+            "fire_count": 27
           },
           {
             "district": "Jind",
@@ -876,11 +880,11 @@
           },
           {
             "district": "Kaithal",
-            "fire_count": 20
+            "fire_count": 21
           },
           {
             "district": "Sonipat",
-            "fire_count": 17
+            "fire_count": 19
           },
           {
             "district": "Hisar",
@@ -903,20 +907,24 @@
             "fire_count": 4
           },
           {
+            "district": "Fatehabad",
+            "fire_count": 4
+          },
+          {
             "district": "Palwal",
             "fire_count": 4
           },
           {
-            "district": "Fatehabad",
-            "fire_count": 3
+            "district": "Gurugram",
+            "fire_count": 2
           },
           {
             "district": "Rewari",
             "fire_count": 2
           },
           {
-            "district": "Gurugram",
-            "fire_count": 1
+            "district": "Yamunanagar",
+            "fire_count": 2
           },
           {
             "district": "Kurukshetra",
@@ -929,15 +937,11 @@
           {
             "district": "Panchkula",
             "fire_count": 1
-          },
-          {
-            "district": "Yamunanagar",
-            "fire_count": 1
           }
         ],
-        "total": 247
+        "total": 266
       },
-      "combined_total": 348
+      "combined_total": 382
     }
   ]
 }
