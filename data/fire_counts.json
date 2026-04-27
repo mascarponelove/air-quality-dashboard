@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-26T12:55:55.601820Z",
+  "last_updated": "2026-04-27T02:14:17.623416Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -871,15 +871,23 @@
         "districts": [
           {
             "district": "Hoshiarpur",
-            "fire_count": 32
+            "fire_count": 39
           },
           {
             "district": "Mansa",
             "fire_count": 25
           },
           {
+            "district": "Kapurthala",
+            "fire_count": 23
+          },
+          {
             "district": "Sangrur",
-            "fire_count": 21
+            "fire_count": 22
+          },
+          {
+            "district": "Jalandhar",
+            "fire_count": 18
           },
           {
             "district": "Patiala",
@@ -887,14 +895,6 @@
           },
           {
             "district": "Fazilka",
-            "fire_count": 17
-          },
-          {
-            "district": "Jalandhar",
-            "fire_count": 17
-          },
-          {
-            "district": "Kapurthala",
             "fire_count": 17
           },
           {
@@ -926,15 +926,15 @@
             "fire_count": 7
           },
           {
+            "district": "Sahibzada Ajit Singh Nag*",
+            "fire_count": 6
+          },
+          {
             "district": "Barnala",
             "fire_count": 5
           },
           {
             "district": "Fatehgarh Sahib",
-            "fire_count": 5
-          },
-          {
-            "district": "Sahibzada Ajit Singh Nag*",
             "fire_count": 5
           },
           {
@@ -958,37 +958,37 @@
             "fire_count": 1
           }
         ],
-        "total": 242
+        "total": 258
       },
       "haryana": {
         "districts": [
           {
             "district": "Rohtak",
-            "fire_count": 77
+            "fire_count": 79
           },
           {
             "district": "Sonipat",
-            "fire_count": 51
+            "fire_count": 52
           },
           {
             "district": "Kaithal",
-            "fire_count": 39
+            "fire_count": 40
           },
           {
             "district": "Panipat",
-            "fire_count": 34
+            "fire_count": 35
           },
           {
             "district": "Karnal",
-            "fire_count": 33
+            "fire_count": 34
           },
           {
             "district": "Jhajjar",
-            "fire_count": 24
+            "fire_count": 27
           },
           {
             "district": "Jind",
-            "fire_count": 22
+            "fire_count": 23
           },
           {
             "district": "Hisar",
@@ -996,7 +996,7 @@
           },
           {
             "district": "Palwal",
-            "fire_count": 11
+            "fire_count": 12
           },
           {
             "district": "Bhiwani",
@@ -1007,37 +1007,41 @@
             "fire_count": 9
           },
           {
+            "district": "Ambala",
+            "fire_count": 7
+          },
+          {
             "district": "Sirsa",
             "fire_count": 6
           },
           {
-            "district": "Ambala",
+            "district": "Fatehabad",
             "fire_count": 5
           },
           {
-            "district": "Fatehabad",
-            "fire_count": 4
-          },
-          {
             "district": "Gurugram",
-            "fire_count": 4
+            "fire_count": 5
           },
           {
             "district": "Kurukshetra",
-            "fire_count": 3
+            "fire_count": 4
           },
           {
             "district": "Yamunanagar",
-            "fire_count": 3
+            "fire_count": 4
           },
           {
             "district": "Faridabad",
             "fire_count": 2
+          },
+          {
+            "district": "Panchkula",
+            "fire_count": 1
           }
         ],
-        "total": 348
+        "total": 366
       },
-      "combined_total": 590
+      "combined_total": 624
     }
   ]
 }
