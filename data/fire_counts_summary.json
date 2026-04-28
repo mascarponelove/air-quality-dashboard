@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-27T13:28:24.961267Z",
-  "total_fire_count": 1965,
+  "last_updated": "2026-04-28T02:29:41.383179Z",
+  "total_fire_count": 2082,
   "date_range": {
     "start": "2026-04-20",
     "end": "2026-04-27"
@@ -9,7 +9,12 @@
     {
       "state": "Haryana",
       "district": "Rohtak",
-      "total_fires": 184
+      "total_fires": 204
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 200
     },
     {
       "state": "Haryana",
@@ -18,28 +23,23 @@
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 133
-    },
-    {
-      "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 120
-    },
-    {
-      "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 96
+      "total_fires": 125
     },
     {
       "state": "Haryana",
       "district": "Karnal",
-      "total_fires": 94
+      "total_fires": 100
+    },
+    {
+      "state": "Haryana",
+      "district": "Jind",
+      "total_fires": 99
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 76
+      "total_fires": 79
     },
     {
       "state": "Haryana",
@@ -67,8 +67,18 @@
       "total_fires": 57
     },
     {
+      "state": "Punjab",
+      "district": "Sangrur",
+      "total_fires": 56
+    },
+    {
       "state": "Haryana",
       "district": "Hisar",
+      "total_fires": 52
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
       "total_fires": 52
     },
     {
@@ -78,18 +88,8 @@
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 51
-    },
-    {
-      "state": "Punjab",
-      "district": "Sangrur",
-      "total_fires": 51
-    },
-    {
-      "state": "Punjab",
       "district": "Kapurthala",
-      "total_fires": 44
+      "total_fires": 48
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 710,
-    "haryana": 1255
+    "punjab": 725,
+    "haryana": 1357
   }
 }
