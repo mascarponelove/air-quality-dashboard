@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-29T13:45:28.764486Z",
+  "last_updated": "2026-04-30T02:30:59.510458Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -1079,7 +1079,7 @@
           },
           {
             "district": "Moga",
-            "fire_count": 13
+            "fire_count": 14
           },
           {
             "district": "Jalandhar",
@@ -1106,7 +1106,7 @@
             "fire_count": 1
           }
         ],
-        "total": 533
+        "total": 534
       },
       "haryana": {
         "districts": [
@@ -1160,6 +1160,14 @@
           },
           {
             "district": "Jhajjar",
+            "fire_count": 7
+          },
+          {
+            "district": "Panchkula",
+            "fire_count": 6
+          },
+          {
+            "district": "Yamunanagar",
             "fire_count": 6
           },
           {
@@ -1167,21 +1175,17 @@
             "fire_count": 4
           },
           {
-            "district": "Panchkula",
-            "fire_count": 2
-          },
-          {
-            "district": "Yamunanagar",
-            "fire_count": 2
+            "district": "Faridabad",
+            "fire_count": 1
           },
           {
             "district": "Gurugram",
             "fire_count": 1
           }
         ],
-        "total": 505
+        "total": 515
       },
-      "combined_total": 1038
+      "combined_total": 1049
     }
   ]
 }

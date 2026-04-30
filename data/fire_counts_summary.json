@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-04-29T13:45:28.786305Z",
-  "total_fire_count": 3278,
+  "last_updated": "2026-04-30T02:30:59.528007Z",
+  "total_fire_count": 3289,
   "date_range": {
     "start": "2026-04-22",
     "end": "2026-04-29"
@@ -19,7 +19,7 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 234
+      "total_fires": 235
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 1333,
-    "haryana": 1945
+    "punjab": 1334,
+    "haryana": 1955
   }
 }
