@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-03T12:58:39.265557Z",
-  "total_fire_count": 6133,
+  "last_updated": "2026-05-04T02:26:39.045339Z",
+  "total_fire_count": 6136,
   "date_range": {
     "start": "2026-04-26",
     "end": "2026-05-03"
@@ -34,7 +34,7 @@
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 295
+      "total_fires": 298
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 3244,
+    "punjab": 3247,
     "haryana": 2889
   }
 }
