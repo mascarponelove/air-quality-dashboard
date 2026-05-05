@@ -1,166 +1,8 @@
 {
-  "last_updated": "2026-05-05T02:14:58.320861Z",
+  "last_updated": "2026-05-05T13:34:33.412965Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-04-27",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Hoshiarpur",
-            "fire_count": 18
-          },
-          {
-            "district": "Sri Muktsar Sahib",
-            "fire_count": 17
-          },
-          {
-            "district": "Fazilka",
-            "fire_count": 16
-          },
-          {
-            "district": "Firozpur",
-            "fire_count": 15
-          },
-          {
-            "district": "Bathinda",
-            "fire_count": 10
-          },
-          {
-            "district": "Faridkot",
-            "fire_count": 10
-          },
-          {
-            "district": "Sangrur",
-            "fire_count": 8
-          },
-          {
-            "district": "Kapurthala",
-            "fire_count": 7
-          },
-          {
-            "district": "Barnala",
-            "fire_count": 6
-          },
-          {
-            "district": "Jalandhar",
-            "fire_count": 5
-          },
-          {
-            "district": "Mansa",
-            "fire_count": 5
-          },
-          {
-            "district": "Tarn Taran",
-            "fire_count": 5
-          },
-          {
-            "district": "Moga",
-            "fire_count": 3
-          },
-          {
-            "district": "Amritsar",
-            "fire_count": 2
-          },
-          {
-            "district": "Pathankot",
-            "fire_count": 2
-          },
-          {
-            "district": "Patiala",
-            "fire_count": 2
-          },
-          {
-            "district": "Gurdaspur",
-            "fire_count": 1
-          },
-          {
-            "district": "Ludhiana",
-            "fire_count": 1
-          }
-        ],
-        "total": 133
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Jhajjar",
-            "fire_count": 90
-          },
-          {
-            "district": "Rohtak",
-            "fire_count": 54
-          },
-          {
-            "district": "Sonipat",
-            "fire_count": 23
-          },
-          {
-            "district": "Karnal",
-            "fire_count": 21
-          },
-          {
-            "district": "Panipat",
-            "fire_count": 21
-          },
-          {
-            "district": "Jind",
-            "fire_count": 18
-          },
-          {
-            "district": "Palwal",
-            "fire_count": 7
-          },
-          {
-            "district": "Hisar",
-            "fire_count": 6
-          },
-          {
-            "district": "Sirsa",
-            "fire_count": 6
-          },
-          {
-            "district": "Bhiwani",
-            "fire_count": 5
-          },
-          {
-            "district": "Charki Dadri",
-            "fire_count": 5
-          },
-          {
-            "district": "Kaithal",
-            "fire_count": 5
-          },
-          {
-            "district": "Kurukshetra",
-            "fire_count": 2
-          },
-          {
-            "district": "Nuh",
-            "fire_count": 2
-          },
-          {
-            "district": "Ambala",
-            "fire_count": 1
-          },
-          {
-            "district": "Gurugram",
-            "fire_count": 1
-          },
-          {
-            "district": "Panchkula",
-            "fire_count": 1
-          },
-          {
-            "district": "Yamunanagar",
-            "fire_count": 1
-          }
-        ],
-        "total": 269
-      },
-      "combined_total": 402
-    },
     {
       "date": "2026-04-28",
       "punjab": {
@@ -1222,6 +1064,136 @@
         "total": 71
       },
       "combined_total": 908
+    },
+    {
+      "date": "2026-05-05",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Amritsar",
+            "fire_count": 162
+          },
+          {
+            "district": "Gurdaspur",
+            "fire_count": 131
+          },
+          {
+            "district": "Hoshiarpur",
+            "fire_count": 53
+          },
+          {
+            "district": "Sangrur",
+            "fire_count": 49
+          },
+          {
+            "district": "Ludhiana",
+            "fire_count": 46
+          },
+          {
+            "district": "Pathankot",
+            "fire_count": 39
+          },
+          {
+            "district": "Moga",
+            "fire_count": 28
+          },
+          {
+            "district": "Tarn Taran",
+            "fire_count": 19
+          },
+          {
+            "district": "Barnala",
+            "fire_count": 17
+          },
+          {
+            "district": "Kapurthala",
+            "fire_count": 16
+          },
+          {
+            "district": "Jalandhar",
+            "fire_count": 14
+          },
+          {
+            "district": "Patiala",
+            "fire_count": 10
+          },
+          {
+            "district": "Shahid Bhagat Singh Nagar",
+            "fire_count": 6
+          },
+          {
+            "district": "Fazilka",
+            "fire_count": 3
+          },
+          {
+            "district": "Firozpur",
+            "fire_count": 2
+          },
+          {
+            "district": "Sri Muktsar Sahib",
+            "fire_count": 2
+          },
+          {
+            "district": "Faridkot",
+            "fire_count": 1
+          }
+        ],
+        "total": 598
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Rohtak",
+            "fire_count": 18
+          },
+          {
+            "district": "Hisar",
+            "fire_count": 11
+          },
+          {
+            "district": "Jhajjar",
+            "fire_count": 8
+          },
+          {
+            "district": "Jind",
+            "fire_count": 8
+          },
+          {
+            "district": "Kaithal",
+            "fire_count": 7
+          },
+          {
+            "district": "Sonipat",
+            "fire_count": 7
+          },
+          {
+            "district": "Bhiwani",
+            "fire_count": 6
+          },
+          {
+            "district": "Fatehabad",
+            "fire_count": 5
+          },
+          {
+            "district": "Charki Dadri",
+            "fire_count": 4
+          },
+          {
+            "district": "Panipat",
+            "fire_count": 4
+          },
+          {
+            "district": "Sirsa",
+            "fire_count": 4
+          },
+          {
+            "district": "Nuh",
+            "fire_count": 1
+          }
+        ],
+        "total": 83
+      },
+      "combined_total": 681
     }
   ]
 }
