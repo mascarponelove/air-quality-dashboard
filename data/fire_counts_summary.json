@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-07T14:03:53.451037Z",
-  "total_fire_count": 8358,
+  "last_updated": "2026-05-08T02:34:49.926239Z",
+  "total_fire_count": 8371,
   "date_range": {
     "start": "2026-04-30",
     "end": "2026-05-07"
@@ -19,7 +19,7 @@
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 554
+      "total_fires": 556
     },
     {
       "state": "Punjab",
@@ -39,7 +39,7 @@
     {
       "state": "Haryana",
       "district": "Jind",
-      "total_fires": 307
+      "total_fires": 308
     },
     {
       "state": "Punjab",
@@ -48,13 +48,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 285
+      "district": "Jhajjar",
+      "total_fires": 286
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 284
+      "district": "Rohtak",
+      "total_fires": 285
     },
     {
       "state": "Punjab",
@@ -64,12 +64,12 @@
     {
       "state": "Haryana",
       "district": "Sonipat",
-      "total_fires": 259
+      "total_fires": 260
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 246
+      "total_fires": 247
     },
     {
       "state": "Punjab",
@@ -99,7 +99,7 @@
     {
       "state": "Punjab",
       "district": "Faridkot",
-      "total_fires": 205
+      "total_fires": 206
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 5879,
-    "haryana": 2479
+    "punjab": 5883,
+    "haryana": 2488
   }
 }
