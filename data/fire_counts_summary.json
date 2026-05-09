@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-08T13:21:21.777129Z",
-  "total_fire_count": 9111,
+  "last_updated": "2026-05-09T02:27:44.936865Z",
+  "total_fire_count": 9114,
   "date_range": {
     "start": "2026-05-01",
     "end": "2026-05-08"
@@ -9,7 +9,7 @@
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 749
+      "total_fires": 750
     },
     {
       "state": "Punjab",
@@ -69,7 +69,7 @@
     {
       "state": "Haryana",
       "district": "Jind",
-      "total_fires": 264
+      "total_fires": 265
     },
     {
       "state": "Haryana",
@@ -92,13 +92,13 @@
       "total_fires": 237
     },
     {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 231
-    },
-    {
       "state": "Haryana",
       "district": "Jhajjar",
+      "total_fires": 232
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
       "total_fires": 231
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 6811,
-    "haryana": 2300
+    "punjab": 6812,
+    "haryana": 2302
   }
 }
