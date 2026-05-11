@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-10T13:06:39.732284Z",
-  "total_fire_count": 10523,
+  "last_updated": "2026-05-11T02:40:05.226184Z",
+  "total_fire_count": 10529,
   "date_range": {
     "start": "2026-05-03",
     "end": "2026-05-10"
@@ -14,7 +14,7 @@
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 793
+      "total_fires": 796
     },
     {
       "state": "Punjab",
@@ -54,12 +54,12 @@
     {
       "state": "Punjab",
       "district": "Faridkot",
-      "total_fires": 413
+      "total_fires": 414
     },
     {
       "state": "Punjab",
       "district": "Fazilka",
-      "total_fires": 371
+      "total_fires": 373
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 8596,
+    "punjab": 8602,
     "haryana": 1927
   }
 }
