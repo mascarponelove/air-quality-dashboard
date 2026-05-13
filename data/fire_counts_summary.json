@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-12T14:11:22.597235Z",
-  "total_fire_count": 10381,
+  "last_updated": "2026-05-13T02:40:35.832283Z",
+  "total_fire_count": 10390,
   "date_range": {
     "start": "2026-05-05",
     "end": "2026-05-12"
@@ -18,12 +18,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Gurdaspur",
+      "district": "Tarn Taran",
       "total_fires": 693
     },
     {
       "state": "Punjab",
-      "district": "Tarn Taran",
+      "district": "Gurdaspur",
       "total_fires": 693
     },
     {
@@ -94,7 +94,7 @@
     {
       "state": "Haryana",
       "district": "Sirsa",
-      "total_fires": 205
+      "total_fires": 206
     },
     {
       "state": "Punjab",
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 8727,
-    "haryana": 1654
+    "haryana": 1663
   }
 }
