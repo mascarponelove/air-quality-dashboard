@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-14T13:57:52.844897Z",
-  "total_fire_count": 8653,
+  "last_updated": "2026-05-15T02:40:26.486898Z",
+  "total_fire_count": 8654,
   "date_range": {
     "start": "2026-05-07",
     "end": "2026-05-14"
@@ -74,7 +74,7 @@
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 242
+      "total_fires": 243
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 7511,
+    "punjab": 7512,
     "haryana": 1142
   }
 }
