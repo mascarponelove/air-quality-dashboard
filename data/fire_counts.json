@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-15T13:54:27.474827Z",
+  "last_updated": "2026-05-16T02:30:10.473032Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -1171,11 +1171,11 @@
             "fire_count": 4
           },
           {
-            "district": "Hisar",
-            "fire_count": 2
+            "district": "Jhajjar",
+            "fire_count": 3
           },
           {
-            "district": "Jhajjar",
+            "district": "Hisar",
             "fire_count": 2
           },
           {
@@ -1191,6 +1191,10 @@
             "fire_count": 1
           },
           {
+            "district": "Gurugram",
+            "fire_count": 1
+          },
+          {
             "district": "Kurukshetra",
             "fire_count": 1
           },
@@ -1199,13 +1203,17 @@
             "fire_count": 1
           },
           {
+            "district": "Rohtak",
+            "fire_count": 1
+          },
+          {
             "district": "Sirsa",
             "fire_count": 1
           }
         ],
-        "total": 65
+        "total": 68
       },
-      "combined_total": 369
+      "combined_total": 372
     }
   ]
 }
