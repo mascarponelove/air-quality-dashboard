@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-17T13:07:56.758559Z",
-  "total_fire_count": 5245,
+  "last_updated": "2026-05-18T02:48:32.520895Z",
+  "total_fire_count": 5257,
   "date_range": {
     "start": "2026-05-10",
     "end": "2026-05-17"
@@ -94,7 +94,7 @@
     {
       "state": "Haryana",
       "district": "Kaithal",
-      "total_fires": 80
+      "total_fires": 81
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 4650,
-    "haryana": 595
+    "punjab": 4651,
+    "haryana": 606
   }
 }
