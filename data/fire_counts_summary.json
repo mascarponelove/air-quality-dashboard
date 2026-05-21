@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-20T14:48:52.800170Z",
-  "total_fire_count": 2727,
+  "last_updated": "2026-05-21T02:48:23.041226Z",
+  "total_fire_count": 2743,
   "date_range": {
     "start": "2026-05-13",
     "end": "2026-05-20"
@@ -48,6 +48,11 @@
     },
     {
       "state": "Punjab",
+      "district": "Sangrur",
+      "total_fires": 125
+    },
+    {
+      "state": "Punjab",
       "district": "Firozpur",
       "total_fires": 123
     },
@@ -55,11 +60,6 @@
       "state": "Punjab",
       "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 122
-    },
-    {
-      "state": "Punjab",
-      "district": "Sangrur",
-      "total_fires": 119
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 2411,
-    "haryana": 316
+    "punjab": 2418,
+    "haryana": 325
   }
 }
