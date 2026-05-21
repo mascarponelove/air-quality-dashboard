@@ -1,114 +1,114 @@
 {
-  "last_updated": "2026-05-21T02:48:23.041226Z",
-  "total_fire_count": 2743,
+  "last_updated": "2026-05-21T14:53:57.740066Z",
+  "total_fire_count": 2643,
   "date_range": {
-    "start": "2026-05-13",
-    "end": "2026-05-20"
+    "start": "2026-05-14",
+    "end": "2026-05-21"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 314
+      "total_fires": 335
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 259
+      "total_fires": 260
     },
     {
       "state": "Punjab",
       "district": "Kapurthala",
-      "total_fires": 206
+      "total_fires": 212
     },
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 190
-    },
-    {
-      "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 152
+      "total_fires": 204
     },
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 149
+      "total_fires": 154
     },
     {
       "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
-      "total_fires": 132
-    },
-    {
-      "state": "Punjab",
-      "district": "Moga",
-      "total_fires": 131
-    },
-    {
-      "state": "Punjab",
-      "district": "Sangrur",
-      "total_fires": 125
-    },
-    {
-      "state": "Punjab",
-      "district": "Firozpur",
-      "total_fires": 123
+      "district": "Patiala",
+      "total_fires": 150
     },
     {
       "state": "Punjab",
       "district": "Shahid Bhagat Singh Nagar",
-      "total_fires": 122
+      "total_fires": 138
+    },
+    {
+      "state": "Punjab",
+      "district": "Sangrur",
+      "total_fires": 126
+    },
+    {
+      "state": "Punjab",
+      "district": "Moga",
+      "total_fires": 114
     },
     {
       "state": "Punjab",
       "district": "Fatehgarh Sahib",
-      "total_fires": 94
+      "total_fires": 92
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 88
+      "total_fires": 90
+    },
+    {
+      "state": "Punjab",
+      "district": "Firozpur",
+      "total_fires": 80
+    },
+    {
+      "state": "Punjab",
+      "district": "Sri Muktsar Sahib",
+      "total_fires": 79
     },
     {
       "state": "Punjab",
       "district": "Fazilka",
-      "total_fires": 78
+      "total_fires": 61
     },
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 71
+      "total_fires": 55
     },
     {
       "state": "Haryana",
       "district": "Kaithal",
-      "total_fires": 53
-    },
-    {
-      "state": "Punjab",
-      "district": "Faridkot",
-      "total_fires": 44
+      "total_fires": 55
     },
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 40
+      "total_fires": 33
+    },
+    {
+      "state": "Punjab",
+      "district": "Faridkot",
+      "total_fires": 30
+    },
+    {
+      "state": "Punjab",
+      "district": "Rupnagar",
+      "total_fires": 30
     },
     {
       "state": "Haryana",
       "district": "Sonipat",
       "total_fires": 28
-    },
-    {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 28
     }
   ],
   "state_totals": {
-    "punjab": 2418,
-    "haryana": 325
+    "punjab": 2313,
+    "haryana": 330
   }
 }
