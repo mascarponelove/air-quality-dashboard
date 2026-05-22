@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-21T14:53:57.740066Z",
-  "total_fire_count": 2643,
+  "last_updated": "2026-05-22T02:49:15.195447Z",
+  "total_fire_count": 2651,
   "date_range": {
     "start": "2026-05-14",
     "end": "2026-05-21"
@@ -19,7 +19,7 @@
     {
       "state": "Punjab",
       "district": "Kapurthala",
-      "total_fires": 212
+      "total_fires": 213
     },
     {
       "state": "Punjab",
@@ -53,13 +53,13 @@
     },
     {
       "state": "Punjab",
-      "district": "Fatehgarh Sahib",
-      "total_fires": 92
+      "district": "Hoshiarpur",
+      "total_fires": 93
     },
     {
       "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 90
+      "district": "Fatehgarh Sahib",
+      "total_fires": 92
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 2313,
-    "haryana": 330
+    "punjab": 2317,
+    "haryana": 334
   }
 }
