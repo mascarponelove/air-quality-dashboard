@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-23T13:13:47.703454Z",
-  "total_fire_count": 2151,
+  "last_updated": "2026-05-24T02:45:27.398814Z",
+  "total_fire_count": 2165,
   "date_range": {
     "start": "2026-05-16",
     "end": "2026-05-23"
@@ -9,7 +9,7 @@
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 290
+      "total_fires": 292
     },
     {
       "state": "Punjab",
@@ -44,7 +44,7 @@
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 85
+      "total_fires": 88
     },
     {
       "state": "Punjab",
@@ -94,21 +94,21 @@
     {
       "state": "Haryana",
       "district": "Yamunanagar",
-      "total_fires": 26
+      "total_fires": 27
     },
     {
-      "state": "Punjab",
-      "district": "Faridkot",
-      "total_fires": 22
+      "state": "Haryana",
+      "district": "Ambala",
+      "total_fires": 25
     },
     {
-      "state": "Punjab",
-      "district": "Rupnagar",
+      "state": "Haryana",
+      "district": "Sonipat",
       "total_fires": 22
     }
   ],
   "state_totals": {
-    "punjab": 1863,
-    "haryana": 288
+    "punjab": 1870,
+    "haryana": 295
   }
 }

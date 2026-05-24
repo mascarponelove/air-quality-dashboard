@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-23T13:13:47.683721Z",
+  "last_updated": "2026-05-24T02:45:27.384268Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -975,15 +975,15 @@
         "districts": [
           {
             "district": "Jalandhar",
-            "fire_count": 15
+            "fire_count": 17
+          },
+          {
+            "district": "Patiala",
+            "fire_count": 12
           },
           {
             "district": "Ludhiana",
             "fire_count": 11
-          },
-          {
-            "district": "Patiala",
-            "fire_count": 9
           },
           {
             "district": "Kapurthala",
@@ -1018,6 +1018,10 @@
             "fire_count": 2
           },
           {
+            "district": "Sahibzada Ajit Singh Nag*",
+            "fire_count": 2
+          },
+          {
             "district": "Bathinda",
             "fire_count": 1
           },
@@ -1034,24 +1038,28 @@
             "fire_count": 1
           }
         ],
-        "total": 75
+        "total": 82
       },
       "haryana": {
         "districts": [
+          {
+            "district": "Ambala",
+            "fire_count": 7
+          },
           {
             "district": "Panipat",
             "fire_count": 5
           },
           {
-            "district": "Ambala",
+            "district": "Yamunanagar",
             "fire_count": 4
           },
           {
-            "district": "Sonipat",
+            "district": "Gurugram",
             "fire_count": 3
           },
           {
-            "district": "Yamunanagar",
+            "district": "Sonipat",
             "fire_count": 3
           },
           {
@@ -1063,17 +1071,17 @@
             "fire_count": 1
           },
           {
-            "district": "Gurugram",
+            "district": "Kaithal",
             "fire_count": 1
           },
           {
-            "district": "Kaithal",
+            "district": "Karnal",
             "fire_count": 1
           }
         ],
-        "total": 20
+        "total": 27
       },
-      "combined_total": 95
+      "combined_total": 109
     }
   ]
 }
