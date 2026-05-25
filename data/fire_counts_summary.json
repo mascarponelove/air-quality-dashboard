@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-24T13:13:59.434161Z",
-  "total_fire_count": 1724,
+  "last_updated": "2026-05-25T02:54:02.190538Z",
+  "total_fire_count": 1729,
   "date_range": {
     "start": "2026-05-17",
     "end": "2026-05-24"
@@ -38,12 +38,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Patiala",
+      "district": "Moga",
       "total_fires": 72
     },
     {
       "state": "Punjab",
-      "district": "Moga",
+      "district": "Patiala",
       "total_fires": 72
     },
     {
@@ -53,12 +53,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Hoshiarpur",
+      "district": "Firozpur",
       "total_fires": 57
     },
     {
       "state": "Punjab",
-      "district": "Firozpur",
+      "district": "Hoshiarpur",
       "total_fires": 57
     },
     {
@@ -82,14 +82,14 @@
       "total_fires": 33
     },
     {
+      "state": "Haryana",
+      "district": "Yamunanagar",
+      "total_fires": 27
+    },
+    {
       "state": "Punjab",
       "district": "Fatehgarh Sahib",
       "total_fires": 26
-    },
-    {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 25
     },
     {
       "state": "Haryana",
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 1471,
-    "haryana": 253
+    "haryana": 258
   }
 }
