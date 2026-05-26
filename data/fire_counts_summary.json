@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-25T14:44:19.869550Z",
-  "total_fire_count": 1061,
+  "last_updated": "2026-05-26T02:42:20.529350Z",
+  "total_fire_count": 1070,
   "date_range": {
     "start": "2026-05-18",
     "end": "2026-05-25"
@@ -29,7 +29,7 @@
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 67
+      "total_fires": 70
     },
     {
       "state": "Punjab",
@@ -88,6 +88,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Panipat",
+      "total_fires": 19
+    },
+    {
+      "state": "Haryana",
       "district": "Panchkula",
       "total_fires": 18
     },
@@ -98,17 +103,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 13
-    },
-    {
-      "state": "Haryana",
       "district": "Sonipat",
       "total_fires": 13
     }
   ],
   "state_totals": {
-    "punjab": 880,
-    "haryana": 181
+    "punjab": 883,
+    "haryana": 187
   }
 }
