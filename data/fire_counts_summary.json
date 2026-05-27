@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-26T14:56:21.460440Z",
-  "total_fire_count": 1161,
+  "last_updated": "2026-05-27T02:52:50.812984Z",
+  "total_fire_count": 1181,
   "date_range": {
     "start": "2026-05-19",
     "end": "2026-05-26"
@@ -14,7 +14,7 @@
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 112
+      "total_fires": 113
     },
     {
       "state": "Punjab",
@@ -59,7 +59,7 @@
     {
       "state": "Haryana",
       "district": "Yamunanagar",
-      "total_fires": 30
+      "total_fires": 32
     },
     {
       "state": "Punjab",
@@ -69,7 +69,7 @@
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 26
+      "total_fires": 27
     },
     {
       "state": "Punjab",
@@ -83,6 +83,16 @@
     },
     {
       "state": "Haryana",
+      "district": "Panchkula",
+      "total_fires": 23
+    },
+    {
+      "state": "Punjab",
+      "district": "Rupnagar",
+      "total_fires": 22
+    },
+    {
+      "state": "Haryana",
       "district": "Ambala",
       "total_fires": 22
     },
@@ -93,22 +103,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Panchkula",
-      "total_fires": 16
-    },
-    {
-      "state": "Punjab",
-      "district": "Rupnagar",
-      "total_fires": 16
-    },
-    {
-      "state": "Haryana",
       "district": "Sonipat",
       "total_fires": 15
     }
   ],
   "state_totals": {
-    "punjab": 947,
-    "haryana": 214
+    "punjab": 956,
+    "haryana": 225
   }
 }
