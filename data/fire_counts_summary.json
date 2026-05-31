@@ -1,16 +1,11 @@
 {
-  "last_updated": "2026-05-31T02:54:41.305018Z",
-  "total_fire_count": 635,
+  "last_updated": "2026-05-31T13:25:34.327053Z",
+  "total_fire_count": 536,
   "date_range": {
-    "start": "2026-05-23",
-    "end": "2026-05-30"
+    "start": "2026-05-24",
+    "end": "2026-05-31"
   },
   "top_districts": [
-    {
-      "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 56
-    },
     {
       "state": "Punjab",
       "district": "Amritsar",
@@ -18,48 +13,38 @@
     },
     {
       "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 39
+    },
+    {
+      "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 47
+      "total_fires": 36
     },
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 46
+      "total_fires": 34
     },
     {
       "state": "Punjab",
       "district": "Firozpur",
-      "total_fires": 36
+      "total_fires": 33
     },
     {
       "state": "Haryana",
       "district": "Yamunanagar",
-      "total_fires": 27
-    },
-    {
-      "state": "Punjab",
-      "district": "Kapurthala",
-      "total_fires": 25
-    },
-    {
-      "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 25
+      "total_fires": 23
     },
     {
       "state": "Punjab",
       "district": "Rupnagar",
-      "total_fires": 24
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 20
+      "total_fires": 22
     },
     {
       "state": "Punjab",
-      "district": "Shahid Bhagat Singh Nagar",
-      "total_fires": 19
+      "district": "Gurdaspur",
+      "total_fires": 21
     },
     {
       "state": "Haryana",
@@ -68,23 +53,23 @@
     },
     {
       "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 17
+      "district": "Kapurthala",
+      "total_fires": 18
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
+      "total_fires": 15
     },
     {
       "state": "Punjab",
       "district": "Sri Muktsar Sahib",
-      "total_fires": 16
+      "total_fires": 15
     },
     {
       "state": "Punjab",
-      "district": "Moga",
-      "total_fires": 15
-    },
-    {
-      "state": "Haryana",
-      "district": "Ambala",
-      "total_fires": 15
+      "district": "Shahid Bhagat Singh Nagar",
+      "total_fires": 14
     },
     {
       "state": "Punjab",
@@ -93,22 +78,37 @@
     },
     {
       "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 13
+    },
+    {
+      "state": "Punjab",
       "district": "Tarn Taran",
       "total_fires": 13
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
+      "district": "Moga",
       "total_fires": 13
     },
     {
       "state": "Haryana",
       "district": "Hisar",
       "total_fires": 12
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 12
+    },
+    {
+      "state": "Haryana",
+      "district": "Jind",
+      "total_fires": 10
     }
   ],
   "state_totals": {
-    "punjab": 468,
-    "haryana": 167
+    "punjab": 396,
+    "haryana": 140
   }
 }
