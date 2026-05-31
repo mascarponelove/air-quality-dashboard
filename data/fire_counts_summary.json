@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-30T13:16:57.874979Z",
-  "total_fire_count": 631,
+  "last_updated": "2026-05-31T02:54:41.305018Z",
+  "total_fire_count": 635,
   "date_range": {
     "start": "2026-05-23",
     "end": "2026-05-30"
@@ -38,12 +38,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Gurdaspur",
+      "district": "Kapurthala",
       "total_fires": 25
     },
     {
       "state": "Punjab",
-      "district": "Kapurthala",
+      "district": "Gurdaspur",
       "total_fires": 25
     },
     {
@@ -93,22 +93,22 @@
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 13
-    },
-    {
-      "state": "Punjab",
       "district": "Tarn Taran",
       "total_fires": 13
     },
     {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 13
+    },
+    {
       "state": "Haryana",
-      "district": "Sonipat",
+      "district": "Hisar",
       "total_fires": 12
     }
   ],
   "state_totals": {
     "punjab": 468,
-    "haryana": 163
+    "haryana": 167
   }
 }
