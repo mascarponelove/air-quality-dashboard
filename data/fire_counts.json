@@ -1,138 +1,8 @@
 {
-  "last_updated": "2026-06-01T03:31:24.962866Z",
+  "last_updated": "2026-06-01T17:27:50.083309Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-05-24",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Amritsar",
-            "fire_count": 12
-          },
-          {
-            "district": "Bathinda",
-            "fire_count": 4
-          },
-          {
-            "district": "Firozpur",
-            "fire_count": 4
-          },
-          {
-            "district": "Gurdaspur",
-            "fire_count": 4
-          },
-          {
-            "district": "Ludhiana",
-            "fire_count": 4
-          },
-          {
-            "district": "Sangrur",
-            "fire_count": 4
-          },
-          {
-            "district": "Moga",
-            "fire_count": 3
-          },
-          {
-            "district": "Sri Muktsar Sahib",
-            "fire_count": 3
-          },
-          {
-            "district": "Patiala",
-            "fire_count": 2
-          },
-          {
-            "district": "Faridkot",
-            "fire_count": 1
-          },
-          {
-            "district": "Fatehgarh Sahib",
-            "fire_count": 1
-          },
-          {
-            "district": "Fazilka",
-            "fire_count": 1
-          },
-          {
-            "district": "Hoshiarpur",
-            "fire_count": 1
-          },
-          {
-            "district": "Jalandhar",
-            "fire_count": 1
-          },
-          {
-            "district": "Kapurthala",
-            "fire_count": 1
-          },
-          {
-            "district": "Rupnagar",
-            "fire_count": 1
-          },
-          {
-            "district": "Tarn Taran",
-            "fire_count": 1
-          }
-        ],
-        "total": 48
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Yamunanagar",
-            "fire_count": 4
-          },
-          {
-            "district": "Nuh",
-            "fire_count": 2
-          },
-          {
-            "district": "Ambala",
-            "fire_count": 1
-          },
-          {
-            "district": "Gurugram",
-            "fire_count": 1
-          },
-          {
-            "district": "Hisar",
-            "fire_count": 1
-          },
-          {
-            "district": "Jhajjar",
-            "fire_count": 1
-          },
-          {
-            "district": "Jind",
-            "fire_count": 1
-          },
-          {
-            "district": "Kaithal",
-            "fire_count": 1
-          },
-          {
-            "district": "Karnal",
-            "fire_count": 1
-          },
-          {
-            "district": "Kurukshetra",
-            "fire_count": 1
-          },
-          {
-            "district": "Panipat",
-            "fire_count": 1
-          },
-          {
-            "district": "Sirsa",
-            "fire_count": 1
-          }
-        ],
-        "total": 16
-      },
-      "combined_total": 64
-    },
     {
       "date": "2026-05-25",
       "punjab": {
@@ -789,6 +659,44 @@
         "total": 7
       },
       "combined_total": 17
+    },
+    {
+      "date": "2026-06-01",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Mansa",
+            "fire_count": 2
+          },
+          {
+            "district": "Moga",
+            "fire_count": 2
+          },
+          {
+            "district": "Kapurthala",
+            "fire_count": 1
+          },
+          {
+            "district": "Sri Muktsar Sahib",
+            "fire_count": 1
+          }
+        ],
+        "total": 6
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Sonipat",
+            "fire_count": 2
+          },
+          {
+            "district": "Karnal",
+            "fire_count": 1
+          }
+        ],
+        "total": 3
+      },
+      "combined_total": 9
     }
   ]
 }
