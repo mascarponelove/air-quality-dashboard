@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-05-31T13:25:34.327053Z",
-  "total_fire_count": 536,
+  "last_updated": "2026-06-01T03:31:24.975271Z",
+  "total_fire_count": 543,
   "date_range": {
     "start": "2026-05-24",
     "end": "2026-05-31"
@@ -93,6 +93,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 12
+    },
+    {
+      "state": "Haryana",
       "district": "Hisar",
       "total_fires": 12
     },
@@ -100,15 +105,10 @@
       "state": "Punjab",
       "district": "Bathinda",
       "total_fires": 12
-    },
-    {
-      "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 10
     }
   ],
   "state_totals": {
     "punjab": 396,
-    "haryana": 140
+    "haryana": 147
   }
 }
