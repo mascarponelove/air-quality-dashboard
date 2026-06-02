@@ -1,110 +1,8 @@
 {
-  "last_updated": "2026-06-02T03:28:06.052689Z",
+  "last_updated": "2026-06-02T16:11:58.038012Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-05-25",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Firozpur",
-            "fire_count": 17
-          },
-          {
-            "district": "Jalandhar",
-            "fire_count": 9
-          },
-          {
-            "district": "Sri Muktsar Sahib",
-            "fire_count": 8
-          },
-          {
-            "district": "Amritsar",
-            "fire_count": 7
-          },
-          {
-            "district": "Patiala",
-            "fire_count": 6
-          },
-          {
-            "district": "Bathinda",
-            "fire_count": 4
-          },
-          {
-            "district": "Kapurthala",
-            "fire_count": 4
-          },
-          {
-            "district": "Faridkot",
-            "fire_count": 3
-          },
-          {
-            "district": "Gurdaspur",
-            "fire_count": 3
-          },
-          {
-            "district": "Sangrur",
-            "fire_count": 3
-          },
-          {
-            "district": "Ludhiana",
-            "fire_count": 2
-          },
-          {
-            "district": "Moga",
-            "fire_count": 2
-          },
-          {
-            "district": "Shahid Bhagat Singh Nagar",
-            "fire_count": 2
-          },
-          {
-            "district": "Tarn Taran",
-            "fire_count": 2
-          },
-          {
-            "district": "Fatehgarh Sahib",
-            "fire_count": 1
-          },
-          {
-            "district": "Sahibzada Ajit Singh Nag*",
-            "fire_count": 1
-          }
-        ],
-        "total": 74
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Panipat",
-            "fire_count": 6
-          },
-          {
-            "district": "Panchkula",
-            "fire_count": 3
-          },
-          {
-            "district": "Ambala",
-            "fire_count": 2
-          },
-          {
-            "district": "Karnal",
-            "fire_count": 1
-          },
-          {
-            "district": "Rewari",
-            "fire_count": 1
-          },
-          {
-            "district": "Sirsa",
-            "fire_count": 1
-          }
-        ],
-        "total": 14
-      },
-      "combined_total": 88
-    },
     {
       "date": "2026-05-26",
       "punjab": {
@@ -705,6 +603,84 @@
         "total": 5
       },
       "combined_total": 11
+    },
+    {
+      "date": "2026-06-02",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Jalandhar",
+            "fire_count": 4
+          },
+          {
+            "district": "Patiala",
+            "fire_count": 4
+          },
+          {
+            "district": "Gurdaspur",
+            "fire_count": 3
+          },
+          {
+            "district": "Sri Muktsar Sahib",
+            "fire_count": 3
+          },
+          {
+            "district": "Fazilka",
+            "fire_count": 2
+          },
+          {
+            "district": "Sangrur",
+            "fire_count": 2
+          },
+          {
+            "district": "Amritsar",
+            "fire_count": 1
+          },
+          {
+            "district": "Bathinda",
+            "fire_count": 1
+          },
+          {
+            "district": "Fatehgarh Sahib",
+            "fire_count": 1
+          },
+          {
+            "district": "Firozpur",
+            "fire_count": 1
+          },
+          {
+            "district": "Hoshiarpur",
+            "fire_count": 1
+          },
+          {
+            "district": "Kapurthala",
+            "fire_count": 1
+          },
+          {
+            "district": "Pathankot",
+            "fire_count": 1
+          }
+        ],
+        "total": 25
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Panipat",
+            "fire_count": 2
+          },
+          {
+            "district": "Fatehabad",
+            "fire_count": 1
+          },
+          {
+            "district": "Jind",
+            "fire_count": 1
+          }
+        ],
+        "total": 4
+      },
+      "combined_total": 29
     }
   ]
 }
