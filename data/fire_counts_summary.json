@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-01T17:27:50.098673Z",
-  "total_fire_count": 488,
+  "last_updated": "2026-06-02T03:28:06.068113Z",
+  "total_fire_count": 490,
   "date_range": {
     "start": "2026-05-25",
     "end": "2026-06-01"
@@ -77,6 +77,11 @@
       "total_fires": 12
     },
     {
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 12
+    },
+    {
       "state": "Punjab",
       "district": "Hoshiarpur",
       "total_fires": 12
@@ -97,11 +102,6 @@
       "total_fires": 11
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 11
-    },
-    {
       "state": "Punjab",
       "district": "Sangrur",
       "total_fires": 10
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 354,
-    "haryana": 134
+    "haryana": 136
   }
 }
