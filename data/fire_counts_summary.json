@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-02T16:11:58.050201Z",
-  "total_fire_count": 431,
+  "last_updated": "2026-06-03T03:35:37.344829Z",
+  "total_fire_count": 436,
   "date_range": {
     "start": "2026-05-26",
     "end": "2026-06-02"
@@ -13,17 +13,17 @@
     },
     {
       "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 31
+    },
+    {
+      "state": "Punjab",
       "district": "Amritsar",
       "total_fires": 31
     },
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 30
-    },
-    {
-      "state": "Punjab",
-      "district": "Ludhiana",
       "total_fires": 30
     },
     {
@@ -44,7 +44,7 @@
     {
       "state": "Haryana",
       "district": "Panchkula",
-      "total_fires": 16
+      "total_fires": 17
     },
     {
       "state": "Punjab",
@@ -53,12 +53,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Hoshiarpur",
+      "district": "Firozpur",
       "total_fires": 13
     },
     {
       "state": "Punjab",
-      "district": "Firozpur",
+      "district": "Hoshiarpur",
       "total_fires": 13
     },
     {
@@ -73,27 +73,17 @@
     },
     {
       "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 12
+    },
+    {
+      "state": "Haryana",
       "district": "Sonipat",
       "total_fires": 11
     },
     {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 11
-    },
-    {
-      "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 10
-    },
-    {
       "state": "Punjab",
-      "district": "Pathankot",
-      "total_fires": 10
-    },
-    {
-      "state": "Haryana",
-      "district": "Panipat",
+      "district": "Tarn Taran",
       "total_fires": 10
     },
     {
@@ -103,12 +93,22 @@
     },
     {
       "state": "Punjab",
-      "district": "Tarn Taran",
+      "district": "Pathankot",
+      "total_fires": 10
+    },
+    {
+      "state": "Haryana",
+      "district": "Jind",
+      "total_fires": 10
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 10
     }
   ],
   "state_totals": {
-    "punjab": 305,
-    "haryana": 126
+    "punjab": 306,
+    "haryana": 130
   }
 }
