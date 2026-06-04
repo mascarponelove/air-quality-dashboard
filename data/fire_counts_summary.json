@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-03T16:27:22.586130Z",
-  "total_fire_count": 274,
+  "last_updated": "2026-06-04T03:31:30.819439Z",
+  "total_fire_count": 279,
   "date_range": {
     "start": "2026-05-27",
     "end": "2026-06-03"
@@ -27,6 +27,11 @@
       "total_fires": 12
     },
     {
+      "state": "Haryana",
+      "district": "Gurugram",
+      "total_fires": 11
+    },
+    {
       "state": "Punjab",
       "district": "Hoshiarpur",
       "total_fires": 11
@@ -48,17 +53,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 9
-    },
-    {
-      "state": "Punjab",
-      "district": "Kapurthala",
-      "total_fires": 9
-    },
-    {
-      "state": "Punjab",
-      "district": "Ludhiana",
+      "district": "Hisar",
       "total_fires": 9
     },
     {
@@ -67,19 +62,19 @@
       "total_fires": 9
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 9
+    },
+    {
+      "state": "Punjab",
+      "district": "Kapurthala",
       "total_fires": 9
     },
     {
       "state": "Haryana",
-      "district": "Gurugram",
+      "district": "Sonipat",
       "total_fires": 9
-    },
-    {
-      "state": "Haryana",
-      "district": "Panchkula",
-      "total_fires": 8
     },
     {
       "state": "Haryana",
@@ -93,12 +88,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 7
+      "district": "Panchkula",
+      "total_fires": 8
     },
     {
       "state": "Haryana",
       "district": "Jind",
+      "total_fires": 7
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
       "total_fires": 7
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 192,
-    "haryana": 82
+    "haryana": 87
   }
 }
