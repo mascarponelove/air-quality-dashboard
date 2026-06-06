@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-05T14:37:24.487364Z",
-  "total_fire_count": 154,
+  "last_updated": "2026-06-06T02:40:17.912142Z",
+  "total_fire_count": 157,
   "date_range": {
     "start": "2026-05-29",
     "end": "2026-06-05"
@@ -42,18 +42,18 @@
       "total_fires": 8
     },
     {
+      "state": "Punjab",
+      "district": "Fatehgarh Sahib",
+      "total_fires": 6
+    },
+    {
       "state": "Haryana",
       "district": "Sonipat",
       "total_fires": 6
     },
     {
       "state": "Punjab",
-      "district": "Fatehgarh Sahib",
-      "total_fires": 6
-    },
-    {
-      "state": "Punjab",
-      "district": "Moga",
+      "district": "Fazilka",
       "total_fires": 5
     },
     {
@@ -62,18 +62,13 @@
       "total_fires": 5
     },
     {
-      "state": "Punjab",
-      "district": "Firozpur",
-      "total_fires": 5
-    },
-    {
-      "state": "Punjab",
-      "district": "Fazilka",
-      "total_fires": 5
-    },
-    {
       "state": "Haryana",
       "district": "Panchkula",
+      "total_fires": 5
+    },
+    {
+      "state": "Punjab",
+      "district": "Moga",
       "total_fires": 5
     },
     {
@@ -87,28 +82,33 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 3
-    },
-    {
-      "state": "Haryana",
-      "district": "Karnal",
-      "total_fires": 3
+      "state": "Punjab",
+      "district": "Firozpur",
+      "total_fires": 5
     },
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 3
+      "total_fires": 4
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
       "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Ambala",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Panipat",
+      "total_fires": 3
     }
   ],
   "state_totals": {
     "punjab": 107,
-    "haryana": 47
+    "haryana": 50
   }
 }
