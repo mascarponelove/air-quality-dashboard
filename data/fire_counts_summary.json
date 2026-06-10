@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-09T14:37:37.837945Z",
-  "total_fire_count": 163,
+  "last_updated": "2026-06-10T02:52:35.927939Z",
+  "total_fire_count": 166,
   "date_range": {
     "start": "2026-06-02",
     "end": "2026-06-09"
@@ -9,7 +9,7 @@
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 17
+      "total_fires": 18
     },
     {
       "state": "Punjab",
@@ -18,13 +18,13 @@
     },
     {
       "state": "Punjab",
-      "district": "Hoshiarpur",
+      "district": "Kapurthala",
       "total_fires": 10
     },
     {
       "state": "Punjab",
-      "district": "Kapurthala",
-      "total_fires": 9
+      "district": "Hoshiarpur",
+      "total_fires": 10
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 113,
-    "haryana": 50
+    "punjab": 115,
+    "haryana": 51
   }
 }
