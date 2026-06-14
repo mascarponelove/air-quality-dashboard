@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-13T13:48:11.069891Z",
-  "total_fire_count": 180,
+  "last_updated": "2026-06-14T03:29:16.024021Z",
+  "total_fire_count": 184,
   "date_range": {
     "start": "2026-06-06",
     "end": "2026-06-13"
@@ -33,6 +33,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 9
+    },
+    {
+      "state": "Haryana",
       "district": "Kurukshetra",
       "total_fires": 8
     },
@@ -47,14 +52,14 @@
       "total_fires": 8
     },
     {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 8
-    },
-    {
       "state": "Punjab",
       "district": "Gurdaspur",
       "total_fires": 7
+    },
+    {
+      "state": "Punjab",
+      "district": "Firozpur",
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -63,17 +68,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Firozpur",
-      "total_fires": 6
-    },
-    {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
+      "district": "Fatehgarh Sahib",
       "total_fires": 5
     },
     {
       "state": "Punjab",
-      "district": "Fatehgarh Sahib",
+      "district": "Hoshiarpur",
       "total_fires": 5
     },
     {
@@ -82,13 +82,13 @@
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Barnala",
+      "state": "Haryana",
+      "district": "Sonipat",
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Sonipat",
+      "state": "Punjab",
+      "district": "Barnala",
       "total_fires": 3
     },
     {
@@ -98,17 +98,17 @@
     },
     {
       "state": "Punjab",
-      "district": "Moga",
+      "district": "Sangrur",
       "total_fires": 3
     },
     {
       "state": "Punjab",
-      "district": "Sangrur",
+      "district": "Moga",
       "total_fires": 3
     }
   ],
   "state_totals": {
     "punjab": 138,
-    "haryana": 42
+    "haryana": 46
   }
 }
