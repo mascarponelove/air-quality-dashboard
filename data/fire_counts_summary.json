@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-15T17:07:18.247207Z",
-  "total_fire_count": 209,
+  "last_updated": "2026-06-16T03:33:47.293360Z",
+  "total_fire_count": 213,
   "date_range": {
     "start": "2026-06-08",
     "end": "2026-06-15"
@@ -92,8 +92,8 @@
       "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Barnala",
+      "state": "Haryana",
+      "district": "Faridabad",
       "total_fires": 3
     },
     {
@@ -102,13 +102,13 @@
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 2
+      "state": "Punjab",
+      "district": "Barnala",
+      "total_fires": 3
     }
   ],
   "state_totals": {
     "punjab": 173,
-    "haryana": 36
+    "haryana": 40
   }
 }
