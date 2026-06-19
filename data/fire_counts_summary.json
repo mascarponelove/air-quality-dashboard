@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-18T14:56:36.533651Z",
-  "total_fire_count": 294,
+  "last_updated": "2026-06-19T03:46:34.957469Z",
+  "total_fire_count": 298,
   "date_range": {
     "start": "2026-06-11",
     "end": "2026-06-18"
@@ -18,11 +18,6 @@
     },
     {
       "state": "Punjab",
-      "district": "Tarn Taran",
-      "total_fires": 38
-    },
-    {
-      "state": "Punjab",
       "district": "Amritsar",
       "total_fires": 38
     },
@@ -33,18 +28,23 @@
     },
     {
       "state": "Punjab",
+      "district": "Tarn Taran",
+      "total_fires": 38
+    },
+    {
+      "state": "Punjab",
       "district": "Patiala",
       "total_fires": 15
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 10
     },
     {
       "state": "Punjab",
       "district": "Fatehgarh Sahib",
       "total_fires": 9
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 8
     },
     {
       "state": "Punjab",
@@ -63,17 +63,17 @@
     },
     {
       "state": "Punjab",
+      "district": "Barnala",
+      "total_fires": 6
+    },
+    {
+      "state": "Punjab",
       "district": "Sangrur",
       "total_fires": 6
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 6
-    },
-    {
-      "state": "Punjab",
-      "district": "Barnala",
       "total_fires": 6
     },
     {
@@ -103,12 +103,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Rohtak",
+      "district": "Karnal",
       "total_fires": 2
     }
   ],
   "state_totals": {
     "punjab": 262,
-    "haryana": 32
+    "haryana": 36
   }
 }
