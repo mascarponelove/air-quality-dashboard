@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-06-19T03:46:34.957469Z",
-  "total_fire_count": 298,
+  "last_updated": "2026-06-19T14:52:43.966655Z",
+  "total_fire_count": 261,
   "date_range": {
-    "start": "2026-06-11",
-    "end": "2026-06-18"
+    "start": "2026-06-12",
+    "end": "2026-06-19"
   },
   "top_districts": [
     {
@@ -18,18 +18,18 @@
     },
     {
       "state": "Punjab",
-      "district": "Amritsar",
-      "total_fires": 38
+      "district": "Tarn Taran",
+      "total_fires": 34
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 38
+      "total_fires": 33
     },
     {
       "state": "Punjab",
-      "district": "Tarn Taran",
-      "total_fires": 38
+      "district": "Amritsar",
+      "total_fires": 29
     },
     {
       "state": "Punjab",
@@ -39,36 +39,21 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 10
+      "total_fires": 8
     },
     {
       "state": "Punjab",
       "district": "Fatehgarh Sahib",
-      "total_fires": 9
-    },
-    {
-      "state": "Punjab",
-      "district": "Firozpur",
       "total_fires": 8
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 8
-    },
-    {
-      "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 7
-    },
-    {
-      "state": "Punjab",
-      "district": "Barnala",
-      "total_fires": 6
     },
     {
       "state": "Punjab",
       "district": "Sangrur",
+      "total_fires": 6
+    },
+    {
+      "state": "Punjab",
+      "district": "Firozpur",
       "total_fires": 6
     },
     {
@@ -77,14 +62,24 @@
       "total_fires": 6
     },
     {
+      "state": "Punjab",
+      "district": "Gurdaspur",
+      "total_fires": 5
+    },
+    {
       "state": "Haryana",
       "district": "Kurukshetra",
       "total_fires": 5
     },
     {
       "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 4
+      "district": "Barnala",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Karnal",
+      "total_fires": 3
     },
     {
       "state": "Punjab",
@@ -93,22 +88,27 @@
     },
     {
       "state": "Haryana",
-      "district": "Gurugram",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Yamunanagar",
       "total_fires": 2
     },
     {
       "state": "Haryana",
-      "district": "Karnal",
+      "district": "Gurugram",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
       "total_fires": 2
     }
   ],
   "state_totals": {
-    "punjab": 262,
-    "haryana": 36
+    "punjab": 228,
+    "haryana": 33
   }
 }
