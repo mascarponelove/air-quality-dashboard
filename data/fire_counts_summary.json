@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-21T13:57:26.122307Z",
-  "total_fire_count": 482,
+  "last_updated": "2026-06-22T03:38:50.636552Z",
+  "total_fire_count": 483,
   "date_range": {
     "start": "2026-06-14",
     "end": "2026-06-21"
@@ -34,7 +34,7 @@
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 25
+      "total_fires": 26
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 429,
+    "punjab": 430,
     "haryana": 53
   }
 }
