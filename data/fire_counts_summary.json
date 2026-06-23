@@ -1,35 +1,35 @@
 {
-  "last_updated": "2026-06-22T03:38:50.636552Z",
-  "total_fire_count": 483,
+  "last_updated": "2026-06-23T02:44:06.000268Z",
+  "total_fire_count": 491,
   "date_range": {
-    "start": "2026-06-14",
-    "end": "2026-06-21"
+    "start": "2026-06-15",
+    "end": "2026-06-22"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 90
+      "total_fires": 98
     },
     {
       "state": "Punjab",
       "district": "Kapurthala",
-      "total_fires": 70
+      "total_fires": 72
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 65
+      "total_fires": 64
     },
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 50
+      "total_fires": 46
     },
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 45
+      "total_fires": 43
     },
     {
       "state": "Punjab",
@@ -43,8 +43,13 @@
     },
     {
       "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 17
+    },
+    {
+      "state": "Punjab",
       "district": "Sangrur",
-      "total_fires": 14
+      "total_fires": 15
     },
     {
       "state": "Haryana",
@@ -54,11 +59,6 @@
     {
       "state": "Punjab",
       "district": "Moga",
-      "total_fires": 11
-    },
-    {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
       "total_fires": 11
     },
     {
@@ -72,9 +72,14 @@
       "total_fires": 9
     },
     {
+      "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 7
+    },
+    {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 9
+      "total_fires": 6
     },
     {
       "state": "Punjab",
@@ -88,27 +93,22 @@
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 6
+      "district": "Sonipat",
+      "total_fires": 4
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
+      "district": "Panipat",
       "total_fires": 3
     },
     {
       "state": "Punjab",
       "district": "Mansa",
       "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 2
     }
   ],
   "state_totals": {
-    "punjab": 430,
-    "haryana": 53
+    "punjab": 437,
+    "haryana": 54
   }
 }
