@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-25T14:14:42.119651Z",
-  "total_fire_count": 538,
+  "last_updated": "2026-06-26T02:49:47.770101Z",
+  "total_fire_count": 540,
   "date_range": {
     "start": "2026-06-18",
     "end": "2026-06-25"
@@ -67,13 +67,13 @@
       "total_fires": 14
     },
     {
-      "state": "Punjab",
-      "district": "Barnala",
-      "total_fires": 8
-    },
-    {
       "state": "Haryana",
       "district": "Jhajjar",
+      "total_fires": 9
+    },
+    {
+      "state": "Punjab",
+      "district": "Barnala",
       "total_fires": 8
     },
     {
@@ -94,7 +94,7 @@
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 3
+      "total_fires": 4
     },
     {
       "state": "Punjab",
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 474,
-    "haryana": 64
+    "haryana": 66
   }
 }
