@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-28T13:25:29.611664Z",
-  "total_fire_count": 491,
+  "last_updated": "2026-06-29T02:55:30.202948Z",
+  "total_fire_count": 503,
   "date_range": {
     "start": "2026-06-21",
     "end": "2026-06-28"
@@ -52,6 +52,11 @@
       "total_fires": 14
     },
     {
+      "state": "Haryana",
+      "district": "Panipat",
+      "total_fires": 13
+    },
+    {
       "state": "Punjab",
       "district": "Amritsar",
       "total_fires": 13
@@ -77,8 +82,8 @@
       "total_fires": 5
     },
     {
-      "state": "Punjab",
-      "district": "Barnala",
+      "state": "Haryana",
+      "district": "Jhajjar",
       "total_fires": 4
     },
     {
@@ -87,19 +92,14 @@
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 4
-    },
-    {
       "state": "Punjab",
       "district": "Gurdaspur",
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Yamunanagar",
-      "total_fires": 3
+      "state": "Punjab",
+      "district": "Barnala",
+      "total_fires": 4
     },
     {
       "state": "Haryana",
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 441,
-    "haryana": 50
+    "haryana": 62
   }
 }
