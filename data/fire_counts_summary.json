@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-29T15:37:35.899822Z",
-  "total_fire_count": 414,
+  "last_updated": "2026-06-30T02:49:47.214510Z",
+  "total_fire_count": 415,
   "date_range": {
     "start": "2026-06-22",
     "end": "2026-06-29"
@@ -48,12 +48,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Tarn Taran",
+      "district": "Fatehgarh Sahib",
       "total_fires": 9
     },
     {
       "state": "Punjab",
-      "district": "Fatehgarh Sahib",
+      "district": "Tarn Taran",
       "total_fires": 9
     },
     {
@@ -73,12 +73,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Barnala",
+      "district": "Sahibzada Ajit Singh Nag*",
       "total_fires": 4
     },
     {
       "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
+      "district": "Firozpur",
       "total_fires": 4
     },
     {
@@ -93,7 +93,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Firozpur",
+      "district": "Barnala",
       "total_fires": 4
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 350,
-    "haryana": 64
+    "haryana": 65
   }
 }
