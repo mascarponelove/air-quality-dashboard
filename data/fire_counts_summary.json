@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-03T13:51:51.883167Z",
+  "last_updated": "2026-07-04T02:25:41.892560Z",
   "total_fire_count": 225,
   "date_range": {
     "start": "2026-06-26",
@@ -53,22 +53,22 @@
     },
     {
       "state": "Punjab",
+      "district": "Firozpur",
+      "total_fires": 4
+    },
+    {
+      "state": "Punjab",
       "district": "Sangrur",
       "total_fires": 4
     },
     {
       "state": "Punjab",
-      "district": "Firozpur",
-      "total_fires": 4
+      "district": "Hoshiarpur",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
       "district": "Ambala",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
       "total_fires": 3
     },
     {
@@ -82,16 +82,6 @@
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Fatehabad",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Nuh",
-      "total_fires": 1
-    },
-    {
       "state": "Punjab",
       "district": "Amritsar",
       "total_fires": 1
@@ -99,6 +89,16 @@
     {
       "state": "Punjab",
       "district": "Barnala",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Fatehabad",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Yamunanagar",
       "total_fires": 1
     },
     {
