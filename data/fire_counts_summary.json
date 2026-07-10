@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-07-10T02:29:36.664929Z",
-  "total_fire_count": 38,
+  "last_updated": "2026-07-10T14:09:50.998290Z",
+  "total_fire_count": 53,
   "date_range": {
     "start": "2026-07-03",
-    "end": "2026-07-09"
+    "end": "2026-07-10"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 12
+      "total_fires": 21
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 8
+      "total_fires": 12
     },
     {
       "state": "Punjab",
@@ -24,7 +24,7 @@
     {
       "state": "Punjab",
       "district": "Moga",
-      "total_fires": 3
+      "total_fires": 5
     },
     {
       "state": "Haryana",
@@ -58,7 +58,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 33,
+    "punjab": 48,
     "haryana": 5
   }
 }
