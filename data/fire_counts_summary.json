@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-07-11T02:06:56.144987Z",
-  "total_fire_count": 53,
+  "last_updated": "2026-07-11T13:06:31.336877Z",
+  "total_fire_count": 48,
   "date_range": {
-    "start": "2026-07-03",
+    "start": "2026-07-04",
     "end": "2026-07-10"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 21
+      "total_fires": 20
     },
     {
       "state": "Punjab",
@@ -28,17 +28,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Fatehgarh Sahib",
       "total_fires": 2
     },
     {
@@ -58,7 +48,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 48,
-    "haryana": 5
+    "punjab": 45,
+    "haryana": 3
   }
 }
