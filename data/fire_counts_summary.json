@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-07-14T01:57:44.916453Z",
-  "total_fire_count": 42,
+  "last_updated": "2026-07-14T13:20:57.305845Z",
+  "total_fire_count": 38,
   "date_range": {
-    "start": "2026-07-06",
-    "end": "2026-07-10"
+    "start": "2026-07-07",
+    "end": "2026-07-14"
   },
   "top_districts": [
     {
@@ -14,7 +14,7 @@
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 9
+      "total_fires": 6
     },
     {
       "state": "Punjab",
@@ -28,13 +28,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Sirsa",
-      "total_fires": 1
+      "total_fires": 2
     },
     {
       "state": "Punjab",
@@ -48,7 +43,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 39,
-    "haryana": 3
+    "punjab": 36,
+    "haryana": 2
   }
 }
