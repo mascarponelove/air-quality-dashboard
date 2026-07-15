@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-14T13:20:57.305845Z",
-  "total_fire_count": 38,
+  "last_updated": "2026-07-15T01:54:10.346651Z",
+  "total_fire_count": 40,
   "date_range": {
     "start": "2026-07-07",
     "end": "2026-07-14"
@@ -29,7 +29,12 @@
     {
       "state": "Haryana",
       "district": "Sirsa",
-      "total_fires": 2
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Gurugram",
+      "total_fires": 1
     },
     {
       "state": "Punjab",
@@ -44,6 +49,6 @@
   ],
   "state_totals": {
     "punjab": 36,
-    "haryana": 2
+    "haryana": 4
   }
 }
