@@ -1,19 +1,24 @@
 {
-  "last_updated": "2026-07-15T01:54:10.346651Z",
-  "total_fire_count": 40,
+  "last_updated": "2026-07-16T13:38:35.521001Z",
+  "total_fire_count": 58,
   "date_range": {
-    "start": "2026-07-07",
-    "end": "2026-07-14"
+    "start": "2026-07-09",
+    "end": "2026-07-16"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 19
+      "total_fires": 22
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
+      "total_fires": 13
+    },
+    {
+      "state": "Punjab",
+      "district": "Kapurthala",
       "total_fires": 6
     },
     {
@@ -22,14 +27,24 @@
       "total_fires": 5
     },
     {
-      "state": "Punjab",
-      "district": "Kapurthala",
-      "total_fires": 4
-    },
-    {
       "state": "Haryana",
       "district": "Sirsa",
       "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Firozpur",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Tarn Taran",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
@@ -37,18 +52,18 @@
       "total_fires": 1
     },
     {
-      "state": "Punjab",
-      "district": "Firozpur",
+      "state": "Haryana",
+      "district": "Sonipat",
       "total_fires": 1
     },
     {
       "state": "Punjab",
-      "district": "Tarn Taran",
+      "district": "Rupnagar",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 36,
-    "haryana": 4
+    "punjab": 51,
+    "haryana": 7
   }
 }
