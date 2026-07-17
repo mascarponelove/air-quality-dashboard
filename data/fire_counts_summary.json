@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-07-17T02:08:22.717273Z",
-  "total_fire_count": 58,
+  "last_updated": "2026-07-17T13:15:55.851131Z",
+  "total_fire_count": 47,
   "date_range": {
-    "start": "2026-07-09",
-    "end": "2026-07-16"
+    "start": "2026-07-10",
+    "end": "2026-07-17"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 22
+      "total_fires": 18
     },
     {
       "state": "Punjab",
@@ -18,17 +18,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Kapurthala",
-      "total_fires": 6
-    },
-    {
-      "state": "Punjab",
       "district": "Moga",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Sirsa",
       "total_fires": 3
     },
     {
@@ -37,8 +27,13 @@
       "total_fires": 2
     },
     {
+      "state": "Haryana",
+      "district": "Sirsa",
+      "total_fires": 2
+    },
+    {
       "state": "Punjab",
-      "district": "Firozpur",
+      "district": "Kapurthala",
       "total_fires": 2
     },
     {
@@ -53,7 +48,17 @@
     },
     {
       "state": "Haryana",
+      "district": "Jind",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
       "district": "Sonipat",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Firozpur",
       "total_fires": 1
     },
     {
@@ -63,7 +68,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 51,
+    "punjab": 40,
     "haryana": 7
   }
 }
