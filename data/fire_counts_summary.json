@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-19T02:08:26.930751Z",
+  "last_updated": "2026-07-19T13:04:24.356417Z",
   "total_fire_count": 33,
   "date_range": {
     "start": "2026-07-14",
@@ -28,22 +28,22 @@
     },
     {
       "state": "Punjab",
-      "district": "Tarn Taran",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
       "district": "Kapurthala",
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 1
+      "state": "Punjab",
+      "district": "Tarn Taran",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
       "district": "Gurugram",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Jind",
       "total_fires": 1
     },
     {
