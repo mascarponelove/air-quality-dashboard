@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-22T13:38:10.999278Z",
-  "total_fire_count": 32,
+  "last_updated": "2026-07-23T02:12:09.106587Z",
+  "total_fire_count": 35,
   "date_range": {
     "start": "2026-07-15",
     "end": "2026-07-22"
@@ -19,7 +19,12 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 5
+      "total_fires": 7
+    },
+    {
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 2
     },
     {
       "state": "Punjab",
@@ -42,11 +47,6 @@
       "total_fires": 1
     },
     {
-      "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 1
-    },
-    {
       "state": "Punjab",
       "district": "Firozpur",
       "total_fires": 1
@@ -64,6 +64,6 @@
   ],
   "state_totals": {
     "punjab": 24,
-    "haryana": 8
+    "haryana": 11
   }
 }
