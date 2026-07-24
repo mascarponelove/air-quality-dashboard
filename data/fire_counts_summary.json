@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-07-24T02:08:34.829732Z",
-  "total_fire_count": 20,
+  "last_updated": "2026-07-24T13:26:04.141055Z",
+  "total_fire_count": 17,
   "date_range": {
-    "start": "2026-07-16",
+    "start": "2026-07-17",
     "end": "2026-07-23"
   },
   "top_districts": [
@@ -22,11 +22,6 @@
       "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 3
-    },
-    {
       "state": "Haryana",
       "district": "Jind",
       "total_fires": 1
@@ -38,7 +33,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Kapurthala",
+      "district": "Ludhiana",
       "total_fires": 1
     },
     {
@@ -48,7 +43,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 9,
+    "punjab": 6,
     "haryana": 11
   }
 }
