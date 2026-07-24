@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-23T13:43:32.947519Z",
+  "last_updated": "2026-07-24T02:08:34.824337Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -124,11 +124,15 @@
           {
             "district": "Panipat",
             "fire_count": 2
+          },
+          {
+            "district": "Jhajjar",
+            "fire_count": 1
           }
         ],
-        "total": 2
+        "total": 3
       },
-      "combined_total": 2
+      "combined_total": 3
     }
   ]
 }
