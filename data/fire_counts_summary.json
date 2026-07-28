@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-07-27T14:19:38.521673Z",
-  "total_fire_count": 14,
+  "last_updated": "2026-07-28T02:01:29.984466Z",
+  "total_fire_count": 16,
   "date_range": {
     "start": "2026-07-21",
-    "end": "2026-07-26"
+    "end": "2026-07-27"
   },
   "top_districts": [
     {
@@ -19,16 +19,21 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 2
+      "total_fires": 3
     },
     {
       "state": "Haryana",
       "district": "Sonipat",
       "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 0,
-    "haryana": 14
+    "punjab": 1,
+    "haryana": 15
   }
 }
