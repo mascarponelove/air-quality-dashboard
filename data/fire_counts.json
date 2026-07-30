@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-29T13:56:18.060434Z",
+  "last_updated": "2026-07-30T01:54:21.616449Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -112,6 +112,23 @@
         "total": 1
       },
       "combined_total": 2
+    },
+    {
+      "date": "2026-07-29",
+      "punjab": {
+        "districts": [],
+        "total": 0
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Panipat",
+            "fire_count": 1
+          }
+        ],
+        "total": 1
+      },
+      "combined_total": 1
     }
   ]
 }
