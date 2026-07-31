@@ -1,30 +1,40 @@
 {
-  "last_updated": "2026-07-30T01:54:21.623015Z",
+  "last_updated": "2026-07-31T02:13:01.565604Z",
   "total_fire_count": 14,
   "date_range": {
-    "start": "2026-07-22",
-    "end": "2026-07-29"
+    "start": "2026-07-23",
+    "end": "2026-07-30"
   },
   "top_districts": [
     {
       "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 5
+      "district": "Faridabad",
+      "total_fires": 4
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 3
+      "district": "Panipat",
+      "total_fires": 4
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 3
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Gurugram",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 1
     },
     {
       "state": "Haryana",
       "district": "Sonipat",
-      "total_fires": 2
+      "total_fires": 1
     },
     {
       "state": "Punjab",
