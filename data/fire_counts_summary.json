@@ -1,15 +1,20 @@
 {
-  "last_updated": "2026-07-31T13:51:01.575734Z",
-  "total_fire_count": 11,
+  "last_updated": "2026-08-01T02:14:49.959576Z",
+  "total_fire_count": 13,
   "date_range": {
     "start": "2026-07-25",
-    "end": "2026-07-30"
+    "end": "2026-07-31"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 4
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
@@ -28,11 +33,6 @@
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
       "district": "Sonipat",
       "total_fires": 1
     },
@@ -44,6 +44,6 @@
   ],
   "state_totals": {
     "punjab": 1,
-    "haryana": 10
+    "haryana": 12
   }
 }
