@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-08-06T02:02:44.367843Z",
-  "total_fire_count": 14,
+  "last_updated": "2026-08-06T13:52:07.443550Z",
+  "total_fire_count": 13,
   "date_range": {
-    "start": "2026-07-29",
+    "start": "2026-07-30",
     "end": "2026-08-02"
   },
   "top_districts": [
@@ -23,11 +23,6 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Gurugram",
       "total_fires": 1
     },
@@ -38,12 +33,17 @@
     },
     {
       "state": "Haryana",
+      "district": "Panipat",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
       "district": "Rewari",
       "total_fires": 1
     }
   ],
   "state_totals": {
     "punjab": 0,
-    "haryana": 14
+    "haryana": 13
   }
 }
