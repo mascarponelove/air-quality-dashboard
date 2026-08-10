@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-08-09T12:37:50.231365Z",
-  "total_fire_count": 7,
+  "last_updated": "2026-08-10T01:16:51.280728Z",
+  "total_fire_count": 9,
   "date_range": {
     "start": "2026-08-02",
-    "end": "2026-08-02"
+    "end": "2026-08-09"
   },
   "top_districts": [
     {
@@ -13,12 +13,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 1
+      "district": "Panipat",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
+      "district": "Jhajjar",
       "total_fires": 1
     },
     {
@@ -29,6 +29,6 @@
   ],
   "state_totals": {
     "punjab": 0,
-    "haryana": 7
+    "haryana": 9
   }
 }
