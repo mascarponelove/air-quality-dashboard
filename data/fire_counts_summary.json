@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-08-12T01:23:12.315039Z",
-  "total_fire_count": 8,
+  "last_updated": "2026-08-12T12:55:59.465672Z",
+  "total_fire_count": 9,
   "date_range": {
     "start": "2026-08-09",
-    "end": "2026-08-11"
+    "end": "2026-08-12"
   },
   "top_districts": [
     {
@@ -15,10 +15,15 @@
       "state": "Haryana",
       "district": "Panipat",
       "total_fires": 4
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 0,
+    "punjab": 1,
     "haryana": 8
   }
 }
