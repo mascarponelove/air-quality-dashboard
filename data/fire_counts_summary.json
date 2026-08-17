@@ -1,29 +1,54 @@
 {
-  "last_updated": "2026-08-15T12:26:03.581554Z",
-  "total_fire_count": 9,
+  "last_updated": "2026-08-17T00:55:33.958850Z",
+  "total_fire_count": 20,
   "date_range": {
     "start": "2026-08-09",
-    "end": "2026-08-12"
+    "end": "2026-08-16"
   },
   "top_districts": [
+    {
+      "state": "Haryana",
+      "district": "Panipat",
+      "total_fires": 6
+    },
     {
       "state": "Haryana",
       "district": "Faridabad",
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Panipat",
+      "state": "Punjab",
+      "district": "Firozpur",
       "total_fires": 4
     },
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Fazilka",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Tarn Taran",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 1,
-    "haryana": 8
+    "punjab": 9,
+    "haryana": 11
   }
 }
