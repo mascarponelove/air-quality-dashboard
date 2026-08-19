@@ -1,16 +1,11 @@
 {
-  "last_updated": "2026-08-19T00:55:32.878325Z",
-  "total_fire_count": 18,
+  "last_updated": "2026-08-19T12:34:43.794188Z",
+  "total_fire_count": 14,
   "date_range": {
-    "start": "2026-08-11",
+    "start": "2026-08-12",
     "end": "2026-08-18"
   },
   "top_districts": [
-    {
-      "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 5
-    },
     {
       "state": "Punjab",
       "district": "Firozpur",
@@ -32,6 +27,11 @@
       "total_fires": 2
     },
     {
+      "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 1
+    },
+    {
       "state": "Punjab",
       "district": "Fazilka",
       "total_fires": 1
@@ -49,6 +49,6 @@
   ],
   "state_totals": {
     "punjab": 9,
-    "haryana": 9
+    "haryana": 5
   }
 }
