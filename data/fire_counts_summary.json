@@ -1,11 +1,16 @@
 {
-  "last_updated": "2026-08-20T12:36:13.836380Z",
-  "total_fire_count": 14,
+  "last_updated": "2026-08-21T00:58:13.068727Z",
+  "total_fire_count": 20,
   "date_range": {
     "start": "2026-08-15",
-    "end": "2026-08-19"
+    "end": "2026-08-20"
   },
   "top_districts": [
+    {
+      "state": "Haryana",
+      "district": "Panipat",
+      "total_fires": 5
+    },
     {
       "state": "Punjab",
       "district": "Firozpur",
@@ -13,13 +18,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Panipat",
+      "district": "Jhajjar",
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 2
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
@@ -48,7 +53,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 8,
-    "haryana": 6
+    "punjab": 11,
+    "haryana": 9
   }
 }
