@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-08-23T12:27:48.535668Z",
-  "total_fire_count": 25,
+  "last_updated": "2026-08-24T00:56:46.526509Z",
+  "total_fire_count": 31,
   "date_range": {
     "start": "2026-08-16",
     "end": "2026-08-23"
@@ -9,7 +9,12 @@
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 9
+      "total_fires": 13
+    },
+    {
+      "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 4
     },
     {
       "state": "Punjab",
@@ -25,11 +30,6 @@
       "state": "Punjab",
       "district": "Bathinda",
       "total_fires": 3
-    },
-    {
-      "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 2
     },
     {
       "state": "Punjab",
@@ -54,6 +54,6 @@
   ],
   "state_totals": {
     "punjab": 11,
-    "haryana": 14
+    "haryana": 20
   }
 }
