@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-08-26T12:39:47.100735Z",
-  "total_fire_count": 20,
+  "last_updated": "2026-08-27T21:37:52.184322Z",
+  "total_fire_count": 21,
   "date_range": {
-    "start": "2026-08-19",
-    "end": "2026-08-25"
+    "start": "2026-08-20",
+    "end": "2026-08-27"
   },
   "top_districts": [
     {
@@ -25,10 +25,15 @@
       "state": "Haryana",
       "district": "Jhajjar",
       "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 3,
+    "punjab": 4,
     "haryana": 17
   }
 }
