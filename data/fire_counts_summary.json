@@ -1,30 +1,15 @@
 {
-  "last_updated": "2026-09-04T02:31:12.754014Z",
-  "total_fire_count": 39,
+  "last_updated": "2026-09-05T02:32:10.242703Z",
+  "total_fire_count": 33,
   "date_range": {
-    "start": "2026-08-27",
-    "end": "2026-09-03"
+    "start": "2026-08-29",
+    "end": "2026-09-04"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 17
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 5
-    },
-    {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 3
+      "total_fires": 16
     },
     {
       "state": "Haryana",
@@ -33,12 +18,27 @@
     },
     {
       "state": "Haryana",
-      "district": "Ambala",
-      "total_fires": 1
+      "district": "Faridabad",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 3
+    },
+    {
+      "state": "Haryana",
+      "district": "Sirsa",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
       "district": "Hisar",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Ambala",
       "total_fires": 1
     },
     {
@@ -58,17 +58,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
       "district": "Sri Muktsar Sahib",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 10,
-    "haryana": 29
+    "punjab": 7,
+    "haryana": 26
   }
 }
