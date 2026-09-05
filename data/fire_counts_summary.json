@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-05T02:32:10.242703Z",
+  "last_updated": "2026-09-05T14:25:02.595052Z",
   "total_fire_count": 33,
   "date_range": {
     "start": "2026-08-29",
@@ -13,12 +13,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
+      "district": "Faridabad",
       "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
+      "district": "Jhajjar",
       "total_fires": 3
     },
     {
@@ -33,12 +33,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
+      "district": "Ambala",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Ambala",
+      "district": "Hisar",
       "total_fires": 1
     },
     {
