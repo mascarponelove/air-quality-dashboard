@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-09-05T14:25:02.595052Z",
-  "total_fire_count": 33,
+  "last_updated": "2026-09-06T02:28:35.815414Z",
+  "total_fire_count": 34,
   "date_range": {
     "start": "2026-08-29",
-    "end": "2026-09-04"
+    "end": "2026-09-05"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 16
+      "total_fires": 17
     },
     {
       "state": "Haryana",
@@ -64,6 +64,6 @@
   ],
   "state_totals": {
     "punjab": 7,
-    "haryana": 26
+    "haryana": 27
   }
 }
