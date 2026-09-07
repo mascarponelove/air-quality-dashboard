@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-06T14:47:14.299035Z",
+  "last_updated": "2026-09-07T02:25:44.815942Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -165,6 +165,31 @@
         "total": 1
       },
       "combined_total": 1
+    },
+    {
+      "date": "2026-09-06",
+      "punjab": {
+        "districts": [],
+        "total": 0
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Faridabad",
+            "fire_count": 2
+          },
+          {
+            "district": "Gurugram",
+            "fire_count": 1
+          },
+          {
+            "district": "Panipat",
+            "fire_count": 1
+          }
+        ],
+        "total": 4
+      },
+      "combined_total": 4
     }
   ]
 }
