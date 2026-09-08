@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-07T17:04:47.773809Z",
-  "total_fire_count": 30,
+  "last_updated": "2026-09-08T02:38:54.843715Z",
+  "total_fire_count": 38,
   "date_range": {
     "start": "2026-08-31",
     "end": "2026-09-07"
@@ -9,32 +9,27 @@
     {
       "state": "Haryana",
       "district": "Panipat",
-      "total_fires": 11
+      "total_fires": 12
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 5
+      "total_fires": 7
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 4
     },
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 3
+      "total_fires": 4
     },
     {
       "state": "Haryana",
       "district": "Sirsa",
       "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 1
     },
     {
       "state": "Haryana",
@@ -44,6 +39,16 @@
     {
       "state": "Haryana",
       "district": "Gurugram",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Sonipat",
       "total_fires": 1
     },
     {
@@ -63,12 +68,17 @@
     },
     {
       "state": "Punjab",
+      "district": "Rupnagar",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
       "district": "Sri Muktsar Sahib",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 7,
-    "haryana": 23
+    "punjab": 9,
+    "haryana": 29
   }
 }
