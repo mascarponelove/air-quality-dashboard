@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-09-09T02:39:07.145968Z",
-  "total_fire_count": 34,
+  "last_updated": "2026-09-09T15:47:37.022216Z",
+  "total_fire_count": 31,
   "date_range": {
-    "start": "2026-09-01",
+    "start": "2026-09-02",
     "end": "2026-09-08"
   },
   "top_districts": [
@@ -17,13 +17,13 @@
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Jhajjar",
+      "state": "Punjab",
+      "district": "Bathinda",
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Bathinda",
+      "state": "Haryana",
+      "district": "Jhajjar",
       "total_fires": 4
     },
     {
@@ -43,11 +43,6 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
       "district": "Sonipat",
       "total_fires": 1
     },
@@ -58,22 +53,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Fatehgarh Sahib",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Firozpur",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
       "district": "Rupnagar",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 8,
-    "haryana": 26
+    "punjab": 6,
+    "haryana": 25
   }
 }
