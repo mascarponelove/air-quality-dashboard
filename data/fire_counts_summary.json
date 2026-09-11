@@ -1,16 +1,11 @@
 {
-  "last_updated": "2026-09-11T02:34:40.662814Z",
-  "total_fire_count": 37,
+  "last_updated": "2026-09-11T15:43:00.837675Z",
+  "total_fire_count": 24,
   "date_range": {
-    "start": "2026-09-03",
+    "start": "2026-09-04",
     "end": "2026-09-10"
   },
   "top_districts": [
-    {
-      "state": "Haryana",
-      "district": "Panipat",
-      "total_fires": 13
-    },
     {
       "state": "Haryana",
       "district": "Faridabad",
@@ -18,17 +13,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
+      "district": "Panipat",
       "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 3
     },
     {
       "state": "Punjab",
       "district": "Bathinda",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
-      "district": "Sirsa",
       "total_fires": 3
     },
     {
@@ -39,6 +34,11 @@
     {
       "state": "Haryana",
       "district": "Karnal",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Sirsa",
       "total_fires": 1
     },
     {
@@ -63,7 +63,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 7,
-    "haryana": 30
+    "punjab": 6,
+    "haryana": 18
   }
 }
