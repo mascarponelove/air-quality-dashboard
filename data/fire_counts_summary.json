@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-16T15:57:40.046381Z",
+  "last_updated": "2026-09-17T02:59:19.072052Z",
   "total_fire_count": 53,
   "date_range": {
     "start": "2026-09-09",
@@ -28,13 +28,18 @@
     },
     {
       "state": "Punjab",
+      "district": "Firozpur",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
       "district": "Bathinda",
       "total_fires": 3
     },
     {
       "state": "Punjab",
-      "district": "Firozpur",
-      "total_fires": 3
+      "district": "Mansa",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
@@ -47,18 +52,13 @@
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Mansa",
-      "total_fires": 2
-    },
-    {
       "state": "Haryana",
-      "district": "Hisar",
+      "district": "Karnal",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Karnal",
+      "district": "Hisar",
       "total_fires": 1
     },
     {
