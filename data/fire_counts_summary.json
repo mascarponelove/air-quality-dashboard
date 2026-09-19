@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-18T15:40:35.654489Z",
-  "total_fire_count": 50,
+  "last_updated": "2026-09-19T02:45:14.235233Z",
+  "total_fire_count": 54,
   "date_range": {
     "start": "2026-09-11",
     "end": "2026-09-18"
@@ -9,7 +9,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 13
+      "total_fires": 14
     },
     {
       "state": "Punjab",
@@ -24,7 +24,7 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 4
+      "total_fires": 7
     },
     {
       "state": "Punjab",
@@ -69,6 +69,6 @@
   ],
   "state_totals": {
     "punjab": 31,
-    "haryana": 19
+    "haryana": 23
   }
 }
