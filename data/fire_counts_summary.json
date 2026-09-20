@@ -1,20 +1,15 @@
 {
-  "last_updated": "2026-09-20T02:57:24.541598Z",
-  "total_fire_count": 69,
+  "last_updated": "2026-09-20T15:16:58.081117Z",
+  "total_fire_count": 55,
   "date_range": {
-    "start": "2026-09-12",
-    "end": "2026-09-19"
+    "start": "2026-09-13",
+    "end": "2026-09-20"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 17
-    },
-    {
-      "state": "Punjab",
-      "district": "Amritsar",
-      "total_fires": 13
+      "total_fires": 12
     },
     {
       "state": "Haryana",
@@ -23,17 +18,22 @@
     },
     {
       "state": "Punjab",
-      "district": "Tarn Taran",
-      "total_fires": 8
+      "district": "Amritsar",
+      "total_fires": 10
     },
     {
       "state": "Punjab",
-      "district": "Firozpur",
-      "total_fires": 4
+      "district": "Tarn Taran",
+      "total_fires": 5
     },
     {
       "state": "Haryana",
       "district": "Hisar",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Firozpur",
       "total_fires": 3
     },
     {
@@ -43,22 +43,17 @@
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Rupnagar",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
       "district": "Mansa",
       "total_fires": 2
     },
     {
       "state": "Punjab",
       "district": "Patiala",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Rupnagar",
       "total_fires": 2
     },
     {
@@ -78,7 +73,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 38,
-    "haryana": 31
+    "punjab": 29,
+    "haryana": 26
   }
 }
