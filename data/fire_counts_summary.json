@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-21T17:41:24.383315Z",
-  "total_fire_count": 58,
+  "last_updated": "2026-09-22T02:55:02.566411Z",
+  "total_fire_count": 63,
   "date_range": {
     "start": "2026-09-14",
     "end": "2026-09-21"
@@ -9,7 +9,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 12
+      "total_fires": 16
     },
     {
       "state": "Punjab",
@@ -37,8 +37,8 @@
       "total_fires": 3
     },
     {
-      "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
+      "state": "Haryana",
+      "district": "Sonipat",
       "total_fires": 2
     },
     {
@@ -57,14 +57,9 @@
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 1
-    },
-    {
       "state": "Punjab",
-      "district": "Pathankot",
-      "total_fires": 1
+      "district": "Sahibzada Ajit Singh Nag*",
+      "total_fires": 2
     },
     {
       "state": "Punjab",
@@ -75,10 +70,15 @@
       "state": "Punjab",
       "district": "Ludhiana",
       "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Pathankot",
+      "total_fires": 1
     }
   ],
   "state_totals": {
     "punjab": 33,
-    "haryana": 25
+    "haryana": 30
   }
 }
