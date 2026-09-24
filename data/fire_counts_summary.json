@@ -1,11 +1,16 @@
 {
-  "last_updated": "2026-09-23T15:57:13.244843Z",
-  "total_fire_count": 81,
+  "last_updated": "2026-09-24T02:45:49.772359Z",
+  "total_fire_count": 87,
   "date_range": {
     "start": "2026-09-16",
     "end": "2026-09-23"
   },
   "top_districts": [
+    {
+      "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 17
+    },
     {
       "state": "Punjab",
       "district": "Amritsar",
@@ -13,18 +18,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 14
-    },
-    {
-      "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 11
+      "total_fires": 13
     },
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 5
+      "total_fires": 6
     },
     {
       "state": "Punjab",
@@ -103,7 +103,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 44,
-    "haryana": 37
+    "punjab": 45,
+    "haryana": 42
   }
 }
