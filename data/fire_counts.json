@@ -1,37 +1,8 @@
 {
-  "last_updated": "2026-09-24T02:45:49.767263Z",
+  "last_updated": "2026-09-24T16:20:29.069197Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-09-16",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Amritsar",
-            "fire_count": 3
-          },
-          {
-            "district": "Hoshiarpur",
-            "fire_count": 1
-          },
-          {
-            "district": "Patiala",
-            "fire_count": 1
-          },
-          {
-            "district": "Tarn Taran",
-            "fire_count": 1
-          }
-        ],
-        "total": 6
-      },
-      "haryana": {
-        "districts": [],
-        "total": 0
-      },
-      "combined_total": 6
-    },
     {
       "date": "2026-09-17",
       "punjab": {
@@ -292,6 +263,40 @@
         "total": 10
       },
       "combined_total": 25
+    },
+    {
+      "date": "2026-09-24",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Amritsar",
+            "fire_count": 2
+          },
+          {
+            "district": "Bathinda",
+            "fire_count": 1
+          },
+          {
+            "district": "Gurdaspur",
+            "fire_count": 1
+          },
+          {
+            "district": "Patiala",
+            "fire_count": 1
+          }
+        ],
+        "total": 5
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Hisar",
+            "fire_count": 1
+          }
+        ],
+        "total": 1
+      },
+      "combined_total": 6
     }
   ]
 }
