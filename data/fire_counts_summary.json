@@ -1,34 +1,39 @@
 {
-  "last_updated": "2026-09-26T03:05:49.268720Z",
-  "total_fire_count": 94,
+  "last_updated": "2026-09-26T15:34:42.554559Z",
+  "total_fire_count": 92,
   "date_range": {
-    "start": "2026-09-18",
-    "end": "2026-09-25"
+    "start": "2026-09-19",
+    "end": "2026-09-26"
   },
   "top_districts": [
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 19
+      "total_fires": 18
     },
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 15
+      "total_fires": 16
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 15
+      "total_fires": 12
     },
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 6
+      "total_fires": 7
     },
     {
       "state": "Haryana",
       "district": "Sirsa",
+      "total_fires": 4
+    },
+    {
+      "state": "Punjab",
+      "district": "Sri Muktsar Sahib",
       "total_fires": 4
     },
     {
@@ -44,16 +49,6 @@
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 4
-    },
-    {
-      "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
-      "total_fires": 4
-    },
-    {
-      "state": "Punjab",
-      "district": "Fazilka",
       "total_fires": 3
     },
     {
@@ -63,12 +58,17 @@
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 2
+      "district": "Fazilka",
+      "total_fires": 3
     },
     {
       "state": "Punjab",
       "district": "Patiala",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
       "total_fires": 2
     },
     {
@@ -78,7 +78,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Sahibzada Ajit Singh Nag*",
+      "district": "Gurdaspur",
       "total_fires": 2
     },
     {
@@ -93,6 +93,11 @@
     },
     {
       "state": "Punjab",
+      "district": "Sahibzada Ajit Singh Nag*",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
       "district": "Pathankot",
       "total_fires": 1
     },
@@ -100,15 +105,10 @@
       "state": "Punjab",
       "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 47,
-    "haryana": 47
+    "punjab": 50,
+    "haryana": 42
   }
 }
