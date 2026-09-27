@@ -1,39 +1,39 @@
 {
-  "last_updated": "2026-09-27T03:11:57.169134Z",
-  "total_fire_count": 92,
+  "last_updated": "2026-09-27T16:14:18.557743Z",
+  "total_fire_count": 86,
   "date_range": {
-    "start": "2026-09-19",
-    "end": "2026-09-26"
+    "start": "2026-09-20",
+    "end": "2026-09-27"
   },
   "top_districts": [
     {
-      "state": "Haryana",
-      "district": "Faridabad",
+      "state": "Punjab",
+      "district": "Amritsar",
       "total_fires": 18
     },
     {
-      "state": "Punjab",
-      "district": "Amritsar",
-      "total_fires": 16
-    },
-    {
       "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 12
+      "district": "Faridabad",
+      "total_fires": 15
     },
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 7
+      "total_fires": 9
     },
     {
       "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 4
+      "district": "Jhajjar",
+      "total_fires": 9
     },
     {
       "state": "Punjab",
       "district": "Firozpur",
+      "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Sirsa",
       "total_fires": 4
     },
     {
@@ -44,16 +44,6 @@
     {
       "state": "Haryana",
       "district": "Sonipat",
-      "total_fires": 4
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Ludhiana",
       "total_fires": 3
     },
     {
@@ -62,18 +52,23 @@
       "total_fires": 3
     },
     {
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
+      "total_fires": 2
+    },
+    {
       "state": "Punjab",
       "district": "Bathinda",
       "total_fires": 2
     },
     {
       "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Rupnagar",
+      "district": "Ludhiana",
       "total_fires": 2
     },
     {
@@ -82,8 +77,8 @@
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
+      "state": "Haryana",
+      "district": "Mahendragarh",
       "total_fires": 1
     },
     {
@@ -98,17 +93,22 @@
     },
     {
       "state": "Punjab",
-      "district": "Sangrur",
+      "district": "Patiala",
       "total_fires": 1
     },
     {
       "state": "Punjab",
       "district": "Shahid Bhagat Singh Nagar",
       "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Sangrur",
+      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 50,
-    "haryana": 42
+    "punjab": 52,
+    "haryana": 34
   }
 }
