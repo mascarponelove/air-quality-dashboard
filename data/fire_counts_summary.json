@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-28T19:07:38.587433Z",
-  "total_fire_count": 103,
+  "last_updated": "2026-09-29T03:47:09.154459Z",
+  "total_fire_count": 110,
   "date_range": {
     "start": "2026-09-21",
     "end": "2026-09-28"
@@ -14,12 +14,12 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 14
+      "total_fires": 18
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 11
+      "total_fires": 13
     },
     {
       "state": "Punjab",
@@ -52,13 +52,13 @@
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Fazilka",
-      "total_fires": 3
-    },
-    {
       "state": "Haryana",
       "district": "Hisar",
+      "total_fires": 4
+    },
+    {
+      "state": "Punjab",
+      "district": "Fazilka",
       "total_fires": 3
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 65,
-    "haryana": 38
+    "haryana": 45
   }
 }
