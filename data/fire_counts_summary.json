@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-01T17:53:11.633307Z",
-  "total_fire_count": 92,
+  "last_updated": "2026-10-02T03:40:10.550334Z",
+  "total_fire_count": 93,
   "date_range": {
     "start": "2026-09-24",
     "end": "2026-10-01"
@@ -62,13 +62,18 @@
       "total_fires": 2
     },
     {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 1
+    },
+    {
       "state": "Haryana",
       "district": "Sonipat",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Nuh",
+      "district": "Palwal",
       "total_fires": 1
     },
     {
@@ -77,8 +82,8 @@
       "total_fires": 1
     },
     {
-      "state": "Punjab",
-      "district": "Bathinda",
+      "state": "Haryana",
+      "district": "Nuh",
       "total_fires": 1
     },
     {
@@ -99,6 +104,6 @@
   ],
   "state_totals": {
     "punjab": 64,
-    "haryana": 28
+    "haryana": 29
   }
 }
