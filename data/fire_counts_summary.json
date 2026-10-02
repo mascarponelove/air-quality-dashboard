@@ -1,35 +1,35 @@
 {
-  "last_updated": "2026-10-02T03:40:10.550334Z",
-  "total_fire_count": 93,
+  "last_updated": "2026-10-02T17:17:10.808026Z",
+  "total_fire_count": 99,
   "date_range": {
-    "start": "2026-09-24",
-    "end": "2026-10-01"
+    "start": "2026-09-25",
+    "end": "2026-10-02"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 28
+      "total_fires": 32
     },
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 11
+      "total_fires": 12
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 10
+      "total_fires": 9
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 9
+      "total_fires": 7
     },
     {
       "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 7
+      "total_fires": 6
     },
     {
       "state": "Punjab",
@@ -53,22 +53,32 @@
     },
     {
       "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
       "district": "Moga",
       "total_fires": 2
     },
     {
       "state": "Punjab",
-      "district": "Bathinda",
+      "district": "Patiala",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Fazilka",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Bhiwani",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
+      "district": "Jind",
       "total_fires": 1
     },
     {
@@ -83,6 +93,11 @@
     },
     {
       "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
       "district": "Nuh",
       "total_fires": 1
     },
@@ -90,20 +105,10 @@
       "state": "Punjab",
       "district": "Hoshiarpur",
       "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Sangrur",
-      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 64,
-    "haryana": 29
+    "punjab": 71,
+    "haryana": 28
   }
 }
