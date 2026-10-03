@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-02T17:17:10.808026Z",
-  "total_fire_count": 99,
+  "last_updated": "2026-10-03T03:24:45.751967Z",
+  "total_fire_count": 101,
   "date_range": {
     "start": "2026-09-25",
     "end": "2026-10-02"
@@ -19,7 +19,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 9
+      "total_fires": 10
     },
     {
       "state": "Haryana",
@@ -33,12 +33,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Faridkot",
+      "district": "Firozpur",
       "total_fires": 5
     },
     {
       "state": "Punjab",
-      "district": "Firozpur",
+      "district": "Faridkot",
       "total_fires": 5
     },
     {
@@ -53,16 +53,6 @@
     },
     {
       "state": "Punjab",
-      "district": "Moga",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
       "district": "Fazilka",
       "total_fires": 2
     },
@@ -72,14 +62,14 @@
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Bhiwani",
-      "total_fires": 1
+      "state": "Punjab",
+      "district": "Moga",
+      "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 1
+      "state": "Punjab",
+      "district": "Patiala",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
@@ -93,12 +83,22 @@
     },
     {
       "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
       "district": "Sonipat",
       "total_fires": 1
     },
     {
       "state": "Haryana",
       "district": "Nuh",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Jind",
       "total_fires": 1
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 71,
-    "haryana": 28
+    "haryana": 30
   }
 }
