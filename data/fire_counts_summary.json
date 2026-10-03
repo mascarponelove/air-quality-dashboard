@@ -1,30 +1,30 @@
 {
-  "last_updated": "2026-10-03T03:24:45.751967Z",
-  "total_fire_count": 101,
+  "last_updated": "2026-10-03T15:35:22.141053Z",
+  "total_fire_count": 108,
   "date_range": {
-    "start": "2026-09-25",
-    "end": "2026-10-02"
+    "start": "2026-09-26",
+    "end": "2026-10-03"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 32
+      "total_fires": 36
     },
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 12
+      "total_fires": 15
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 10
+      "total_fires": 8
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 7
+      "total_fires": 6
     },
     {
       "state": "Punjab",
@@ -33,18 +33,33 @@
     },
     {
       "state": "Punjab",
-      "district": "Firozpur",
-      "total_fires": 5
+      "district": "Faridkot",
+      "total_fires": 6
     },
     {
       "state": "Punjab",
-      "district": "Faridkot",
+      "district": "Firozpur",
       "total_fires": 5
     },
     {
       "state": "Haryana",
       "district": "Hisar",
       "total_fires": 4
+    },
+    {
+      "state": "Haryana",
+      "district": "Kurukshetra",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Patiala",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Moga",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
@@ -58,27 +73,22 @@
     },
     {
       "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 2
+      "district": "Sangrur",
+      "total_fires": 1
     },
     {
       "state": "Punjab",
-      "district": "Moga",
-      "total_fires": 2
+      "district": "Jalandhar",
+      "total_fires": 1
     },
     {
       "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Palwal",
+      "district": "Hoshiarpur",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Rewari",
+      "district": "Bhiwani",
       "total_fires": 1
     },
     {
@@ -88,27 +98,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
+      "district": "Rewari",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Nuh",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Hoshiarpur",
+      "district": "Palwal",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 71,
-    "haryana": 30
+    "punjab": 77,
+    "haryana": 31
   }
 }
