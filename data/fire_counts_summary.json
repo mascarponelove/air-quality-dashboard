@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-04T16:19:24.326957Z",
-  "total_fire_count": 133,
+  "last_updated": "2026-10-05T03:37:08.709540Z",
+  "total_fire_count": 135,
   "date_range": {
     "start": "2026-09-27",
     "end": "2026-10-04"
@@ -19,7 +19,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 8
+      "total_fires": 10
     },
     {
       "state": "Haryana",
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 96,
-    "haryana": 37
+    "haryana": 39
   }
 }
