@@ -1,15 +1,15 @@
 {
-  "last_updated": "2026-10-05T03:37:08.709540Z",
-  "total_fire_count": 135,
+  "last_updated": "2026-10-05T20:10:33.485218Z",
+  "total_fire_count": 125,
   "date_range": {
-    "start": "2026-09-27",
-    "end": "2026-10-04"
+    "start": "2026-09-28",
+    "end": "2026-10-05"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 48
+      "total_fires": 43
     },
     {
       "state": "Punjab",
@@ -19,22 +19,12 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 10
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 6
-    },
-    {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 6
+      "total_fires": 8
     },
     {
       "state": "Punjab",
       "district": "Faridkot",
-      "total_fires": 6
+      "total_fires": 7
     },
     {
       "state": "Punjab",
@@ -42,9 +32,29 @@
       "total_fires": 5
     },
     {
+      "state": "Haryana",
+      "district": "Gurugram",
+      "total_fires": 4
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 4
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 4
+    },
+    {
+      "state": "Haryana",
+      "district": "Kurukshetra",
+      "total_fires": 3
+    },
+    {
       "state": "Punjab",
       "district": "Firozpur",
-      "total_fires": 5
+      "total_fires": 3
     },
     {
       "state": "Punjab",
@@ -52,14 +62,24 @@
       "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 3
+      "state": "Punjab",
+      "district": "Moga",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Patiala",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
-      "district": "Kurukshetra",
-      "total_fires": 3
+      "district": "Sonipat",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
+      "district": "Fazilka",
+      "total_fires": 2
     },
     {
       "state": "Haryana",
@@ -72,43 +92,23 @@
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 2
+      "state": "Haryana",
+      "district": "Jind",
+      "total_fires": 1
     },
     {
-      "state": "Punjab",
-      "district": "Fazilka",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Moga",
-      "total_fires": 2
+      "state": "Haryana",
+      "district": "Ambala",
+      "total_fires": 1
     },
     {
       "state": "Haryana",
       "district": "Palwal",
       "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Pathankot",
-      "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 96,
-    "haryana": 39
+    "punjab": 90,
+    "haryana": 35
   }
 }
