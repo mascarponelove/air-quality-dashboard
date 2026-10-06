@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-05T20:10:33.485218Z",
-  "total_fire_count": 125,
+  "last_updated": "2026-10-06T04:25:21.710223Z",
+  "total_fire_count": 129,
   "date_range": {
     "start": "2026-09-28",
     "end": "2026-10-05"
@@ -19,7 +19,12 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 8
+      "total_fires": 9
+    },
+    {
+      "state": "Haryana",
+      "district": "Jhajjar",
+      "total_fires": 7
     },
     {
       "state": "Punjab",
@@ -42,9 +47,9 @@
       "total_fires": 4
     },
     {
-      "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 4
+      "state": "Punjab",
+      "district": "Sangrur",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
@@ -58,22 +63,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Sangrur",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Moga",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
       "district": "Patiala",
       "total_fires": 2
     },
     {
-      "state": "Haryana",
-      "district": "Sonipat",
+      "state": "Punjab",
+      "district": "Moga",
       "total_fires": 2
     },
     {
@@ -83,7 +78,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Charki Dadri",
+      "district": "Sonipat",
       "total_fires": 2
     },
     {
@@ -93,12 +88,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Jind",
+      "district": "Charki Dadri",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Ambala",
+      "district": "Rewari",
       "total_fires": 1
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 90,
-    "haryana": 35
+    "haryana": 39
   }
 }
