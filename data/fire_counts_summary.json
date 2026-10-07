@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-06T17:47:07.674577Z",
-  "total_fire_count": 110,
+  "last_updated": "2026-10-07T03:51:04.222455Z",
+  "total_fire_count": 111,
   "date_range": {
     "start": "2026-09-29",
     "end": "2026-10-06"
@@ -24,7 +24,7 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 5
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -33,12 +33,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Gurugram",
+      "district": "Hisar",
       "total_fires": 4
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
+      "district": "Gurugram",
       "total_fires": 4
     },
     {
@@ -52,6 +52,11 @@
       "total_fires": 3
     },
     {
+      "state": "Haryana",
+      "district": "Bhiwani",
+      "total_fires": 2
+    },
+    {
       "state": "Punjab",
       "district": "Patiala",
       "total_fires": 2
@@ -59,6 +64,16 @@
     {
       "state": "Punjab",
       "district": "Gurdaspur",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Sonipat",
+      "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Charki Dadri",
       "total_fires": 2
     },
     {
@@ -73,42 +88,27 @@
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Bhiwani",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Charki Dadri",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Rohtak",
+      "district": "Ambala",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Rewari",
-      "total_fires": 1
-    },
-    {
-      "state": "Haryana",
-      "district": "Palwal",
+      "district": "Jind",
       "total_fires": 1
     },
     {
       "state": "Haryana",
       "district": "Mahendragarh",
       "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Rewari",
+      "total_fires": 1
     }
   ],
   "state_totals": {
     "punjab": 77,
-    "haryana": 33
+    "haryana": 34
   }
 }
