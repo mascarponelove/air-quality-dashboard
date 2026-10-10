@@ -1,40 +1,40 @@
 {
-  "last_updated": "2026-10-10T03:55:22.067276Z",
-  "total_fire_count": 159,
+  "last_updated": "2026-10-10T16:48:54.915909Z",
+  "total_fire_count": 148,
   "date_range": {
-    "start": "2026-10-02",
-    "end": "2026-10-09"
+    "start": "2026-10-03",
+    "end": "2026-10-10"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 33
+      "total_fires": 27
     },
     {
       "state": "Punjab",
       "district": "Fazilka",
-      "total_fires": 28
+      "total_fires": 26
     },
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 20
-    },
-    {
-      "state": "Haryana",
-      "district": "Faridabad",
-      "total_fires": 10
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 10
+      "total_fires": 21
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
       "total_fires": 10
+    },
+    {
+      "state": "Haryana",
+      "district": "Faridabad",
+      "total_fires": 9
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 9
     },
     {
       "state": "Punjab",
@@ -52,18 +52,18 @@
       "total_fires": 4
     },
     {
+      "state": "Punjab",
+      "district": "Kapurthala",
+      "total_fires": 4
+    },
+    {
+      "state": "Haryana",
+      "district": "Palwal",
+      "total_fires": 3
+    },
+    {
       "state": "Haryana",
       "district": "Sirsa",
-      "total_fires": 3
-    },
-    {
-      "state": "Haryana",
-      "district": "Kurukshetra",
-      "total_fires": 3
-    },
-    {
-      "state": "Punjab",
-      "district": "Patiala",
       "total_fires": 3
     },
     {
@@ -73,12 +73,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Palwal",
-      "total_fires": 2
+      "district": "Kurukshetra",
+      "total_fires": 3
     },
     {
-      "state": "Haryana",
-      "district": "Bhiwani",
+      "state": "Punjab",
+      "district": "Faridkot",
       "total_fires": 2
     },
     {
@@ -88,27 +88,27 @@
     },
     {
       "state": "Punjab",
-      "district": "Faridkot",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
       "district": "Gurdaspur",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Kapurthala",
       "total_fires": 2
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
       "total_fires": 2
+    },
+    {
+      "state": "Haryana",
+      "district": "Bhiwani",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 104,
-    "haryana": 55
+    "punjab": 97,
+    "haryana": 51
   }
 }
