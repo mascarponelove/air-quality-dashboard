@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-13T05:03:33.627127Z",
+  "last_updated": "2026-10-13T18:46:23.086504Z",
   "total_fire_count": 102,
   "date_range": {
     "start": "2026-10-06",
@@ -48,23 +48,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 3
-    },
-    {
-      "state": "Haryana",
       "district": "Palwal",
       "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Gurugram",
-      "total_fires": 2
-    },
-    {
-      "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 2
+      "district": "Sirsa",
+      "total_fires": 3
     },
     {
       "state": "Haryana",
@@ -77,13 +67,23 @@
       "total_fires": 2
     },
     {
+      "state": "Haryana",
+      "district": "Gurugram",
+      "total_fires": 2
+    },
+    {
       "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 1
+      "district": "Gurdaspur",
+      "total_fires": 2
     },
     {
       "state": "Punjab",
       "district": "Jalandhar",
+      "total_fires": 1
+    },
+    {
+      "state": "Punjab",
+      "district": "Ludhiana",
       "total_fires": 1
     },
     {
@@ -93,7 +93,7 @@
     },
     {
       "state": "Punjab",
-      "district": "Ludhiana",
+      "district": "Bathinda",
       "total_fires": 1
     }
   ],
