@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-14T16:21:01.540022Z",
-  "total_fire_count": 180,
+  "last_updated": "2026-10-15T02:49:29.818009Z",
+  "total_fire_count": 186,
   "date_range": {
     "start": "2026-10-07",
     "end": "2026-10-14"
@@ -9,7 +9,7 @@
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 51
+      "total_fires": 52
     },
     {
       "state": "Punjab",
@@ -23,18 +23,18 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 9
+      "district": "Jhajjar",
+      "total_fires": 11
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 9
+      "district": "Hisar",
+      "total_fires": 10
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 8
+      "total_fires": 9
     },
     {
       "state": "Punjab",
@@ -52,18 +52,18 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Sirsa",
-      "total_fires": 3
-    },
-    {
       "state": "Punjab",
       "district": "Gurdaspur",
       "total_fires": 3
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
+      "district": "Sirsa",
+      "total_fires": 3
+    },
+    {
+      "state": "Punjab",
+      "district": "Ludhiana",
       "total_fires": 2
     },
     {
@@ -73,18 +73,23 @@
     },
     {
       "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 2
+    },
+    {
+      "state": "Punjab",
       "district": "Jalandhar",
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Ludhiana",
+      "state": "Haryana",
+      "district": "Sonipat",
       "total_fires": 2
     },
     {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 2
+      "state": "Haryana",
+      "district": "Fatehabad",
+      "total_fires": 1
     },
     {
       "state": "Haryana",
@@ -93,22 +98,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Fatehabad",
+      "district": "Rewari",
       "total_fires": 1
     },
     {
       "state": "Punjab",
       "district": "Firozpur",
       "total_fires": 1
-    },
-    {
-      "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 140,
-    "haryana": 40
+    "punjab": 141,
+    "haryana": 45
   }
 }
