@@ -1,20 +1,20 @@
 {
-  "last_updated": "2026-10-15T02:49:29.818009Z",
-  "total_fire_count": 186,
+  "last_updated": "2026-10-15T16:08:51.972511Z",
+  "total_fire_count": 175,
   "date_range": {
-    "start": "2026-10-07",
-    "end": "2026-10-14"
+    "start": "2026-10-08",
+    "end": "2026-10-15"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 52
+      "total_fires": 53
     },
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 39
+      "total_fires": 34
     },
     {
       "state": "Punjab",
@@ -24,17 +24,17 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 11
-    },
-    {
-      "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 10
+      "total_fires": 9
     },
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 9
+      "total_fires": 8
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 8
     },
     {
       "state": "Punjab",
@@ -42,14 +42,14 @@
       "total_fires": 7
     },
     {
-      "state": "Haryana",
-      "district": "Palwal",
-      "total_fires": 5
-    },
-    {
       "state": "Punjab",
       "district": "Kapurthala",
       "total_fires": 5
+    },
+    {
+      "state": "Haryana",
+      "district": "Palwal",
+      "total_fires": 4
     },
     {
       "state": "Punjab",
@@ -83,17 +83,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
       "district": "Fatehabad",
       "total_fires": 1
     },
     {
       "state": "Haryana",
       "district": "Mahendragarh",
+      "total_fires": 1
+    },
+    {
+      "state": "Haryana",
+      "district": "Sonipat",
       "total_fires": 1
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 141,
-    "haryana": 45
+    "punjab": 137,
+    "haryana": 38
   }
 }
