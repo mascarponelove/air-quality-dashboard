@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-15T16:08:51.972511Z",
-  "total_fire_count": 175,
+  "last_updated": "2026-10-16T02:46:32.116789Z",
+  "total_fire_count": 178,
   "date_range": {
     "start": "2026-10-08",
     "end": "2026-10-15"
@@ -9,12 +9,12 @@
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 53
+      "total_fires": 54
     },
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 34
+      "total_fires": 35
     },
     {
       "state": "Punjab",
@@ -44,7 +44,7 @@
     {
       "state": "Punjab",
       "district": "Kapurthala",
-      "total_fires": 5
+      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -67,6 +67,11 @@
       "total_fires": 2
     },
     {
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 2
+    },
+    {
       "state": "Haryana",
       "district": "Gurugram",
       "total_fires": 2
@@ -78,17 +83,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 2
-    },
-    {
-      "state": "Haryana",
-      "district": "Fatehabad",
+      "district": "Firozpur",
       "total_fires": 1
     },
     {
       "state": "Haryana",
-      "district": "Mahendragarh",
+      "district": "Fatehabad",
       "total_fires": 1
     },
     {
@@ -103,12 +103,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Firozpur",
+      "district": "Patiala",
       "total_fires": 1
     }
   ],
   "state_totals": {
-    "punjab": 137,
+    "punjab": 140,
     "haryana": 38
   }
 }
