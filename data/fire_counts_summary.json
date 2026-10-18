@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-17T14:49:39.683331Z",
-  "total_fire_count": 167,
+  "last_updated": "2026-10-18T02:39:33.729098Z",
+  "total_fire_count": 168,
   "date_range": {
     "start": "2026-10-10",
     "end": "2026-10-17"
@@ -37,13 +37,13 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Jhajjar",
+      "state": "Punjab",
+      "district": "Firozpur",
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Firozpur",
+      "state": "Haryana",
+      "district": "Jhajjar",
       "total_fires": 4
     },
     {
@@ -82,6 +82,11 @@
       "total_fires": 1
     },
     {
+      "state": "Haryana",
+      "district": "Panchkula",
+      "total_fires": 1
+    },
+    {
       "state": "Punjab",
       "district": "Ludhiana",
       "total_fires": 1
@@ -94,6 +99,6 @@
   ],
   "state_totals": {
     "punjab": 142,
-    "haryana": 25
+    "haryana": 26
   }
 }
