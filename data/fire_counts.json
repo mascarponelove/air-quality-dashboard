@@ -1,29 +1,8 @@
 {
-  "last_updated": "2026-10-19T02:52:36.725640Z",
+  "last_updated": "2026-10-19T18:11:52.557321Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-10-11",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Tarn Taran",
-            "fire_count": 2
-          },
-          {
-            "district": "Bathinda",
-            "fire_count": 1
-          }
-        ],
-        "total": 3
-      },
-      "haryana": {
-        "districts": [],
-        "total": 0
-      },
-      "combined_total": 3
-    },
     {
       "date": "2026-10-12",
       "punjab": {
@@ -327,6 +306,96 @@
         "total": 8
       },
       "combined_total": 101
+    },
+    {
+      "date": "2026-10-19",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Tarn Taran",
+            "fire_count": 47
+          },
+          {
+            "district": "Amritsar",
+            "fire_count": 28
+          },
+          {
+            "district": "Kapurthala",
+            "fire_count": 9
+          },
+          {
+            "district": "Gurdaspur",
+            "fire_count": 8
+          },
+          {
+            "district": "Firozpur",
+            "fire_count": 3
+          },
+          {
+            "district": "Sahibzada Ajit Singh Nag*",
+            "fire_count": 3
+          },
+          {
+            "district": "Faridkot",
+            "fire_count": 2
+          },
+          {
+            "district": "Fazilka",
+            "fire_count": 2
+          },
+          {
+            "district": "Hoshiarpur",
+            "fire_count": 2
+          },
+          {
+            "district": "Jalandhar",
+            "fire_count": 1
+          },
+          {
+            "district": "Ludhiana",
+            "fire_count": 1
+          },
+          {
+            "district": "Patiala",
+            "fire_count": 1
+          },
+          {
+            "district": "Rupnagar",
+            "fire_count": 1
+          }
+        ],
+        "total": 108
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Ambala",
+            "fire_count": 1
+          },
+          {
+            "district": "Bhiwani",
+            "fire_count": 1
+          },
+          {
+            "district": "Gurugram",
+            "fire_count": 1
+          },
+          {
+            "district": "Kurukshetra",
+            "fire_count": 1
+          },
+          {
+            "district": "Rohtak",
+            "fire_count": 1
+          },
+          {
+            "district": "Sirsa",
+            "fire_count": 1
+          }
+        ],
+        "total": 6
+      },
+      "combined_total": 114
     }
   ]
 }
