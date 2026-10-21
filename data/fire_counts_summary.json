@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-20T16:12:28.810634Z",
-  "total_fire_count": 457,
+  "last_updated": "2026-10-21T02:57:42.188508Z",
+  "total_fire_count": 466,
   "date_range": {
     "start": "2026-10-13",
     "end": "2026-10-20"
@@ -34,12 +34,17 @@
     {
       "state": "Haryana",
       "district": "Faridabad",
-      "total_fires": 12
+      "total_fires": 15
     },
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 10
+      "total_fires": 12
+    },
+    {
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 9
     },
     {
       "state": "Punjab",
@@ -47,19 +52,14 @@
       "total_fires": 9
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
+      "state": "Punjab",
+      "district": "Patiala",
       "total_fires": 8
     },
     {
       "state": "Haryana",
       "district": "Bhiwani",
       "total_fires": 8
-    },
-    {
-      "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 6
     },
     {
       "state": "Haryana",
@@ -77,13 +77,13 @@
       "total_fires": 5
     },
     {
-      "state": "Haryana",
-      "district": "Panchkula",
+      "state": "Punjab",
+      "district": "Ludhiana",
       "total_fires": 4
     },
     {
-      "state": "Punjab",
-      "district": "Ludhiana",
+      "state": "Haryana",
+      "district": "Panchkula",
       "total_fires": 4
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 399,
-    "haryana": 58
+    "punjab": 401,
+    "haryana": 65
   }
 }
