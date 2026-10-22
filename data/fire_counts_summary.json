@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-21T16:27:51.029050Z",
-  "total_fire_count": 452,
+  "last_updated": "2026-10-22T02:56:35.185239Z",
+  "total_fire_count": 459,
   "date_range": {
     "start": "2026-10-14",
     "end": "2026-10-21"
@@ -9,7 +9,7 @@
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 188
+      "total_fires": 191
     },
     {
       "state": "Punjab",
@@ -38,13 +38,13 @@
     },
     {
       "state": "Haryana",
-      "district": "Hisar",
-      "total_fires": 11
+      "district": "Jhajjar",
+      "total_fires": 13
     },
     {
       "state": "Haryana",
-      "district": "Jhajjar",
-      "total_fires": 10
+      "district": "Hisar",
+      "total_fires": 11
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 388,
-    "haryana": 64
+    "punjab": 392,
+    "haryana": 67
   }
 }
