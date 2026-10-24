@@ -1,25 +1,25 @@
 {
-  "last_updated": "2026-10-23T02:59:47.139000Z",
-  "total_fire_count": 449,
+  "last_updated": "2026-10-24T03:14:45.529291Z",
+  "total_fire_count": 468,
   "date_range": {
-    "start": "2026-10-15",
-    "end": "2026-10-22"
+    "start": "2026-10-16",
+    "end": "2026-10-23"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 176
+      "total_fires": 177
     },
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 88
+      "total_fires": 94
     },
     {
       "state": "Punjab",
       "district": "Kapurthala",
-      "total_fires": 30
+      "total_fires": 32
     },
     {
       "state": "Punjab",
@@ -39,12 +39,12 @@
     {
       "state": "Haryana",
       "district": "Jhajjar",
-      "total_fires": 12
+      "total_fires": 13
     },
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 10
+      "total_fires": 12
     },
     {
       "state": "Punjab",
@@ -63,13 +63,18 @@
     },
     {
       "state": "Punjab",
+      "district": "Fazilka",
+      "total_fires": 7
+    },
+    {
+      "state": "Punjab",
       "district": "Faridkot",
       "total_fires": 6
     },
     {
-      "state": "Punjab",
-      "district": "Fazilka",
-      "total_fires": 5
+      "state": "Haryana",
+      "district": "Palwal",
+      "total_fires": 6
     },
     {
       "state": "Punjab",
@@ -78,12 +83,7 @@
     },
     {
       "state": "Haryana",
-      "district": "Palwal",
-      "total_fires": 5
-    },
-    {
-      "state": "Punjab",
-      "district": "Jalandhar",
+      "district": "Gurugram",
       "total_fires": 4
     },
     {
@@ -94,21 +94,21 @@
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 3
+      "total_fires": 4
+    },
+    {
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 4
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
       "total_fires": 3
-    },
-    {
-      "state": "Haryana",
-      "district": "Kurukshetra",
-      "total_fires": 3
     }
   ],
   "state_totals": {
-    "punjab": 386,
-    "haryana": 63
+    "punjab": 400,
+    "haryana": 68
   }
 }
