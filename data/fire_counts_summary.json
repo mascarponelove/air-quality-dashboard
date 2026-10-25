@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-24T15:15:11.997588Z",
-  "total_fire_count": 517,
+  "last_updated": "2026-10-25T02:49:22.245265Z",
+  "total_fire_count": 520,
   "date_range": {
     "start": "2026-10-17",
     "end": "2026-10-24"
@@ -37,13 +37,13 @@
       "total_fires": 15
     },
     {
-      "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 13
-    },
-    {
       "state": "Haryana",
       "district": "Jhajjar",
+      "total_fires": 14
+    },
+    {
+      "state": "Punjab",
+      "district": "Patiala",
       "total_fires": 13
     },
     {
@@ -67,9 +67,9 @@
       "total_fires": 7
     },
     {
-      "state": "Punjab",
-      "district": "Sangrur",
-      "total_fires": 6
+      "state": "Haryana",
+      "district": "Hisar",
+      "total_fires": 7
     },
     {
       "state": "Haryana",
@@ -83,12 +83,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Faridkot",
+      "district": "Sangrur",
       "total_fires": 6
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
+      "state": "Punjab",
+      "district": "Faridkot",
       "total_fires": 6
     },
     {
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 452,
-    "haryana": 65
+    "haryana": 68
   }
 }
