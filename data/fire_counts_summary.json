@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-29T17:55:20.706556Z",
+  "last_updated": "2026-10-30T03:59:33.084084Z",
   "total_fire_count": 673,
   "date_range": {
     "start": "2026-10-22",
@@ -72,13 +72,13 @@
       "total_fires": 13
     },
     {
-      "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
+      "state": "Haryana",
+      "district": "Sirsa",
       "total_fires": 11
     },
     {
-      "state": "Haryana",
-      "district": "Sirsa",
+      "state": "Punjab",
+      "district": "Sri Muktsar Sahib",
       "total_fires": 11
     },
     {
@@ -87,8 +87,8 @@
       "total_fires": 10
     },
     {
-      "state": "Haryana",
-      "district": "Hisar",
+      "state": "Punjab",
+      "district": "Faridkot",
       "total_fires": 9
     },
     {
@@ -98,12 +98,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Faridkot",
+      "district": "Pathankot",
       "total_fires": 9
     },
     {
-      "state": "Punjab",
-      "district": "Pathankot",
+      "state": "Haryana",
+      "district": "Hisar",
       "total_fires": 9
     }
   ],
