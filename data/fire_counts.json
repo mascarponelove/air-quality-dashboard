@@ -1,90 +1,8 @@
 {
-  "last_updated": "2026-11-01T03:52:44.529867Z",
+  "last_updated": "2026-11-01T17:31:03.390159Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-10-24",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Tarn Taran",
-            "fire_count": 15
-          },
-          {
-            "district": "Amritsar",
-            "fire_count": 14
-          },
-          {
-            "district": "Firozpur",
-            "fire_count": 6
-          },
-          {
-            "district": "Jalandhar",
-            "fire_count": 5
-          },
-          {
-            "district": "Kapurthala",
-            "fire_count": 4
-          },
-          {
-            "district": "Fatehgarh Sahib",
-            "fire_count": 2
-          },
-          {
-            "district": "Gurdaspur",
-            "fire_count": 2
-          },
-          {
-            "district": "Hoshiarpur",
-            "fire_count": 2
-          },
-          {
-            "district": "Patiala",
-            "fire_count": 1
-          },
-          {
-            "district": "Sahibzada Ajit Singh Nag*",
-            "fire_count": 1
-          },
-          {
-            "district": "Sangrur",
-            "fire_count": 1
-          }
-        ],
-        "total": 53
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Gurugram",
-            "fire_count": 1
-          },
-          {
-            "district": "Hisar",
-            "fire_count": 1
-          },
-          {
-            "district": "Jhajjar",
-            "fire_count": 1
-          },
-          {
-            "district": "Jind",
-            "fire_count": 1
-          },
-          {
-            "district": "Kurukshetra",
-            "fire_count": 1
-          },
-          {
-            "district": "Rohtak",
-            "fire_count": 1
-          }
-        ],
-        "total": 6
-      },
-      "combined_total": 59
-    },
     {
       "date": "2026-10-25",
       "punjab": {
@@ -825,6 +743,112 @@
         "total": 13
       },
       "combined_total": 141
+    },
+    {
+      "date": "2026-11-01",
+      "punjab": {
+        "districts": [
+          {
+            "district": "Firozpur",
+            "fire_count": 20
+          },
+          {
+            "district": "Bathinda",
+            "fire_count": 18
+          },
+          {
+            "district": "Sangrur",
+            "fire_count": 13
+          },
+          {
+            "district": "Amritsar",
+            "fire_count": 12
+          },
+          {
+            "district": "Tarn Taran",
+            "fire_count": 12
+          },
+          {
+            "district": "Jalandhar",
+            "fire_count": 7
+          },
+          {
+            "district": "Gurdaspur",
+            "fire_count": 6
+          },
+          {
+            "district": "Kapurthala",
+            "fire_count": 5
+          },
+          {
+            "district": "Mansa",
+            "fire_count": 5
+          },
+          {
+            "district": "Patiala",
+            "fire_count": 5
+          },
+          {
+            "district": "Barnala",
+            "fire_count": 4
+          },
+          {
+            "district": "Fatehgarh Sahib",
+            "fire_count": 4
+          },
+          {
+            "district": "Moga",
+            "fire_count": 4
+          },
+          {
+            "district": "Sahibzada Ajit Singh Nag*",
+            "fire_count": 4
+          },
+          {
+            "district": "Ludhiana",
+            "fire_count": 3
+          },
+          {
+            "district": "Fazilka",
+            "fire_count": 2
+          },
+          {
+            "district": "Rupnagar",
+            "fire_count": 2
+          },
+          {
+            "district": "Sri Muktsar Sahib",
+            "fire_count": 2
+          },
+          {
+            "district": "Faridkot",
+            "fire_count": 1
+          },
+          {
+            "district": "Hoshiarpur",
+            "fire_count": 1
+          },
+          {
+            "district": "Shahid Bhagat Singh Nagar",
+            "fire_count": 1
+          }
+        ],
+        "total": 131
+      },
+      "haryana": {
+        "districts": [
+          {
+            "district": "Yamunanagar",
+            "fire_count": 3
+          },
+          {
+            "district": "Kurukshetra",
+            "fire_count": 2
+          }
+        ],
+        "total": 5
+      },
+      "combined_total": 136
     }
   ]
 }
