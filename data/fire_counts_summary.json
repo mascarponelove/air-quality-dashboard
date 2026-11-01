@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-31T16:42:02.093488Z",
-  "total_fire_count": 860,
+  "last_updated": "2026-11-01T03:52:44.541315Z",
+  "total_fire_count": 875,
   "date_range": {
     "start": "2026-10-24",
     "end": "2026-10-31"
@@ -13,12 +13,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Firozpur",
-      "total_fires": 87
+      "district": "Gurdaspur",
+      "total_fires": 88
     },
     {
       "state": "Punjab",
-      "district": "Gurdaspur",
+      "district": "Firozpur",
       "total_fires": 87
     },
     {
@@ -34,7 +34,12 @@
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 37
+      "total_fires": 39
+    },
+    {
+      "state": "Punjab",
+      "district": "Ludhiana",
+      "total_fires": 29
     },
     {
       "state": "Punjab",
@@ -48,17 +53,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Hoshiarpur",
-      "total_fires": 24
-    },
-    {
-      "state": "Punjab",
-      "district": "Ludhiana",
-      "total_fires": 24
-    },
-    {
-      "state": "Punjab",
       "district": "Fatehgarh Sahib",
+      "total_fires": 26
+    },
+    {
+      "state": "Punjab",
+      "district": "Hoshiarpur",
       "total_fires": 24
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 774,
-    "haryana": 86
+    "punjab": 784,
+    "haryana": 91
   }
 }
