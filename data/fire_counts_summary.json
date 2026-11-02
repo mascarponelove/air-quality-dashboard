@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-01T17:31:03.396522Z",
-  "total_fire_count": 952,
+  "last_updated": "2026-11-02T03:56:33.877356Z",
+  "total_fire_count": 965,
   "date_range": {
     "start": "2026-10-25",
     "end": "2026-11-01"
@@ -14,7 +14,7 @@
     {
       "state": "Punjab",
       "district": "Firozpur",
-      "total_fires": 101
+      "total_fires": 107
     },
     {
       "state": "Punjab",
@@ -93,12 +93,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Moga",
+      "district": "Faridkot",
       "total_fires": 12
     },
     {
       "state": "Punjab",
-      "district": "Faridkot",
+      "district": "Moga",
       "total_fires": 12
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 862,
-    "haryana": 90
+    "punjab": 868,
+    "haryana": 97
   }
 }
