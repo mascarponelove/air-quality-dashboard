@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-03T18:56:53.808407Z",
-  "total_fire_count": 1192,
+  "last_updated": "2026-11-04T04:29:42.269255Z",
+  "total_fire_count": 1200,
   "date_range": {
     "start": "2026-10-27",
     "end": "2026-11-03"
@@ -49,7 +49,7 @@
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 53
+      "total_fires": 55
     },
     {
       "state": "Punjab",
@@ -99,7 +99,7 @@
     {
       "state": "Punjab",
       "district": "Shahid Bhagat Singh Nagar",
-      "total_fires": 8
+      "total_fires": 11
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 1117,
-    "haryana": 75
+    "punjab": 1122,
+    "haryana": 78
   }
 }
