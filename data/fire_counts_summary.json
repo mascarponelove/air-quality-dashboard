@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-07T17:18:03.707087Z",
-  "total_fire_count": 1630,
+  "last_updated": "2026-11-08T03:56:22.135680Z",
+  "total_fire_count": 1635,
   "date_range": {
     "start": "2026-10-31",
     "end": "2026-11-07"
@@ -89,7 +89,7 @@
     {
       "state": "Punjab",
       "district": "Sahibzada Ajit Singh Nag*",
-      "total_fires": 32
+      "total_fires": 34
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 1488,
-    "haryana": 142
+    "punjab": 1490,
+    "haryana": 145
   }
 }
