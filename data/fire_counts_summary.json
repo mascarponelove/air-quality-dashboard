@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-08T17:30:06.444464Z",
-  "total_fire_count": 1888,
+  "last_updated": "2026-11-09T04:10:39.775487Z",
+  "total_fire_count": 1903,
   "date_range": {
     "start": "2026-11-01",
     "end": "2026-11-08"
@@ -19,12 +19,12 @@
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 164
+      "total_fires": 165
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 150
+      "total_fires": 155
     },
     {
       "state": "Punjab",
@@ -34,17 +34,17 @@
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 141
+      "total_fires": 143
     },
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 70
+      "total_fires": 71
     },
     {
       "state": "Punjab",
       "district": "Kapurthala",
-      "total_fires": 67
+      "total_fires": 68
     },
     {
       "state": "Punjab",
@@ -73,12 +73,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Fatehgarh Sahib",
+      "district": "Barnala",
       "total_fires": 47
     },
     {
       "state": "Punjab",
-      "district": "Barnala",
+      "district": "Fatehgarh Sahib",
       "total_fires": 47
     },
     {
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 1731,
-    "haryana": 157
+    "punjab": 1744,
+    "haryana": 159
   }
 }
