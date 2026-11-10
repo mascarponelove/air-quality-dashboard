@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-09T21:52:13.000367Z",
-  "total_fire_count": 2088,
+  "last_updated": "2026-11-10T05:40:53.554568Z",
+  "total_fire_count": 2102,
   "date_range": {
     "start": "2026-11-02",
     "end": "2026-11-09"
@@ -9,27 +9,27 @@
     {
       "state": "Punjab",
       "district": "Firozpur",
-      "total_fires": 258
+      "total_fires": 260
     },
     {
       "state": "Punjab",
       "district": "Sangrur",
-      "total_fires": 229
+      "total_fires": 230
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 201
+      "total_fires": 204
     },
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 186
+      "total_fires": 187
     },
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 136
+      "total_fires": 137
     },
     {
       "state": "Punjab",
@@ -39,7 +39,7 @@
     {
       "state": "Punjab",
       "district": "Fazilka",
-      "total_fires": 93
+      "total_fires": 95
     },
     {
       "state": "Punjab",
@@ -54,7 +54,7 @@
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 67
+      "total_fires": 68
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 1914,
-    "haryana": 174
+    "punjab": 1925,
+    "haryana": 177
   }
 }
