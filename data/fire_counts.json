@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-10T19:12:20.195682Z",
+  "last_updated": "2026-11-11T04:14:35.795254Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -994,7 +994,15 @@
             "fire_count": 12
           },
           {
+            "district": "Jalandhar",
+            "fire_count": 10
+          },
+          {
             "district": "Fatehgarh Sahib",
+            "fire_count": 9
+          },
+          {
+            "district": "Kapurthala",
             "fire_count": 9
           },
           {
@@ -1006,16 +1014,8 @@
             "fire_count": 8
           },
           {
-            "district": "Jalandhar",
-            "fire_count": 8
-          },
-          {
             "district": "Hoshiarpur",
-            "fire_count": 5
-          },
-          {
-            "district": "Kapurthala",
-            "fire_count": 5
+            "fire_count": 6
           },
           {
             "district": "Faridkot",
@@ -1034,13 +1034,13 @@
             "fire_count": 3
           }
         ],
-        "total": 301
+        "total": 308
       },
       "haryana": {
         "districts": [
           {
             "district": "Jind",
-            "fire_count": 5
+            "fire_count": 6
           },
           {
             "district": "Kaithal",
@@ -1067,6 +1067,10 @@
             "fire_count": 2
           },
           {
+            "district": "Faridabad",
+            "fire_count": 1
+          },
+          {
             "district": "Hisar",
             "fire_count": 1
           },
@@ -1079,9 +1083,9 @@
             "fire_count": 1
           }
         ],
-        "total": 27
+        "total": 29
       },
-      "combined_total": 328
+      "combined_total": 337
     }
   ]
 }

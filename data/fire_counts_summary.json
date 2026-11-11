@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-10T19:12:20.203211Z",
-  "total_fire_count": 2241,
+  "last_updated": "2026-11-11T04:14:35.806632Z",
+  "total_fire_count": 2250,
   "date_range": {
     "start": "2026-11-03",
     "end": "2026-11-10"
@@ -59,7 +59,7 @@
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 70
+      "total_fires": 72
     },
     {
       "state": "Punjab",
@@ -69,7 +69,7 @@
     {
       "state": "Punjab",
       "district": "Kapurthala",
-      "total_fires": 56
+      "total_fires": 60
     },
     {
       "state": "Punjab",
@@ -104,11 +104,11 @@
     {
       "state": "Punjab",
       "district": "Hoshiarpur",
-      "total_fires": 23
+      "total_fires": 24
     }
   ],
   "state_totals": {
-    "punjab": 2049,
-    "haryana": 192
+    "punjab": 2056,
+    "haryana": 194
   }
 }
