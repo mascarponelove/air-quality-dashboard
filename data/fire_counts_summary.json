@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-11T19:09:23.616659Z",
-  "total_fire_count": 2119,
+  "last_updated": "2026-11-12T05:25:54.774581Z",
+  "total_fire_count": 2121,
   "date_range": {
     "start": "2026-11-04",
     "end": "2026-11-11"
@@ -64,7 +64,7 @@
     {
       "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 59
+      "total_fires": 61
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 1937,
+    "punjab": 1939,
     "haryana": 182
   }
 }
