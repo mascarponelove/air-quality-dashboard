@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-12T19:26:44.191285Z",
-  "total_fire_count": 1953,
+  "last_updated": "2026-11-13T04:41:18.382806Z",
+  "total_fire_count": 1955,
   "date_range": {
     "start": "2026-11-05",
     "end": "2026-11-12"
@@ -109,6 +109,6 @@
   ],
   "state_totals": {
     "punjab": 1790,
-    "haryana": 163
+    "haryana": 165
   }
 }
