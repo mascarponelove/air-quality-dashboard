@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-13T19:05:26.725031Z",
-  "total_fire_count": 1773,
+  "last_updated": "2026-11-14T04:35:58.598368Z",
+  "total_fire_count": 1777,
   "date_range": {
     "start": "2026-11-06",
     "end": "2026-11-13"
@@ -63,17 +63,17 @@
     },
     {
       "state": "Punjab",
-      "district": "Fatehgarh Sahib",
-      "total_fires": 34
-    },
-    {
-      "state": "Punjab",
       "district": "Jalandhar",
-      "total_fires": 34
+      "total_fires": 35
     },
     {
       "state": "Punjab",
       "district": "Amritsar",
+      "total_fires": 35
+    },
+    {
+      "state": "Punjab",
+      "district": "Fatehgarh Sahib",
       "total_fires": 34
     },
     {
@@ -102,13 +102,13 @@
       "total_fires": 17
     },
     {
-      "state": "Punjab",
-      "district": "Gurdaspur",
+      "state": "Haryana",
+      "district": "Karnal",
       "total_fires": 16
     }
   ],
   "state_totals": {
-    "punjab": 1626,
-    "haryana": 147
+    "punjab": 1628,
+    "haryana": 149
   }
 }
