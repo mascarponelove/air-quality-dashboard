@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-14T17:34:28.946111Z",
-  "total_fire_count": 1673,
+  "last_updated": "2026-11-15T04:24:48.828103Z",
+  "total_fire_count": 1681,
   "date_range": {
     "start": "2026-11-07",
     "end": "2026-11-14"
@@ -23,12 +23,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 123
+      "district": "Fazilka",
+      "total_fires": 126
     },
     {
       "state": "Punjab",
-      "district": "Fazilka",
+      "district": "Patiala",
       "total_fires": 123
     },
     {
@@ -63,12 +63,12 @@
     },
     {
       "state": "Punjab",
-      "district": "Amritsar",
+      "district": "Kapurthala",
       "total_fires": 32
     },
     {
       "state": "Punjab",
-      "district": "Kapurthala",
+      "district": "Amritsar",
       "total_fires": 32
     },
     {
@@ -89,12 +89,12 @@
     {
       "state": "Haryana",
       "district": "Jind",
-      "total_fires": 22
+      "total_fires": 23
     },
     {
       "state": "Haryana",
       "district": "Kaithal",
-      "total_fires": 22
+      "total_fires": 23
     },
     {
       "state": "Haryana",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 1541,
-    "haryana": 132
+    "punjab": 1544,
+    "haryana": 137
   }
 }
