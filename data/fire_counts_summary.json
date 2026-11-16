@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-15T18:23:14.149664Z",
-  "total_fire_count": 1674,
+  "last_updated": "2026-11-16T04:23:08.259943Z",
+  "total_fire_count": 1687,
   "date_range": {
     "start": "2026-11-08",
     "end": "2026-11-15"
@@ -24,7 +24,7 @@
     {
       "state": "Punjab",
       "district": "Fazilka",
-      "total_fires": 132
+      "total_fires": 134
     },
     {
       "state": "Punjab",
@@ -68,6 +68,11 @@
     },
     {
       "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 31
+    },
+    {
+      "state": "Punjab",
       "district": "Faridkot",
       "total_fires": 31
     },
@@ -78,18 +83,8 @@
     },
     {
       "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 28
-    },
-    {
-      "state": "Punjab",
       "district": "Fatehgarh Sahib",
       "total_fires": 27
-    },
-    {
-      "state": "Haryana",
-      "district": "Kaithal",
-      "total_fires": 21
     },
     {
       "state": "Haryana",
@@ -97,18 +92,23 @@
       "total_fires": 21
     },
     {
-      "state": "Punjab",
-      "district": "Gurdaspur",
-      "total_fires": 18
+      "state": "Haryana",
+      "district": "Kaithal",
+      "total_fires": 21
     },
     {
-      "state": "Haryana",
-      "district": "Kurukshetra",
+      "state": "Punjab",
+      "district": "Gurdaspur",
+      "total_fires": 19
+    },
+    {
+      "state": "Punjab",
+      "district": "Rupnagar",
       "total_fires": 12
     }
   ],
   "state_totals": {
-    "punjab": 1543,
-    "haryana": 131
+    "punjab": 1549,
+    "haryana": 138
   }
 }
