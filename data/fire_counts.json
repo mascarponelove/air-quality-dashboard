@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-17T20:21:53.396360Z",
+  "last_updated": "2026-11-18T05:35:58.339255Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -787,7 +787,7 @@
         "districts": [
           {
             "district": "Fazilka",
-            "fire_count": 28
+            "fire_count": 29
           },
           {
             "district": "Firozpur",
@@ -810,6 +810,10 @@
             "fire_count": 9
           },
           {
+            "district": "Tarn Taran",
+            "fire_count": 9
+          },
+          {
             "district": "Mansa",
             "fire_count": 7
           },
@@ -823,10 +827,6 @@
           },
           {
             "district": "Bathinda",
-            "fire_count": 5
-          },
-          {
-            "district": "Tarn Taran",
             "fire_count": 5
           },
           {
@@ -850,12 +850,20 @@
             "fire_count": 1
           }
         ],
-        "total": 135
+        "total": 140
       },
       "haryana": {
         "districts": [
           {
+            "district": "Faridabad",
+            "fire_count": 4
+          },
+          {
             "district": "Fatehabad",
+            "fire_count": 3
+          },
+          {
+            "district": "Hisar",
             "fire_count": 3
           },
           {
@@ -863,21 +871,33 @@
             "fire_count": 3
           },
           {
+            "district": "Jhajjar",
+            "fire_count": 2
+          },
+          {
+            "district": "Kaithal",
+            "fire_count": 2
+          },
+          {
             "district": "Ambala",
             "fire_count": 1
           },
           {
-            "district": "Hisar",
+            "district": "Kurukshetra",
             "fire_count": 1
           },
           {
             "district": "Sonipat",
             "fire_count": 1
+          },
+          {
+            "district": "Yamunanagar",
+            "fire_count": 1
           }
         ],
-        "total": 9
+        "total": 21
       },
-      "combined_total": 144
+      "combined_total": 161
     }
   ]
 }

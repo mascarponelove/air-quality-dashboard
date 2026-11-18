@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-17T20:21:53.413877Z",
-  "total_fire_count": 1252,
+  "last_updated": "2026-11-18T05:35:58.356761Z",
+  "total_fire_count": 1269,
   "date_range": {
     "start": "2026-11-10",
     "end": "2026-11-17"
@@ -19,7 +19,7 @@
     {
       "state": "Punjab",
       "district": "Fazilka",
-      "total_fires": 117
+      "total_fires": 118
     },
     {
       "state": "Punjab",
@@ -59,7 +59,7 @@
     {
       "state": "Punjab",
       "district": "Tarn Taran",
-      "total_fires": 41
+      "total_fires": 45
     },
     {
       "state": "Punjab",
@@ -103,12 +103,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Fatehabad",
-      "total_fires": 10
+      "district": "Kaithal",
+      "total_fires": 11
     }
   ],
   "state_totals": {
-    "punjab": 1144,
-    "haryana": 108
+    "punjab": 1149,
+    "haryana": 120
   }
 }
