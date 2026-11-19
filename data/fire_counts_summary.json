@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-18T19:52:05.173600Z",
-  "total_fire_count": 1108,
+  "last_updated": "2026-11-19T05:34:13.898423Z",
+  "total_fire_count": 1126,
   "date_range": {
     "start": "2026-11-11",
     "end": "2026-11-18"
@@ -9,7 +9,7 @@
     {
       "state": "Punjab",
       "district": "Fazilka",
-      "total_fires": 119
+      "total_fires": 120
     },
     {
       "state": "Punjab",
@@ -29,7 +29,7 @@
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 88
+      "total_fires": 91
     },
     {
       "state": "Punjab",
@@ -49,7 +49,7 @@
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 51
+      "total_fires": 52
     },
     {
       "state": "Punjab",
@@ -69,17 +69,17 @@
     {
       "state": "Punjab",
       "district": "Faridkot",
-      "total_fires": 24
-    },
-    {
-      "state": "Punjab",
-      "district": "Jalandhar",
-      "total_fires": 21
+      "total_fires": 25
     },
     {
       "state": "Haryana",
       "district": "Fatehabad",
-      "total_fires": 20
+      "total_fires": 23
+    },
+    {
+      "state": "Punjab",
+      "district": "Jalandhar",
+      "total_fires": 22
     },
     {
       "state": "Punjab",
@@ -98,17 +98,17 @@
     },
     {
       "state": "Haryana",
-      "district": "Sirsa",
+      "district": "Kaithal",
       "total_fires": 12
     },
     {
       "state": "Haryana",
-      "district": "Sonipat",
-      "total_fires": 10
+      "district": "Sirsa",
+      "total_fires": 12
     }
   ],
   "state_totals": {
-    "punjab": 992,
-    "haryana": 116
+    "punjab": 999,
+    "haryana": 127
   }
 }
