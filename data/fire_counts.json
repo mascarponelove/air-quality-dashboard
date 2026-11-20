@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-19T19:51:51.791972Z",
+  "last_updated": "2026-11-20T05:22:04.432801Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
@@ -799,7 +799,7 @@
           },
           {
             "district": "Ludhiana",
-            "fire_count": 8
+            "fire_count": 10
           },
           {
             "district": "Bathinda",
@@ -822,11 +822,11 @@
             "fire_count": 5
           },
           {
-            "district": "Barnala",
-            "fire_count": 3
+            "district": "Patiala",
+            "fire_count": 4
           },
           {
-            "district": "Patiala",
+            "district": "Barnala",
             "fire_count": 3
           },
           {
@@ -850,12 +850,20 @@
             "fire_count": 1
           }
         ],
-        "total": 120
+        "total": 123
       },
       "haryana": {
         "districts": [
           {
             "district": "Hisar",
+            "fire_count": 8
+          },
+          {
+            "district": "Kaithal",
+            "fire_count": 5
+          },
+          {
+            "district": "Fatehabad",
             "fire_count": 4
           },
           {
@@ -863,15 +871,19 @@
             "fire_count": 4
           },
           {
-            "district": "Fatehabad",
-            "fire_count": 3
+            "district": "Sirsa",
+            "fire_count": 2
           },
           {
-            "district": "Kaithal",
-            "fire_count": 3
+            "district": "Faridabad",
+            "fire_count": 1
           },
           {
             "district": "Jind",
+            "fire_count": 1
+          },
+          {
+            "district": "Kurukshetra",
             "fire_count": 1
           },
           {
@@ -883,9 +895,9 @@
             "fire_count": 1
           }
         ],
-        "total": 17
+        "total": 28
       },
-      "combined_total": 137
+      "combined_total": 151
     }
   ]
 }
