@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-20T19:31:27.437659Z",
-  "total_fire_count": 1194,
+  "last_updated": "2026-11-21T05:14:20.414009Z",
+  "total_fire_count": 1220,
   "date_range": {
     "start": "2026-11-13",
     "end": "2026-11-20"
@@ -8,13 +8,13 @@
   "top_districts": [
     {
       "state": "Punjab",
-      "district": "Sri Muktsar Sahib",
-      "total_fires": 127
+      "district": "Fazilka",
+      "total_fires": 136
     },
     {
       "state": "Punjab",
-      "district": "Fazilka",
-      "total_fires": 125
+      "district": "Sri Muktsar Sahib",
+      "total_fires": 131
     },
     {
       "state": "Punjab",
@@ -49,7 +49,7 @@
     {
       "state": "Punjab",
       "district": "Patiala",
-      "total_fires": 43
+      "total_fires": 44
     },
     {
       "state": "Punjab",
@@ -59,7 +59,7 @@
     {
       "state": "Punjab",
       "district": "Faridkot",
-      "total_fires": 34
+      "total_fires": 35
     },
     {
       "state": "Punjab",
@@ -74,12 +74,12 @@
     {
       "state": "Haryana",
       "district": "Fatehabad",
-      "total_fires": 27
+      "total_fires": 29
     },
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 21
+      "total_fires": 22
     },
     {
       "state": "Punjab",
@@ -108,7 +108,7 @@
     }
   ],
   "state_totals": {
-    "punjab": 1027,
-    "haryana": 167
+    "punjab": 1044,
+    "haryana": 176
   }
 }
