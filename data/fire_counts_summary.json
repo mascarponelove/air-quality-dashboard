@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-22T18:57:21.822758Z",
-  "total_fire_count": 1192,
+  "last_updated": "2026-11-23T05:18:06.155038Z",
+  "total_fire_count": 1204,
   "date_range": {
     "start": "2026-11-15",
     "end": "2026-11-22"
@@ -57,19 +57,19 @@
       "total_fires": 34
     },
     {
+      "state": "Haryana",
+      "district": "Fatehabad",
+      "total_fires": 32
+    },
+    {
       "state": "Punjab",
       "district": "Amritsar",
       "total_fires": 30
     },
     {
       "state": "Haryana",
-      "district": "Fatehabad",
-      "total_fires": 29
-    },
-    {
-      "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 29
+      "total_fires": 30
     },
     {
       "state": "Haryana",
@@ -88,8 +88,8 @@
     },
     {
       "state": "Haryana",
-      "district": "Jind",
-      "total_fires": 19
+      "district": "Kaithal",
+      "total_fires": 20
     },
     {
       "state": "Punjab",
@@ -103,12 +103,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Kaithal",
-      "total_fires": 18
+      "district": "Jind",
+      "total_fires": 19
     }
   ],
   "state_totals": {
     "punjab": 994,
-    "haryana": 198
+    "haryana": 210
   }
 }
