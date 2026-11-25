@@ -1,45 +1,45 @@
 {
-  "last_updated": "2026-11-25T06:36:18.865167Z",
-  "total_fire_count": 765,
+  "last_updated": "2026-11-25T20:57:39.623676Z",
+  "total_fire_count": 815,
   "date_range": {
     "start": "2026-11-18",
-    "end": "2026-11-24"
+    "end": "2026-11-25"
   },
   "top_districts": [
     {
       "state": "Punjab",
       "district": "Fazilka",
-      "total_fires": 115
+      "total_fires": 125
     },
     {
       "state": "Punjab",
       "district": "Sri Muktsar Sahib",
-      "total_fires": 83
+      "total_fires": 86
     },
     {
       "state": "Punjab",
       "district": "Moga",
-      "total_fires": 67
+      "total_fires": 71
     },
     {
       "state": "Punjab",
       "district": "Sangrur",
-      "total_fires": 49
-    },
-    {
-      "state": "Punjab",
-      "district": "Bathinda",
-      "total_fires": 44
+      "total_fires": 53
     },
     {
       "state": "Punjab",
       "district": "Ludhiana",
-      "total_fires": 42
+      "total_fires": 47
+    },
+    {
+      "state": "Punjab",
+      "district": "Bathinda",
+      "total_fires": 46
     },
     {
       "state": "Punjab",
       "district": "Mansa",
-      "total_fires": 36
+      "total_fires": 38
     },
     {
       "state": "Punjab",
@@ -49,7 +49,12 @@
     {
       "state": "Haryana",
       "district": "Hisar",
-      "total_fires": 30
+      "total_fires": 33
+    },
+    {
+      "state": "Haryana",
+      "district": "Rohtak",
+      "total_fires": 31
     },
     {
       "state": "Haryana",
@@ -57,19 +62,14 @@
       "total_fires": 28
     },
     {
-      "state": "Haryana",
-      "district": "Rohtak",
-      "total_fires": 25
+      "state": "Punjab",
+      "district": "Patiala",
+      "total_fires": 22
     },
     {
       "state": "Punjab",
       "district": "Faridkot",
       "total_fires": 20
-    },
-    {
-      "state": "Punjab",
-      "district": "Patiala",
-      "total_fires": 19
     },
     {
       "state": "Haryana",
@@ -89,12 +89,12 @@
     {
       "state": "Punjab",
       "district": "Amritsar",
-      "total_fires": 13
+      "total_fires": 14
     },
     {
       "state": "Haryana",
       "district": "Jind",
-      "total_fires": 11
+      "total_fires": 12
     },
     {
       "state": "Punjab",
@@ -103,12 +103,12 @@
     },
     {
       "state": "Haryana",
-      "district": "Faridabad",
+      "district": "Sirsa",
       "total_fires": 9
     }
   ],
   "state_totals": {
-    "punjab": 586,
-    "haryana": 179
+    "punjab": 621,
+    "haryana": 194
   }
 }
