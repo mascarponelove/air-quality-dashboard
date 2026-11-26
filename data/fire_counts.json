@@ -1,130 +1,8 @@
 {
-  "last_updated": "2026-11-25T20:57:39.607364Z",
+  "last_updated": "2026-11-26T06:27:21.208637Z",
   "data_source": "NASA FIRMS VIIRS (NOAA-20)",
   "time_period": "7 days",
   "daily_data": [
-    {
-      "date": "2026-11-18",
-      "punjab": {
-        "districts": [
-          {
-            "district": "Moga",
-            "fire_count": 24
-          },
-          {
-            "district": "Sri Muktsar Sahib",
-            "fire_count": 24
-          },
-          {
-            "district": "Fazilka",
-            "fire_count": 23
-          },
-          {
-            "district": "Bathinda",
-            "fire_count": 16
-          },
-          {
-            "district": "Firozpur",
-            "fire_count": 15
-          },
-          {
-            "district": "Sangrur",
-            "fire_count": 14
-          },
-          {
-            "district": "Patiala",
-            "fire_count": 10
-          },
-          {
-            "district": "Jalandhar",
-            "fire_count": 7
-          },
-          {
-            "district": "Ludhiana",
-            "fire_count": 6
-          },
-          {
-            "district": "Mansa",
-            "fire_count": 6
-          },
-          {
-            "district": "Amritsar",
-            "fire_count": 4
-          },
-          {
-            "district": "Barnala",
-            "fire_count": 2
-          },
-          {
-            "district": "Faridkot",
-            "fire_count": 2
-          },
-          {
-            "district": "Gurdaspur",
-            "fire_count": 2
-          },
-          {
-            "district": "Tarn Taran",
-            "fire_count": 2
-          },
-          {
-            "district": "Kapurthala",
-            "fire_count": 1
-          }
-        ],
-        "total": 158
-      },
-      "haryana": {
-        "districts": [
-          {
-            "district": "Fatehabad",
-            "fire_count": 13
-          },
-          {
-            "district": "Kaithal",
-            "fire_count": 6
-          },
-          {
-            "district": "Jind",
-            "fire_count": 3
-          },
-          {
-            "district": "Rohtak",
-            "fire_count": 3
-          },
-          {
-            "district": "Sonipat",
-            "fire_count": 3
-          },
-          {
-            "district": "Faridabad",
-            "fire_count": 2
-          },
-          {
-            "district": "Panipat",
-            "fire_count": 2
-          },
-          {
-            "district": "Gurugram",
-            "fire_count": 1
-          },
-          {
-            "district": "Hisar",
-            "fire_count": 1
-          },
-          {
-            "district": "Jhajjar",
-            "fire_count": 1
-          },
-          {
-            "district": "Kurukshetra",
-            "fire_count": 1
-          }
-        ],
-        "total": 36
-      },
-      "combined_total": 194
-    },
     {
       "date": "2026-11-19",
       "punjab": {
@@ -743,7 +621,7 @@
           },
           {
             "district": "Ludhiana",
-            "fire_count": 5
+            "fire_count": 6
           },
           {
             "district": "Moga",
@@ -778,20 +656,24 @@
             "fire_count": 1
           }
         ],
-        "total": 35
+        "total": 36
       },
       "haryana": {
         "districts": [
+          {
+            "district": "Hisar",
+            "fire_count": 6
+          },
           {
             "district": "Rohtak",
             "fire_count": 6
           },
           {
-            "district": "Hisar",
-            "fire_count": 3
+            "district": "Bhiwani",
+            "fire_count": 2
           },
           {
-            "district": "Bhiwani",
+            "district": "Jhajjar",
             "fire_count": 2
           },
           {
@@ -799,7 +681,15 @@
             "fire_count": 2
           },
           {
+            "district": "Faridabad",
+            "fire_count": 1
+          },
+          {
             "district": "Jind",
+            "fire_count": 1
+          },
+          {
+            "district": "Panipat",
             "fire_count": 1
           },
           {
@@ -807,9 +697,9 @@
             "fire_count": 1
           }
         ],
-        "total": 15
+        "total": 22
       },
-      "combined_total": 50
+      "combined_total": 58
     }
   ]
 }
